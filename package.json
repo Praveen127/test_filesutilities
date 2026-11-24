@@ -1,0 +1,17 @@
+{
+  "name": "fileutilo",
+  "private": true,
+  "type": "module",
+  "description": "Fileutilo by Kalaburagi Labs \u2014 accounts and payments",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "test": "tsx tests/functions.test.ts",
+    "test:browser": "node scripts/build-site.mjs && node tests/browser/run-all.mjs",
+    "test:browser:online": "LIB_MODE=online node tests/browser/run-all.mjs",
+    "test:fixtures": "python3 tests/browser/make_fixtures.py"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "playwright": "^1.48.0"
+  }
+}
