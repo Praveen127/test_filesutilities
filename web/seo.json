@@ -1,0 +1,637 @@
+{
+ "tools": {
+  "home": {
+   "title": "Fileutilo — Free Online PDF, Image & Document Tools (Private)",
+   "description": "27 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.",
+   "h1": "Free, private file tools that run in your browser",
+   "intro": "Fileutilo brings 27 everyday file tools together in one place: convert documents, merge and split PDFs, compress images for form uploads, clean up spreadsheets, format JSON and more. Your files are processed inside your browser and are never uploaded to a server. That makes it fast, and safe for personal and work documents.",
+   "steps": [],
+   "faqs": [
+    [
+     "Is Fileutilo free?",
+     "Yes. Every tool can be used free of charge. A free account gives you 25 tasks a day; data tools like the JSON formatter and file diff have no daily limit. Pro removes the limits and the ads."
+    ],
+    [
+     "Are my files uploaded?",
+     "No. Your files are processed inside your browser and are never uploaded to a server. Only your account details and payment records are stored, never your files."
+    ],
+    [
+     "Does it work on a phone?",
+     "Yes. Fileutilo works in any modern browser on Android, iPhone, Windows, Mac and Linux, with nothing to install."
+    ]
+   ]
+  },
+  "convert": {
+   "title": "Document Converter — Word, PDF, Excel, PPT Online | Fileutilo",
+   "description": "Convert Word, Excel, PowerPoint, PDF, ODT, RTF, HTML and text files online for free. Real, selectable text in PDFs. Files never leave your device.",
+   "h1": "Convert documents between Word, PDF, Excel and more",
+   "intro": "Turn a Word file into a PDF, a PDF into editable Word, a spreadsheet into CSV or a presentation into PDF — the input format is detected automatically. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more files into the converter, or choose them from your device.",
+    "Pick the format you need for each file, or apply one format to all.",
+    "Click Convert, check the preview, and download the results."
+   ],
+   "faqs": [
+    [
+     "Which formats are supported?",
+     "Word, Excel, PowerPoint, PDF, OpenDocument, RTF, HTML, plain text and PostScript. Scanned PDFs need OCR first."
+    ],
+    [
+     "Will my PDF have selectable text?",
+     "Yes. Word documents converted to PDF keep real, selectable text with headings, lists, tables and images rather than flat pictures."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-merge": {
+   "title": "Merge PDF Files Online — Free & Private | Fileutilo",
+   "description": "Combine several PDFs into one file in the order you choose. Free, fast and private: your PDFs are merged in your browser, never uploaded.",
+   "h1": "Merge PDF files into one",
+   "intro": "Join two or more PDFs into a single document — handy for applications, reports and scanned pages. Drag the files into order and download one combined PDF. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDFs into the merge tool.",
+    "Drag them, or use the arrows, to set the order.",
+    "Name the file and click Merge PDFs, then download it."
+   ],
+   "faqs": [
+    [
+     "Is there a limit on how many PDFs I can merge?",
+     "Free accounts can merge up to 5 files of up to 20 MB each per task; Pro removes these limits."
+    ],
+    [
+     "Is merging PDFs here safe for confidential files?",
+     "Yes. The merge runs entirely in your browser, so the documents never reach our servers."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-split": {
+   "title": "Split PDF — Extract Pages Online Free | Fileutilo",
+   "description": "Extract page ranges from a PDF or split it into several files: by range, or every N pages. Free and private — nothing is uploaded.",
+   "h1": "Split a PDF or extract pages",
+   "intro": "Pull out just the pages you need, break a long PDF into one file per range, or cut it into equal chunks. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the PDF into the split tool.",
+    "Choose: extract pages into one PDF, one PDF per range, or every N pages.",
+    "Type the page ranges (for example 1-3, 5, 8-) and click Split PDF."
+   ],
+   "faqs": [
+    [
+     "How do I write page ranges?",
+     "Use commas between ranges: 1-3, 5, 8- means pages 1 to 3, page 5, and page 8 to the end."
+    ],
+    [
+     "Does splitting reduce quality?",
+     "No. Pages are copied exactly as they are, so text and images keep their original quality."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-organize": {
+   "title": "Rotate, Delete & Reorder PDF Pages Online | Fileutilo",
+   "description": "Rearrange PDF pages by dragging thumbnails, rotate sideways scans and delete pages you don't need. Free, private, no upload.",
+   "h1": "Organize PDF pages: rotate, delete and reorder",
+   "intro": "See every page as a thumbnail, drag pages into a new order, turn sideways scans upright and remove blank or unwanted pages. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop a PDF into the organizer to see its pages.",
+    "Drag thumbnails to reorder; use the buttons to rotate or delete pages.",
+    "Save and download the reorganized PDF."
+   ],
+   "faqs": [
+    [
+     "Can I fix a scanned page that is sideways?",
+     "Yes. Rotate any page left or right (or all pages at once) and the change is saved in the new PDF."
+    ],
+    [
+     "Are links and text kept?",
+     "Yes. Pages are moved, not re-drawn, so their text stays selectable."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-compress": {
+   "title": "Compress PDF — Reduce PDF Size Online Free | Fileutilo",
+   "description": "Make PDFs smaller for email, WhatsApp and portal uploads. Light mode keeps text selectable; strong mode shrinks scans a lot. Private, no upload.",
+   "h1": "Compress a PDF to reduce its file size",
+   "intro": "Shrink PDFs that are too big to email or upload. Light compression removes unused data and keeps the text selectable; strong compression turns pages into optimized images, which works best for scans and photos. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the compressor.",
+    "Choose Light (keep text) or Strong, and a quality level for strong mode.",
+    "Click Compress and download — the new size is shown for each file."
+   ],
+   "faqs": [
+    [
+     "Which mode should I choose?",
+     "Use Light for typed documents and Strong for scanned pages or PDFs full of photos."
+    ],
+    [
+     "What if my PDF doesn't get smaller?",
+     "If a file is already optimized, Fileutilo keeps your original rather than giving you a bigger file."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-protect": {
+   "title": "Password Protect PDF — AES-256 Encryption | Fileutilo",
+   "description": "Add a password to a PDF with strong AES-256 encryption and control printing, copying and editing. Done in your browser — the file is never uploaded.",
+   "h1": "Password-protect a PDF",
+   "intro": "Lock a PDF with a password before sharing it, using AES-256 encryption, and choose whether people may print, copy or edit it. Your files are processed inside your browser and are never uploaded to a server. Your password is never sent anywhere either.",
+   "steps": [
+    "Drop the PDF into the protect tool.",
+    "Type a password and choose the permissions.",
+    "Click Protect and download the encrypted PDF."
+   ],
+   "faqs": [
+    [
+     "How strong is the protection?",
+     "Fileutilo uses AES-256, the strongest encryption the PDF standard supports."
+    ],
+    [
+     "Can I remove the password later?",
+     "Yes, with the Unlock PDF tool, as long as you know the password."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-unlock": {
+   "title": "Unlock PDF — Remove PDF Password Online | Fileutilo",
+   "description": "Remove the password and restrictions from a PDF you're allowed to open, so you can print, copy or edit it. Private: works in your browser.",
+   "h1": "Remove a password from a PDF",
+   "intro": "Save an unlocked copy of a password-protected PDF that you have the right to open, without printing, copying or editing restrictions. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the locked PDF into the unlock tool.",
+    "Enter the PDF's password if it asks for one.",
+    "Click Unlock and download the unprotected copy."
+   ],
+   "faqs": [
+    [
+     "Can it open a PDF without the password?",
+     "No. You need the password to open the file. PDFs protected with RC4, AES-128 and AES-256 are supported."
+    ],
+    [
+     "Is my password stored?",
+     "No. It's used inside your browser for that file only and never sent to a server."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-stamp": {
+   "title": "Add Watermark & Page Numbers to PDF Online | Fileutilo",
+   "description": "Stamp a text watermark like CONFIDENTIAL or DRAFT across PDF pages and add page numbers in the format and position you choose. Free and private.",
+   "h1": "Add a watermark and page numbers to a PDF",
+   "intro": "Mark documents as CONFIDENTIAL, DRAFT or COPY with a diagonal, horizontal or tiled watermark, and add page numbers such as \"Page 3 of 9\". Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the tool.",
+    "Turn on the watermark, page numbers or both, and set the text, size, colour and position.",
+    "Click Apply and download the stamped PDFs."
+   ],
+   "faqs": [
+    [
+     "Can I skip numbering the cover page?",
+     "Yes. Tick \"Don't number the first page\" and choose the starting number."
+    ],
+    [
+     "Can I batch-watermark several PDFs?",
+     "Yes. Add several files and the same watermark and numbering are applied to each."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-ocr": {
+   "title": "OCR Online — Scanned PDF & Image to Text (Kannada, Hindi) | Fileutilo",
+   "description": "Extract text from scanned PDFs and photos with free OCR. Supports English, Kannada, Hindi, Tamil, Telugu and more. Runs in your browser, no upload.",
+   "h1": "OCR: turn scanned PDFs and photos into text",
+   "intro": "Read the text in scanned documents, phone photos and image-only PDFs, including Kannada, Hindi and other Indian languages, and save it as a text file you can edit and search. Your files are processed inside your browser and are never uploaded to a server. The language data downloads once, the first time you use it.",
+   "steps": [
+    "Drop scanned PDFs or photos into the OCR tool.",
+    "Tick the languages used in the document.",
+    "Click Read text, then copy the text or download it as .txt."
+   ],
+   "faqs": [
+    [
+     "Which languages are supported?",
+     "English plus Indian languages such as Kannada, Hindi, Tamil, Telugu, Malayalam, Marathi and Bengali, among others."
+    ],
+    [
+     "Why is the first run slower?",
+     "Each language's data (2–15 MB) downloads the first time you use it; after that it's cached by your browser."
+    ]
+   ],
+   "free": false
+  },
+  "pdf-to-img": {
+   "title": "PDF to JPG / PNG — Convert PDF Pages to Images | Fileutilo",
+   "description": "Save every page of a PDF, or just the pages you choose, as high-quality JPG or PNG images. Free, fast and private — nothing is uploaded.",
+   "h1": "Convert PDF pages to JPG or PNG images",
+   "intro": "Turn PDF pages into images for slides, social posts or forms that only accept pictures. Pick the format and the resolution. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the tool.",
+    "Choose PNG or JPG and the resolution.",
+    "Click Convert to images and download them (several pages come as a ZIP)."
+   ],
+   "faqs": [
+    [
+     "Which is better, PNG or JPG?",
+     "PNG is sharper for text and diagrams; JPG makes smaller files for photos."
+    ],
+    [
+     "Are the images good enough to print?",
+     "Choose a higher resolution for printing; lower resolutions make smaller files for screens and chat."
+    ]
+   ],
+   "free": false
+  },
+  "img-to-pdf": {
+   "title": "Images to PDF — JPG, PNG, HEIC to PDF Online | Fileutilo",
+   "description": "Combine photos and scans (JPG, PNG, HEIC from iPhone and more) into one PDF for WhatsApp, email or form uploads. Free and private.",
+   "h1": "Convert images to a single PDF",
+   "intro": "Put phone photos, scans and screenshots into one tidy PDF — ideal for sending ID proofs, certificates or receipts. iPhone HEIC photos are supported. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your images into the tool.",
+    "Drag them into order and choose the page size (A4, Letter or same as the image), orientation and margins.",
+    "Click Create PDF and download it."
+   ],
+   "faqs": [
+    [
+     "Can I convert iPhone HEIC photos?",
+     "Yes. HEIC and HEIF photos open directly, alongside JPG, PNG, WEBP and other formats."
+    ],
+    [
+     "How do I make the PDF smaller?",
+     "Shrink the photos first with Resize & compress images, or run the finished PDF through Compress PDF."
+    ]
+   ],
+   "free": false
+  },
+  "img-convert": {
+   "title": "Image Converter — HEIC, WEBP, AVIF, PNG, JPG Online | Fileutilo",
+   "description": "Convert images to JPG, PNG, WEBP, AVIF, GIF, BMP, TIFF, ICO or SVG. Opens iPhone HEIC photos too. Free image converter that runs in your browser.",
+   "h1": "Convert images between JPG, PNG, WEBP, AVIF and more",
+   "intro": "Change image formats in a click: iPhone HEIC to JPG, WEBP to PNG, PNG to ICO for favicons, or JPG to AVIF for smaller web images. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more images into the converter.",
+    "Choose the output format and quality.",
+    "Click Convert and download the converted images."
+   ],
+   "faqs": [
+    [
+     "How do I convert HEIC to JPG?",
+     "Drop the HEIC photo in, choose JPG and click Convert — no app or upload needed."
+    ],
+    [
+     "Which formats can it create?",
+     "JPG, PNG, WEBP, AVIF, GIF, BMP, TIFF, ICO and SVG."
+    ]
+   ],
+   "free": false
+  },
+  "img-resize": {
+   "title": "Resize Image to 20 KB, 50 KB, 100 KB — Photo Resizer | Fileutilo",
+   "description": "Resize and compress photos to an exact size or under a KB limit for exam, job and government form uploads (signature 20 KB, photo 50 KB). Free, private.",
+   "h1": "Resize and compress images to a size limit",
+   "intro": "Online forms often need a photo under 50 KB or a signature under 20 KB. Set the dimensions and a maximum file size, and Fileutilo finds the best quality that fits. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo or signature image into the tool.",
+    "Pick a preset (Signature ≤ 20 KB, Photo ≤ 50 KB…) or set your own width, height and KB limit.",
+    "Click Resize and download the image."
+   ],
+   "faqs": [
+    [
+     "How do I make a photo under 50 KB?",
+     "Choose the \"Photo ≤ 50 KB\" preset, or type 50 in Max file size, and click Resize."
+    ],
+    [
+     "Which format should I use for forms?",
+     "JPG is accepted almost everywhere and gives the smallest files for photos."
+    ]
+   ],
+   "free": false
+  },
+  "json": {
+   "title": "JSON Formatter & Validator Online — Beautify, Minify | Fileutilo",
+   "description": "Format, validate, beautify and minify JSON online as you type. Tree view, sort keys and repair broken JSON. Free, no limits, and nothing is uploaded.",
+   "h1": "JSON formatter and validator",
+   "intro": "Paste or open JSON and it's validated and pretty-printed as you type, with a tree view, key sorting, minifying and a repair option for almost-valid JSON. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste JSON or open a .json file.",
+    "Choose indentation, or Minify, Sort keys or Repair.",
+    "Copy or download the formatted JSON."
+   ],
+   "faqs": [
+    [
+     "Is my JSON sent anywhere?",
+     "No. Formatting happens in your browser, so API keys and private data in your JSON stay with you."
+    ],
+    [
+     "Can it fix invalid JSON?",
+     "Click Repair to have common mistakes fixed automatically, then check the result."
+    ]
+   ],
+   "free": true
+  },
+  "json-compare": {
+   "title": "JSON Compare — Diff Two JSON Files Online | Fileutilo",
+   "description": "Compare two JSON documents by structure and see exactly which keys were added, removed or changed, regardless of formatting or key order. Free and private.",
+   "h1": "Compare two JSON documents",
+   "intro": "Find the real differences between two JSON files or API responses. Fileutilo compares the structure, so different spacing or key order doesn't show up as noise. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste or open the original JSON on the left.",
+    "Paste or open the changed JSON on the right.",
+    "Review the added, removed and changed keys."
+   ],
+   "faqs": [
+    [
+     "Does key order matter?",
+     "No. Objects are compared by key, so reordered keys aren't reported as changes."
+    ],
+    [
+     "Is there a size limit?",
+     "No fixed limit — it depends on your device's memory, and there's no daily limit on this tool."
+    ]
+   ],
+   "free": true
+  },
+  "json-query": {
+   "title": "JSONPath Tester & JSON Schema Generator Online | Fileutilo",
+   "description": "Query JSON with JSONPath expressions and see matches instantly, or generate a JSON Schema from an example document. Free, private, in your browser.",
+   "h1": "JSONPath query tester and JSON Schema generator",
+   "intro": "Test JSONPath expressions such as $.items[*].price against your data, or generate a JSON Schema from a sample document to validate future data. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste or open your JSON.",
+    "Type a JSONPath expression, or switch to schema generation.",
+    "Copy the matches or the generated schema."
+   ],
+   "faqs": [
+    [
+     "What is JSONPath?",
+     "A query language for JSON, like XPath for XML: $.store.book[0].title selects the first book's title."
+    ],
+    [
+     "What does the generated schema include?",
+     "Types, properties and array items inferred from your example, ready to refine and use for validation."
+    ]
+   ],
+   "free": true
+  },
+  "data-convert": {
+   "title": "CSV to JSON, Excel, XML, YAML Converter Online | Fileutilo",
+   "description": "Convert data between CSV, JSON, Excel, XML and YAML, plus Markdown and HTML tables. Free online data converter — your data never leaves the browser.",
+   "h1": "Convert CSV, JSON, Excel, XML and YAML",
+   "intro": "Move data between formats in seconds: CSV to JSON for an API, JSON to Excel for a report, YAML to JSON for a config, or any table to Markdown for documentation. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste data or open a CSV, JSON, Excel, XML or YAML file.",
+    "Choose the output format.",
+    "Copy or download the converted data."
+   ],
+   "faqs": [
+    [
+     "Can it convert Excel to JSON?",
+     "Yes. Open the .xlsx file, choose JSON and each row becomes an object keyed by the header row."
+    ],
+    [
+     "Does it handle large CSV files?",
+     "Yes, within your device's memory, and there's no daily limit on this tool."
+    ]
+   ],
+   "free": true
+  },
+  "table-clean": {
+   "title": "CSV & Excel Cleaner — Remove Duplicates, Sort, Trim | Fileutilo",
+   "description": "Open a CSV or Excel sheet to sort, filter, trim spaces, remove duplicate rows and tidy columns, then download a clean file. Free and private.",
+   "h1": "Clean up CSV and Excel tables",
+   "intro": "Tidy messy spreadsheets without formulas: remove duplicate and empty rows, trim stray spaces, fix capitalisation, find and replace, filter and sort — with undo. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Open a CSV or Excel file, or paste rows copied from a spreadsheet.",
+    "Apply the clean-ups you need: trim, remove duplicates or empty rows, sort, filter, replace.",
+    "Export the cleaned table as CSV, Excel or JSON."
+   ],
+   "faqs": [
+    [
+     "How do I remove duplicate rows?",
+     "Open the file and click Remove duplicate rows. Made a mistake? Use Undo."
+    ],
+    [
+     "Will it change my original file?",
+     "No. You download a new, cleaned copy; the original is untouched."
+    ]
+   ],
+   "free": true
+  },
+  "hash": {
+   "title": "File Checksum (MD5, SHA-256) & Base64 Encoder Online | Fileutilo",
+   "description": "Calculate MD5, SHA-1, SHA-256, SHA-512 and CRC-32 checksums of files, verify downloads, and encode or decode Base64. Free, private, no upload.",
+   "h1": "File checksums and Base64 encode/decode",
+   "intro": "Check that a download isn't corrupted or tampered with by comparing its checksum, or convert text and files to and from Base64. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop a file, or paste text.",
+    "Read the MD5, SHA-1, SHA-256, SHA-512 and CRC-32 values, or paste a published hash to verify.",
+    "Switch to Base64 to encode or decode."
+   ],
+   "faqs": [
+    [
+     "How do I verify a download?",
+     "Drop the file and paste the published SHA-256 into Expected checksum; Fileutilo tells you if it matches."
+    ],
+    [
+     "Is it safe for private files?",
+     "Yes. Files are hashed in your browser and never uploaded."
+    ]
+   ],
+   "free": true
+  },
+  "word-merge": {
+   "title": "Merge Word Documents Online — Combine DOCX Files | Fileutilo",
+   "description": "Join several Word .docx files into one document, keeping formatting, images, tables and lists. Free online Word merger; files stay on your device.",
+   "h1": "Merge Word documents into one",
+   "intro": "Combine chapters, reports or forms into a single .docx while keeping their formatting, images, tables and numbered lists. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .docx files into the tool.",
+    "Put them in order.",
+    "Click Merge and download the combined Word document."
+   ],
+   "faqs": [
+    [
+     "Is formatting kept?",
+     "Yes. Styles, images, tables and lists from each document are carried into the merged file."
+    ],
+    [
+     "Can I merge old .doc files?",
+     "Convert them to .docx first with the Document Converter, then merge."
+    ]
+   ],
+   "free": false
+  },
+  "excel-combine": {
+   "title": "Combine Excel Files — Merge Sheets & Workbooks Online | Fileutilo",
+   "description": "Merge several Excel or CSV files into one workbook, as separate sheets or stacked into a single sheet. Free and private — nothing is uploaded.",
+   "h1": "Combine Excel files and sheets",
+   "intro": "Bring monthly reports, branch files or exports together: keep every sheet in one workbook, or stack rows from files with the same columns into a single sheet, with an optional Source file column. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .xlsx, .xls, .ods or .csv files into the tool.",
+    "Choose: keep each sheet, or stack rows into one sheet.",
+    "Click Combine and download the workbook."
+   ],
+   "faqs": [
+    [
+     "How do I know which file a row came from?",
+     "When stacking rows, tick the option to add a Source file column."
+    ],
+    [
+     "Can I combine CSV and Excel together?",
+     "Yes. CSV, XLSX, XLS, XLSM and ODS files can be mixed."
+    ]
+   ],
+   "free": false
+  },
+  "find-replace": {
+   "title": "Find and Replace in Multiple Word Files at Once | Fileutilo",
+   "description": "Replace text across many Word documents and text files in one go, with match case, whole words and regex. Word formatting is kept. Free, private.",
+   "h1": "Find and replace text across many files",
+   "intro": "Update a name, date or price in dozens of Word documents at once, or run a regular-expression replace over text and code files, then download the updated copies. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .docx or text files into the tool.",
+    "Type what to find and what to replace it with; set match case, whole words or regex.",
+    "Count matches first if you like, then click Replace & download."
+   ],
+   "faqs": [
+    [
+     "Does it keep Word formatting?",
+     "Yes. Only the matching text changes; fonts, styles and layout stay the same."
+    ],
+    [
+     "Can I use regular expressions?",
+     "Yes. Tick Regular expression and use $1, $2 in the replacement for captured groups."
+    ]
+   ],
+   "free": false
+  },
+  "doc-stats": {
+   "title": "Word Counter — Count Words in Word, PDF & Text Online | Fileutilo",
+   "description": "Count words, characters, sentences and reading time in Word, PDF, PowerPoint and text files, or pasted text. Works with Kannada and other scripts. Free.",
+   "h1": "Word count and document statistics",
+   "intro": "Get the word count, character count, sentences, reading time and most frequent words of a document or pasted text, in English, Kannada and other scripts. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste text, or drop a .docx, .pdf, .pptx, .odt, .rtf or .txt file.",
+    "See the counts update instantly.",
+    "Copy the statistics if you need them for a submission."
+   ],
+   "faqs": [
+    [
+     "Does it count words in Kannada and Hindi?",
+     "Yes. Words are counted correctly in Indian scripts as well as Latin text."
+    ],
+    [
+     "Can it count words in a PDF?",
+     "Yes, for PDFs with real text. For scanned PDFs, run OCR first."
+    ]
+   ],
+   "free": true
+  },
+  "metadata": {
+   "title": "Remove Metadata from PDF, Word & Photos (EXIF, GPS) | Fileutilo",
+   "description": "Strip author names, company, edit history, camera details and GPS location from Word, Excel, PowerPoint, PDF and photos before sharing. Free, private.",
+   "h1": "Remove hidden metadata from files and photos",
+   "intro": "Documents and photos carry hidden details: author and company names, revision history, camera model and the exact GPS location where a photo was taken. Remove them before you share. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop documents, PDFs or photos into the tool.",
+    "Click Remove metadata.",
+    "Check the report of what was removed and download the clean files."
+   ],
+   "faqs": [
+    [
+     "Which files are supported?",
+     "Word, Excel and PowerPoint (.docx, .xlsx, .pptx), OpenDocument files, PDF, JPG, PNG and WEBP."
+    ],
+    [
+     "Does it remove GPS location from photos?",
+     "Yes. EXIF data including GPS coordinates and camera details is removed."
+    ]
+   ],
+   "free": false
+  },
+  "diff": {
+   "title": "Compare Two Files Online — Text, Word, PDF Diff | Fileutilo",
+   "description": "Compare two versions of text, code, CSV, JSON, Word or PDF files side by side and see every change highlighted. Free file diff, no upload.",
+   "h1": "Compare two files and see what changed",
+   "intro": "Spot the differences between two versions of a contract, report, CSV or source file, side by side or unified, with options to ignore whitespace and case. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Open, drop or paste the original version on the left.",
+    "Open, drop or paste the changed version on the right.",
+    "Click Compare and step through the changes."
+   ],
+   "faqs": [
+    [
+     "Can it compare two Word or PDF files?",
+     "Yes. The text is extracted from .docx and .pdf files and compared line by line."
+    ],
+    [
+     "Can I ignore spacing changes?",
+     "Yes. Tick Ignore whitespace (and Ignore case if you like)."
+    ]
+   ],
+   "free": true
+  },
+  "zip-create": {
+   "title": "Create ZIP File Online — Compress Files & Folders | Fileutilo",
+   "description": "Bundle files or a whole folder into one compressed .zip, right in your browser. Free online ZIP maker — your files are never uploaded.",
+   "h1": "Create a ZIP file",
+   "intro": "Pack many files, or an entire folder with its subfolders, into a single .zip that's easy to email or upload. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop files or a folder into the tool (or use Add a folder).",
+    "Choose the compression level.",
+    "Click Create ZIP and download it."
+   ],
+   "faqs": [
+    [
+     "Can I zip a whole folder?",
+     "Yes. Drop the folder and its subfolder structure is kept inside the ZIP."
+    ],
+    [
+     "Does zipping make files smaller?",
+     "Text and documents shrink a lot; photos and videos are already compressed, so they shrink little."
+    ]
+   ],
+   "free": false
+  },
+  "zip-open": {
+   "title": "Open ZIP File Online — View & Extract Without Installing | Fileutilo",
+   "description": "Look inside .zip, .jar, .epub, .docx or .apk files, preview the contents and download just the files you need. Free and private, no upload.",
+   "h1": "Open a ZIP file online",
+   "intro": "See what's inside a ZIP without extracting everything: browse folders, preview text and images, and download only the files you need. Works with JAR, EPUB, DOCX and APK too. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the .zip (or .jar, .epub, .docx, .apk) file into the tool.",
+    "Browse the folders and preview files.",
+    "Tick the files you want and download them."
+   ],
+   "faqs": [
+    [
+     "Can it open password-protected ZIPs?",
+     "Not at the moment; it opens standard, unencrypted ZIP archives."
+    ],
+    [
+     "Do I need to install anything?",
+     "No. It runs in your browser on phones and computers alike."
+    ]
+   ],
+   "free": true
+  }
+ },
+ "pages": {
+  "pricing": {
+   "title": "Pricing — Free, Pro & Lifetime Plans | Fileutilo",
+   "description": "Use Fileutilo free with 25 tasks a day, or go Pro for no limits and no ads: ₹149 a month, ₹999 a year, or ₹2,999 once for lifetime access."
+  },
+  "privacy": {
+   "title": "Privacy Policy | Fileutilo",
+   "description": "How Fileutilo handles your data: files are processed in your browser and never uploaded. What we store for accounts, payments and visit statistics."
+  },
+  "terms": {
+   "title": "Terms of Service | Fileutilo",
+   "description": "The terms for using Fileutilo, the private online file tools by Kalaburagi Labs."
+  },
+  "refunds": {
+   "title": "Refund & Cancellation Policy | Fileutilo",
+   "description": "How to cancel a Fileutilo Pro subscription and when refunds are given for plans and credit packs."
+  }
+ }
+}
