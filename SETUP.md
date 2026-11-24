@@ -154,10 +154,10 @@ automatically. The company name on Razorpay's checkout defaults to "Kalaburagi L
 
 ## Part F — Website (Notepad → GitHub → Vercel)
 
-The website is the **`site`** folder: one page per tool (`pdf-merge.html` becomes `www.fileutilo.com/pdf-merge`),
+The website is the **`site-navy`** or **`site-green`** folder (pick one colour theme): one page per tool (`pdf-merge.html` becomes `www.fileutilo.com/pdf-merge`),
 plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt` and `vercel.json`. All pages share one settings file.
 
-1. Open `site\config.js` in **Notepad** and check the settings:
+1. Open `site-navy\config.js` (or `site-green\config.js`) in **Notepad** and check the settings:
    ```js
    supabaseUrl:     "https://abcdefgh.supabase.co",
    supabaseAnonKey: "sb_publishable_…",
@@ -166,7 +166,7 @@ plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt` and `vercel.json
    ga4Id:           "G-…",            // Google Analytics measurement ID (Part I); "" = off
    ```
    Save.
-2. **GitHub:** open the repo Vercel uses → **Add file → Upload files** → open the `site` folder, select **all files
+2. **GitHub:** open the repo Vercel uses → **Add file → Upload files** → open your chosen site folder, select **all files
    inside it** (Ctrl+A) and drag them in → **Commit changes**. They go at the top level of the repo, next to the old
    `index.html` they replace. (GitHub accepts up to 100 files per upload; `site` has about 45.)
 3. **Vercel:** nothing to upload. It redeploys within about a minute.
@@ -214,7 +214,7 @@ If something fails:
 1. Go to **analytics.google.com** → **Start measuring** (or **Admin → Create → Property**).
    Property name `Fileutilo`, time zone **India**, currency **Indian Rupee**. Choose **Web**, enter
    `https://www.fileutilo.com`, stream name `Fileutilo`. Copy the **Measurement ID** (`G-XXXXXXXXXX`).
-2. Put it in `site\config.js` as `ga4Id: "G-XXXXXXXXXX"` and upload `config.js` to GitHub.
+2. Put it in `config.js` (inside the site folder you uploaded) as `ga4Id: "G-XXXXXXXXXX"` and upload `config.js` to GitHub.
 3. In the data stream's **Enhanced measurement** settings, keep **Page views** on and make sure
    **"Page changes based on browser history events"** is ticked (tools change the address without reloading).
 4. Events the site sends (never file names or contents):

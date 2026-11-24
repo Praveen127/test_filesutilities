@@ -1,28 +1,27 @@
-# Fileutilo — build of 24 November 2026
+# Fileutilo — new landing page and brand (24 November 2026)
 
-## Upload to GitHub (the website)
-Upload **everything inside the `site` folder** to the top level of your GitHub repo (Add file → Upload files →
-select all → Commit). Vercel publishes it in about a minute. Full steps: SETUP.md, Part F.
+## Choose a colour theme, then upload ONE folder
+- `site-navy`  — navy + blue (like your reference screenshot)
+- `site-green` — the current deep green + lime
 
-Your live settings (Supabase, live Razorpay key, AdSense publisher ID) are already in `site/config.js`.
-From now on, settings live in **`config.js`**, not inside `index.html`.
+Upload **everything inside the folder you choose** to the top level of your GitHub repo
+(Add file → Upload files → select all → Commit). Same steps as SETUP.md Part F. Don't upload both.
+Your live settings are in `config.js` inside each folder.
 
 ## What's new
-1. **Brand:** favicon (browser tab icon), phone home-screen icons, web app manifest, and a 1200×630 share
-   image for WhatsApp/LinkedIn/X link previews.
-2. **SEO:** every tool has its own address (www.fileutilo.com/pdf-merge, /img-resize, …) — 32 pages, each with
-   its own title, description, heading, help text with steps and FAQs, structured data and share preview.
-   Plus `sitemap.xml`, `robots.txt`, a 404 page and a footer linking all 27 tools. Old links such as
-   `/#pdf-merge` still work and switch to the new address.
-3. **Google Analytics 4 + conversions:** add your `G-…` ID to `config.js` (SETUP.md Part I). Events:
-   tool_use, limit_reached, sign_up, login, begin_checkout, purchase, subscription_pending, payment_failed.
-   No file names or contents are ever sent. Off until you add the ID.
-4. **Google Search Console:** steps to verify the domain and submit the sitemap (SETUP.md Part J).
-5. **Payments (from earlier today, also in this build):** Pro only after a real charge, and Delete account no
-   longer fails on unpaid or test-mode subscriptions. If you haven't yet: run
-   `supabase/migrations/20261124000000_pro_after_charge.sql` in the Supabase SQL Editor, then
-   `deploy-supabase.bat` from this folder.
+- **Landing page:** hero "Your files. Your device. Your control." with a *Private by design* badge;
+  all 27 tools with their own icons, grouped and linked to their own pages; How it works with a real
+  10-second demo recording and three product screenshots; a precise privacy section (what stays on your
+  device vs. what uses the network, how it's tested, how to check yourself); supported formats; a clear
+  Free vs Pro table; a support section with email and bug-report links.
+- **Visual identity:** your existing logo (lines and coral dot) — lime tile in green, blue tile with white lines in navy — on a new favicon,
+  phone icons, share image and colour system, in both themes.
+- **Privacy check:** every tool was run on files containing a unique marker and every network request was
+  inspected (25 tools in the automated suite; OCR and Combine Excel checked on the live site). No request
+  carried file contents or names.
 
-## Tests
-Payment functions 25/25; browser suites: privacy 33, library failures 39, formats 234, mobile 60,
-accessibility 34, accounts 29, SEO & site 27 — all passing.
+## Rebuilding later (only if you edit web/index.html or the text)
+```
+node scripts/build-site.mjs --brand navy  --out site-navy
+node scripts/build-site.mjs --brand green --out site-green
+```

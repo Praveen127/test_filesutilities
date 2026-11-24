@@ -1,13 +1,18 @@
 // Builds the upload-ready website into ./site from web/index.html, web/config.js, web/seo.json and web/static/*.
 // Every tool gets its own page (site/pdf-merge.html → https://www.fileutilo.com/pdf-merge) with its own
 // title, description, share preview, structured data and help text, plus sitemap.xml and robots.txt.
-// Run:  node scripts/build-site.mjs        (no npm packages needed)
+// Run:  node scripts/build-site.mjs [--brand navy|green] [--out site]     (no npm packages needed)
+//   --brand picks the colour theme, logo, icons, share image and screenshots (default: navy)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const WEB = path.join(ROOT, 'web'), OUT = path.join(ROOT, 'site');
+const arg = (k, d) => { const i = process.argv.indexOf('--' + k); return i > 0 ? process.argv[i + 1] : d; };
+const BRAND = arg('brand', 'navy');
+if (!['navy', 'green'].includes(BRAND)) throw new Error('--brand must be navy or green');
+const WEB = path.join(ROOT, 'web'), OUT = path.resolve(ROOT, arg('out', 'site'));
+const THEME_COLOR = { navy: '#101a33', green: '#064b40' }[BRAND];
 const ORIGIN = 'https://www.fileutilo.com';
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -80,13 +85,15 @@ function about(id, m) {
 </article>`;
 }
 
-const HERO = '<h1>Less file busywork.<br><em>More work, done.</em></h1>';
+const HERO = '<h1>Your files. Your device.<br><em>Your control.</em></h1>';
 if (!src.includes(HERO)) throw new Error('hero heading not found in web/index.html');
 
 function page(id, { noindex = false } = {}) {
   const m = seo.tools[id] || seo.pages[id];
-  let html = src.replace(/<!--seo:start-->[\s\S]*?<!--seo:end-->/, head(id, m, { noindex }));
-  html = html.replace('<!--seo:about-->', seo.tools[id] ? about(id, m) : '');
+  let html = src.replace(/<!--seo:start-->[\s\S]*?<!--seo:end-->/, head(id, m, { noindex }))
+    .replace('<html lang="en" data-brand="green">', `<html lang="en" data-brand="${BRAND}">`)
+    .replace(/<meta name="theme-color" content="[^"]*">/, `<meta name="theme-color" content="${THEME_COLOR}">`);
+  html = html.replace('<!--seo:about-->', seo.tools[id] && id !== 'home' ? about(id, m) : '');
   html = html.replace('<!--seo:toollinks-->', toolLinks).replace('<!--seo:data-->', seoDataTag);
   if (seo.tools[id] && id !== 'home') html = html.replace(HERO, `<h1>${esc(m.h1)}<br><em>Free &amp; private.</em></h1>`);
   // pre-select the right page so the correct section shows even before the script runs
@@ -102,7 +109,12 @@ for (const t of TOOLS) write(t + '.html', page(t));
 for (const p of PAGES) write(p + '.html', page(p));
 write('404.html', page('home', { noindex: true }));
 write('config.js', fs.readFileSync(path.join(WEB, 'config.js')));
-for (const f of fs.readdirSync(path.join(WEB, 'static'))) write(f, fs.readFileSync(path.join(WEB, 'static', f)));
+for (const dir of ['static', 'static-' + BRAND]) {
+  const d = path.join(WEB, dir); if (!fs.existsSync(d)) continue;
+  for (const f of fs.readdirSync(d)) write(f, fs.readFileSync(path.join(d, f)));
+}
+const media = path.join(WEB, 'media-' + BRAND);
+if (fs.existsSync(media)) { fs.mkdirSync(path.join(OUT, 'media')); for (const f of fs.readdirSync(media)) write('media/' + f, fs.readFileSync(path.join(media, f))); }
 if (fs.existsSync(path.join(WEB, 'ads.txt'))) write('ads.txt', fs.readFileSync(path.join(WEB, 'ads.txt')));
 
 const urls = ['/', ...TOOLS.map(t => '/' + t), ...PAGES.map(p => '/' + p)];
