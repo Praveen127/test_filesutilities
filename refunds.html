@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="navy">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -27,7 +27,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#064b40">
+<meta name="theme-color" content="#101a33">
 <script src="/config.js"></script>
 <script>window.FILEUTILO_CONFIG=window.FILEUTILO_CONFIG||{};/*config-overrides*/</script>
 
@@ -449,53 +449,108 @@ footer .flinks a{color:var(--mute);margin:0 6px}
 main:focus{outline:none}
 h3.sl{margin:0 0 14px}
 
-/* ---------- Fileutilo brand + conversion-focused landing page ---------- */
-.eyebrow,.home-kicker{display:block;font:700 11px/1.4 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--limeD)}
-.hero .eyebrow{margin:0 0 12px}.hero h1{max-width:720px}
+/* ---------- Brand themes: data-brand="navy" | "green" on <html> ---------- */
+:root{--logoBg:#e6f5c8;--logoInk:#00463c;--hero:#00463c;--hero2:#0a6b58;--heroInk:#cde3d9;--heroInk2:#e5f1eb;--accent:#c9ec8a;--accentH:#e6f5c8;--accentInk:#103e34;
+ --tile:linear-gradient(135deg,#d4f29b,#b9e06f);--tileFold:#2f7a5d;--tileInk:#00463c;--markF:#c9ec8a;--okBg:rgba(201,236,138,.14);--okInk:#c9ec8a;--card2:linear-gradient(145deg,#00463c,#0b6654)}
+:root[data-brand=navy]{
+ --logoBg:linear-gradient(135deg,#5b97ff,#2f6fed);--logoInk:#ffffff;
+ --bg:light-dark(#eef1f7,#0a0f1c);--sheet:light-dark(#ffffff,#121a2b);--panel:light-dark(#f4f6fb,#172136);--line:light-dark(#dde3ee,#26324a);
+ --ink:light-dark(#0f172a,#e6ebf5);--mute:light-dark(#5b6478,#9aa6bd);
+ --green:#1d4ed8;--green2:light-dark(#2457d6,#8fb0ff);--lime:#e3ebff;--limeD:#8fb0ff;
+ --code:#0c1222;--codeInk:#dbe4f5;--codeLine:#202b44;
+ --sh:0 1px 2px rgba(10,20,50,.06),0 8px 24px -8px rgba(10,20,50,.16);--sh2:0 2px 4px rgba(10,20,50,.08),0 22px 48px -16px rgba(10,20,50,.3);
+ --hero:#101a33;--hero2:#1f3a73;--heroInk:#c3cde3;--heroInk2:#e3e9f6;--accent:#2563eb;--accentH:#3b74f0;--accentInk:#ffffff;
+ --tile:linear-gradient(135deg,#5b97ff,#2f6fed);--tileFold:#bcd2ff;--tileInk:#ffffff;--markF:#2f6fed;--okBg:rgba(34,197,94,.14);--okInk:#4ade80;--card2:linear-gradient(145deg,#101a33,#1f3a73)}
+:root[data-brand=navy] .plan.hot button.pri{color:#0f1a33}:root[data-brand=navy] .plan.hot .note,:root[data-brand=navy] .plan.hot .price span{color:#dbe4ff}
+.hero{background-color:var(--hero);background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),radial-gradient(120% 90% at 85% 10%,var(--hero2) 0,transparent 60%)}
+.hero p{color:var(--heroInk)}nav a{color:var(--heroInk)}.badges span{color:var(--heroInk2)}
+/* logo: page with folded corner and an F — reads at 16 px */
+.logo{width:46px;height:46px;border-radius:13px;background:var(--logoBg);color:var(--logoInk);display:grid;place-items:center;box-shadow:0 6px 18px -6px rgba(0,0,0,.45)}
+.mark .m-page{fill:var(--tileInk)}.mark .m-fold{fill:var(--tileFold)}.mark .m-f{stroke:var(--markF)}
+.brand{gap:12px;flex-wrap:wrap}.brand .bname{font:700 20px 'Inter Tight',Inter,sans-serif;color:#fff;letter-spacing:-.01em}
+.pbadge{font:700 10.5px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--okInk);background:var(--okBg);border:1px solid color-mix(in srgb,var(--okInk) 35%,transparent);padding:5px 10px;border-radius:99px}
+.hero h1{max-width:760px}.hero h1 em{font-style:normal;color:var(--limeD)}
+.home-kicker{display:block;font:700 11px/1.4 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--green2);margin-bottom:9px}
 .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
-.hero-cta,.hero-secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 18px;border-radius:12px;text-decoration:none;font:700 14px Inter,sans-serif;transition:transform .18s,background .18s}
-.hero-cta{background:var(--limeD);color:#103e34;box-shadow:0 8px 22px -12px #001a14}.hero-cta:hover{transform:translateY(-2px);background:#e6f5c8}
-.hero-secondary{color:#f1f8f4;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07)}.hero-secondary:hover{background:rgba(255,255,255,.14)}
-.hero-cta:focus-visible,.hero-secondary:focus-visible,.home-card:focus-visible,.home-pro-link:focus-visible,.home-upgrade>a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-.home-page{padding:4px 0 30px}.home-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:10px 0 24px}
-.home-intro>div{max-width:760px}.home-kicker{color:var(--green2);margin-bottom:9px}
-.home-intro h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.035em;max-width:780px}
-.home-intro p{font-size:16px;color:var(--mute);max-width:670px;margin:12px 0 0}
-.home-pro-link{flex:none;text-decoration:none;color:var(--green2);font-weight:700;font-size:14px;padding:10px 0}
-.home-trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 38px;padding:17px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.hero-cta,.hero-secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 20px;border-radius:12px;text-decoration:none;font:700 15px Inter,sans-serif;transition:transform .18s,background .18s}
+.hero-cta{background:var(--accent);color:var(--accentInk);box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}.hero-cta:hover{transform:translateY(-2px);background:var(--accentH)}
+.hero-secondary{color:#fff;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.06)}.hero-secondary:hover{background:rgba(255,255,255,.14)}
+.ticks{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;margin:18px 0 0;padding:0;font-size:13.5px;color:var(--heroInk2)}
+.ticks li::before{content:"✓";color:var(--okInk);font-weight:800;margin-right:6px}
+.hero-cta:focus-visible,.hero-secondary:focus-visible,.tcard:focus-visible,.hbtn:focus-visible,.pcta a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+/* scene colours follow the brand */
+.scene .s-floor{fill:color-mix(in srgb,var(--hero) 70%,#000)}.scene .s-tint{fill:var(--lime)}.scene .s-ok{fill:var(--limeD)}
+/* home */
+.home-page{padding:4px 0 30px}
+.home-trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 10px;padding:17px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
 .home-trust div{display:grid;gap:2px;padding-left:16px;border-left:1px solid var(--line)}.home-trust div:first-child{border:0;padding-left:0}
 .home-trust b{font:700 18px 'Inter Tight',Inter,sans-serif;color:var(--ink)}.home-trust span{font-size:13px;color:var(--mute)}
-.home-section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:15px}
-.home-section-head h3,.home-privacy h3,.home-upgrade h3,.home-faq h3{font-size:24px;letter-spacing:-.02em}
-.home-small{font-size:13px;color:var(--mute)}
-.home-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.home-card{min-height:220px;display:flex;flex-direction:column;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--sheet);box-shadow:var(--sh);text-decoration:none;color:var(--ink);transition:transform .18s,border-color .18s,box-shadow .18s}
-.home-card:hover{transform:translateY(-3px);border-color:var(--green2);box-shadow:var(--sh2)}
-.home-card-feature{background:linear-gradient(145deg,var(--green),#0b6654);border-color:var(--green);color:white}
-.home-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#e6f5c8;color:#15483c;font:800 13px var(--mono);margin-bottom:18px}
-.home-icon.blue{background:#e4efff;color:#2459a5;font-size:21px}.home-icon.purple{background:#eee7ff;color:#6541a6;font-size:22px}.home-icon.green{background:#e2f6e8;color:#1e7540;font-size:18px}.home-icon.amber{background:#fff0d8;color:#9a5c13;font-size:10px}.home-icon.rose{background:#ffe8e4;color:#a13f32;font-size:22px}
-.home-card-label{font:700 10px Inter,sans-serif;letter-spacing:.12em;color:var(--mute);margin-bottom:7px}.home-card-feature .home-card-label{color:#c2e6d7}
-.home-card>b{font:700 19px 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em}.home-card p{font-size:13px;line-height:1.55;color:var(--mute);margin:8px 0 16px}
-.home-card-feature p{color:#d2e9df}.home-card-action{font:700 13px Inter,sans-serif;color:var(--green2);margin-top:auto}.home-card-feature .home-card-action{color:var(--limeD)}
-.home-privacy{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.privacy-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--lime);color:var(--green);font-size:28px;font-weight:700}
-.home-privacy h3{font-size:21px}.home-privacy p{font-size:13px;color:var(--mute);margin:7px 0 0;max-width:720px}
-.home-privacy>a{font-size:13px;color:var(--green2);font-weight:700;text-decoration:none;white-space:nowrap}
-.home-upgrade{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px;padding:22px 24px;border-radius:18px;background:linear-gradient(110deg,#102f28,#075d4d);color:#fff}
-.home-upgrade .home-kicker{color:var(--limeD)}.home-upgrade h3{font-size:22px}.home-upgrade p{font-size:13px;color:#cde3d9;margin:7px 0 0}
-.home-upgrade>a{flex:none;display:inline-flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:var(--limeD);color:#123f34;text-decoration:none;font-weight:700;font-size:13px}
-.home-faq{max-width:800px;margin:34px auto 0}.home-faq h3{margin:0 0 10px}.home-faq details{border-top:1px solid var(--line);padding:13px 0}
+.hsec{padding-top:46px;scroll-margin-top:12px}
+.hhead{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}
+.hhead h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.03em}.hhead>p{max-width:420px;margin:0;font-size:14px;color:var(--mute)}
+.tgroup{margin-top:18px}.tgroup h3{font:700 13px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.tgroup h3 span{font-weight:600;color:var(--green2);margin-left:4px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tcard{position:relative;display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--sheet);color:var(--ink);text-decoration:none;transition:transform .15s,border-color .15s,box-shadow .15s}
+.tcard:hover{transform:translateY(-2px);border-color:var(--green2);box-shadow:var(--sh)}
+.tico{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center}
+.ttx b{display:block;font:700 15px 'Inter Tight',Inter,sans-serif}.ttx small{display:block;font-size:12.5px;color:var(--mute);line-height:1.4;margin-top:2px}
+.tfree{font:700 9.5px Inter,sans-serif;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--green2);background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:2px 7px;white-space:nowrap}
+.ttx .tfree{margin-left:4px;vertical-align:2px}
+.c-pdf .tico{background:light-dark(#ffe9e5,#3a1d19);color:light-dark(#c4361f,#ff9d8a)}
+.c-img .tico{background:light-dark(#efe8ff,#2a2145);color:light-dark(#6b3fd1,#c3a8ff)}
+.c-doc .tico{background:light-dark(#e5efff,#1b2848);color:light-dark(#2459c7,#9dbcff)}
+.c-data .tico{background:light-dark(#e2f6e8,#163224);color:light-dark(#1d7a45,#86dca6)}
+.c-arch .tico{background:light-dark(#fff3d6,#3a2e12);color:light-dark(#a86a00,#f3c56b)}
+.how{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;align-items:center}
+.hsteps{list-style:none;counter-reset:st;margin:0;padding:0;display:grid;gap:18px}
+.hsteps li{counter-increment:st;position:relative;padding-left:52px}
+.hsteps li::before{content:counter(st);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font:700 15px Inter,sans-serif}
+.hsteps b{font:700 18px 'Inter Tight',Inter,sans-serif}.hsteps p{margin:4px 0 0;color:var(--mute);font-size:14.5px}
+.demo{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--sheet);box-shadow:var(--sh2)}
+.bframe{display:flex;align-items:center;gap:6px;padding:9px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+.bframe span{width:10px;height:10px;border-radius:50%;background:var(--line)}.bframe i{font:500 12px var(--mono);font-style:normal;color:var(--mute);margin-left:10px;padding:3px 10px;background:var(--sheet);border-radius:6px}
+.demo video{display:block;width:100%;height:auto;aspect-ratio:16/10;background:var(--panel)}
+.demo figcaption{font-size:12.5px;color:var(--mute);padding:8px 12px}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.shots figure{margin:0}.shots img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:var(--sh)}
+.shots figcaption{font-size:13px;color:var(--mute);margin-top:7px;font-weight:600}
+.pgrid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:14px}
+.pstay{align-self:start}.pstay,.pnet{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--sheet)}
+.pstay{background:light-dark(#effaf2,#11261b);border-color:light-dark(#bfe6cc,#24513a)}
+.pgrid h3{display:flex;align-items:center;gap:8px;font-size:19px;margin-bottom:10px}.pstay h3 svg{color:#16a34a}
+.pstay ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14.5px}.pstay p{margin:12px 0 0;font-size:13.5px;font-weight:600;color:light-dark(#166534,#86efac)}
+.pnet table{width:100%;border-collapse:collapse;font-size:13.5px}.pnet th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:0 8px 8px 0}
+.pnet td{padding:9px 8px 9px 0;border-top:1px solid var(--line);vertical-align:top}.pnet td:first-child{font-weight:600;width:34%}.pnet td:nth-child(2){color:var(--mute)}
+.pnet td.no{font-weight:700;color:light-dark(#15803d,#4ade80);white-space:nowrap}
+.pproof{display:grid;grid-template-columns:1fr 1fr auto;gap:18px;align-items:start;margin-top:14px;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);font-size:13.5px;color:var(--mute)}
+.pproof b{color:var(--ink)}.pproof a{color:var(--green2);font-weight:700;text-decoration:none;white-space:nowrap}
+kbd{font:600 12px var(--mono);padding:1px 6px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;background:var(--sheet);color:var(--ink)}
+.fgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.fgrid>div{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--sheet)}.fgrid h3{font-size:17px}
+.fgrid p{margin:12px 0 6px;font:700 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.fchips{display:flex;flex-wrap:wrap;gap:5px}.fchips i{font:600 11.5px var(--mono);font-style:normal;padding:3px 7px;border-radius:6px;background:var(--panel);border:1px solid var(--line)}
+.fnote{font-size:13px;color:var(--mute);margin:12px 0 0}.fnote a{color:var(--green2)}
+.ptable{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--sheet)}
+.ptable table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.ptable th,.ptable td{padding:11px 16px;text-align:left;border-top:1px solid var(--line)}.ptable thead th{border-top:0;font:700 14px 'Inter Tight',Inter,sans-serif}
+.ptable td:first-child{color:var(--mute)}.ptable td svg{color:#16a34a;vertical-align:middle}
+.ptable .pro{background:color-mix(in srgb,var(--green) 7%,transparent);font-weight:700}.ptable thead .pro{color:var(--green2)}
+.pcta{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px;padding:14px 18px;border-radius:14px;background:var(--card2);color:#fff;font-size:14px}
+.pcta a{display:inline-flex;gap:10px;align-items:center;padding:11px 16px;border-radius:11px;background:var(--accent);color:var(--accentInk);font-weight:700;text-decoration:none}
+.help{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:46px;padding:22px 24px!important;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.help h2{font-size:24px;letter-spacing:-.02em}.help p{margin:8px 0 0;font-size:14px;color:var(--mute);max-width:640px}.help .cmail{color:var(--green2);font-weight:700}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap}.hbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:11px;background:var(--green);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
+.hbtn.ghost{background:transparent;color:var(--green2);border:1px solid var(--line)}
+.home-faq{max-width:800px;margin:40px auto 0}.home-faq h3{font-size:24px;letter-spacing:-.02em;margin:0 0 10px}.home-faq details{border-top:1px solid var(--line);padding:13px 0}
 .home-faq summary{cursor:pointer;font-weight:600}.home-faq details p{color:var(--mute);font-size:14px;margin:8px 0 0}
-#catnav a:first-child .ic{background:rgba(230,245,200,.18)}#catnav a[aria-current=true] .ic{background:var(--green)}
-@media(max-width:860px){.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-intro{align-items:flex-start;flex-direction:column}.home-pro-link{padding:0}}
-@media(max-width:600px){.hero-actions{gap:8px}.hero-cta,.hero-secondary{flex:1;padding:0 12px;font-size:13px}
-.home-trust{grid-template-columns:1fr;gap:10px}.home-trust div{border:0;border-top:1px solid var(--line);padding:10px 0 0}.home-trust div:first-child{padding-top:0}
-.home-grid{grid-template-columns:1fr}.home-card{min-height:185px}.home-section-head{align-items:flex-start;flex-direction:column}
-.home-privacy{grid-template-columns:auto minmax(0,1fr)}.home-privacy>a{grid-column:2}.home-upgrade{align-items:flex-start;flex-direction:column}.home-upgrade>a{width:100%;justify-content:center}}
-@media(prefers-reduced-motion:reduce){.home-card,.hero-cta,.hero-secondary{transition:none}}
-
-.badges .lk{font-style:normal}
-@media (pointer:coarse){.home-pro-link,.home-privacy>a{display:inline-flex;align-items:center;min-height:44px}}
+@media(max-width:980px){.how,.pgrid{grid-template-columns:minmax(0,1fr)}.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pproof{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:860px){.home-trust{grid-template-columns:repeat(2,minmax(0,1fr))}.home-trust div:nth-child(3){border:0;padding-left:0}.hhead{flex-direction:column;align-items:flex-start;gap:8px}.shots{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.shots figure:last-child{display:none}}
+@media(max-width:600px){.hero-actions{gap:8px}.hero-cta,.hero-secondary{flex:1;padding:0 12px;font-size:14px}.fgrid{grid-template-columns:minmax(0,1fr)}.shots{grid-template-columns:minmax(0,1fr)}.shots figure:last-child{display:block}
+ .pnet table,.pnet tbody,.pnet tr,.pnet td{display:block;width:auto!important}.pnet thead{display:none}.pnet tr{border-top:1px solid var(--line);padding:8px 0}.pnet td{border:0;padding:2px 0}.pnet td.no::before{content:"Contains your files: "}
+ .help{padding:18px!important}}
+@media(prefers-reduced-motion:reduce){.tcard,.hero-cta,.hero-secondary{transition:none}}
+@media (pointer:coarse){.pproof a,.fnote a{display:inline-flex;align-items:center;min-height:44px}}
 .seo-about{max-width:760px;margin:40px 0 4px;padding-top:26px;border-top:1px solid var(--line);color:var(--ink)}
 .seo-about h2{font-size:clamp(20px,2.2vw,24px);margin:0 0 10px}.seo-about h3{font-size:16px;margin:20px 0 6px}
 .seo-about p,.seo-about li{line-height:1.6}.seo-about ol{padding-left:22px}.seo-about details{border-bottom:1px solid var(--line);padding:10px 0}
@@ -542,24 +597,23 @@ window.fuTrack = function (name, params) {
 <header class="hero"><div class="top">
 <div class="heroin">
 <div>
-<div class="brand"><div class="logo"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00463c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2.2" fill="#ff6f59" stroke="none"/></svg></div><span>Fileutilo</span></div>
-<p class="eyebrow">THE PRIVATE WORKSPACE FOR YOUR FILES</p>
-<h1>Less file busywork.<br><em>More work, done.</em></h1>
-<p>One clean workspace for PDFs, documents, images and data. Convert, organize, compare and optimize with <b class="toolcount" data-suffix=" practical tools">27 practical tools</b> — right in your browser.</p>
-<div class="hero-actions"><a class="hero-cta" href="/">Explore all tools <span aria-hidden="true">→</span></a><a class="hero-secondary" href="/pricing">See Fileutilo Pro</a></div>
-<div class="badges"><span><i class="lk" aria-hidden="true">🔒</i> Files never leave your device</span><span>Start free</span><span class="toolcount" data-suffix=" useful tools">27 useful tools</span></div>
+<div class="brand"><div class="logo"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2.2" fill="#ff6f59" stroke="none"/></svg></div><span class="bname">Fileutilo</span><span class="pbadge">Private by design</span></div>
+<h1>Your files. Your device.<br><em>Your control.</em></h1>
+<p>One simple workspace for PDFs, documents, images and data. Get work done without sending your files to a server.</p>
+<div class="hero-actions"><a class="hero-cta" href="/#tools">Explore tools <span aria-hidden="true">→</span></a><a class="hero-secondary" href="/#how">See how it works</a></div>
+<ul class="ticks"><li>No installation</li><li>Files processed in your browser</li><li><span class="toolcount" data-suffix=" useful tools">27 useful tools</span></li><li>Free to start</li></ul>
 </div>
 <div class="scene" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 420 240">
 <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e3eee8"/></linearGradient>
 <filter id="ds" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#00140f" flood-opacity=".45"/></filter></defs>
-<ellipse cx="215" cy="226" rx="190" ry="12" fill="#00342c"/>
+<ellipse class="s-floor" cx="215" cy="226" rx="190" ry="12"/>
 <g class="f1" filter="url(#ds)"><rect x="24" y="40" width="120" height="156" rx="12" fill="url(#pg)"/><path d="M118 40h14l12 12v0h-14a12 12 0 0 1-12-12z" fill="#c9dbd2"/>
 <rect x="40" y="62" width="44" height="16" rx="4" fill="#2b6cd6"/><text x="62" y="74" font-family="Inter" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">DOCX</text>
 <g fill="#b9cdc4"><rect x="40" y="92" width="88" height="6" rx="3"/><rect x="40" y="106" width="72" height="6" rx="3"/><rect x="40" y="120" width="82" height="6" rx="3"/><rect x="40" y="134" width="60" height="6" rx="3"/></g>
-<rect x="40" y="154" width="88" height="28" rx="6" fill="#e6f5c8"/></g>
+<rect class="s-tint" x="40" y="154" width="88" height="28" rx="6"/></g>
 <g class="f2" filter="url(#ds)"><rect x="150" y="20" width="128" height="176" rx="12" fill="#0e1d18"/>
 <g font-family="JetBrains Mono,monospace" font-size="11"><text x="164" y="46" fill="#e5a6f2">{</text><text x="176" y="64" fill="#e5a6f2">"id"<tspan fill="#dce9e2">: </tspan><tspan fill="#ffb27a">1042</tspan></text><text x="176" y="82" fill="#e5a6f2">"ok"<tspan fill="#dce9e2">: </tspan><tspan fill="#8fb8ff">true</tspan></text><text x="176" y="100" fill="#e5a6f2">"tags"<tspan fill="#dce9e2">: [</tspan></text><text x="188" y="118" fill="#9be2a8">"new"</text><text x="176" y="136" fill="#dce9e2">]</text><text x="164" y="154" fill="#e5a6f2">}</text></g>
-<rect x="164" y="166" width="100" height="18" rx="9" fill="#24413a"/><text x="214" y="179" font-family="Inter" font-size="10" font-weight="600" fill="#c9ec8a" text-anchor="middle">✓ valid JSON</text></g>
+<rect x="164" y="166" width="100" height="18" rx="9" fill="#24413a"/><text class="s-ok" x="214" y="179" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle">✓ valid JSON</text></g>
 <g class="f3" filter="url(#ds)"><rect x="284" y="52" width="122" height="144" rx="12" fill="url(#pg)"/>
 <rect x="296" y="66" width="98" height="14" rx="3" fill="#ffd6cd"/><rect x="300" y="70" width="60" height="6" rx="3" fill="#ff8a76"/>
 <rect x="296" y="86" width="98" height="14" rx="3" fill="#d4f1c1"/><rect x="300" y="90" width="72" height="6" rx="3" fill="#62b77a"/>
@@ -576,39 +630,112 @@ window.fuTrack = function (name, params) {
 
 <!-- ============ CONVERTER ============ -->
 <section id="home" class="home-page">
-  <div class="home-intro">
-    <div><span class="home-kicker">YOUR FILE WORKSPACE</span>
-      <h2>Everything you need to work with files. Nothing you don't.</h2>
-      <p>Skip the downloads, confusing interfaces and repetitive manual steps. Choose a tool, add your file and get straight to the result.</p>
-    </div><a class="home-pro-link" href="/pricing">Explore Pro <span aria-hidden="true">→</span></a>
-  </div>
   <div class="home-trust">
-    <div><b class="toolcount-n">27</b><span>purpose-built tools</span></div>
-    <div><b>In-browser</b><span>file processing</span></div>
-    <div><b>Free to start</b><span>upgrade when you need more</span></div>
+    <div><b class="toolcount-n">27</b><span>tools in one workspace</span></div>
+    <div><b>0 uploads</b><span>your files stay in your browser</span></div>
+    <div><b>No install</b><span>works on phone and computer</span></div>
+    <div><b>Free to start</b><span>Pro when you need more</span></div>
   </div>
-  <div class="home-section-head"><div><span class="home-kicker">PICK UP WHERE YOU NEED</span><h3>Explore the toolkit</h3></div><span class="home-small">Choose a workflow to get started</span></div>
-  <div class="home-grid">
-    <a class="home-card home-card-feature" href="/pdf-merge"><span class="home-icon" aria-hidden="true">PDF</span><span class="home-card-label">DOCUMENT WORKFLOWS</span><b>Make PDFs work for you</b><p>Merge, split, organize, compress, protect and convert PDF files.</p><span class="home-card-action">Explore PDF tools →</span></a>
-    <a class="home-card" href="/convert"><span class="home-icon blue" aria-hidden="true">↔</span><span class="home-card-label">FILE CONVERSION</span><b>Convert between formats</b><p>Move between Word, PDF, Excel, PowerPoint and more.</p><span class="home-card-action">Open converter →</span></a>
-    <a class="home-card" href="/img-convert"><span class="home-icon purple" aria-hidden="true">▧</span><span class="home-card-label">IMAGE TOOLS</span><b>Optimize your images</b><p>Resize and convert images for sharing, publishing and everyday use.</p><span class="home-card-action">Explore image tools →</span></a>
-    <a class="home-card" href="/json"><span class="home-icon green" aria-hidden="true">{ }</span><span class="home-card-label">DATA & DEVELOPER</span><b>Clean up structured data</b><p>Format JSON, compare values, query data, clean tables and create hashes.</p><span class="home-card-action">Explore data tools →</span></a>
-    <a class="home-card" href="/word-merge"><span class="home-icon amber" aria-hidden="true">DOC</span><span class="home-card-label">DOCUMENT PRODUCTIVITY</span><b>Work smarter with documents</b><p>Combine spreadsheets, merge Word files, find and replace, inspect metadata.</p><span class="home-card-action">Explore document tools →</span></a>
-    <a class="home-card" href="/diff"><span class="home-icon rose" aria-hidden="true">±</span><span class="home-card-label">COMPARE & ARCHIVE</span><b>Spot changes. Package files.</b><p>Compare text and files, create ZIP archives and inspect archive contents.</p><span class="home-card-action">Explore compare tools →</span></a>
+
+  <div class="hsec" id="tools">
+    <div class="hhead"><div><span class="home-kicker">THE TOOLKIT</span><h2>27 tools. One private workspace.</h2></div>
+      <p>Every tool has its own page — bookmark the ones you use. Tools marked <em class="tfree">No limit</em> are free without daily limits.</p></div>
+<div class="tgroup"><h3>PDF <span>10</span></h3><div class="tgrid"><a class="tcard c-pdf" href="/pdf-merge"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="10" rx="1.5"/><path d="M7 13v2a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-2"/><path d="M12 18v3m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Merge PDF</b><small>Combine PDFs into one, in any order</small></span></a><a class="tcard c-pdf" href="/pdf-split"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M3 12h3m3 0h2m3 0h2m3 0h2" /><path d="M9 6h6M9 8.5h4"/><path d="M9 16h6M9 18.5h4"/></svg></span><span class="ttx"><b>Split PDF</b><small>Extract pages or split by range</small></span></a><a class="tcard c-pdf" href="/pdf-organize"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="8" rx="1.5"/><rect x="3" y="13" width="7" height="8" rx="1.5"/><path d="M17.5 14.5a3.5 3.5 0 1 1-3 1.7"/><path d="M14 13.5v3h3"/></svg></span><span class="ttx"><b>Organize pages</b><small>Reorder, rotate and delete pages</small></span></a><a class="tcard c-pdf" href="/pdf-compress"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 10v4m-2-2 2 2 2-2"/><path d="M12 20v-3m-2 1.5 2-1.5 2 1.5" /><path d="M8 15.5h8"/></svg></span><span class="ttx"><b>Compress PDF</b><small>Shrink PDFs for email and uploads</small></span></a><a class="tcard c-pdf" href="/pdf-protect"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6"/></svg></span><span class="ttx"><b>Protect PDF</b><small>Add an AES-256 password</small></span></a><a class="tcard c-pdf" href="/pdf-unlock"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 7.6-1.7"/><path d="M12 14v3"/></svg></span><span class="ttx"><b>Unlock PDF</b><small>Remove a password you know</small></span></a><a class="tcard c-pdf" href="/pdf-stamp"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 13V9.5a3 3 0 1 1 6 0V13"/><path d="M4 13h16v3H4z"/><path d="M6 20h12"/></svg></span><span class="ttx"><b>Watermark & numbers</b><small>Watermarks and page numbers</small></span></a><a class="tcard c-pdf" href="/pdf-ocr"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 8h8M12 8v9"/></svg></span><span class="ttx"><b>OCR</b><small>Text from scans — Kannada, Hindi & more</small></span></a><a class="tcard c-pdf" href="/pdf-to-img"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2H5a2 2 0 0 0-2 2v9"/><path d="M10 2l4 4h-4z"/><rect x="11" y="11" width="10" height="10" rx="2"/><path d="m11 19 3-3 2.5 2.5 1.5-1.5 3 3"/><circle cx="17.5" cy="14" r="1"/><path d="M3 17h5m-2-2 2 2-2 2"/></svg></span><span class="ttx"><b>PDF to images</b><small>Save pages as JPG or PNG</small></span></a><a class="tcard c-pdf" href="/img-to-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="m3 11 3-3 2.5 2.5L10 9l3 3"/><path d="M18 11h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-5z"/><path d="M8 17h5m-2-2 2 2-2 2" transform="translate(-2 0)"/></svg></span><span class="ttx"><b>Images to PDF</b><small>Photos and scans into one PDF</small></span></a></div></div>
+<div class="tgroup"><h3>Convert & images <span>3</span></h3><div class="tgrid"><a class="tcard c-img" href="/convert"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v6"/><path d="M14 3l5 5v3"/><path d="M14 3v5h5"/><path d="M5 15h14m-3-3 3 3-3 3"/><path d="M19 21H5m3-3-3 3 3 3" transform="translate(0 -3)"/></svg></span><span class="ttx"><b>Document converter</b><small>Word, PDF, Excel, PowerPoint, ODT, RTF and more</small></span></a><a class="tcard c-img" href="/img-convert"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><circle cx="8.5" cy="8" r="1.5"/><path d="m3 15 5-5 4 4 2-2 5 5"/><path d="M8 21h8m-2-2 2 2-2 2" transform="translate(0 -1)"/></svg></span><span class="ttx"><b>Image converter</b><small>HEIC, WEBP, AVIF, PNG, JPG, ICO…</small></span></a><a class="tcard c-img" href="/img-resize"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="12" height="12" rx="2"/><path d="M14 3h7v7"/><path d="m21 3-7 7"/><path d="m3 18 4-4 4 4"/></svg></span><span class="ttx"><b>Resize & compress</b><small>Fit 20 KB / 50 KB form limits</small></span></a></div></div>
+<div class="tgroup"><h3>Documents <span>5</span></h3><div class="tgrid"><a class="tcard c-doc" href="/word-merge"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h9l4 4v6"/><path d="M6.5 8 8 13l1.5-4 1.5 4L12.5 8"/><path d="M4 3v14a2 2 0 0 0 2 2h4"/><path d="M14 17h7m-3-3 3 3-3 3"/></svg></span><span class="ttx"><b>Merge Word</b><small>Join .docx files, keep formatting</small></span></a><a class="tcard c-doc" href="/excel-combine"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M3 7.5h12M7.5 3v12"/><path d="M9 21h10a2 2 0 0 0 2-2V9"/><path d="M18 6h3"/></svg></span><span class="ttx"><b>Combine Excel</b><small>Merge workbooks and sheets</small></span></a><a class="tcard c-doc" href="/find-replace"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 3 3"/><path d="M14 20h7m-2.5-2.5L21 20l-2.5 2.5"/><path d="M7 9h4"/></svg></span><span class="ttx"><b>Find & replace</b><small>Replace text across many files</small></span></a><a class="tcard c-doc" href="/doc-stats"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="ttx"><b>Word count <em class="tfree">No limit</em></b><small>Words, characters, reading time</small></span></a><a class="tcard c-doc" href="/metadata"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/><path d="m14 14 4 4m0-4-4 4"/></svg></span><span class="ttx"><b>Remove metadata</b><small>Strip author, edit history and GPS</small></span></a></div></div>
+<div class="tgroup"><h3>Data & developer <span>6</span></h3><div class="tgrid"><a class="tcard c-data" href="/json"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/><path d="M10 9h4m-4 3h4m-4 3h2"/></svg></span><span class="ttx"><b>JSON formatter <em class="tfree">No limit</em></b><small>Format, validate and repair</small></span></a><a class="tcard c-data" href="/json-compare"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3H5a2 2 0 0 0-2 2v4l-1 1 1 1v4a2 2 0 0 0 2 2h1"/><path d="M18 3h1a2 2 0 0 1 2 2v4l1 1-1 1v4a2 2 0 0 1-2 2h-1"/><path d="M12 3v18"/><path d="M7.5 9h2m5 0h2m-9.5 4h2m5 0h2"/></svg></span><span class="ttx"><b>JSON compare <em class="tfree">No limit</em></b><small>Differences by structure</small></span></a><a class="tcard c-data" href="/json-query"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/><path d="M8.5 7.5c-.8 0-1 .5-1 1v.6l-.6.4.6.4v.6c0 .5.2 1 1 1m3-4c.8 0 1 .5 1 1v.6l.6.4-.6.4v.6c0 .5-.2 1-1 1"/></svg></span><span class="ttx"><b>JSONPath & schema <em class="tfree">No limit</em></b><small>JSONPath tester, schema generator</small></span></a><a class="tcard c-data" href="/data-convert"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="11" rx="2"/><path d="M3 7.5h18M9 3v11M15 3v11"/><path d="M6 21h12m-3-3 3 3-3 3" transform="translate(0 -2)"/></svg></span><span class="ttx"><b>Data converter <em class="tfree">No limit</em></b><small>CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML</small></span></a><a class="tcard c-data" href="/table-clean"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/><path d="M19 13l.8 2.2L22 16l-2.2.8L19 19l-.8-2.2L16 16l2.2-.8z"/></svg></span><span class="ttx"><b>Table cleaner <em class="tfree">No limit</em></b><small>De-duplicate, trim, sort, filter</small></span></a><a class="tcard c-data" href="/hash"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 21M17 3l-2 18M4 8.5h17M3 15.5h17"/></svg></span><span class="ttx"><b>Checksums & Base64 <em class="tfree">No limit</em></b><small>MD5, SHA-256 checksums and Base64</small></span></a></div></div>
+<div class="tgroup"><h3>Compare & archive <span>3</span></h3><div class="tgrid"><a class="tcard c-arch" href="/diff"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="18" rx="2"/><rect x="13" y="3" width="8" height="18" rx="2"/><path d="M5.5 9h3M17 7.5v3M15.5 9h3"/><path d="M5.5 14h3m7 0h3"/></svg></span><span class="ttx"><b>Compare files <em class="tfree">No limit</em></b><small>Compare text, Word and PDF files</small></span></a><a class="tcard c-arch" href="/zip-create"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></span><span class="ttx"><b>Create ZIP</b><small>Pack files and folders</small></span></a><a class="tcard c-arch" href="/zip-open"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9"/><path d="M3 9 6 3h12l3 6z"/><path d="M12 12v5m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Open ZIP <em class="tfree">No limit</em></b><small>Look inside and extract</small></span></a></div></div>
   </div>
-  <div class="home-privacy">
-    <div class="privacy-mark" aria-hidden="true">⌑</div><div><span class="home-kicker">PRIVACY BY DESIGN</span><h3>Files never leave your device.</h3><p>Fileutilo processes supported files locally in your browser. Your files are not uploaded to Fileutilo servers as part of these browser-based workflows. Account and payment information are handled separately.</p></div>
-    <a href="/privacy">Read our privacy policy →</a>
+
+  <div class="hsec" id="how">
+    <div class="hhead"><div><span class="home-kicker">HOW IT WORKS</span><h2>Three steps. Your file never leaves the tab.</h2></div></div>
+    <div class="how">
+      <ol class="hsteps">
+        <li><b>Pick a tool</b><p>Open any of the 27 tools — no account needed to start.</p></li>
+        <li><b>Add your files</b><p>Drop them in. Your browser reads them from your disk into memory on this page; nothing is sent to us.</p></li>
+        <li><b>Download the result</b><p>The work happens on your device, so it's quick even on a slow connection — and the result is saved straight from the page.</p></li>
+      </ol>
+      <figure class="demo"><div class="bframe"><span></span><span></span><span></span><i>fileutilo.com/img-resize</i></div>
+        <video id="demoVideo" muted loop playsinline preload="none" poster="/media/demo-poster.webp" aria-label="Demo: resizing a photo to under 50 KB in Fileutilo"><source src="/media/demo.webm" type="video/webm"><source src="/media/demo.mp4" type="video/mp4"></video>
+        <figcaption>Real recording: a photo resized to under 50 KB for a form upload.</figcaption></figure>
+    </div>
+    <div class="shots">
+      <figure><img src="/media/shot-merge.webp" width="1200" height="760" loading="lazy" alt="Merge PDF: three PDFs listed in order, ready to combine"><figcaption>Merge PDF</figcaption></figure>
+      <figure><img src="/media/shot-convert.webp" width="1200" height="760" loading="lazy" alt="Document converter with Word, Excel and PDF files queued"><figcaption>Document converter</figcaption></figure>
+      <figure><img src="/media/shot-json.webp" width="1200" height="760" loading="lazy" alt="JSON formatter showing formatted, validated JSON"><figcaption>JSON formatter</figcaption></figure>
+    </div>
   </div>
-  <div class="home-upgrade">
-    <div><span class="home-kicker">WHEN YOUR WORKLOAD GROWS</span><h3>Need more room to get things done?</h3><p>Upgrade to Pro for higher-volume workflows, expanded limits and an ad-free experience.</p></div>
-    <a href="/pricing">Compare plans <span aria-hidden="true">→</span></a>
+
+  <div class="hsec" id="privacy-explained">
+    <div class="hhead"><div><span class="home-kicker">PRIVACY, PRECISELY</span><h2>What stays on your device — and what doesn't</h2></div>
+      <p>“Private” should be checkable. Here is exactly what Fileutilo sends over the network, and what it never does.</p></div>
+    <div class="pgrid">
+      <div class="pstay"><h3><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg> Stays on your device</h3>
+        <ul><li><b>Your files</b> — PDFs, documents, images, spreadsheets, archives</li>
+        <li><b>Their contents and file names</b></li>
+        <li><b>Passwords</b> you type into Protect or Unlock PDF</li>
+        <li><b>The results</b> — saved straight from the page to your downloads</li></ul>
+        <p>This is true for all 27 tools, on every plan, signed in or not.</p></div>
+      <div class="pnet"><h3>What does use the network</h3>
+        <table><thead><tr><th>What</th><th>Why</th><th>Contains your files?</th></tr></thead><tbody>
+        <tr><td>Processing code (PDF engine, Office readers, OCR language data)</td><td>Downloaded from public code libraries (jsDelivr, unpkg, esm.sh) the first time a tool needs it, then cached</td><td class="no">No</td></tr>
+        <tr><td>Your account (email, plan, credits, daily task counts)</td><td>Only if you sign in — stored with Supabase. Task counts record the tool name and file count, never names or contents</td><td class="no">No</td></tr>
+        <tr><td>Payments</td><td>Card and UPI details go to Razorpay; we keep the order ID, amount and status</td><td class="no">No</td></tr>
+        <tr><td>Visit statistics</td><td>Vercel Web Analytics counts page views without cookies; Google Analytics only if enabled, and only after consent in the EEA/UK</td><td class="no">No</td></tr>
+        <tr><td>Ads (Free plan only)</td><td>Google AdSense may show an ad; it sees the page address and your device type, like any website ad</td><td class="no">No</td></tr>
+        </tbody></table></div>
+    </div>
+    <div class="pproof"><div><b>How we check.</b> An automated test runs every tool on files containing a unique marker and inspects every network request the page makes — the marker, the file name and the file bytes must never appear. It runs before every release.</div>
+      <div><b>Check it yourself.</b> Press <kbd>F12</kbd> → <b>Network</b>, then use any tool: you'll see code downloads, but no request carrying your file. Or switch your connection off after the page loads — tools you've used before keep working.</div>
+      <a href="/privacy">Full privacy policy →</a></div>
   </div>
+
+  <div class="hsec" id="formats">
+    <div class="hhead"><div><span class="home-kicker">SUPPORTED FORMATS</span><h2>Open it. Convert it. Clean it.</h2></div></div>
+    <div class="fgrid">
+      <div><h3>Documents</h3><p>Open</p><div class="fchips"><i>DOCX</i><i>DOC</i><i>ODT</i><i>RTF</i><i>PDF</i><i>XLSX</i><i>XLS</i><i>ODS</i><i>CSV</i><i>PPTX</i><i>PPT</i><i>HTML</i><i>TXT</i><i>PS</i></div>
+        <p>Create</p><div class="fchips"><i>PDF</i><i>DOCX</i><i>ODT</i><i>RTF</i><i>DOC</i><i>XLSX</i><i>XLS</i><i>PPTX</i><i>HTML</i><i>TXT</i><i>PS</i></div></div>
+      <div><h3>Images</h3><p>Open</p><div class="fchips"><i>JPG</i><i>PNG</i><i>WEBP</i><i>AVIF</i><i>HEIC</i><i>GIF</i><i>BMP</i><i>TIFF</i><i>ICO</i><i>SVG</i></div>
+        <p>Create</p><div class="fchips"><i>JPG</i><i>PNG</i><i>WEBP</i><i>AVIF</i><i>GIF</i><i>BMP</i><i>TIFF</i><i>ICO</i><i>SVG</i><i>PDF</i></div></div>
+      <div><h3>Data</h3><p>Open and create</p><div class="fchips"><i>JSON</i><i>CSV</i><i>TSV</i><i>XLSX</i><i>XML</i><i>YAML</i><i>Markdown</i><i>HTML table</i></div>
+        <p>Also</p><div class="fchips"><i>JSONPath</i><i>JSON Schema</i><i>MD5</i><i>SHA-256</i><i>Base64</i></div></div>
+      <div><h3>Archives</h3><p>Open</p><div class="fchips"><i>ZIP</i><i>JAR</i><i>EPUB</i><i>APK</i><i>DOCX/XLSX/PPTX</i></div>
+        <p>Create</p><div class="fchips"><i>ZIP</i></div></div>
+    </div>
+    <p class="fnote">Scanned PDFs and photos have no text layer — run <a href="/pdf-ocr">OCR</a> first. Converting complex layouts keeps text, headings, lists and tables; see each tool's page for details.</p>
+  </div>
+
+  <div class="hsec" id="plans">
+    <div class="hhead"><div><span class="home-kicker">FREE AND PRO</span><h2>Free for everyday tasks. Pro for heavy days.</h2></div></div>
+    <div class="ptable" role="region" aria-label="Free and Pro compared" tabindex="0"><table>
+      <thead><tr><th></th><th>Without an account</th><th>Free account</th><th class="pro">Pro</th></tr></thead>
+      <tbody>
+      <tr><td>All 27 tools</td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td class="pro"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td></tr>
+      <tr><td>Tasks a day</td><td>10</td><td>25</td><td class="pro">Unlimited</td></tr>
+      <tr><td>Files per task</td><td>5</td><td>5</td><td class="pro">No limit</td></tr>
+      <tr><td>File size</td><td>Up to 20 MB</td><td>Up to 20 MB</td><td class="pro">No limit</td></tr>
+      <tr><td>OCR pages a day</td><td>5</td><td>5</td><td class="pro">Unlimited</td></tr>
+      <tr><td>JSON, data, diff and other “No limit” tools</td><td>Unlimited</td><td>Unlimited</td><td class="pro">Unlimited</td></tr>
+      <tr><td>Ads</td><td>Ad-supported</td><td>Ad-supported</td><td class="pro">No ads</td></tr>
+      <tr><td>Files processed on your device</td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td class="pro"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td></tr>
+      <tr><td>Price</td><td>₹0</td><td>₹0</td><td class="pro">₹149/month · ₹999/year · ₹2,999 lifetime</td></tr>
+      </tbody></table></div>
+    <div class="pcta"><span>Need a few extra tasks? <b>Credits</b> start at ₹49 for 50 and never expire.</span><a href="/pricing">See plans <span aria-hidden="true">→</span></a></div>
+  </div>
+
+  <div class="hsec help" id="support">
+    <div><span class="home-kicker">HELP</span><h2>Stuck, or found a bug? Talk to a person.</h2>
+      <p>Email <a class="cmail" href="mailto:support@fileutilo.com">support@fileutilo.com</a> — tell us the tool and what happened. Please don't attach confidential files; a description or a sample is enough.</p></div>
+    <div class="hbtns"><a class="hbtn" href="mailto:support@fileutilo.com?subject=Fileutilo%20help">Email support</a><a class="hbtn ghost" href="mailto:support@fileutilo.com?subject=Bug%20report&body=Tool%3A%0ABrowser%20and%20device%3A%0AWhat%20happened%3A%0A">Report a problem</a></div>
+  </div>
+
   <div class="home-faq">
-    <span class="home-kicker">GOOD TO KNOW</span><h3>Simple by design</h3>
-    <details><summary>Do I need to install anything?</summary><p>No installation is required. Open Fileutilo in a modern browser and choose the tool you need.</p></details>
-    <details><summary>Are my files uploaded?</summary><p>Supported file processing runs in your browser on your device. Your account may store plan, usage and payment records, but not the contents of the files you process.</p></details>
-    <details><summary>Can I use Fileutilo for free?</summary><p>Yes. The Free plan gives access to the toolkit with daily usage and file limits. Some data tools are available without task limits. See the pricing page for the current plan details.</p></details>
+    <span class="home-kicker">GOOD TO KNOW</span><h3>Questions people ask</h3>
+    <details><summary>Do I need to install anything?</summary><p>No. Fileutilo runs in any modern browser on Windows, Mac, Linux, Android and iPhone.</p></details>
+    <details><summary>Are my files uploaded?</summary><p>No. All 27 tools process files inside your browser. Fileutilo's servers only store account, usage-count and payment records if you sign in or buy something — never your files, their names or their contents.</p></details>
+    <details><summary>Why does a tool download something the first time?</summary><p>Some tools need processing code — for example the PDF engine or OCR language data. It's fetched from a public code library once and cached by your browser. Those downloads don't contain anything from your files.</p></details>
+    <details><summary>Can I use Fileutilo for free?</summary><p>Yes: 10 tasks a day without an account, 25 with a free account, and the data tools have no daily limit. Pro removes all limits and ads.</p></details>
+    <details><summary>Does it work offline?</summary><p>Once a tool's code has been loaded, it keeps working if your connection drops — another sign the work happens on your device.</p></details>
   </div>
 </section>
 <section id="convert">
@@ -1662,7 +1789,7 @@ function syncUrl(id){if(location.protocol==='file:')return;const want=routeUrl(i
   if(location.pathname!==want||hr)try{history.replaceState(history.state,'',want+location.search+(hr?'':location.hash))}catch(e){}}
 function seoApply(id){document.querySelectorAll('.seo-about').forEach(a=>a.hidden=a.dataset.route!==id);
   const SEO=seoData(),m=SEO&&(SEO[id]||SEO.home);if(!m)return;document.title=m.t;
-  const h1=document.querySelector('.hero h1');if(h1)h1.innerHTML=m.h?esc(m.h)+'<br><em>Free &amp; private.</em>':'Less file busywork.<br><em>More work, done.</em>';
+  const h1=document.querySelector('.hero h1');if(h1)h1.innerHTML=m.h?esc(m.h)+'<br><em>Free &amp; private.</em>':'Your files. Your device.<br><em>Your control.</em>';
   const set=(q,a,v)=>{const e=document.querySelector(q);if(e)e.setAttribute(a,v)};
   set('meta[name="description"]','content',m.d);set('link[rel="canonical"]','href','https://www.fileutilo.com'+routeUrl(id))}
 function go(id){firstRoute=false;if(location.protocol==='file:'){location.hash='#'+id;return}
@@ -1672,10 +1799,14 @@ function go(id){firstRoute=false;if(location.protocol==='file:'){location.hash='
   if(innerWidth<900&&!$('subnav').hidden)$('subnav').scrollIntoView({block:'nearest'})}
 document.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
   const a=e.target.closest&&e.target.closest('a[href]');if(!a||(a.target&&a.target!=='_self')||a.hasAttribute('download'))return;
-  const raw=a.getAttribute('href');const m=/^\/([a-z0-9-]*)\/?$/.exec(raw);if(!m)return;const id=m[1]||'home';if(!isRoute(id))return;
+  const raw=a.getAttribute('href');const sec=/^\/#([a-z-]+)$/.exec(raw);
+  if(sec&&!isRoute(sec[1])&&location.protocol!=='file:'){const el=document.getElementById(sec[1]);if(!el)return;e.preventDefault();if(location.pathname!=='/'||curRoute())go('home');el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});return}
+  const m=/^\/([a-z0-9-]*)\/?$/.exec(raw);if(!m)return;const id=m[1]||'home';if(!isRoute(id))return;
   e.preventDefault();go(id)});
 addEventListener('popstate',()=>{if(!hashRoute())route()});
 const TOOL_COUNT=Object.keys(TOOL_CAT).filter(t=>t!=='home').length;
+(()=>{const v=document.getElementById('demoVideo');if(!v||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){if(v)v.controls=true;return}
+  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(v.preload==='none')v.preload='auto';v.play().catch(()=>{v.controls=true})}else v.pause()}),{threshold:.35}).observe(v)})();
 document.querySelectorAll('.toolcount').forEach(e=>e.textContent=TOOL_COUNT+(e.dataset.suffix||' tools'));document.querySelectorAll('.toolcount-n').forEach(e=>e.textContent=TOOL_COUNT);
 const icon=(p,s=22,c='currentColor')=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 $('catnav').innerHTML=CATS.map(c=>`<a href="${routeUrl(c.tools[0])}" id="t-cat-${c.id}" data-cat="${c.id}"><span class="ic">${icon(c.ic,22,'#e6f5c8')}</span><span><b>${c.name}</b><small>${c.sub}</small></span></a>`).join('');
