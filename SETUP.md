@@ -156,7 +156,7 @@ automatically. The company name on Razorpay's checkout defaults to "Kalaburagi L
 
 The website is the **`site-navy`** or **`site-green`** folder (pick one colour theme). It has one page per tool at a
 task-named address (`merge-pdf.html` becomes `www.fileutilo.com/merge-pdf`), eight task pages such as `/word-to-pdf`,
-plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
+plus `config.js`, `sw.js` (offline copy), icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
 app loads when you move between tools) and `media` (screenshots and the demo video). All pages share one settings file.
 
 1. Open `site-navy\config.js` (or `site-green\config.js`) in **Notepad** and check the settings:
@@ -170,9 +170,9 @@ app loads when you move between tools) and `media` (screenshots and the demo vid
    Save.
 2. **GitHub** — GitHub's web upload takes at most 100 files at a time, so upload in two rounds:
    - **Round 1:** repo → **Add file → Upload files** → open your site folder, select **all the files** at its top level
-     (not the two folders) → drag them in → **Commit changes**. About 53 files.
+     (not the two folders) → drag them in → **Commit changes**. About 63 files.
    - **Round 2:** **Add file → Upload files** again → drag the **`about`** and **`media`** folders in together →
-     **Commit changes**. About 72 files; GitHub keeps the folder names.
+     **Commit changes**. About 84 files; GitHub keeps the folder names.
    - The hidden `.nojekyll` file is part of round 1. If Windows hides it, turn on **View → Show → Hidden items**.
 3. **Remove the earlier tool pages** (they used the old addresses). In GitHub, open each and delete it
    (… menu → **Delete file**), or delete them all at once with GitHub Desktop:
@@ -185,6 +185,9 @@ app loads when you move between tools) and `media` (screenshots and the demo vid
    - Open https://www.fileutilo.com/pdf-merge — it should jump to `/merge-pdf`.
    - Under **Settings → Domains**, `fileutilo.com` should redirect to `www.fileutilo.com`.
    - **Analytics** tab → **Enable** turns on the visitor statistics.
+   - **Install and offline:** in Chrome, the address bar shows an install icon on www.fileutilo.com. After one visit,
+     F12 → **Application → Service workers** shows `sw.js` as *activated*. Each upload replaces the offline copy
+     on visitors' next visit, so there's nothing to clear by hand.
 
 **Later changes:** to change only a setting, edit `config.js` and upload just that file. If you edit page text or
 code in `web\index.html` or `scripts\seo_content.py`, rebuild, then upload the site folder again:
@@ -249,15 +252,19 @@ If something fails:
 2. It shows a TXT record. Namecheap → **Domain List → Manage → Advanced DNS → Add new record**:
    type **TXT**, host `@`, value = the `google-site-verification=…` text → save. Back in Search Console, **Verify**
    (DNS can take a few minutes to an hour).
-3. **Sitemaps** → enter `sitemap.xml` → **Submit**. It lists all 40 pages: home, 27 tools, 8 task pages and 4 info pages.
+3. **Sitemaps** → enter `sitemap.xml` → **Submit**. It lists all 48 pages: home, 31 tools, 12 task pages and 4 info pages.
 4. **URL inspection** → paste each of your most important pages and click **Request indexing** (about 10 a day are
    allowed), for example `/merge-pdf`, `/compress-pdf`, `/word-to-pdf`, `/pdf-to-word`, `/image-compressor`,
-   `/json-formatter`, `/file-comparison`, `/excel-to-csv`, `/zip-extractor`, `/heic-to-jpg`.
+   `/json-formatter`, `/file-comparison`, `/excel-to-csv`, `/zip-extractor`, `/heic-to-jpg`. After the November 2026
+   update, request the new pages too: `/sign-pdf`, `/edit-pdf`, `/redact-pdf`, `/mask-aadhaar`,
+   `/exam-photo-resizer`, `/signature-resizer`, `/compress-pdf-to-200kb`, `/fill-pdf-form`.
 5. After 2–4 weeks, check **Performance → Search results** to see which searches show your pages, and
    **Pages** for any that weren't indexed and why. **Experience → Core Web Vitals** shows real-phone loading speed
    once there is enough traffic.
 
 ## Good to know
+- **On-device extras:** favourites and recent activity live in the visitor's browser (`localStorage`); clearing
+  site data removes them. Nothing about them reaches Supabase.
 - **Free limits:**
   - 25 tasks a day, 5 files per task, 20 MB per file and 5 OCR pages a day, resetting at midnight IST.
   - Signed-out visitors get 10 tasks a day.
