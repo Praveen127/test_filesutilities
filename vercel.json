@@ -33,6 +33,21 @@
       "permanent": true
     },
     {
+      "source": "/pdf-sign",
+      "destination": "/sign-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-edit",
+      "destination": "/edit-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-redact",
+      "destination": "/redact-pdf",
+      "permanent": true
+    },
+    {
       "source": "/pdf-protect",
       "destination": "/protect-pdf",
       "permanent": true
@@ -70,6 +85,11 @@
     {
       "source": "/img-resize",
       "destination": "/image-compressor",
+      "permanent": true
+    },
+    {
+      "source": "/exam-photo",
+      "destination": "/exam-photo-resizer",
       "permanent": true
     },
     {
@@ -145,6 +165,19 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
         }
       ]
     },
