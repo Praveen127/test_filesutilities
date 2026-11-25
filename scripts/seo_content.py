@@ -9,9 +9,9 @@ def tool(title, desc, h1, intro, steps, faqs, free=False):
 
 T = {
 "home": {"title": "Fileutilo — Free Online PDF, Image & Document Tools (Private)",
-  "description": "27 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.",
+  "description": "31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.",
   "h1": "Free, private file tools that run in your browser",
-  "intro": "Fileutilo brings 27 everyday file tools together in one place: convert documents, merge and split PDFs, compress images for form uploads, clean up spreadsheets, format JSON and more. " + PRIV + " That makes it fast, and safe for personal and work documents.",
+  "intro": "Fileutilo brings 31 everyday file tools together in one place: convert documents, merge and split PDFs, compress images for form uploads, clean up spreadsheets, format JSON and more. " + PRIV + " That makes it fast, and safe for personal and work documents.",
   "steps": [], "faqs": [
     ["Is Fileutilo free?", "Yes. Every tool can be used free of charge. A free account gives you 25 tasks a day; data tools like the JSON formatter and file diff have no daily limit. Pro removes Fileutilo's daily limits, file caps and ads."],
     ["Are my files uploaded?", "No. " + PRIV + " Only your account details and payment records are stored, never your files."],
@@ -213,6 +213,38 @@ T = {
   [["Can it open password-protected ZIPs?", "Not at the moment; it opens standard, unencrypted ZIP archives."],
    ["Do I need to install anything?", "No. It runs in your browser on phones and computers alike."],
    ["Can I look inside a Word file or an e-book?", "Yes. DOCX, XLSX, PPTX and EPUB files are ZIP archives inside — open one to see and extract its images and parts."]], free=True),
+"pdf-sign": tool("Sign PDF Online — Add Signature, Initials & Date, Free | Fileutilo",
+  "Sign a PDF in your browser: draw, type or upload your signature, add initials, the date or your name, and place them on any page. The PDF is never uploaded.",
+  "Sign a PDF",
+  "Add your signature to a PDF without printing it. Draw it with a mouse or finger, type your name in a handwriting style, or upload a photo of your signature on paper — the background is removed for you. Then click where it goes, resize it, and add the date, your initials or any text. " + PRIV,
+  ["Drop the PDF you need to sign.", "Click Add signature, then draw, type or upload it — tick Remember to keep it in this browser for next time.", "Click the page where it goes, drag to adjust, add the date or initials, then Save signed PDF."],
+  [["Is this a legally valid signature?", "It adds an image of your signature, like signing a printout and scanning it. That is accepted for many everyday documents. Where a law or organisation asks for a certificate-based digital signature (DSC) or Aadhaar eSign, you need that service instead."],
+   ["Where is my signature saved?", "Only if you tick Remember, and then only in this browser on this device. It is never sent to Fileutilo. You can forget a saved signature at any time."],
+   ["Can I sign every page at once?", "Yes. Place your initials or signature once, select it and click Copy to every page."]]),
+"pdf-edit": tool("Edit PDF & Fill PDF Forms Online — Add Text, Ticks, Dates | Fileutilo",
+  "Fill in PDF forms and type anywhere on a PDF: add text, ticks, crosses, dates and white-out. Works in your browser — the PDF is never uploaded.",
+  "Edit and fill in a PDF",
+  "Fill in a PDF form without printing it. If the PDF has fillable fields, they are listed beside the page so you can type your answers, tick boxes and choose options. For any other PDF, click on the page to add text, a tick or cross, or today’s date, and use white-out to cover a mistake. " + PRIV,
+  ["Drop the PDF you want to fill in.", "Type into the form fields on the right, or click Add text, Tick or Date and click on the page.", "Drag items into place and click Save PDF."],
+  [["Can I change the existing text in a PDF?", "Not directly — PDFs don’t store text like a Word file. Cover the old words with white-out and type the new text on top. To remove private text for good, use Redact instead."],
+   ["Can I type in Hindi, Kannada or other Indian scripts?", "Yes, with Add text on the page. Standard PDF form fields can only show Latin letters here, so for other scripts leave the field empty and type on the page instead."],
+   ["What does Flatten do?", "It turns your answers into part of the page, so they can’t be changed in a PDF reader. Leave it off if someone else still needs to edit the form."]]),
+"pdf-redact": tool("Redact PDF & Mask Aadhaar Number Online — Free, Private | Fileutilo",
+  "Black out names, numbers and other private details in a PDF or photo for good, and mask Aadhaar numbers automatically (XXXX XXXX 1234). Nothing is uploaded.",
+  "Redact a PDF and mask Aadhaar numbers",
+  "Hide private details before you share a document. Drag boxes over anything, search for a name or number to black it out everywhere, or let Fileutilo find Aadhaar numbers and mask the first 8 digits — the masked format UIDAI recommends sharing. Pages you redact are rebuilt as images, so the hidden text is really gone, not just covered. " + PRIV,
+  ["Drop a PDF, or a photo or scan of a document.", "Drag boxes over private details, search for words, or click Find Aadhaar numbers.", "Check every page, then click Save redacted file."],
+  [["Is the hidden text really removed?", "Yes. Each page with a box is rebuilt as an image with the box burned in, so the text underneath can’t be copied, searched or uncovered. Pages without boxes are kept as they are, and document details such as author and title are removed."],
+   ["How does Aadhaar masking work?", "Fileutilo looks for 12-digit numbers in the Aadhaar format, checks them with the Aadhaar check digit, and covers the first 8 digits so only the last 4 show. For scans and photos it reads the page with OCR first. Always check the result — OCR can miss blurry numbers."],
+   ["What about the QR code on an Aadhaar card?", "The QR code can contain your details. In browsers that can read QR codes, Fileutilo covers it for you; otherwise drag a box over it."]]),
+"exam-photo": tool("Exam Photo & Signature Resizer — 20 KB, 50 KB, 200×230 px | Fileutilo",
+  "Resize your photo, signature and thumb impression to the exact pixels and KB range for IBPS, SBI, SSC, UPSC, NEET and JEE forms. Free, with nothing uploaded.",
+  "Resize your exam photo and signature",
+  "Online application forms reject a photo or signature that’s the wrong size. Choose your exam and document, crop your picture, and Fileutilo makes a JPG with the exact pixels and a file size inside the allowed KB range — for example 200 × 230 px and 20–50 KB for a bank exam photo. It can also clean up the paper behind a signature and add your name and date below a photo. " + PRIV,
+  ["Choose your exam and the document — photo, signature, thumb impression or declaration.", "Drop your picture and drag the frame to crop it.", "Click Make my file and download — the size check shows the pixels and KB."],
+  [["Which exams are included?", "Bank exams (IBPS, SBI, RBI, RRB), SSC, UPSC, NEET UG and JEE Main, plus passport-size photos and a custom size. The sizes follow the 2025–26 notifications. Rules change, so always check your own notification."],
+   ["My file is under the minimum KB — what happens?", "Very small pictures can come out below the minimum. Fileutilo then adds empty padding to the file so it meets the minimum size; the picture itself doesn’t change."],
+   ["Is it really free?", "Yes. The exam photo and signature resizer has no daily limit, with or without an account."]], free=True)
 }
 
 PAGES = {
@@ -230,7 +262,8 @@ SLUG = {"convert": "document-converter", "pdf-merge": "merge-pdf", "pdf-split": 
   "img-resize": "image-compressor", "json": "json-formatter", "json-compare": "json-compare", "json-query": "jsonpath-tester",
   "data-convert": "data-converter", "table-clean": "csv-cleaner", "hash": "checksum-calculator", "word-merge": "merge-word",
   "excel-combine": "combine-excel", "find-replace": "find-and-replace", "doc-stats": "word-counter", "metadata": "remove-metadata",
-  "diff": "file-comparison", "zip-create": "create-zip", "zip-open": "zip-extractor"}
+  "diff": "file-comparison", "zip-create": "create-zip", "zip-open": "zip-extractor",
+  "pdf-sign": "sign-pdf", "pdf-edit": "edit-pdf", "pdf-redact": "redact-pdf", "exam-photo": "exam-photo-resizer"}
 
 # ---------- supported formats (open → create) ----------
 FORMATS = {
@@ -249,6 +282,8 @@ FORMATS = {
  "doc-stats": ("DOCX, PDF, PPTX, ODT, RTF, TXT, pasted text", "On-screen statistics"),
  "metadata": ("DOCX, XLSX, PPTX, ODT, ODS, ODP, PDF, JPG, PNG, WEBP", "The same files without hidden details"),
  "diff": ("TXT, CSV, JSON, code, DOCX, PDF, pasted text", "Side-by-side or unified comparison"),
+ "pdf-sign": ("PDF", "PDF"), "pdf-edit": ("PDF, including fillable forms", "PDF"), "pdf-redact": ("PDF, JPG, PNG, WEBP, HEIC", "PDF, or the same image format (WEBP as PNG)"),
+ "exam-photo": ("JPG, PNG, WEBP, HEIC, BMP", "JPG"),
  "zip-create": ("Any files or a folder", "ZIP"), "zip-open": ("ZIP, JAR, EPUB, APK, DOCX/XLSX/PPTX", "The files inside"),
 }
 # ---------- honest, tool-specific limitations ----------
@@ -280,6 +315,10 @@ LIMITS = {
  "diff": ["Word and PDF files are compared as text, so formatting-only changes don't show."],
  "zip-create": ["Photos, videos and other already-compressed files barely shrink inside a ZIP."],
  "zip-open": ["Password-protected and RAR/7z archives are not supported."],
+ "pdf-sign": ["This adds an image of your signature — it is not a certificate-based digital signature (DSC) or Aadhaar eSign.", "Password-protected PDFs must be unlocked first."],
+ "pdf-edit": ["Existing text can’t be edited in place; cover it with white-out and type over it.", "Form fields can only show Latin letters here — type other scripts on the page with Add text.", "Very complex Adobe-only (XFA) forms may not show every field."],
+ "pdf-redact": ["Redacted pages become images, so their text is no longer selectable and the file can get bigger.", "Automatic Aadhaar detection can miss blurry or handwritten numbers — always check every page.", "Scanned pages and photos need OCR, which downloads about 4 MB the first time."],
+ "exam-photo": ["Sizes follow the 2025–26 notifications; always check your own exam notification before uploading.", "Some forms (for example SSC CGL and UPSC) now take a live photo with your webcam instead of an uploaded one."]
 }
 RELATED = {
  "convert": ["pdf-compress", "pdf-merge", "pdf-ocr", "word-merge"], "pdf-merge": ["pdf-split", "pdf-organize", "pdf-compress", "img-to-pdf"],
@@ -296,6 +335,8 @@ RELATED = {
  "doc-stats": ["pdf-ocr", "find-replace", "diff", "convert"], "metadata": ["pdf-protect", "img-convert", "pdf-stamp", "zip-create"],
  "diff": ["json-compare", "doc-stats", "find-replace", "table-clean"], "zip-create": ["zip-open", "hash", "metadata", "pdf-merge"],
  "zip-open": ["zip-create", "hash", "convert", "doc-stats"],
+ "pdf-sign": ["pdf-edit", "pdf-protect", "pdf-merge", "pdf-redact"], "pdf-edit": ["pdf-sign", "pdf-redact", "pdf-merge", "pdf-compress"],
+ "pdf-redact": ["metadata", "pdf-protect", "pdf-edit", "pdf-compress"], "exam-photo": ["img-resize", "pdf-compress", "img-to-pdf", "img-convert"],
 }
 SHOT_ALT = {
  "convert": "Document converter with a PowerPoint file, a text file and a web page converted to PDF, with a preview",
@@ -325,6 +366,10 @@ SHOT_ALT = {
  "diff": "File comparison showing two versions side by side with changes highlighted",
  "zip-create": "Create ZIP with three files added and the ZIP file ready to download",
  "zip-open": "ZIP extractor listing the files and folders inside an archive",
+ "pdf-sign": "Sign PDF with a handwritten signature and the date placed on a letter",
+ "pdf-edit": "Edit and fill PDF with text, a tick and the date typed onto a form",
+ "pdf-redact": "Redact PDF with black boxes over an Aadhaar number, leaving only the last 4 digits",
+ "exam-photo": "Exam photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
 }
 
 # ---------- a few task pages people search for, each with its own preset ----------
@@ -396,6 +441,42 @@ VARIANTS = {
   "steps": ["Drop your .webp images into the converter — JPG is already selected.", "Pick a background colour for transparent areas, or choose PNG to keep transparency.", "Click Convert and download the images."],
   "faqs": [["What happens to transparent areas?", "JPG has no transparency, so transparent areas are filled with the background colour you choose (white by default). Choose PNG to keep them."], ["Can I convert many images at once?", "Yes. Add several and download them together as a ZIP."]],
   "formats": ("WEBP (and other image formats)", "JPG (also PNG, AVIF, GIF and more)"), "limits_from": "img-convert", "related": ["heic-to-jpg", "img-resize", "img-to-pdf", "metadata"]},
+"compress-pdf-to-200kb": {"tool": "pdf-compress", "preset": {"target_kb": 200},
+  "title": "Compress PDF to 200 KB (or 100 KB, 500 KB) — Online, Free | Fileutilo",
+  "description": "Get a PDF under 200 KB, 100 KB or any size limit for an upload form. Keeps text when it can, and finds the best quality that fits. Nothing is uploaded.",
+  "h1": "Compress a PDF to 200 KB", "shot": "pdf-compress",
+  "intro": "Government and exam portals often accept PDFs only up to 200 KB, 300 KB or 1 MB. Type the limit and Fileutilo first tries lossless clean-up that keeps the text; if that isn’t enough, it turns pages into images at the highest quality that still fits. " + PRIV,
+  "steps": ["Drop your PDF — “Under a size limit” is already chosen with 200 KB.", "Change the limit if your form asks for something else (100 KB, 500 KB, 1 MB…).", "Click Compress and download the PDF that fits."],
+  "faqs": [["Will the text still be selectable?", "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."],
+           ["What if it can’t get under the limit?", "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF into parts with Split PDF and compress each part."]],
+  "formats": ("PDF", "PDF"), "limits_from": "pdf-compress", "related": ["pdf-split", "img-resize", "exam-photo", "pdf-merge"]},
+"fill-pdf-form": {"tool": "pdf-edit", "preset": {},
+  "title": "Fill PDF Form Online — Type Into Fillable PDFs, Free | Fileutilo",
+  "description": "Fill in a PDF form in your browser: type into fillable fields, tick boxes, pick options, or type anywhere on a non-fillable form. The PDF is never uploaded.",
+  "h1": "Fill in a PDF form", "shot": "pdf-edit",
+  "intro": "Application forms, bank forms and declarations often come as PDFs. Fileutilo lists a form’s fillable fields beside the page so you can type your answers; if the PDF isn’t fillable, click on the page to type, tick and date it instead. " + PRIV,
+  "steps": ["Drop the PDF form.", "Type your answers into the fields on the right — or click Add text and click on the page for forms without fields.", "Optionally tick Flatten so the answers can’t be changed, then Save PDF."],
+  "faqs": [["How do I know if my PDF is fillable?", "When you open it, Fileutilo lists its form fields. If it says the PDF has no fillable fields, use Add text, Tick and Date on the page."],
+           ["Can I sign the form too?", "Yes — save it, then open it in Sign PDF to add your signature."]],
+  "formats": ("PDF with or without form fields", "PDF"), "limits_from": "pdf-edit", "related": ["pdf-sign", "pdf-redact", "pdf-merge", "compress-pdf-to-200kb"]},
+"mask-aadhaar": {"tool": "pdf-redact", "preset": {"aadhaar": True},
+  "title": "Masked Aadhaar — Hide Your Aadhaar Number Online, Free | Fileutilo",
+  "description": "Mask the first 8 digits of an Aadhaar number in a PDF or photo before you share it. Finds the number automatically and removes it for good. Nothing is uploaded.",
+  "h1": "Mask your Aadhaar number", "shot": "pdf-redact",
+  "intro": "Hotels, landlords and offices often ask for a copy of your Aadhaar. A masked copy shows only the last 4 digits, which is the format UIDAI recommends sharing. Drop your Aadhaar PDF or a photo of the card, click Find Aadhaar numbers, and Fileutilo covers the first 8 digits — and the QR code where your browser can read it. " + PRIV,
+  "steps": ["Drop your Aadhaar PDF, or a photo or scan of the card.", "Click Find Aadhaar numbers — the first 8 digits are covered on every page.", "Check the result, drag a box over anything else you want hidden, and save."],
+  "faqs": [["Is a masked Aadhaar valid as ID?", "UIDAI lets you download and share a masked Aadhaar that shows only the last 4 digits. Whether a particular office accepts it is up to them."],
+           ["Can someone undo the masking?", "No. The masked page is rebuilt as an image with the digits burned out, so they can’t be uncovered or copied."]],
+  "formats": ("PDF, JPG, PNG, WEBP, HEIC", "PDF or image"), "limits_from": "pdf-redact", "related": ["pdf-protect", "metadata", "pdf-redact", "pdf-compress"]},
+"signature-resizer": {"tool": "exam-photo", "preset": {"preset": "bank-sign"},
+  "title": "Signature Resizer — 140×60 px, 10–20 KB for Exam Forms | Fileutilo",
+  "description": "Resize a scanned signature to 140 × 60 pixels and 10–20 KB, or the size your exam form asks for, with a whiter background. Free, no limit, nothing uploaded.",
+  "h1": "Resize your signature for an exam form", "shot": "exam-photo",
+  "intro": "Exam and job forms want your signature at an exact size — often 140 × 60 pixels and 10–20 KB. Sign on white paper, take a photo, crop it, and Fileutilo makes a clean JPG that fits, with the paper turned white and the ink darker. " + PRIV,
+  "steps": ["Sign on plain white paper with a black pen and take a clear photo.", "Drop the photo — the bank-exam signature size is already chosen; pick another exam if you need to.", "Crop around your signature, click Make my file and download."],
+  "faqs": [["My form asks for 3.5 × 1.5 cm — which option is that?", "Choose JEE Main or NEET signature; or pick Custom size and type the pixels your form lists."],
+           ["Why does my signature look grey?", "Keep Clean up the paper ticked — it turns the background white and the ink darker, which portals read more reliably."]],
+  "formats": ("JPG, PNG, WEBP, HEIC", "JPG"), "limits_from": "exam-photo", "related": ["exam-photo", "img-resize", "pdf-sign", "img-convert"]},
 }
 
 for t, m in T.items():
@@ -414,7 +495,8 @@ import sys as _sys; _sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from landing_parts import NAME as _NAME, BLURB as _BLURB
 VBLURB = {"word-to-pdf": "DOCX to PDF with selectable text", "pdf-to-word": "Editable DOCX from a PDF", "excel-to-pdf": "Spreadsheets as shareable PDFs",
  "powerpoint-to-pdf": "Slides as 16:9 PDF pages", "excel-to-csv": "XLSX to CSV with a live preview", "csv-to-json": "Header row becomes the keys",
- "heic-to-jpg": "iPhone photos that open everywhere", "webp-to-jpg": "Web images for any app or form"}
+ "heic-to-jpg": "iPhone photos that open everywhere", "webp-to-jpg": "Web images for any app or form",
+ "compress-pdf-to-200kb": "PDFs under a portal’s size limit", "fill-pdf-form": "Type into fillable PDF forms", "mask-aadhaar": "Show only the last 4 digits", "signature-resizer": "140 × 60 px, 10–20 KB and more"}
 for t, m in T.items():
     if t != "home": m["name"] = _NAME[t]; m["blurb"] = _BLURB[t]
 for k, v in VARIANTS.items(): v["name"] = v["h1"].replace("Convert ", ""); v["blurb"] = VBLURB[k]

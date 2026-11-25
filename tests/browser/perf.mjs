@@ -8,7 +8,7 @@ const TYPES = { html: 'text/html; charset=utf-8', js: 'text/javascript', png: 'i
 const browser = await pw.chromium.launch();
 const rows = [];
 for (const page of ['/', '/compress-pdf', '/image-compressor', '/json-formatter']) {
-  const ctx = await browser.newContext({ ...pw.devices['Pixel 7'] });
+  const ctx = await browser.newContext({ ...pw.devices['Pixel 7'], serviceWorkers: 'block' });
   let bytes = 0;
   await ctx.route('**/*', r => {
     const u = new URL(r.request().url());

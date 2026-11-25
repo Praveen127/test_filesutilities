@@ -8,7 +8,7 @@ const T=path.join(path.dirname(new URL(import.meta.url).pathname),'mocks')+'/';
 const ROUTES=[['supabase-js@2',T+'mock-supabase.js'],['checkout.razorpay.com',T+'mock-razorpay.js'],...LOCAL.filter(l=>l.file).map(l=>[l.key,l.file])];
 let html=fs.readFileSync(path.join(ROOT,'web/index.html'),'utf8');
 const CONFIG_JS='window.FILEUTILO_CONFIG={supabaseUrl:"https://proj.supabase.co",supabaseAnonKey:"anon123"};';
-const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1280,height:1000}});
+const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1280,height:1000},serviceWorkers:'block'});
 await ctx.route('**/*',r=>{const u=r.request().url();if(u.startsWith('https://app.test/config.js'))return r.fulfill({body:CONFIG_JS,contentType:'text/javascript'});if(u.startsWith('https://app.test/'))return r.fulfill({body:html,contentType:'text/html'});
   for(const [k,p] of ROUTES)if(u.includes(k))return r.fulfill({path:p,contentType:'text/javascript',headers:{'Access-Control-Allow-Origin':'*'}});if(u.startsWith('blob:')||u.startsWith('data:'))return r.continue();return r.abort()});
 const pg=await ctx.newPage();const errs=[];pg.on('pageerror',e=>errs.push('PAGEERR '+e.message));

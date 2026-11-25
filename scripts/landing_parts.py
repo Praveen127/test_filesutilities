@@ -26,6 +26,10 @@ ICON = {  # 24×24 line icons, stroke = currentColor
  'metadata': '<path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/><path d="m14 14 4 4m0-4-4 4"/>',
  'diff': '<rect x="3" y="3" width="8" height="18" rx="2"/><rect x="13" y="3" width="8" height="18" rx="2"/><path d="M5.5 9h3M17 7.5v3M15.5 9h3"/><path d="M5.5 14h3m7 0h3"/>',
  'zip-create': '<path d="M21 8v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/>',
+ 'pdf-sign': '<path d="m14.5 4.5 5 5L9 20H4v-5z"/><path d="m12.5 6.5 5 5"/><path d="M15 21h6"/>',
+ 'pdf-edit': '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h3"/><path d="m8 9 1.5 1.5L12 8"/>',
+ 'pdf-redact': '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><rect x="8" y="11" width="8" height="2.6" fill="currentColor"/><rect x="8" y="15.5" width="5" height="2.6" fill="currentColor"/>',
+ 'exam-photo': '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2.2"/><path d="M5.5 16.5c.6-1.8 2-2.7 3.5-2.7s2.9.9 3.5 2.7M14.5 9h4M14.5 12.5h4M14.5 16h2.5"/>',
  'zip-open': '<path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9"/><path d="M3 9 6 3h12l3 6z"/><path d="M12 12v5m-2-2 2 2 2-2"/>',
 }
 BLURB = {
@@ -56,6 +60,10 @@ BLURB = {
  'diff': 'Compare text, Word and PDF files',
  'zip-create': 'Pack files and folders',
  'zip-open': 'Look inside and extract',
+ 'pdf-sign': 'Draw, type or upload a signature',
+ 'pdf-edit': 'Fill forms, add text and ticks',
+ 'pdf-redact': 'Black out details, mask Aadhaar',
+ 'exam-photo': 'Exact px and KB for exam forms',
 }
 NAME = {
  'convert': 'Document converter', 'pdf-merge': 'Merge PDF', 'pdf-split': 'Split PDF', 'pdf-organize': 'Organize pages',
@@ -65,17 +73,18 @@ NAME = {
  'data-convert': 'Data converter', 'table-clean': 'Table cleaner', 'hash': 'Checksums & Base64', 'word-merge': 'Merge Word',
  'excel-combine': 'Combine Excel', 'find-replace': 'Find & replace', 'doc-stats': 'Word count', 'metadata': 'Remove metadata',
  'diff': 'Compare files', 'zip-create': 'Create ZIP', 'zip-open': 'Open ZIP',
+ 'pdf-sign': 'Sign PDF', 'pdf-edit': 'Edit & fill PDF', 'pdf-redact': 'Redact & mask Aadhaar', 'exam-photo': 'Exam photo & signature',
 }
 GROUPS = [
- ('pdf', 'PDF', 'c-pdf', ['pdf-merge', 'pdf-split', 'pdf-organize', 'pdf-compress', 'pdf-protect', 'pdf-unlock', 'pdf-stamp', 'pdf-ocr', 'pdf-to-img', 'img-to-pdf']),
- ('conv', 'Convert & images', 'c-img', ['convert', 'img-convert', 'img-resize']),
+ ('pdf', 'PDF', 'c-pdf', ['pdf-merge', 'pdf-split', 'pdf-organize', 'pdf-compress', 'pdf-sign', 'pdf-edit', 'pdf-redact', 'pdf-protect', 'pdf-unlock', 'pdf-stamp', 'pdf-ocr', 'pdf-to-img', 'img-to-pdf']),
+ ('conv', 'Convert & images', 'c-img', ['convert', 'img-convert', 'img-resize', 'exam-photo']),
  ('docs', 'Documents', 'c-doc', ['word-merge', 'excel-combine', 'find-replace', 'doc-stats', 'metadata']),
  ('data', 'Data & developer', 'c-data', ['json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash']),
  ('arch', 'Compare & archive', 'c-arch', ['diff', 'zip-create', 'zip-open']),
 ]
 import json, pathlib
 SLUG = {t: m['slug'] for t, m in json.load(open(pathlib.Path(__file__).resolve().parent.parent / 'web' / 'seo.json'))['tools'].items() if t != 'home'}
-FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats'}
+FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats', 'exam-photo'}
 
 def svg(t, size=22):
     return f'<svg aria-hidden="true" width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICON[t]}</svg>'

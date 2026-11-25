@@ -31,6 +31,17 @@ const FLOWS = {
   'img-to-pdf': async p => { await add(p, 'img-to-pdf', 'IMG_2048.jpg', 'Signature.jpg'); await run(p, 'img-to-pdf'); },
   'img-convert': async p => { await add(p, 'img-convert', 'banner.webp', 'logo.png'); await p.selectOption('#img-convert .o-f', 'jpg'); await run(p, 'img-convert'); },
   'webp-to-jpg': async p => { await add(p, 'img-convert', 'banner.webp'); await run(p, 'img-convert'); },
+  'pdf-sign': async p => { await add(p, 'pdf-sign', 'Application-form.pdf'); await p.waitForSelector('#pdf-sign .pe-page canvas');
+    await p.click('#pdf-sign .o-sig'); const pad = await (await p.$('#sigDlg .sig-pad')).boundingBox(); await p.mouse.move(pad.x + 60, pad.y + pad.height * .65); await p.mouse.down();
+    for (let k = 0; k <= 40; k++) { const t = k / 40; await p.mouse.move(pad.x + 60 + t * 440, pad.y + pad.height * (.55 + .28 * Math.sin(t * 13) * Math.exp(-t * 1.2))); } await p.mouse.up();
+    await p.click('#sigDlg .sig-ok'); await placeAt(p, 'pdf-sign', .66, .6); await p.click('#pdf-sign .o-date'); await placeAt(p, 'pdf-sign', .15, .627); await p.mouse.click(5, 5); },
+  'pdf-edit': async p => { await add(p, 'pdf-edit', 'Application-form.pdf'); await p.waitForSelector('#pdf-edit .ffl [data-f]');
+    const ins = await p.$$('#pdf-edit .ffl input[type=text]'); await ins[0].fill('Asha Rao'); await ins[1].fill('asha@example.com'); await ins[2].fill('98450 00000');
+    await p.selectOption('#pdf-edit .ffl select', 'Kalaburagi'); await p.click('#pdf-edit .ffl label.chk');
+    await p.click('#pdf-edit .o-tick'); await placeAt(p, 'pdf-edit', .334, .338); await p.click('#pdf-edit .o-txt'); await placeAt(p, 'pdf-edit', .084, .4); await p.keyboard.type('Available on weekends — Saturday and Sunday'); await p.mouse.click(5, 5); },
+  'pdf-redact': async p => { await add(p, 'pdf-redact', 'Identity-copy.pdf'); await p.waitForSelector('#pdf-redact .pe-page canvas'); await p.click('#pdf-redact .o-aad');
+    await p.waitForFunction(() => /Masked/.test(document.querySelector('#pdf-redact .o-aadn').textContent)); await p.fill('#pdf-redact .o-q', '98450 00000'); await p.click('#pdf-redact .o-find'); await p.waitForTimeout(300); },
+  'exam-photo': async p => { await add(p, 'exam-photo', 'Photo-avatar.jpg'); await run(p, 'exam-photo'); },
   'img-resize': async p => { await add(p, 'img-resize', 'IMG_2048.jpg'); await p.click('#img-resize [data-p="50"]'); await run(p, 'img-resize'); },
   json: async p => { await p.setInputFiles('#jfile', f('order.json')); await p.waitForTimeout(500); await p.click('#jvTree'); },
   'json-compare': async p => { await p.setInputFiles('#json-compare .ja-file', f('order.json')); await p.setInputFiles('#json-compare .jb-file', f('order-v2.json')); await p.click('#json-compare .o-go'); },
@@ -48,13 +59,14 @@ const FLOWS = {
   'zip-create': async p => { await add(p, 'zip-create', 'Annual-report.pdf', 'logo.png', 'customers.csv'); await run(p, 'zip-create'); },
   'zip-open': async p => { await add(p, 'zip-open', 'Project files.zip'); await p.waitForSelector('#zip-open .zrow', { timeout: 30000 }); },
 };
+async function placeAt(p, sec, fx, fy) { const el = await p.$(`#${sec} .pe-page`); await el.evaluate(e => e.scrollIntoView({ block: 'center' })); const b = await el.boundingBox(); await p.mouse.click(b.x + b.width * fx, b.y + b.height * fy); await p.waitForTimeout(150); }
 async function add(p, sec, ...names) { await p.setInputFiles(`#${sec} .drop input`, f(...names)); await p.waitForTimeout(700); }
 async function run(p, sec) { await p.click(`#${sec} .run`); await Promise.race([waitDone(p, sec, 60000), p.waitForSelector(`#${sec} .rlist li`, { timeout: 60000 })]); await p.waitForTimeout(700); }
 async function jobs(p) { await p.waitForFunction(() => { const li = [...document.querySelectorAll('#jobs li[data-id]')]; return li.length && li.every(l => l.querySelector('.st.okk,.st.err')); }, null, { timeout: 60000 }); await p.waitForTimeout(600); }
 
 const browser = await pw.chromium.launch();
 // a fresh browser profile per page, so the free daily-task counter never gets in the way
-async function newCtx() { const ctx = await browser.newContext({ viewport: { width: 1200, height: 760 }, deviceScaleFactor: 1 });
+async function newCtx() { const ctx = await browser.newContext({ viewport: { width: 1200, height: 760 }, deviceScaleFactor: 1, serviceWorkers: 'block' });
 await ctx.route('**/*', r => {
   const u = new URL(r.request().url());
   if (u.host === 'www.fileutilo.com') { let n = u.pathname === '/' ? 'index.html' : u.pathname.slice(1); if (!n.includes('.')) n += '.html';

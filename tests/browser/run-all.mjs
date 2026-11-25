@@ -2,7 +2,7 @@
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 const here = path.dirname(new URL(import.meta.url).pathname);
-const SUITES = ['privacy', 'deps', 'formats', 'mobile', 'a11y', 'accounts', 'seo'];
+const SUITES = ['privacy', 'deps', 'formats', 'mobile', 'a11y', 'accounts', 'seo', 'return', 'pe'];
 const only = process.argv.slice(2);
 const rows = []; let failed = false;
 for (const s of SUITES.filter(s => !only.length || only.includes(s))) {

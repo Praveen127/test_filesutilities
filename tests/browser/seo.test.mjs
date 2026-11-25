@@ -21,7 +21,7 @@ function resolve(p) {        // Vercel cleanUrls behaviour
 
 const browser = await pw.chromium.launch();
 async function openSite(first, { config = null } = {}) {
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, serviceWorkers: 'block' });
   const gaHits = [];
   await ctx.route('**/*', async route => {
     const u = new URL(route.request().url());
@@ -135,7 +135,8 @@ await t.page.evaluate(() => document.querySelector('.hero-cta') && document.quer
 await t.page.goto('https://www.fileutilo.com/'); await t.page.waitForTimeout(300); i = await info(t.page);
 check(i.vis.includes('home') && i.h1.startsWith('Your files. Your device.'), 'home page shows the home heading', i.path + ' ' + i.h1);
 const n = await t.page.evaluate(() => [document.querySelectorAll('footer .tool-links a').length, document.querySelectorAll('.popular .pchips a').length]);
-check(n[0] === 27 + 8 && n[1] === 8, 'footer links all 27 tools and 8 task pages; home lists the task pages', n.join());
+const NT = Object.keys(seo.tools).length - 1, NV = Object.keys(seo.variants).length;
+check(n[0] === NT + NV && n[1] === NV, `footer links all ${NT} tools and ${NV} task pages; home lists the task pages`, n.join());
 await t.ctx.close();
 
 // ---------- 4. old addresses and unknown addresses ----------
