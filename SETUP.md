@@ -154,8 +154,10 @@ automatically. The company name on Razorpay's checkout defaults to "Kalaburagi L
 
 ## Part F — Website (Notepad → GitHub → Vercel)
 
-The website is the **`site-navy`** or **`site-green`** folder (pick one colour theme): one page per tool (`pdf-merge.html` becomes `www.fileutilo.com/pdf-merge`),
-plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt` and `vercel.json`. All pages share one settings file.
+The website is the **`site-navy`** or **`site-green`** folder (pick one colour theme). It has one page per tool at a
+task-named address (`merge-pdf.html` becomes `www.fileutilo.com/merge-pdf`), eight task pages such as `/word-to-pdf`,
+plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
+app loads when you move between tools) and `media` (screenshots and the demo video). All pages share one settings file.
 
 1. Open `site-navy\config.js` (or `site-green\config.js`) in **Notepad** and check the settings:
    ```js
@@ -166,20 +168,29 @@ plus `config.js`, icons, `sitemap.xml`, `robots.txt`, `ads.txt` and `vercel.json
    ga4Id:           "G-…",            // Google Analytics measurement ID (Part I); "" = off
    ```
    Save.
-2. **GitHub:** open the repo Vercel uses → **Add file → Upload files** → open your chosen site folder, select **all files
-   inside it** (Ctrl+A) and drag them in → **Commit changes**. They go at the top level of the repo, next to the old
-   `index.html` they replace. (GitHub accepts up to 100 files per upload; `site` has about 45.)
-3. **Vercel:** nothing to upload. It redeploys within about a minute.
+2. **GitHub** — GitHub's web upload takes at most 100 files at a time, so upload in two rounds:
+   - **Round 1:** repo → **Add file → Upload files** → open your site folder, select **all the files** at its top level
+     (not the two folders) → drag them in → **Commit changes**. About 53 files.
+   - **Round 2:** **Add file → Upload files** again → drag the **`about`** and **`media`** folders in together →
+     **Commit changes**. About 72 files; GitHub keeps the folder names.
+   - The hidden `.nojekyll` file is part of round 1. If Windows hides it, turn on **View → Show → Hidden items**.
+3. **Remove the earlier tool pages** (they used the old addresses). In GitHub, open each and delete it
+   (… menu → **Delete file**), or delete them all at once with GitHub Desktop:
+   `convert.html`, `pdf-merge.html`, `pdf-split.html`, `pdf-organize.html`, `pdf-compress.html`, `pdf-protect.html`, `pdf-unlock.html`, `pdf-stamp.html`, `pdf-ocr.html`, `pdf-to-img.html`, `img-to-pdf.html`, `img-convert.html`, `img-resize.html`, `json.html`, `json-query.html`, `data-convert.html`, `table-clean.html`, `hash.html`, `word-merge.html`, `excel-combine.html`, `find-replace.html`, `doc-stats.html`, `metadata.html`, `diff.html`, `zip-create.html`, `zip-open.html`.
+   On Vercel these addresses also redirect permanently to the new ones (`vercel.json`), so old links keep working.
+4. **Vercel:** nothing to upload. It redeploys within about a minute.
    - Under **Deployments**, the newest entry should say *Ready*.
-   - Open https://www.fileutilo.com/pdf-merge — the tool opens directly, with its own title in the browser tab.
+   - Open https://www.fileutilo.com/merge-pdf — the tool opens directly, with its own title in the browser tab,
+     and the help text, screenshot, formats, FAQs and related tools below it.
+   - Open https://www.fileutilo.com/pdf-merge — it should jump to `/merge-pdf`.
    - Under **Settings → Domains**, `fileutilo.com` should redirect to `www.fileutilo.com`.
    - **Analytics** tab → **Enable** turns on the visitor statistics.
 
 **Later changes:** to change only a setting, edit `config.js` and upload just that file. If you edit page text or
-code in `web\index.html` or `scripts\seo_content.py`, rebuild the site, then upload the `site` folder again:
+code in `web\index.html` or `scripts\seo_content.py`, rebuild, then upload the site folder again:
 ```
 python scripts\seo_content.py
-node scripts\build-site.mjs
+node scripts\build-site.mjs --brand navy
 ```
 
 ## Part G — Test (still in Razorpay test mode)
@@ -238,9 +249,13 @@ If something fails:
 2. It shows a TXT record. Namecheap → **Domain List → Manage → Advanced DNS → Add new record**:
    type **TXT**, host `@`, value = the `google-site-verification=…` text → save. Back in Search Console, **Verify**
    (DNS can take a few minutes to an hour).
-3. **Sitemaps** → enter `sitemap.xml` → **Submit**. Google then finds all 32 pages.
-4. Optional: **URL inspection** → paste `https://www.fileutilo.com/pdf-merge` → **Request indexing** for your most
-   important tools. New sites usually appear in results within one to four weeks.
+3. **Sitemaps** → enter `sitemap.xml` → **Submit**. It lists all 40 pages: home, 27 tools, 8 task pages and 4 info pages.
+4. **URL inspection** → paste each of your most important pages and click **Request indexing** (about 10 a day are
+   allowed), for example `/merge-pdf`, `/compress-pdf`, `/word-to-pdf`, `/pdf-to-word`, `/image-compressor`,
+   `/json-formatter`, `/file-comparison`, `/excel-to-csv`, `/zip-extractor`, `/heic-to-jpg`.
+5. After 2–4 weeks, check **Performance → Search results** to see which searches show your pages, and
+   **Pages** for any that weren't indexed and why. **Experience → Core Web Vitals** shows real-phone loading speed
+   once there is enough traffic.
 
 ## Good to know
 - **Free limits:**

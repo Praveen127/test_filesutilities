@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.fileutilo.com/</loc><lastmod>2026-11-24</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.fileutilo.com/convert</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-merge</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-split</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-organize</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-compress</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-protect</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-unlock</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-stamp</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-ocr</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/pdf-to-img</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/img-to-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/img-convert</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/img-resize</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/json</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/document-converter</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/merge-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/split-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/organize-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/compress-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/protect-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/unlock-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/watermark-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/ocr</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/pdf-to-jpg</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/jpg-to-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/image-converter</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/image-compressor</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/json-formatter</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.fileutilo.com/json-compare</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/json-query</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/data-convert</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/table-clean</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/hash</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/word-merge</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/excel-combine</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/find-replace</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/doc-stats</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/metadata</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/diff</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/zip-create</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.fileutilo.com/zip-open</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/jsonpath-tester</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/data-converter</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/csv-cleaner</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/checksum-calculator</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/merge-word</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/combine-excel</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/find-and-replace</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/word-counter</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/remove-metadata</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/file-comparison</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/create-zip</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/zip-extractor</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.fileutilo.com/word-to-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/pdf-to-word</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/excel-to-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/powerpoint-to-pdf</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/excel-to-csv</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/csv-to-json</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/heic-to-jpg</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.fileutilo.com/webp-to-jpg</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.fileutilo.com/pricing</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.fileutilo.com/privacy</loc><lastmod>2026-11-24</lastmod><priority>0.3</priority></url>
   <url><loc>https://www.fileutilo.com/terms</loc><lastmod>2026-11-24</lastmod><priority>0.3</priority></url>

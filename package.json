@@ -4,11 +4,12 @@
   "type": "module",
   "description": "Fileutilo by Kalaburagi Labs \u2014 accounts and payments",
   "scripts": {
-    "build": "node scripts/build-site.mjs --brand navy --out site-navy && node scripts/build-site.mjs --brand green --out site-green",
+    "build": "node scripts/build-site.mjs --brand navy && node scripts/build-site.mjs --brand green",
     "test": "tsx tests/functions.test.ts",
     "test:browser": "npm run build && node tests/browser/run-all.mjs",
     "test:browser:online": "LIB_MODE=online node tests/browser/run-all.mjs",
-    "test:fixtures": "python3 tests/browser/make_fixtures.py"
+    "test:fixtures": "python3 tests/browser/make_fixtures.py",
+    "perf": "node tests/browser/perf.mjs site-navy"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

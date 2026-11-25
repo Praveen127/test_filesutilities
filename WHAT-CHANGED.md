@@ -1,27 +1,27 @@
-# Fileutilo — new landing page and brand (24 November 2026)
+# Fileutilo — search-ready tool pages (25 November 2026)
 
-## Choose a colour theme, then upload ONE folder
-- `site-navy`  — navy + blue (like your reference screenshot)
-- `site-green` — the current deep green + lime
-
-Upload **everything inside the folder you choose** to the top level of your GitHub repo
-(Add file → Upload files → select all → Commit). Same steps as SETUP.md Part F. Don't upload both.
-Your live settings are in `config.js` inside each folder.
+## Upload
+Pick one theme folder — `site-navy` or `site-green` — and upload it in two rounds (GitHub's web upload takes
+100 files at a time): first all files at the top level, then the `about` and `media` folders. Then delete the
+earlier tool pages with the old addresses. Step by step: SETUP.md, Part F. Then submit the sitemap: Part J.
 
 ## What's new
-- **Landing page:** hero "Your files. Your device. Your control." with a *Private by design* badge;
-  all 27 tools with their own icons, grouped and linked to their own pages; How it works with a real
-  10-second demo recording and three product screenshots; a precise privacy section (what stays on your
-  device vs. what uses the network, how it's tested, how to check yourself); supported formats; a clear
-  Free vs Pro table; a support section with email and bug-report links.
-- **Visual identity:** your existing logo (lines and coral dot) — lime tile in green, blue tile with white lines in navy — on a new favicon,
-  phone icons, share image and colour system, in both themes.
-- **Privacy check:** every tool was run on files containing a unique marker and every network request was
-  inspected (25 tools in the automated suite; OCR and Combine Excel checked on the live site). No request
-  carried file contents or names.
+- **Task-named addresses** for all 27 tools: /merge-pdf, /compress-pdf, /image-compressor, /json-formatter,
+  /file-comparison, /zip-extractor … Old addresses (/pdf-merge, /#pdf-merge) still work and redirect.
+- **8 task pages** that open a tool already set up for the job: /word-to-pdf, /pdf-to-word, /excel-to-pdf,
+  /powerpoint-to-pdf, /excel-to-csv, /csv-to-json, /heic-to-jpg, /webp-to-jpg. Deliberately few — each one is a
+  real task with its own steps, formats, limits and FAQs, not a near-copy.
+- **Every tool and task page** now has: a unique title and description; the working tool at the top; how-it-works
+  steps with a real screenshot (descriptive alt text); supported formats and honest limitations; FAQs; four
+  related tools; and a clear free-to-Pro path.
+- **Structured data:** WebApplication (with screenshot), BreadcrumbList and FAQPage on every tool page; canonical
+  URLs; sitemap with 40 pages; permanent redirects for old addresses on Vercel.
+- **Mobile:** tool pages use a compact header so the tool is on the first screen of a phone; inline code and styles
+  are minified. Measured on a simulated mid-range phone with slow 4G: pages appear in about 1.6–1.7 s, no layout shift.
+- **Pro wording:** "No limit on batch or file size" is now "No Fileutilo caps … your device's memory still applies",
+  with a note on the pricing page and each tool page.
+- The home address always shows the home page (it used to reopen the last tool).
 
-## Rebuilding later (only if you edit web/index.html or the text)
-```
-node scripts/build-site.mjs --brand navy  --out site-navy
-node scripts/build-site.mjs --brand green --out site-green
-```
+## Tests
+Payment functions 25/25 · privacy 33 · library failures 39 · formats 234 · mobile 60 · accessibility 34 (both themes)
+· accounts 29 · SEO & pages 34 (both themes) · sub-folder (GitHub Pages) check · mobile load check (`npm run perf`).
