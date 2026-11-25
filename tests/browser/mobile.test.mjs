@@ -46,7 +46,7 @@ for (const dev of DEVICES) {
 
   // category menu by touch
   await t.go('pdf-merge'); await t.page.tap('#t-cat-img'); await t.page.waitForTimeout(250);
-  check(await t.page.evaluate(() => /^\/img-/.test(location.pathname) && !document.getElementById(location.pathname.slice(1)).hidden && document.getElementById('t-cat-img').getAttribute('aria-current') === 'true'), `${dev}: category menu works by tap`, await t.page.evaluate(() => location.pathname));
+  check(await t.page.evaluate(() => /^\/image-(converter|compressor)$/.test(location.pathname) && !document.getElementById(location.pathname === '/image-converter' ? 'img-convert' : 'img-resize').hidden && document.getElementById('t-cat-img').getAttribute('aria-current') === 'true'), `${dev}: category menu works by tap`, await t.page.evaluate(() => location.pathname));
   // full tool run by touch
   await t.go('pdf-merge'); await t.add('pdf-merge', ['canary.pdf', 'canary.pdf']);
   await t.page.tap('#pdf-merge .run'); await t.page.waitForSelector('#pdf-merge .rlist li', { timeout: 60000 });

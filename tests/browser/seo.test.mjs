@@ -52,64 +52,100 @@ const info = page => page.evaluate(() => {
     h1: document.querySelector('.hero h1').textContent, ld, vis, about, robots: (document.querySelector('meta[name=robots]') || {}).content || null };
 });
 
-// ---------- 1. every page renders with its own metadata ----------
-const ids = ['home', ...Object.keys(seo.tools).filter(t => t !== 'home'), ...Object.keys(seo.pages)];
-const bad = [];
+// ---------- 1. every page renders with its own metadata and content ----------
+const meta = k => seo.tools[k] || seo.variants[k] || seo.pages[k];
+const slug = k => k === 'home' ? '' : seo.variants[k] ? k : (seo.tools[k] && seo.tools[k].slug) || k;
+const toolOf = k => seo.variants[k] ? seo.variants[k].tool : k;
+const ids = ['home', ...Object.keys(seo.tools).filter(t => t !== 'home'), ...Object.keys(seo.variants), ...Object.keys(seo.pages)];
+const bad = [], thin = [];
 let t = await openSite('/');
 for (const id of ids) {
-  const url = id === 'home' ? '/' : '/' + id;
+  const url = '/' + slug(id);
   await t.page.goto('https://www.fileutilo.com' + url); await t.page.waitForTimeout(150);
-  const m = seo.tools[id] || seo.pages[id], i = await info(t.page);
+  const m = meta(id), i = await info(t.page);
   const want = 'https://www.fileutilo.com' + url;
   const problems = [];
   if (i.path !== url) problems.push('address ' + i.path);
   if (i.title !== m.title) problems.push('title');
   if (i.desc !== m.description) problems.push('description');
   if (i.canon !== want || i.ogUrl !== want) problems.push('canonical');
-  if (!i.vis.includes(id)) problems.push('section hidden: ' + i.vis);
+  if (!i.vis.includes(toolOf(id))) problems.push('section hidden: ' + i.vis);
   if (i.ld.includes('BAD') || !i.ld.length) problems.push('structured data');
-  if (seo.tools[id] && id !== 'home' && !i.h1.startsWith(m.h1)) problems.push('h1 ' + i.h1);
-  if (seo.tools[id] && id !== 'home' && !i.about.includes(id)) problems.push('help text hidden');
   if (m.title.length > 70) problems.push('title too long (' + m.title.length + ')');
   if (m.description.length > 170) problems.push('description too long (' + m.description.length + ')');
+  if (id !== 'home' && !seo.pages[id]) {
+    if (!i.h1.startsWith(m.h1)) problems.push('h1 ' + i.h1);
+    if (!i.about.includes(id)) problems.push('help text hidden');
+    const c = await t.page.evaluate(k => { const a = document.querySelector(`.seo-about[data-route="${k}"]`); if (!a) return null;
+      const img = a.querySelector('.sa-shot img');
+      return { steps: a.querySelectorAll('.sa-steps li').length, img: img ? [img.alt.length, img.getAttribute('loading'), img.src] : null, fmt: a.querySelectorAll('.sa-fmt dd').length,
+        lim: a.querySelectorAll('.sa-lim li').length, faq: a.querySelectorAll('details').length, rel: a.querySelectorAll('.sa-rcard').length, up: !!a.querySelector('.sa-up a[href="pricing"]'),
+        words: a.textContent.trim().split(/\s+/).length, view: document.documentElement.dataset.view,
+        faqLd: [...document.querySelectorAll('script[type="application/ld+json"]')].some(s => s.textContent.includes('"FAQPage"')) }; }, id);
+    if (!c) problems.push('no page content');
+    else {
+      if (c.steps < 3) problems.push('steps'); if (!c.img || c.img[0] < 30 || c.img[1] !== 'lazy') problems.push('screenshot ' + JSON.stringify(c.img && c.img.slice(0, 2)));
+      if (c.fmt !== 2) problems.push('formats'); if (c.lim < 3) problems.push('limits'); if (c.faq < 2) problems.push('faq'); if (c.rel !== 4) problems.push('related ' + c.rel);
+      if (!c.up) problems.push('upgrade path'); if (!c.faqLd) problems.push('FAQ structured data'); if (c.view !== 'tool') problems.push('view ' + c.view);
+      if (c.words < 220) thin.push(`${id} (${c.words} words)`);
+      if (c.img) { const r = await t.page.evaluate(async src => (await fetch(src)).status, c.img[2]); if (r !== 200) problems.push('screenshot file ' + r); }
+    }
+  }
   if (problems.length) bad.push(id + ': ' + problems.join(', '));
 }
-check(!bad.length, `all ${ids.length} pages have their own title, description, canonical, h1, structured data and visible content`, bad.slice(0, 4).join(' | '));
-const titles = ids.map(id => (seo.tools[id] || seo.pages[id]).title), descs = ids.map(id => (seo.tools[id] || seo.pages[id]).description);
+check(!bad.length, `all ${ids.length} pages: own title, description, canonical, h1, structured data, steps with a screenshot, formats and limits, FAQs, related tools and an upgrade path`, bad.slice(0, 4).join(' | '));
+check(!thin.length, 'every tool and task page has substantial help text (220+ words)', thin.join(', '));
+const titles = ids.map(id => meta(id).title), descs = ids.map(id => meta(id).description);
 check(new Set(titles).size === titles.length && new Set(descs).size === descs.length, 'titles and descriptions are unique');
 check(!t.errors.length, 'no script errors on any page', t.errors.slice(0, 3).join(' | '));
-const raw = fs.readFileSync(path.join(SITE, 'pdf-merge.html'), 'utf8');
-check(raw.includes('<title>Merge PDF Files Online') && raw.includes('class="seo-about" data-route="pdf-merge"') && raw.includes('"@type":"WebApplication"'),
+const raw = fs.readFileSync(path.join(SITE, 'merge-pdf.html'), 'utf8');
+check(raw.includes('<title>Merge PDF Files Online') && raw.includes('class="seo-about" data-route="pdf-merge"') && raw.includes('"@type":"WebApplication"') && raw.includes('data-view="tool"'),
   'help text, title and structured data are in the HTML itself (visible to crawlers and link previews without JavaScript)');
 await t.ctx.close();
 
-// ---------- 2. navigation uses real addresses ----------
-t = await openSite('/pdf-merge');
-await t.page.click('#t-cat-img'); await t.page.waitForTimeout(250);
-let i = await info(t.page);
-check(i.path === '/img-convert' && i.vis.includes('img-convert') && i.title === seo.tools['img-convert'].title && i.h1.startsWith(seo.tools['img-convert'].h1) && !i.about.length,
-  'clicking a menu link changes the address, title and heading without reloading', JSON.stringify([i.path, i.title.slice(0, 30), i.about]));
-check(await t.page.evaluate(() => document.querySelector('#t-cat-pdf').getAttribute('href')) === '/pdf-merge', 'menu links are real addresses that crawlers can follow');
-await t.page.goBack(); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/pdf-merge' && i.vis.includes('pdf-merge') && i.about.includes('pdf-merge') && i.title === seo.tools['pdf-merge'].title, 'Back button returns to the previous tool', i.path);
-await t.page.goForward(); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/img-convert' && i.vis.includes('img-convert'), 'Forward button works', i.path);
-await t.page.click('footer a[href="/pricing"]'); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/pricing' && i.vis.includes('pricing') && i.title === seo.pages.pricing.title, 'footer link opens the pricing page', i.path);
-await t.page.click('footer .tool-links a[href="/zip-open"]'); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/zip-open' && i.vis.includes('zip-open'), 'footer "all tools" links work', i.path);
-await t.page.click('.brand, .hero-cta').catch(() => {});
-await t.page.evaluate(() => document.querySelector('.hero-cta').click()); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/' && i.vis.includes('home') && i.h1.startsWith('Your files. Your device.'), '"Explore all tools" goes home and restores the home heading', i.path + ' ' + i.h1);
-const n = await t.page.evaluate(() => document.querySelectorAll('footer .tool-links a').length);
-check(n === 27, 'footer lists all 27 tools', n);
+// ---------- 2. task pages open their tool with the right preset ----------
+t = await openSite('/pdf-to-word');
+check(await t.page.evaluate(() => document.querySelector('#tgts .chip[data-f="docx"]').getAttribute('aria-pressed')) === 'true', '/pdf-to-word opens the converter with DOCX chosen');
+await t.page.goto('https://www.fileutilo.com/word-to-pdf'); await t.page.waitForTimeout(300);
+check(await t.page.evaluate(() => document.querySelector('#tgts .chip[data-f="pdf"]').getAttribute('aria-pressed')) === 'true', '/word-to-pdf opens the converter with PDF chosen');
+await t.page.goto('https://www.fileutilo.com/excel-to-csv'); await t.page.waitForTimeout(500);
+check(await t.page.evaluate(() => document.querySelector('#data-convert .o-to').value) === 'csv', '/excel-to-csv opens the data converter with CSV chosen');
+await t.page.goto('https://www.fileutilo.com/heic-to-jpg'); await t.page.waitForTimeout(300);
+check(await t.page.evaluate(() => document.querySelector('#img-convert .o-f').value) === 'jpg', '/heic-to-jpg opens the image converter with JPG chosen');
 await t.ctx.close();
 
-// ---------- 3. old #links and unknown addresses ----------
+// ---------- 3. navigation uses real, task-named addresses ----------
+t = await openSite('/merge-pdf');
+await t.page.click('#t-cat-img'); await t.page.waitForTimeout(250);
+let i = await info(t.page);
+check(i.path === '/image-converter' && i.vis.includes('img-convert') && i.title === seo.tools['img-convert'].title && i.h1.startsWith(seo.tools['img-convert'].h1) && !i.about.length,
+  'clicking a menu link changes the address, title and heading without reloading', JSON.stringify([i.path, i.title.slice(0, 30), i.about]));
+check(await t.page.evaluate(() => document.querySelector('#t-cat-pdf').getAttribute('href')) === '/merge-pdf', 'menu links are real addresses that crawlers can follow');
+await t.page.goBack(); await t.page.waitForTimeout(250); i = await info(t.page);
+check(i.path === '/merge-pdf' && i.vis.includes('pdf-merge') && i.about.includes('pdf-merge') && i.title === seo.tools['pdf-merge'].title, 'Back button returns to the previous tool', i.path);
+await t.page.goForward(); await t.page.waitForTimeout(250); i = await info(t.page);
+check(i.path === '/image-converter' && i.vis.includes('img-convert'), 'Forward button works', i.path);
+await t.page.click('footer a[href="pricing"]'); await t.page.waitForTimeout(250); i = await info(t.page);
+check(i.path === '/pricing' && i.vis.includes('pricing') && i.title === seo.pages.pricing.title, 'footer link opens the pricing page', i.path);
+await t.page.click('footer .tool-links a[href="zip-extractor"]'); await t.page.waitForTimeout(250); i = await info(t.page);
+check(i.path === '/zip-extractor' && i.vis.includes('zip-open'), 'footer "all tools" links work', i.path);
+await t.page.click('footer .tool-links a[href="excel-to-csv"]'); await t.page.waitForTimeout(400); i = await info(t.page);
+check(i.path === '/excel-to-csv' && i.vis.includes('data-convert') && i.title === seo.variants['excel-to-csv'].title, 'footer "popular" links open task pages in place', i.path);
+await t.page.evaluate(() => document.querySelector('.hero-cta') && document.querySelector('.hero-cta').click());
+await t.page.goto('https://www.fileutilo.com/'); await t.page.waitForTimeout(300); i = await info(t.page);
+check(i.vis.includes('home') && i.h1.startsWith('Your files. Your device.'), 'home page shows the home heading', i.path + ' ' + i.h1);
+const n = await t.page.evaluate(() => [document.querySelectorAll('footer .tool-links a').length, document.querySelectorAll('.popular .pchips a').length]);
+check(n[0] === 27 + 8 && n[1] === 8, 'footer links all 27 tools and 8 task pages; home lists the task pages', n.join());
+await t.ctx.close();
+
+// ---------- 4. old addresses and unknown addresses ----------
 t = await openSite('/#pdf-split'); i = await info(t.page);
-check(i.path === '/pdf-split' && i.vis.includes('pdf-split'), 'old links like /#pdf-split still open the tool and switch to /pdf-split', i.path);
+check(i.path === '/split-pdf' && i.vis.includes('pdf-split'), 'old #links like /#pdf-split open the tool at its new address /split-pdf', i.path);
 await t.page.evaluate(() => { location.hash = '#json'; }); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/json' && i.vis.includes('json'), 'in-page #links still work', i.path);
+check(i.path === '/json-formatter' && i.vis.includes('json'), 'in-page #links still work', i.path);
+await t.ctx.close();
+t = await openSite('/pdf-merge'); i = await info(t.page);
+check(i.vis.includes('pdf-merge') && i.path === '/merge-pdf', 'earlier addresses like /pdf-merge still open the tool and switch to /merge-pdf', `${t.resp.status()} ${i.path}`);
 await t.ctx.close();
 t = await openSite('/no-such-page'); i = await info(t.page);
 check(t.resp.status() === 404 && i.vis.includes('home') && i.robots === 'noindex' && i.path === '/', 'unknown addresses return 404 (not indexed) and show the home page', `${t.resp.status()} ${i.path} ${i.robots}`);
@@ -122,19 +158,19 @@ check(locs.length === ids.length && locs.every(l => l.startsWith('https://www.fi
 check(/Sitemap: https:\/\/www\.fileutilo\.com\/sitemap\.xml/.test(fs.readFileSync(path.join(SITE, 'robots.txt'), 'utf8')), 'robots.txt allows crawling and points to the sitemap');
 const man = JSON.parse(fs.readFileSync(path.join(SITE, 'site.webmanifest'), 'utf8'));
 const pngSize = f => { const b = fs.readFileSync(path.join(SITE, f)); return [b.readUInt32BE(16), b.readUInt32BE(20)]; };
-check(man.icons.every(ic => fs.existsSync(path.join(SITE, ic.src.slice(1)))) && pngSize('icon-512.png').join() === '512,512' && pngSize('apple-touch-icon.png').join() === '180,180',
+check(man.icons.every(ic => fs.existsSync(path.join(SITE, ic.src.replace(/^\//, '')))) && pngSize('icon-512.png').join() === '512,512' && pngSize('apple-touch-icon.png').join() === '180,180',
   'app icons and manifest are present');
 check(pngSize('og-image.png').join() === '1200,630', 'share image is 1200×630');
 const ico = fs.readFileSync(path.join(SITE, 'favicon.ico'));
 check(ico.readUInt16LE(2) === 1 && ico.readUInt16LE(4) >= 2, 'favicon.ico has several sizes', ico.readUInt16LE(4));
 const vj = JSON.parse(fs.readFileSync(path.join(SITE, 'vercel.json'), 'utf8'));
-check(vj.cleanUrls === true, 'vercel.json serves /pdf-merge from pdf-merge.html');
+check(vj.cleanUrls === true && vj.redirects.some(r => r.source === '/pdf-merge' && r.destination === '/merge-pdf' && r.permanent), 'vercel.json serves /merge-pdf from merge-pdf.html and permanently redirects old addresses');
 
 // ---------- 5. Google Analytics: off by default; events never contain file names ----------
-t = await openSite('/pdf-merge');
+t = await openSite('/merge-pdf');
 check(!t.gaHits.length && await t.page.evaluate(() => !window.gtag), 'Google Analytics stays off until a measurement ID is set');
 await t.ctx.close();
-t = await openSite('/pdf-merge', { config: { ga4Id: 'G-TEST1234', analytics: true } });
+t = await openSite('/merge-pdf', { config: { ga4Id: 'G-TEST1234', analytics: true } });
 check(t.gaHits.length === 1 && t.gaHits[0].includes('id=G-TEST1234'), 'with ga4Id set, gtag.js loads once', t.gaHits.join());
 const consent = await t.page.evaluate(() => dataLayer.filter(a => a[0] === 'consent').map(a => [a[1], a[2].analytics_storage, (a[2].region || []).includes('DE')]));
 check(JSON.stringify(consent) === JSON.stringify([['default', 'denied', true], ['default', 'granted', false]]), 'EEA/UK visitors default to "no consent"; others are measured', JSON.stringify(consent));

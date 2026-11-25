@@ -73,6 +73,8 @@ GROUPS = [
  ('data', 'Data & developer', 'c-data', ['json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash']),
  ('arch', 'Compare & archive', 'c-arch', ['diff', 'zip-create', 'zip-open']),
 ]
+import json, pathlib
+SLUG = {t: m['slug'] for t, m in json.load(open(pathlib.Path(__file__).resolve().parent.parent / 'web' / 'seo.json'))['tools'].items() if t != 'home'}
 FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats'}
 
 def svg(t, size=22):
@@ -82,7 +84,7 @@ def grid():
     out = []
     for gid, gname, cls, tools in GROUPS:
         cards = ''.join(
-            f'<a class="tcard {cls}" href="/{t}"><span class="tico">{svg(t)}</span><span class="ttx"><b>{NAME[t]}'
+            f'<a class="tcard {cls}" href="{SLUG[t]}"><span class="tico">{svg(t)}</span><span class="ttx"><b>{NAME[t]}'
             + (' <em class="tfree">No limit</em>' if t in FREE else '') + f'</b><small>{BLURB[t]}</small></span></a>' for t in tools)
         out.append(f'<div class="tgroup"><h3>{gname} <span>{len(tools)}</span></h3><div class="tgrid">{cards}</div></div>')
     return '\n'.join(out)

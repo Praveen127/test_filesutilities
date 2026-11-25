@@ -121,7 +121,7 @@ const focusAfter = await page.evaluate(() => document.activeElement.closest('#pd
 check(focusAfter === 'inside tool', 'focus stays in the tool after running (not lost to the page top)', focusAfter);
 // category menu with keyboard
 await page.focus('#t-cat-data'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);
-check(await page.evaluate(() => /^\/(json|json-compare|json-query|data-convert|table-clean|hash)$/.test(location.pathname)), 'category menu works with Enter');
+check(await page.evaluate(() => /^\/(json-formatter|json-compare|jsonpath-tester|data-converter|csv-cleaner|checksum-calculator)$/.test(location.pathname)), 'category menu works with Enter');
 // dialogs: open with keyboard, focus inside, Tab trapped, Escape closes and returns focus
 await page.focus('#acctBtn'); await page.keyboard.press('Enter'); await page.waitForSelector('#authDlg[open]');
 const inDlg = await page.evaluate(() => !!document.activeElement.closest('#authDlg'));
