@@ -122,5 +122,21 @@
  "tool-zip-extractor.webp": [
   1200,
   791
+ ],
+ "tool-sign-pdf.webp": [
+  1200,
+  1100
+ ],
+ "tool-edit-pdf.webp": [
+  1200,
+  1100
+ ],
+ "tool-redact-pdf.webp": [
+  1200,
+  1100
+ ],
+ "tool-exam-photo-resizer.webp": [
+  1200,
+  1100
  ]
 }
