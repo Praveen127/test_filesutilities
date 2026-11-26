@@ -89,7 +89,7 @@
     },
     {
       "source": "/exam-photo",
-      "destination": "/exam-photo-resizer",
+      "destination": "/passport-size-photo",
       "permanent": true
     },
     {
@@ -155,6 +155,11 @@
     {
       "source": "/zip-open",
       "destination": "/zip-extractor",
+      "permanent": true
+    },
+    {
+      "source": "/exam-photo-resizer",
+      "destination": "/passport-size-photo",
       "permanent": true
     }
   ],
