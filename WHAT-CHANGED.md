@@ -1,3 +1,21 @@
+# Fileutilo 14 — naming and limits (25 November 2026)
+
+Small update on top of Fileutilo 13. Upload the same way (SETUP.md, Part F); nothing to delete, no Supabase changes.
+
+- **Passport size photo & signature resizer** — the exam photo tool now says "passport size photo" everywhere it
+  applies: tool name, home card, quick open, preset names (e.g. "Passport size photo — 200×230 px, 20–50 KB"), and the
+  Resize & compress chip ("Passport photo ≤ 50 KB"). Its address is now **`/passport-size-photo`**; the old
+  `/exam-photo-resizer` redirects there permanently (Vercel) or forwards with a small page (GitHub Pages).
+- **It now counts towards the free limits** like other tools (10 a day without an account, 25 with one, unlimited on
+  Pro). The "No limit" badge and the "Is it really free?" FAQ are gone.
+- **"Redact" is now "Mask"** in the interface: the PDF tab says *Mask*, the tool is *Mask PDF & Aadhaar*, buttons say
+  *Mask all* and *Save masked file*, and files are saved as `-masked.pdf`. The page address stays `/redact-pdf`
+  (that is what people search for); its title reads "Mask PDF (Redact) & Aadhaar Number Online".
+- Search Console: request indexing for `/passport-size-photo`.
+- Tests: new-tools suite now 40 checks (adds the names, the limit and the redirect); all suites pass in both themes.
+
+---
+
 # Fileutilo — sign, fill, redact and exam-ready files (25 November 2026)
 
 ## Upload

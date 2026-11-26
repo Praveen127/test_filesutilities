@@ -144,6 +144,17 @@ await t.add('pdf-compress', ['canary.pdf']); await p.click('#pdf-compress [data-
 const small = await save('pdf-compress');
 check(small && /already under 200 KB|already optimized/.test(await t.result('pdf-compress')), 'Compress: a PDF that already fits is kept as it is');
 
+// ---------------- names, limits and the renamed address ----------------
+await t.go('pdf-redact'); await p.waitForTimeout(200);
+check(/Mask/.test(await p.$eval('#pdf-redact h2', e => e.textContent)) && /Save masked file/.test(await p.$eval('#pdf-redact .run', e => e.textContent)), 'Mask PDF: the tool says “Mask”, not “Redact”');
+await t.go('exam-photo'); await p.waitForTimeout(200);
+check(/Passport size photo/.test(await p.$eval('#exam-photo h2', e => e.textContent)) && await p.$eval('#exam-photo .o-pre', e => [...e.options].filter(o => /photo/i.test(o.text) && !/Postcard|Custom/.test(o.text)).every(o => o.text.startsWith('Passport size photo'))), 'Passport size photo: used in the tool name and the photo presets');
+await t.go('home'); await p.waitForTimeout(200);
+check(!(await p.$eval('a.tcard[href="passport-size-photo"]', e => e.textContent)).includes('No limit'), 'Passport size photo counts towards the free limits (no “No limit” badge)');
+const SD = process.env.SITE_DIR;
+if (SD) { const vj = JSON.parse(fs.readFileSync(path.join(SD, 'vercel.json'), 'utf8'));
+  check(vj.redirects.some(r => r.source === '/exam-photo-resizer' && r.destination === '/passport-size-photo' && r.permanent) && /url=passport-size-photo/.test(fs.readFileSync(path.join(SD, 'exam-photo-resizer.html'), 'utf8')), 'The old /exam-photo-resizer address redirects to /passport-size-photo (Vercel and GitHub Pages)'); }
+
 // ---------------- quick open ----------------
 await t.go('home'); await p.keyboard.press('/'); await p.keyboard.type('aadhaar'); await p.waitForTimeout(150);
 check(/Mask Aadhaar|Redact/.test(await p.$eval('#cmdList', e => e.textContent)), 'Quick open finds the new tools (e.g. “aadhaar”)');

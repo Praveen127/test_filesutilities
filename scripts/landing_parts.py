@@ -62,7 +62,7 @@ BLURB = {
  'zip-open': 'Look inside and extract',
  'pdf-sign': 'Draw, type or upload a signature',
  'pdf-edit': 'Fill forms, add text and ticks',
- 'pdf-redact': 'Black out details, mask Aadhaar',
+ 'pdf-redact': 'Hide details, mask Aadhaar',
  'exam-photo': 'Exact px and KB for exam forms',
 }
 NAME = {
@@ -73,7 +73,7 @@ NAME = {
  'data-convert': 'Data converter', 'table-clean': 'Table cleaner', 'hash': 'Checksums & Base64', 'word-merge': 'Merge Word',
  'excel-combine': 'Combine Excel', 'find-replace': 'Find & replace', 'doc-stats': 'Word count', 'metadata': 'Remove metadata',
  'diff': 'Compare files', 'zip-create': 'Create ZIP', 'zip-open': 'Open ZIP',
- 'pdf-sign': 'Sign PDF', 'pdf-edit': 'Edit & fill PDF', 'pdf-redact': 'Redact & mask Aadhaar', 'exam-photo': 'Exam photo & signature',
+ 'pdf-sign': 'Sign PDF', 'pdf-edit': 'Edit & fill PDF', 'pdf-redact': 'Mask PDF & Aadhaar', 'exam-photo': 'Passport size photo & signature',
 }
 GROUPS = [
  ('pdf', 'PDF', 'c-pdf', ['pdf-merge', 'pdf-split', 'pdf-organize', 'pdf-compress', 'pdf-sign', 'pdf-edit', 'pdf-redact', 'pdf-protect', 'pdf-unlock', 'pdf-stamp', 'pdf-ocr', 'pdf-to-img', 'img-to-pdf']),
@@ -84,7 +84,7 @@ GROUPS = [
 ]
 import json, pathlib
 SLUG = {t: m['slug'] for t, m in json.load(open(pathlib.Path(__file__).resolve().parent.parent / 'web' / 'seo.json'))['tools'].items() if t != 'home'}
-FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats', 'exam-photo'}
+FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats'}
 
 def svg(t, size=22):
     return f'<svg aria-hidden="true" width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICON[t]}</svg>'

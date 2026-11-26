@@ -201,12 +201,18 @@ self.addEventListener('fetch',e=>{const req=e.request;if(req.method!=='GET')retu
   if(CDN.test(req.url)&&!u.pathname.includes('@supabase'))e.respondWith(lib(req))});
 `);
 write('.nojekyll', '');   // GitHub Pages: serve files as they are
+// Addresses that were live and then renamed: Vercel redirects them (vercel.json below); for hosts without
+// redirects (GitHub Pages) a tiny page forwards visitors and tells search engines the new address.
+const RENAMED = { 'exam-photo-resizer': 'passport-size-photo' };
+for (const [from, to] of Object.entries(RENAMED))
+  write(from + '.html', `<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><title>Moved</title><meta name="robots" content="noindex"><link rel="canonical" href="${ORIGIN}/${to}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p>This page has moved to <a href="${to}">${to}</a>.</p></body></html>`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 write('vercel.json', JSON.stringify({
   cleanUrls: true, trailingSlash: false,
   redirects: [{ source: '/index', destination: '/', permanent: true },
     // earlier addresses (/pdf-merge …) → task-named addresses (/merge-pdf …)
-    ...TOOLS.filter(t => slug(t) !== t).map(t => ({ source: '/' + t, destination: '/' + slug(t), permanent: true }))],
+    ...TOOLS.filter(t => slug(t) !== t).map(t => ({ source: '/' + t, destination: '/' + slug(t), permanent: true })),
+    ...Object.entries(RENAMED).map(([f, t]) => ({ source: '/' + f, destination: '/' + t, permanent: true }))],
   headers: [{ source: '/config.js', headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }] },
     { source: '/sw.js', headers: [{ key: 'Cache-Control', value: 'no-cache' }, { key: 'Service-Worker-Allowed', value: '/' }] },
     { source: '/media/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=604800' }] }],

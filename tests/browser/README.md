@@ -4,7 +4,7 @@ Automated checks for the Fileutilo web app (`web/index.html`), run in a real Chr
 
 | Suite | File | What it proves |
 |---|---|---|
-| Privacy | `privacy.test.mjs` | Runs all 27 tools on files containing a unique marker, records every network request, and fails if any request carries file content or names, uploads anything, or goes to an unexpected host. With accounts on, Supabase only receives usage counters. |
+| Privacy | `privacy.test.mjs` | Runs all 31 tools on files containing a unique marker, records every network request, and fails if any request carries file content or names, uploads anything, or goes to an unexpected host. With accounts on, Supabase only receives usage counters. |
 | Library failures | `deps.test.mjs` | Blocks, slows and partly blocks the library CDNs, then checks every tool shows a clear message, recovers when you try again, falls back to unpkg.com, gives up after a time limit, and detects offline. |
 | Formats | `formats.test.mjs` + `validate_formats.py` | Converts each sample into every output format and runs the PDF, image and document tools. Each result is checked by independent software (qpdf, pdftotext, pypdf, python-docx, odfpy, python-pptx, openpyxl, Pillow, LibreOffice) for validity, text, headings, lists, tables and tool-specific promises. Results are compared with `baselines/formats.json`. |
 | Mobile | `mobile.test.mjs` | Emulates iPhone SE, iPhone 13 (portrait and landscape), Pixel 7, Galaxy S9+ and iPad Mini. Checks for sideways scrolling, tap-target size, text size and clipped labels on all 31 screens, and runs tools, the converter and sign-in by touch. Screenshots go to `out/mobile/`. |

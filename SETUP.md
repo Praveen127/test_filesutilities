@@ -257,7 +257,7 @@ If something fails:
    allowed), for example `/merge-pdf`, `/compress-pdf`, `/word-to-pdf`, `/pdf-to-word`, `/image-compressor`,
    `/json-formatter`, `/file-comparison`, `/excel-to-csv`, `/zip-extractor`, `/heic-to-jpg`. After the November 2026
    update, request the new pages too: `/sign-pdf`, `/edit-pdf`, `/redact-pdf`, `/mask-aadhaar`,
-   `/exam-photo-resizer`, `/signature-resizer`, `/compress-pdf-to-200kb`, `/fill-pdf-form`.
+   `/passport-size-photo`, `/signature-resizer`, `/compress-pdf-to-200kb`, `/fill-pdf-form`.
 5. After 2–4 weeks, check **Performance → Search results** to see which searches show your pages, and
    **Pages** for any that weren't indexed and why. **Experience → Core Web Vitals** shows real-phone loading speed
    once there is enough traffic.

@@ -226,25 +226,25 @@ T = {
   "Edit and fill in a PDF",
   "Fill in a PDF form without printing it. If the PDF has fillable fields, they are listed beside the page so you can type your answers, tick boxes and choose options. For any other PDF, click on the page to add text, a tick or cross, or today’s date, and use white-out to cover a mistake. " + PRIV,
   ["Drop the PDF you want to fill in.", "Type into the form fields on the right, or click Add text, Tick or Date and click on the page.", "Drag items into place and click Save PDF."],
-  [["Can I change the existing text in a PDF?", "Not directly — PDFs don’t store text like a Word file. Cover the old words with white-out and type the new text on top. To remove private text for good, use Redact instead."],
+  [["Can I change the existing text in a PDF?", "Not directly — PDFs don’t store text like a Word file. Cover the old words with white-out and type the new text on top. To remove private text for good, use Mask PDF instead."],
    ["Can I type in Hindi, Kannada or other Indian scripts?", "Yes, with Add text on the page. Standard PDF form fields can only show Latin letters here, so for other scripts leave the field empty and type on the page instead."],
    ["What does Flatten do?", "It turns your answers into part of the page, so they can’t be changed in a PDF reader. Leave it off if someone else still needs to edit the form."]]),
-"pdf-redact": tool("Redact PDF & Mask Aadhaar Number Online — Free, Private | Fileutilo",
-  "Black out names, numbers and other private details in a PDF or photo for good, and mask Aadhaar numbers automatically (XXXX XXXX 1234). Nothing is uploaded.",
-  "Redact a PDF and mask Aadhaar numbers",
-  "Hide private details before you share a document. Drag boxes over anything, search for a name or number to black it out everywhere, or let Fileutilo find Aadhaar numbers and mask the first 8 digits — the masked format UIDAI recommends sharing. Pages you redact are rebuilt as images, so the hidden text is really gone, not just covered. " + PRIV,
-  ["Drop a PDF, or a photo or scan of a document.", "Drag boxes over private details, search for words, or click Find Aadhaar numbers.", "Check every page, then click Save redacted file."],
+"pdf-redact": tool("Mask PDF (Redact) & Aadhaar Number Online — Free | Fileutilo",
+  "Mask names, numbers and other private details in a PDF or photo for good, and hide Aadhaar numbers automatically (XXXX XXXX 1234). Nothing is uploaded.",
+  "Mask private details in a PDF",
+  "Hide private details before you share a document. Drag boxes over anything, search for a name or number to mask it everywhere, or let Fileutilo find Aadhaar numbers and mask the first 8 digits — the masked format UIDAI recommends sharing. Masked pages are rebuilt as images (this is called redaction), so the hidden text is really gone, not just covered. " + PRIV,
+  ["Drop a PDF, or a photo or scan of a document.", "Drag boxes over private details, search for words, or click Find Aadhaar numbers.", "Check every page, then click Save masked file."],
   [["Is the hidden text really removed?", "Yes. Each page with a box is rebuilt as an image with the box burned in, so the text underneath can’t be copied, searched or uncovered. Pages without boxes are kept as they are, and document details such as author and title are removed."],
    ["How does Aadhaar masking work?", "Fileutilo looks for 12-digit numbers in the Aadhaar format, checks them with the Aadhaar check digit, and covers the first 8 digits so only the last 4 show. For scans and photos it reads the page with OCR first. Always check the result — OCR can miss blurry numbers."],
    ["What about the QR code on an Aadhaar card?", "The QR code can contain your details. In browsers that can read QR codes, Fileutilo covers it for you; otherwise drag a box over it."]]),
-"exam-photo": tool("Exam Photo & Signature Resizer — 20 KB, 50 KB, 200×230 px | Fileutilo",
-  "Resize your photo, signature and thumb impression to the exact pixels and KB range for IBPS, SBI, SSC, UPSC, NEET and JEE forms. Free, with nothing uploaded.",
-  "Resize your exam photo and signature",
-  "Online application forms reject a photo or signature that’s the wrong size. Choose your exam and document, crop your picture, and Fileutilo makes a JPG with the exact pixels and a file size inside the allowed KB range — for example 200 × 230 px and 20–50 KB for a bank exam photo. It can also clean up the paper behind a signature and add your name and date below a photo. " + PRIV,
-  ["Choose your exam and the document — photo, signature, thumb impression or declaration.", "Drop your picture and drag the frame to crop it.", "Click Make my file and download — the size check shows the pixels and KB."],
-  [["Which exams are included?", "Bank exams (IBPS, SBI, RBI, RRB), SSC, UPSC, NEET UG and JEE Main, plus passport-size photos and a custom size. The sizes follow the 2025–26 notifications. Rules change, so always check your own notification."],
+"exam-photo": tool("Passport Size Photo & Signature Resizer, 20–50 KB | Fileutilo",
+  "Resize your passport size photo, signature and thumb impression to the exact pixels and KB for IBPS, SBI, SSC, UPSC, NEET and JEE forms. Nothing is uploaded.",
+  "Resize your passport size photo and signature",
+  "Online application forms reject a passport size photo or signature that’s the wrong size. Choose your exam and document, crop your picture, and Fileutilo makes a JPG with the exact pixels and a file size inside the allowed KB range — for example 200 × 230 px and 20–50 KB for a bank exam passport size photo. It can also clean up the paper behind a signature and add your name and date below the photo. " + PRIV,
+  ["Choose your exam and the document — passport size photo, signature, thumb impression or declaration.", "Drop your picture and drag the frame to crop it.", "Click Make my file and download — the size check shows the pixels and KB."],
+  [["Which exams are included?", "Bank exams (IBPS, SBI, RBI, RRB), SSC, UPSC, NEET UG and JEE Main, plus a standard 35 × 45 mm passport size photo and a custom size. The sizes follow the 2025–26 notifications. Rules change, so always check your own notification."],
    ["My file is under the minimum KB — what happens?", "Very small pictures can come out below the minimum. Fileutilo then adds empty padding to the file so it meets the minimum size; the picture itself doesn’t change."],
-   ["Is it really free?", "Yes. The exam photo and signature resizer has no daily limit, with or without an account."]], free=True)
+   ["How many can I make for free?", "Each file counts as one task, like the other tools: 10 a day without an account, 25 a day with a free account, and no daily limit on Pro."]])
 }
 
 PAGES = {
@@ -263,7 +263,7 @@ SLUG = {"convert": "document-converter", "pdf-merge": "merge-pdf", "pdf-split": 
   "data-convert": "data-converter", "table-clean": "csv-cleaner", "hash": "checksum-calculator", "word-merge": "merge-word",
   "excel-combine": "combine-excel", "find-replace": "find-and-replace", "doc-stats": "word-counter", "metadata": "remove-metadata",
   "diff": "file-comparison", "zip-create": "create-zip", "zip-open": "zip-extractor",
-  "pdf-sign": "sign-pdf", "pdf-edit": "edit-pdf", "pdf-redact": "redact-pdf", "exam-photo": "exam-photo-resizer"}
+  "pdf-sign": "sign-pdf", "pdf-edit": "edit-pdf", "pdf-redact": "redact-pdf", "exam-photo": "passport-size-photo"}
 
 # ---------- supported formats (open → create) ----------
 FORMATS = {
@@ -317,7 +317,7 @@ LIMITS = {
  "zip-open": ["Password-protected and RAR/7z archives are not supported."],
  "pdf-sign": ["This adds an image of your signature — it is not a certificate-based digital signature (DSC) or Aadhaar eSign.", "Password-protected PDFs must be unlocked first."],
  "pdf-edit": ["Existing text can’t be edited in place; cover it with white-out and type over it.", "Form fields can only show Latin letters here — type other scripts on the page with Add text.", "Very complex Adobe-only (XFA) forms may not show every field."],
- "pdf-redact": ["Redacted pages become images, so their text is no longer selectable and the file can get bigger.", "Automatic Aadhaar detection can miss blurry or handwritten numbers — always check every page.", "Scanned pages and photos need OCR, which downloads about 4 MB the first time."],
+ "pdf-redact": ["Masked pages become images, so their text is no longer selectable and the file can get bigger.", "Automatic Aadhaar detection can miss blurry or handwritten numbers — always check every page.", "Scanned pages and photos need OCR, which downloads about 4 MB the first time."],
  "exam-photo": ["Sizes follow the 2025–26 notifications; always check your own exam notification before uploading.", "Some forms (for example SSC CGL and UPSC) now take a live photo with your webcam instead of an uploaded one."]
 }
 RELATED = {
@@ -368,8 +368,8 @@ SHOT_ALT = {
  "zip-open": "ZIP extractor listing the files and folders inside an archive",
  "pdf-sign": "Sign PDF with a handwritten signature and the date placed on a letter",
  "pdf-edit": "Edit and fill PDF with text, a tick and the date typed onto a form",
- "pdf-redact": "Redact PDF with black boxes over an Aadhaar number, leaving only the last 4 digits",
- "exam-photo": "Exam photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
+ "pdf-redact": "Mask PDF with black boxes over an Aadhaar number, leaving only the last 4 digits",
+ "exam-photo": "Passport size photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
 }
 
 # ---------- a few task pages people search for, each with its own preset ----------
@@ -470,7 +470,7 @@ VARIANTS = {
   "formats": ("PDF, JPG, PNG, WEBP, HEIC", "PDF or image"), "limits_from": "pdf-redact", "related": ["pdf-protect", "metadata", "pdf-redact", "pdf-compress"]},
 "signature-resizer": {"tool": "exam-photo", "preset": {"preset": "bank-sign"},
   "title": "Signature Resizer — 140×60 px, 10–20 KB for Exam Forms | Fileutilo",
-  "description": "Resize a scanned signature to 140 × 60 pixels and 10–20 KB, or the size your exam form asks for, with a whiter background. Free, no limit, nothing uploaded.",
+  "description": "Resize a scanned signature to 140 × 60 pixels and 10–20 KB, or the size your exam form asks for, with a whiter background. Free, with nothing uploaded.",
   "h1": "Resize your signature for an exam form", "shot": "exam-photo",
   "intro": "Exam and job forms want your signature at an exact size — often 140 × 60 pixels and 10–20 KB. Sign on white paper, take a photo, crop it, and Fileutilo makes a clean JPG that fits, with the paper turned white and the ink darker. " + PRIV,
   "steps": ["Sign on plain white paper with a black pen and take a clear photo.", "Drop the photo — the bank-exam signature size is already chosen; pick another exam if you need to.", "Crop around your signature, click Make my file and download."],
