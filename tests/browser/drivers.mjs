@@ -50,4 +50,11 @@ export const DRIVERS = [
   { id: 'zip-create', libs: ['JSZip'], async run(t) { await t.go('zip-create'); await t.add('zip-create', ['canary.txt', 'canary.png', 'canary.pdf']); await t.run('zip-create'); return t.result('zip-create'); } },
   { id: 'zip-open', libs: ['JSZip'], async run(t) { await t.go('zip-open'); await t.add('zip-open', ['canary.zip']); await t.page.waitForSelector('#zip-open .zrow', { timeout: 30000 });
       return t.page.$eval('#zip-open', e => e.innerText.replace(/\s+/g, ' ').slice(0, 160)); } },
+  // Fileutilo 15: PowerPoint tools
+  { id: 'pdf-to-ppt', libs: ['pdfjsLib', 'PptxGenJS', 'JSZip'], async run(t) { await t.go('pdf-to-ppt'); await t.add('pdf-to-ppt', ['canary.pdf']); await t.run('pdf-to-ppt'); return t.result('pdf-to-ppt'); } },
+  { id: 'ppt-compress', libs: ['JSZip'], async run(t) { await t.go('ppt-compress'); await t.add('ppt-compress', ['canary-deck.pptx']); await t.run('ppt-compress'); return t.result('ppt-compress'); } },
+  { id: 'ppt-to-img', libs: ['JSZip'], async run(t) { await t.go('ppt-to-img'); await t.add('ppt-to-img', ['canary-deck.pptx']); await t.run('ppt-to-img'); return t.result('ppt-to-img'); } },
+  { id: 'ppt-images', libs: ['JSZip'], async run(t) { await t.go('ppt-images'); await t.add('ppt-images', ['canary-deck.pptx']); await t.run('ppt-images'); return t.result('ppt-images'); } },
+  { id: 'ppt-merge', libs: ['JSZip'], async run(t) { await t.go('ppt-merge'); await t.add('ppt-merge', ['canary.pptx', 'canary-deck.pptx']); await t.run('ppt-merge'); return t.result('ppt-merge'); } },
+  { id: 'ppt-text', libs: ['JSZip'], async run(t) { await t.go('ppt-text'); await t.add('ppt-text', ['canary-deck.pptx']); await t.run('ppt-text'); return t.result('ppt-text'); } },
 ];

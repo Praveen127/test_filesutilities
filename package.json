@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Fileutilo by Kalaburagi Labs \u2014 accounts and payments",
   "scripts": {
-    "build": "node scripts/build-site.mjs --brand navy && node scripts/build-site.mjs --brand green",
+    "build": "node scripts/build-site.mjs --brand navy",
     "test": "tsx tests/functions.test.ts",
     "test:browser": "npm run build && node tests/browser/run-all.mjs",
     "test:browser:online": "LIB_MODE=online node tests/browser/run-all.mjs",

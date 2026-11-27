@@ -154,12 +154,12 @@ automatically. The company name on Razorpay's checkout defaults to "Kalaburagi L
 
 ## Part F — Website (Notepad → GitHub → Vercel)
 
-The website is the **`site-navy`** or **`site-green`** folder (pick one colour theme). It has one page per tool at a
+The website is the **`site-navy`** folder. It has one page per tool at a
 task-named address (`merge-pdf.html` becomes `www.fileutilo.com/merge-pdf`), eight task pages such as `/word-to-pdf`,
 plus `config.js`, `sw.js` (offline copy), icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
 app loads when you move between tools) and `media` (screenshots and the demo video). All pages share one settings file.
 
-1. Open `site-navy\config.js` (or `site-green\config.js`) in **Notepad** and check the settings:
+1. Open `site-navy\config.js` in **Notepad** and check the settings:
    ```js
    supabaseUrl:     "https://abcdefgh.supabase.co",
    supabaseAnonKey: "sb_publishable_…",
@@ -252,12 +252,15 @@ If something fails:
 2. It shows a TXT record. Namecheap → **Domain List → Manage → Advanced DNS → Add new record**:
    type **TXT**, host `@`, value = the `google-site-verification=…` text → save. Back in Search Console, **Verify**
    (DNS can take a few minutes to an hour).
-3. **Sitemaps** → enter `sitemap.xml` → **Submit**. It lists all 48 pages: home, 31 tools, 12 task pages and 4 info pages.
+3. **Sitemaps** → enter `sitemap.xml` → **Submit**. It lists all 63 pages: home, 37 tools, 21 task pages and 4 info pages. After each update, submit it again.
 4. **URL inspection** → paste each of your most important pages and click **Request indexing** (about 10 a day are
    allowed), for example `/merge-pdf`, `/compress-pdf`, `/word-to-pdf`, `/pdf-to-word`, `/image-compressor`,
    `/json-formatter`, `/file-comparison`, `/excel-to-csv`, `/zip-extractor`, `/heic-to-jpg`. After the November 2026
    update, request the new pages too: `/sign-pdf`, `/edit-pdf`, `/redact-pdf`, `/mask-aadhaar`,
-   `/passport-size-photo`, `/signature-resizer`, `/compress-pdf-to-200kb`, `/fill-pdf-form`.
+   `/passport-size-photo`, `/signature-resizer`, `/compress-pdf-to-200kb`, `/fill-pdf-form`. After the Fileutilo 15
+   update: `/pdf-to-powerpoint`, `/compress-powerpoint`, `/powerpoint-to-jpg`, `/merge-powerpoint`,
+   `/extract-images-from-powerpoint`, `/powerpoint-text-and-notes`, `/compress-image-to-50kb`, `/image-to-pdf`,
+   `/png-to-jpg`, `/compress-pdf-to-100kb` (then the rest over the following days, plus `/powerpoint-to-pdf`, which changed).
 5. After 2–4 weeks, check **Performance → Search results** to see which searches show your pages, and
    **Pages** for any that weren't indexed and why. **Experience → Core Web Vitals** shows real-phone loading speed
    once there is enough traffic.

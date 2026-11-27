@@ -1,3 +1,97 @@
+# Fileutilo 15 — new home page and PowerPoint tools (27 November 2026)
+
+Upload the same way (SETUP.md, Part F): `site-navy` in two rounds — 79 top-level files, then the
+`about` and `media` folders (105 files). Nothing to delete, no Supabase or Razorpay changes. Then, in Search Console,
+submit the sitemap again and request indexing for the new pages (SETUP.md, Part J).
+
+## New home page (design 11)
+- **Look:** the finalized design 11 — light warm page, white header bar, black headline in Outfit, outlined search box,
+  white task chips, Recently used / Favourites cards with tiles, pastel tiles per job, and a dark footer on every page.
+  Tool pages keep their compact header so the tool stays above the fold.
+- **Header:** All tools · Pricing · Privacy · Sign in (on phones: Sign in; the rest is in the footer).
+- **Headline** “Your files. Your device. Your control.” with a new line: “…free to start, and your files never leave your device.”
+- **Tool search** right under the headline: type a task or a format (“compress”, “pptx”, “50 kb”), use the arrow keys,
+  press Enter to open the tool. It searches all tools and task pages.
+- **Popular tasks** — 12 links, each conversion next to its reverse. Visitors whose browser is set to India (time zone
+  or language) see an India list with *Compress PDF to 200 KB*, *Compress photo to 50 KB*, *Passport size photo* and
+  *Mask Aadhaar*; everyone else sees the global list with *Edit PDF*, *Sign PDF* and *HEIC to JPG*.
+- **Recently used and Favourites** for signed-in users (“Pick up where you left off”). Signed-out visitors see a short
+  “Sign in to keep your recently used and favourite tools one click away” prompt instead. The lists are still kept only
+  in the visitor’s browser, never on our servers. On a copy without accounts (preview), everyone sees them.
+- **All tools grouped by job** — Combine · Make smaller · Protect & keep private · Convert · PowerPoint & slides ·
+  Edit & organize · Read, check & compare — 37 tools plus the PowerPoint to PDF and PPT to PPTX pages, each tile linking
+  to its own page. Signed-in users can star any tile to add it to Favourites.
+- **Footer** with the privacy statement (files never uploaded; with an account we keep only the account, plan, credits
+  and daily task counts) and company details (Kalaburagi Labs, support@fileutilo.com), plus Pricing, Terms, Refund
+  policy and Privacy policy.
+- The *How it works*, *Privacy, precisely*, *Supported formats* and *Free and Pro* sections stay below the tools.
+
+## Navy only
+- The green colour theme is gone: there is no `site-green` folder any more, and its screenshots and icons
+  (`web/media-green`, `web/static-green`) were removed. `npm run build` builds `site-navy` only. Nothing on the live site
+  changes, since it already uses navy.
+
+## New headline and a "For business" page
+- **Home headline:** "Free PDF, image, Word and other Office tools", with the tagline "Your files *never leave* your
+  device." under it (smaller, "never leave" in coral). The line below now reads "No uploads, no installs — safe for
+  confidential and work documents. Free to start." The "Private by design" badge, the "What do you want to do?" heading
+  and the three screenshots under *How it works* are gone. The home search box is shorter and narrower.
+- **New page: fileutilo.com/for-business** (64 pages in the sitemap now). It covers:
+  - why files that never leave the device mean no data-processing risk and an easier security review;
+  - a comparison with typical online PDF tools, which keep uploaded files for about 1–2 hours (iLovePDF and Smallpdf
+    publish this);
+  - Pro (the price follows `prices.pro_yearly` in your config, ₹999 by default) and a "For your team — Contact us" card;
+  - contact buttons that email support@fileutilo.com.
+- **"For business" links** in the header (between Pricing and Privacy) and in the footer under *Plans & legal*.
+- The page claims no certifications (no ISO 27001 or similar). Add those only once you have them.
+
+## Tool pages match the home page
+- Every tool, task and info page now uses the design 11 look: the white header strip with the logo, the Outfit
+  headline, the light palette (dark mode follows the visitor's setting), the tool sits on a white panel, and the dark
+  footer is shared by all pages.
+- The category tabs are gone from tool and info pages. Only the **Home** tab stays, to go back to the home page. The
+  related-tool pills under the header stay, so a visitor can still move between tools in the same group.
+
+## Six new PowerPoint tools (37 tools in all), each with its own page
+- **PDF to PowerPoint** (`/pdf-to-powerpoint`) — *Same look*: every page becomes a slide picture, with the page’s text
+  in the speaker notes; or *Editable text*: headings, bullets and tables you can change.
+- **Compress PowerPoint** (`/compress-powerpoint`) — Light / Recommended / Strong. Re-saves the pictures inside at a
+  screen-friendly size and turns large PNG photos into JPG; slides, animations and notes are untouched. A 9 MB test
+  deck became 0.5 MB. If a file can’t get smaller, the original is returned.
+- **PowerPoint to JPG** (`/powerpoint-to-jpg`) — each slide as JPG or PNG (HD, Full HD or 4K), or one PDF with a page per
+  slide; pick slides like “2-4, 7”. Slides are drawn in the browser: text, pictures, shapes, tables, backgrounds and
+  themes; charts and SmartArt effects may be simplified (shown as an outline, and the page says so).
+- **Extract images from PowerPoint** (`/extract-images-from-powerpoint`) — the original picture files, byte for byte;
+  also works on Word and Excel files, optionally with videos and sounds.
+- **Merge PowerPoint** (`/merge-powerpoint`) — combine decks in any order, keeping each deck’s design, or putting every
+  slide on the first deck’s layouts. Notes of the 2nd and later decks are not carried over (the page says so).
+- **Slide text & speaker notes** (`/powerpoint-text-and-notes`) — every slide’s text, tables and notes as .txt or
+  Markdown, with Copy text; option to skip hidden slides; old .ppt files give their text.
+- **PowerPoint to PDF** (`/powerpoint-to-pdf`) now uses the slide drawing above, so the PDF looks like the slides
+  (before, it held only the slide text). For selectable text, the document converter still makes a text PDF.
+- The **document converter** is now called *Word, PowerPoint & Excel converter*, and its PPTX files are tidied (strict
+  checkers no longer warn about three unused entries that the PowerPoint library adds).
+
+## Nine new task pages (21 in all)
+`/ppt-to-pptx`, `/compress-image-to-50kb`, `/compress-image-to-20kb`, `/compress-image-to-100kb`,
+`/compress-pdf-to-100kb`, `/compress-pdf-to-500kb`, `/png-to-jpg`, `/jpg-to-png`, `/image-to-pdf` — each opens the right
+tool with the setting already chosen, and has its own title, description, steps, formats, limits and FAQs. The sitemap
+now lists 63 pages.
+
+## Tests
+- New `ppt.test.mjs` (45 checks): every PowerPoint result is opened with python-pptx, every internal reference and
+  content type is checked, and LibreOffice renders the files; plus the 9 task pages.
+- New `home.test.mjs` (31 checks): search, both popular lists, all tiles and groups, stars, signed-in and signed-out
+  views, footer, and the phone layout.
+- The privacy suite now runs the six PowerPoint tools too (33 tools), with a deck carrying the marker in its text,
+  notes and picture description.
+- Rebuild everything from Fileutilo 14 with: `python scripts/apply_v15_tools.py && python scripts/seo_content.py &&
+  python scripts/apply_v15_home.py && python scripts/apply_v15_look.py &&
+  python scripts/apply_v15_look_all.py && python scripts/apply_v15_hero.py &&
+  python scripts/apply_v15_business.py` (already applied in this build).
+
+---
+
 # Fileutilo 14 — naming and limits (25 November 2026)
 
 Small update on top of Fileutilo 13. Upload the same way (SETUP.md, Part F); nothing to delete, no Supabase changes.

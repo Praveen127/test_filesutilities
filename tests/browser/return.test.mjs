@@ -17,10 +17,10 @@ check(await p.$eval(star, b => b.getAttribute('aria-pressed') === 'false' && /Ad
 await p.click(star);
 check(await p.$eval(star, b => b.getAttribute('aria-pressed')) === 'true', 'clicking it marks the tool as a favourite (aria-pressed)');
 await t.go('home');
-check(await p.evaluate(() => !document.getElementById('mine').hidden && [...document.querySelectorAll('#mine .mchip')].map(a => a.textContent.trim()).includes('Merge PDF')), 'favourites appear on the home page');
+check(await p.evaluate(() => !document.getElementById('mine').hidden && [...document.querySelectorAll('#mine .mtile')].map(a => a.textContent.trim()).includes('Merge PDF')), 'favourites appear on the home page');
 await p.reload(); await p.waitForTimeout(500);
-check(await p.evaluate(() => [...document.querySelectorAll('#mine .mchip')].some(a => a.getAttribute('href') === '/merge-pdf')), 'favourites are remembered after a reload, and link to the tool');
-await p.click('#mine .mchip'); await p.waitForTimeout(300);
+check(await p.evaluate(() => [...document.querySelectorAll('#mine .mtile')].some(a => a.getAttribute('href') === '/merge-pdf')), 'favourites are remembered after a reload, and link to the tool');
+await p.click('#mine .mtile'); await p.waitForTimeout(300);
 check((await vis()) === 'pdf-merge', 'a favourite opens its tool', await vis());
 
 // ---------- recent activity + result preview ----------
@@ -39,7 +39,7 @@ await p.keyboard.press('Escape');
 check(await p.evaluate(() => !document.getElementById('prevDlg').open), 'Esc closes the preview');
 await t.go('home');
 const rec = await p.evaluate(() => [...document.querySelectorAll('#mine .mine-recent li')].map(li => li.textContent.replace(/\s+/g, ' ').trim()));
-check(rec.length === 1 && /Merge PDF/.test(rec[0]) && /2 files → merged\.pdf/.test(rec[0]) && /just now/.test(rec[0]), 'recent activity shows the tool, the files and the result', rec.join(' | '));
+check(rec.length === 1 && /Merge PDF/.test(rec[0]) && /just now/.test(rec[0]) && await p.$eval('#mine .mine-recent .mtile', a => a.getAttribute('href')) === '/merge-pdf', 'recent activity shows the tool as a tile, with when it was used, linking to the tool', rec.join(' | '));
 const stored = await p.evaluate(() => localStorage.getItem('fu_recent'));
 check(stored && !/FUCANARY/i.test(stored) && JSON.parse(stored)[0].o[0] === 'merged.pdf', 'recent activity keeps only names and counts — never file contents', stored && stored.slice(0, 90));
 
@@ -57,7 +57,7 @@ await p.keyboard.press('Escape');
 
 await t.go('home');
 await p.click('#mine .mine-clear'); await p.waitForTimeout(200);
-check(await p.evaluate(() => !localStorage.getItem('fu_recent') && document.querySelectorAll('#mine .mine-recent li').length === 0), '“Clear” removes recent activity');
+check(await p.evaluate(() => !localStorage.getItem('fu_recent') && document.querySelectorAll('#mine .mine-recent .mtile').length === 0), '“Clear” removes recent activity');
 await p.check('#mine .mine-off'); await t.go('pdf-merge');
 await t.add('pdf-merge', fx('canary.pdf', 'canary.pdf')); await t.run('pdf-merge');
 check(await p.evaluate(() => !localStorage.getItem('fu_recent')), 'with recent activity turned off, nothing is recorded');

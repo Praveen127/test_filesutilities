@@ -9,7 +9,7 @@
  ],
  "tool-powerpoint-to-pdf.webp": [
   1200,
-  1100
+  632
  ],
  "tool-merge-pdf.webp": [
   1200,
@@ -138,5 +138,29 @@
  "tool-passport-size-photo.webp": [
   1200,
   1100
+ ],
+ "tool-pdf-to-powerpoint.webp": [
+  1200,
+  648
+ ],
+ "tool-compress-powerpoint.webp": [
+  1200,
+  825
+ ],
+ "tool-powerpoint-to-jpg.webp": [
+  1200,
+  1100
+ ],
+ "tool-extract-images-from-powerpoint.webp": [
+  1200,
+  537
+ ],
+ "tool-merge-powerpoint.webp": [
+  1200,
+  553
+ ],
+ "tool-powerpoint-text-and-notes.webp": [
+  1200,
+  649
  ]
 }

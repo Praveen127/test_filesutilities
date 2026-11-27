@@ -1,0 +1,175 @@
+# Fileutilo 15 landing-page text: the six PowerPoint tools and nine new task pages.
+# Imported by seo_content.py, which merges these into the tables it writes to web/seo.json.
+
+PRIV = "Your files are processed inside your browser and are never uploaded to a server."
+
+def tool(title, desc, h1, intro, steps, faqs, free=False):
+    return {"title": title, "description": desc, "h1": h1, "intro": intro, "steps": steps, "faqs": faqs, "free": free}
+
+TOOLS = {
+"pdf-to-ppt": tool("PDF to PowerPoint Converter — PDF to PPTX Online, Free | Fileutilo",
+  "Convert a PDF to a PowerPoint presentation: keep the exact look with one slide per page, or get editable text slides. Free, and the PDF never leaves your device.",
+  "Convert PDF to PowerPoint",
+  "Need to present a PDF, or reuse its pages in a deck? Fileutilo turns every page into a slide. Choose Same look to keep the page exactly as it is — fonts, charts and photos included — with the page’s text copied into the speaker notes, or Editable text to get headings, bullet points and tables you can change in PowerPoint. " + PRIV,
+  ["Drop one or more PDFs.", "Choose Same look (each page becomes a slide picture) or Editable text.", "Click Convert to PowerPoint and download the .pptx — it opens in PowerPoint, Google Slides, Keynote and LibreOffice."],
+  [["Can I edit the text after converting?", "With Editable text, yes — headings, paragraphs, lists and tables become real PowerPoint text. With Same look, each page is a picture so it looks identical; its text is in the speaker notes so you can copy it."],
+   ["Does it work with scanned PDFs?", "Same look works with any PDF, including scans. Editable text needs a PDF with real text — run OCR first for a scan."],
+   ["What slide size will I get?", "The slides take the shape of the PDF’s first page, so A4 portrait documents become portrait slides and wide reports become wide slides."]]),
+"ppt-compress": tool("Compress PowerPoint — Reduce PPTX File Size Online, Free | Fileutilo",
+  "Make a big PowerPoint small enough to email or upload. Optimises the pictures inside and keeps every slide, animation and note. Free and private — no upload.",
+  "Compress a PowerPoint presentation",
+  "Presentations get huge because of photos pasted at full camera resolution. Fileutilo resizes and re-saves those pictures at a sensible size for screens, turns large PNG photos into JPG, and packs the file tightly — usually making a deck many times smaller while it looks the same on a projector. Slides, text, animations, transitions and speaker notes are left exactly as they are. " + PRIV,
+  ["Drop one or more .pptx files.", "Choose Light, Recommended or Strong compression.", "Click Compress — the before and after size is shown for each file — and download."],
+  [["Will my slides look different?", "With Recommended, pictures are kept up to 1920 pixels wide, which is sharper than most projectors and screens can show. Use Light for printing or very large screens, and Strong when the file must be as small as possible."],
+   ["Are animations and notes kept?", "Yes. Only the pictures inside are optimised; slides, layouts, animations, transitions and speaker notes are untouched."],
+   ["Why didn’t my file get smaller?", "If its pictures are already small, or most of the size is video or embedded fonts, there is little to save. Fileutilo then gives you back your original file rather than a bigger one."]]),
+"ppt-to-img": tool("PowerPoint to JPG — Convert PPTX Slides to Images Online | Fileutilo",
+  "Save every PowerPoint slide as a JPG or PNG picture, or as one PDF with a page per slide. HD, Full HD or 4K. Free, and the presentation is never uploaded.",
+  "Convert PowerPoint slides to JPG",
+  "Share slides on WhatsApp, Instagram or a website, drop them into a document, or send a deck to someone without PowerPoint. Fileutilo draws each slide as a picture at the size you choose — 1280, 1920 or 3840 pixels wide — or puts them all into one PDF. " + PRIV,
+  ["Drop your .pptx file.", "Choose JPG, PNG or PDF, the width, and optionally which slides (for example 1-3, 5).", "Click Convert slides and download the pictures, one by one or as a ZIP."],
+  [["Will the pictures look exactly like PowerPoint?", "Text, pictures, shapes, tables and backgrounds are drawn faithfully. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones — for pixel-perfect output of those slides, export them from PowerPoint itself."],
+   ["Can I convert just a few slides?", "Yes. Type the slide numbers or ranges, such as 2-4, 7. Leave the box empty for all slides."],
+   ["Which format should I choose?", "JPG gives smaller files for photos and sharing; PNG keeps text and lines perfectly sharp; PDF puts every slide into one document that’s easy to print or email."]]),
+"ppt-images": tool("Extract Images from PowerPoint — Get All PPTX Pictures | Fileutilo",
+  "Get every picture out of a PowerPoint in its original quality — no screenshots. Also works for Word and Excel files. Free, private, nothing uploaded.",
+  "Extract images from a PowerPoint",
+  "Need the photos, logos or diagrams someone put in a presentation? Fileutilo pulls out the original picture files stored inside the .pptx — exactly as they were inserted, without the quality loss of a screenshot — and gives them to you one by one or as a ZIP. It also works with Word (.docx) and Excel (.xlsx) files, and can include videos and sounds. " + PRIV,
+  ["Drop one or more .pptx files (or .docx and .xlsx).", "Optionally skip small icons, or leave out videos and sounds.", "Click Extract images and download them, or all of them as a ZIP."],
+  [["Are the images the original quality?", "Yes. They are the exact files stored inside the presentation, byte for byte — nothing is re-saved or resized."],
+   ["Why do some pictures have an .emf or .wmf ending?", "Those are Windows drawing formats that PowerPoint uses for some charts and clip art. They open in Office and Windows apps, but not in most web browsers."],
+   ["Can I get the pictures from just one slide?", "The tool takes every picture in the file. To get one slide as a picture instead, use PowerPoint to JPG with that slide number."]]),
+"ppt-merge": tool("Merge PowerPoint Files — Combine PPTX Online, Free | Fileutilo",
+  "Combine several PowerPoint presentations into one deck, in the order you choose. Slides keep their pictures, layouts and animations. Free, and nothing is uploaded.",
+  "Merge PowerPoint presentations",
+  "Bring together decks from different people or teams into one presentation. Drag the files into order and Fileutilo copies every slide — with its pictures, layouts, theme and animations — into a single .pptx. Keep each presentation’s own design, or give every slide the first deck’s design for a consistent look. " + PRIV,
+  ["Drop two or more .pptx files.", "Drag them, or use the arrows, into the order you want, and choose how to handle the design.", "Name the file, click Merge presentations, and download it."],
+  [["Do the slides keep their design?", "By default, yes — each presentation brings its own slide master and theme. Choose “Use the first presentation’s design” to put every slide on the first deck’s matching layouts instead."],
+   ["Are speaker notes kept?", "Notes of the first presentation are kept. Notes and comments of the second and later presentations are not carried over."],
+   ["What if the presentations have different slide sizes?", "The merged deck uses the first presentation’s size. Slides from a deck with a different shape keep their positions, so check those slides and adjust them if needed."]]),
+"ppt-text": tool("PowerPoint Text & Speaker Notes — PPTX to Text, Free | Fileutilo",
+  "Copy all the text and speaker notes out of a PowerPoint, slide by slide, as plain text or Markdown. Free, private — the presentation is never uploaded.",
+  "Get the text and speaker notes from a PowerPoint",
+  "Turn a presentation into a script, handout or summary. Fileutilo reads every slide in order — titles, bullet points, text boxes and tables — and, if you like, the speaker notes, and gives you a tidy .txt or Markdown file you can paste anywhere or feed into another tool. " + PRIV,
+  ["Drop one or more .pptx files (old .ppt files work too, without notes).", "Choose plain text or Markdown, and whether to include speaker notes or skip hidden slides.", "Click Get text, then copy it or download the file."],
+  [["Does it include speaker notes?", "Yes, when “Include speaker notes” is ticked — each slide’s notes follow its text."],
+   ["What about text in pictures?", "Text that is part of a picture can’t be read this way. Use PowerPoint to JPG and then OCR on those slides."],
+   ["Why choose Markdown?", "Markdown keeps the structure — slide headings, bullet levels and tables — and pastes neatly into Notion, GitHub, ChatGPT and many editors."]]),
+}
+
+SLUG = {"pdf-to-ppt": "pdf-to-powerpoint", "ppt-compress": "compress-powerpoint", "ppt-to-img": "powerpoint-to-jpg",
+        "ppt-images": "extract-images-from-powerpoint", "ppt-merge": "merge-powerpoint", "ppt-text": "powerpoint-text-and-notes"}
+FORMATS = {"pdf-to-ppt": ("PDF", "PPTX"), "ppt-compress": ("PPTX", "PPTX"), "ppt-to-img": ("PPTX", "JPG, PNG or PDF"),
+           "ppt-images": ("PPTX, DOCX, XLSX", "The original JPG, PNG, GIF, SVG, EMF… files (and videos)"),
+           "ppt-merge": ("PPTX", "PPTX"), "ppt-text": ("PPTX, PPT", "TXT or Markdown (.md)")}
+LIMITS = {
+ "pdf-to-ppt": ["Same look makes each page a picture, so its text can’t be edited on the slide (it’s in the speaker notes).", "Editable text keeps headings, paragraphs, lists and tables but not the page’s pictures or exact layout.", "Password-protected PDFs must be unlocked first."],
+ "ppt-compress": ["Videos, sounds and embedded fonts are not compressed.", "Old .ppt files and password-protected presentations aren’t supported — save them as a normal .pptx first."],
+ "ppt-to-img": ["Charts, SmartArt effects and 3-D models may be simplified; fonts that aren’t installed are replaced by similar ones.", "Animations and transitions aren’t shown — each slide is drawn as it looks when fully built.", "Old .ppt files aren’t supported — save them as .pptx first."],
+ "ppt-images": ["Pictures in EMF or WMF format open in Office and Windows apps but not in most browsers.", "Pictures are saved as stored in the file, including any parts that were cropped out on the slide."],
+ "ppt-merge": ["Speaker notes and comments of the second and later presentations are not carried over.", "The merged deck uses the first presentation’s slide size.", "Old .ppt files and password-protected presentations aren’t supported."],
+ "ppt-text": ["Text inside pictures can’t be read — use PowerPoint to JPG and OCR for those slides.", "Speaker notes are read from .pptx files only, not from old .ppt files."],
+}
+RELATED = {
+ "pdf-to-ppt": ["ppt-to-img", "convert", "pdf-to-img", "pdf-compress"], "ppt-compress": ["ppt-merge", "ppt-to-img", "pdf-compress", "ppt-images"],
+ "ppt-to-img": ["powerpoint-to-pdf", "ppt-images", "img-resize", "pdf-to-ppt"], "ppt-images": ["ppt-to-img", "zip-open", "img-convert", "ppt-text"],
+ "ppt-merge": ["ppt-compress", "pdf-merge", "ppt-to-img", "word-merge"], "ppt-text": ["ppt-images", "doc-stats", "pdf-ocr", "convert"],
+}
+SHOT_ALT = {
+ "pdf-to-ppt": "PDF to PowerPoint with Same look chosen and the converted presentation ready to download",
+ "ppt-compress": "Compress PowerPoint showing a 9 MB presentation reduced to about 0.5 MB",
+ "ppt-to-img": "PowerPoint to JPG with Full HD chosen and one picture per slide ready to download",
+ "ppt-images": "Extract images from PowerPoint listing the original pictures found in a presentation",
+ "ppt-merge": "Merge PowerPoint with three presentations listed in order, ready to combine",
+ "ppt-text": "Slide text and speaker notes in Markdown, with slide headings and notes",
+}
+NAME = {"pdf-to-ppt": "PDF to PowerPoint", "ppt-compress": "Compress PowerPoint", "ppt-to-img": "PowerPoint to JPG",
+        "ppt-images": "Extract images from PowerPoint", "ppt-merge": "Merge PowerPoint", "ppt-text": "Slide text & speaker notes"}
+BLURB = {"pdf-to-ppt": "Turn PDF pages into slides", "ppt-compress": "Shrink big decks for email and uploads", "ppt-to-img": "Save every slide as an image",
+         "ppt-images": "Get every picture out of a deck", "ppt-merge": "Combine several decks into one", "ppt-text": "Copy all text and notes from a deck"}
+
+FIT = {50: "within 800 × 1000 pixels", 20: "within 600 × 300 pixels"}
+
+def img_kb(kb, who, why):
+    return {"tool": "img-resize", "preset": {"target_kb": kb},
+      "title": f"Compress Image to {kb} KB — Photo Under {kb}KB Online, Free | Fileutilo",
+      "description": f"Reduce a photo or scan to under {kb} KB for {who}, at the best quality that fits. Free, and the image never leaves your device.",
+      "h1": f"Compress an image to {kb} KB", "shot": "img-resize",
+      "intro": f"{why} Drop your picture and Fileutilo finds the highest quality that still fits under {kb} KB" + (f", after fitting large photos to a form-friendly size ({FIT[kb]})" if kb in FIT else ", making the picture smaller only if it has to") + ". You can also type exact pixels if the form asks for them. " + PRIV,
+      "steps": [f"Drop your photo, signature or scan — the {kb} KB limit is already set.", "If the form gives exact pixels, choose Width, Height or Fit and type them.", f"Click Resize and download the image — the new size in pixels and KB is shown."],
+      "faqs": [[f"Will the photo still look good at {kb} KB?", ("Yes for a passport-style photo or signature. " if kb <= 50 else "Yes — ") + f"Fileutilo searches for the highest quality that fits under {kb} KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message." + (" Very small limits can make large photos a little soft." if kb <= 20 else "")],
+               ["Can I do several photos at once?", "Yes. Add several and each is compressed under the limit; download them together as a ZIP."],
+               ["The form needs the photo between two sizes, like 20–50 KB — what should I use?", "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."]],
+      "formats": ("JPG, PNG, WEBP, HEIC and more", "JPG (or WEBP, PNG)"), "limits_from": "img-resize",
+      "related": ["exam-photo", "compress-pdf-to-200kb", "img-to-pdf", "img-convert"]}
+
+def pdf_kb(kb):
+    return {"tool": "pdf-compress", "preset": {"target_kb": kb},
+      "title": f"Compress PDF to {kb} KB — Reduce PDF Size Under {kb}KB, Free | Fileutilo",
+      "description": f"Get a PDF under {kb} KB for an online form, email or portal. Keeps text when it can and finds the best quality that fits. Free and private — no upload.",
+      "h1": f"Compress a PDF to {kb} KB", "shot": "pdf-compress",
+      "intro": f"Upload forms, job portals and banks often accept PDFs only up to {kb} KB. Fileutilo first tries lossless clean-up that keeps the text selectable; if that isn’t enough, it turns pages into images at the highest quality that still fits under {kb} KB. " + PRIV,
+      "steps": [f"Drop your PDF — “Under a size limit” is already chosen with {kb} KB.", "Change the limit if your form asks for something else.", "Click Compress and download the PDF that fits."],
+      "faqs": [["Will the text still be selectable?", "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."],
+               [f"What if it can’t get under {kb} KB?", "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF with Split PDF and compress each part, or upload fewer pages."]],
+      "formats": ("PDF", "PDF"), "limits_from": "pdf-compress", "related": ["compress-pdf-to-200kb", "pdf-split", "compress-image-to-50kb", "pdf-merge"]}
+
+VARIANTS = {
+"powerpoint-to-pdf": {"tool": "ppt-to-img", "preset": {"target": "pdf"},
+  "title": "PowerPoint to PDF — Convert PPTX to PDF Online, Free | Fileutilo",
+  "description": "Convert a PowerPoint presentation to a PDF that looks like your slides — one page per slide, to email, print or upload. Free, and it stays on your device.",
+  "h1": "Convert PowerPoint to PDF", "shot": "ppt-to-img",
+  "intro": "Send slides as a PDF that opens on any phone or laptop without PowerPoint. Fileutilo draws every slide — text, pictures, shapes, tables and backgrounds — onto its own PDF page in the slide’s shape, so the PDF looks like your presentation. Pick just some slides if you like. " + PRIV,
+  "steps": ["Drop your .pptx file — PDF is already selected.", "Optionally type which slides to include (for example 1-10) and the picture width.", "Click Convert slides and download the PDF."],
+  "faqs": [["Will the PDF look like my slides?", "Yes for text, pictures, shapes, tables and backgrounds. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones."],
+           ["Can I select the text in the PDF?", "No — each slide is placed on its page as a picture so it looks right everywhere. If you need selectable text instead of the design, use the document converter with PDF chosen."],
+           ["Can I convert old .ppt files?", "Save them as .pptx in PowerPoint or LibreOffice first, or use the document converter, which reads the text of .ppt files."]],
+  "formats": ("PPTX", "PDF (one page per slide)"), "limits_from": "ppt-to-img", "related": ["ppt-to-img", "ppt-compress", "pdf-compress", "pdf-merge"]},
+"ppt-to-pptx": {"tool": "convert", "preset": {"target": "pptx"},
+  "title": "PPT to PPTX — Convert Old PowerPoint Files Online, Free | Fileutilo",
+  "description": "Rescue the slides and text of an old PowerPoint 97–2003 (.ppt) file into a new .pptx you can open and edit anywhere. Free, and nothing is uploaded.",
+  "h1": "Convert PPT to PPTX", "shot": "convert",
+  "intro": "Old .ppt presentations from PowerPoint 97–2003 won’t open in some apps and phones. Fileutilo reads the slide titles, text and bullet points from the old file and builds a fresh .pptx with one slide per slide, ready to edit in PowerPoint, Google Slides or Keynote. " + PRIV,
+  "steps": ["Drop your .ppt files into the converter — PPTX is already selected.", "Each presentation is read and rebuilt in your browser.", "Download the new .pptx files."],
+  "faqs": [["Is the layout kept exactly?", "No — the slide text and titles are carried over onto clean slides, but pictures and the original design are not. For an exact copy, open the .ppt in PowerPoint or LibreOffice Impress and use Save As → .pptx."],
+           ["Can I convert a .ppt straight to PDF?", "Yes — choose PDF instead of PPTX in the converter to get a document of the slide text."]],
+  "formats": ("PPT (PowerPoint 97–2003)", "PPTX"), "limits_from": "convert", "related": ["ppt-text", "powerpoint-to-pdf", "ppt-compress", "convert"]},
+"compress-image-to-50kb": img_kb(50, "exam, job and government forms", "Exam and job portals usually ask for a photo under 50 KB."),
+"compress-image-to-20kb": img_kb(20, "signature and thumb-impression uploads", "Signatures and thumb impressions on application forms often have to be under 20 KB."),
+"compress-image-to-100kb": img_kb(100, "online forms, email and websites", "Many forms and websites cap uploads at 100 KB."),
+"compress-pdf-to-100kb": pdf_kb(100),
+"compress-pdf-to-500kb": pdf_kb(500),
+"png-to-jpg": {"tool": "img-convert", "preset": {"target": "jpg"},
+  "title": "PNG to JPG Converter — Convert PNG to JPEG Online, Free | Fileutilo",
+  "description": "Convert PNG images and screenshots to smaller JPG files, with a background colour for transparent areas. Many at once, free, and nothing is uploaded.",
+  "h1": "Convert PNG to JPG", "shot": "img-convert",
+  "intro": "PNG screenshots and graphics can be large, and some forms only accept JPG. Convert them to JPG for a much smaller file that opens everywhere; transparent areas get the background colour you pick. " + PRIV,
+  "steps": ["Drop your PNG images — JPG is already selected.", "Pick the quality and a background colour for any transparent areas.", "Click Convert and download the JPGs, or all of them as a ZIP."],
+  "faqs": [["Why is the JPG smaller?", "JPG is designed for photos and compresses them much more than PNG. For screenshots with lots of text, keep quality high (90+) so the text stays crisp."],
+           ["What happens to transparency?", "JPG can’t be transparent, so those areas are filled with the background colour you choose — white by default."]],
+  "formats": ("PNG (and other image formats)", "JPG"), "limits_from": "img-convert", "related": ["jpg-to-png", "img-resize", "img-to-pdf", "heic-to-jpg"]},
+"jpg-to-png": {"tool": "img-convert", "preset": {"target": "png"},
+  "title": "JPG to PNG Converter — Convert JPEG to PNG Online, Free | Fileutilo",
+  "description": "Convert JPG photos to PNG for editing, logos and sites that need PNG. No quality is lost in the conversion. Free, many at once, and nothing is uploaded.",
+  "h1": "Convert JPG to PNG", "shot": "img-convert",
+  "intro": "Some apps, editors and upload forms want PNG. Convert JPG and JPEG photos to PNG without any further quality loss — handy before editing, or when a site insists on PNG. " + PRIV,
+  "steps": ["Drop your JPG images — PNG is already selected.", "Add as many as you like.", "Click Convert and download the PNGs, or all of them as a ZIP."],
+  "faqs": [["Will converting make my photo better?", "No — PNG keeps exactly what is in the JPG without adding more compression, but it can’t bring back detail the JPG already lost. Expect a bigger file."],
+           ["Can I make the background transparent?", "Converting doesn’t remove backgrounds; the PNG looks the same as the JPG."]],
+  "formats": ("JPG, JPEG (and other image formats)", "PNG"), "limits_from": "img-convert", "related": ["png-to-jpg", "img-resize", "img-convert", "metadata"]},
+"image-to-pdf": {"tool": "img-to-pdf", "preset": {},
+  "title": "Image to PDF Converter — JPG, PNG, HEIC to PDF Online | Fileutilo",
+  "description": "Turn photos, scans and screenshots — JPG, PNG, WEBP or HEIC — into one PDF, in the order you choose, with A4 or Letter pages. Free, and nothing is uploaded.",
+  "h1": "Convert images to PDF", "shot": "img-to-pdf",
+  "intro": "Combine photos of documents, receipts or notes into a single PDF that’s easy to email or upload. Put the pictures in order, choose the page size and margins, and download one PDF. Works with iPhone HEIC photos too. " + PRIV,
+  "steps": ["Drop your pictures — JPG, PNG, WEBP, HEIC and more.", "Drag them into order and choose the page size, orientation and margins.", "Click Create PDF and download it."],
+  "faqs": [["Can I put several photos in one PDF?", "Yes — every picture becomes a page, in the order shown. Free use allows 5 files per task."],
+           ["My PDF is too big to upload — what now?", "Open it in Compress PDF and choose a size limit, or shrink the photos first with Compress image to 100 KB."]],
+  "formats": ("JPG, PNG, WEBP, HEIC, GIF, BMP, TIFF", "PDF"), "limits_from": "img-to-pdf", "related": ["pdf-merge", "compress-pdf-to-200kb", "img-resize", "pdf-compress"]},
+}
+VBLURB = {"powerpoint-to-pdf": "Slides as a PDF that looks the same", "ppt-to-pptx": "Rescue text from old .ppt files", "compress-image-to-50kb": "Photos under 50 KB for forms",
+          "compress-image-to-20kb": "Signatures under 20 KB", "compress-image-to-100kb": "Any picture under 100 KB",
+          "compress-pdf-to-100kb": "PDFs under a 100 KB limit", "compress-pdf-to-500kb": "PDFs under a 500 KB limit",
+          "png-to-jpg": "Smaller files that open everywhere", "jpg-to-png": "PNG for editors and upload forms",
+          "image-to-pdf": "Photos and scans into one PDF"}
+VSHOT_ALT = {"ppt-to-pptx": "Document converter with an old PowerPoint file converted to PPTX", "powerpoint-to-pdf": "PowerPoint to JPG with PDF chosen, making one PDF page per slide"}

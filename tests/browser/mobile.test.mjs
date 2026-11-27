@@ -5,12 +5,12 @@
 //  - the category menu, a full tool run, the converter and the sign-in window all work with touch
 import fs from 'node:fs';
 import path from 'node:path';
-import { open, check, summary, OUT } from './lib.mjs';
+import { open, check, summary, OUT, FX } from './lib.mjs';
 import { DRIVERS } from './drivers.mjs';
 
 const DEVICES = ['iPhone SE', 'iPhone 13', 'Pixel 7', 'Galaxy S9+', 'iPad Mini', 'iPhone 13 landscape'];
 const shots = path.join(OUT, 'mobile'); fs.mkdirSync(shots, { recursive: true });
-const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds'];
+const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business'];
 
 for (const dev of DEVICES) {
   const t = await open({ device: dev, config: { supabaseUrl: 'https://proj.supabase.co', supabaseAnonKey: 'anon' },
@@ -45,8 +45,11 @@ for (const dev of DEVICES) {
   check(!clipped.length, `${dev}: no cut-off button or label text`, clipped.slice(0, 4).join('; '));
 
   // category menu by touch
-  await t.go('pdf-merge'); await t.page.tap('#t-cat-img'); await t.page.waitForTimeout(250);
-  check(await t.page.evaluate(() => /^\/image-(converter|compressor)$/.test(location.pathname) && !document.getElementById(location.pathname === '/image-converter' ? 'img-convert' : 'img-resize').hidden && document.getElementById('t-cat-img').getAttribute('aria-current') === 'true'), `${dev}: category menu works by tap`, await t.page.evaluate(() => location.pathname));
+  // Home tab back to the home page, then a home-page tile to a tool — both by touch
+  await t.go('pdf-merge'); await t.page.tap('#t-cat-home'); await t.page.waitForTimeout(250);
+  const atHome = await t.page.evaluate(() => location.pathname === '/' && !document.getElementById('home').hidden);
+  await t.page.locator('#tools .tcw[data-k="img-convert"] a').scrollIntoViewIfNeeded(); await t.page.tap('#tools .tcw[data-k="img-convert"] a'); await t.page.waitForTimeout(250);
+  check(atHome && await t.page.evaluate(() => location.pathname === '/image-converter' && !document.getElementById('img-convert').hidden), `${dev}: Home tab and tool tiles work by tap`, await t.page.evaluate(() => location.pathname));
   // full tool run by touch
   await t.go('pdf-merge'); await t.add('pdf-merge', ['canary.pdf', 'canary.pdf']);
   await t.page.tap('#pdf-merge .run'); await t.page.waitForSelector('#pdf-merge .rlist li', { timeout: 60000 });
@@ -54,7 +57,7 @@ for (const dev of DEVICES) {
   check(bb && bb.x >= 0 && bb.x + bb.width <= vw + 1, `${dev}: merge PDFs by tap; download button on screen`);
   await t.page.screenshot({ path: path.join(shots, `${dev.replace(/\W+/g, '_')}-merge.png`), fullPage: true });
   // converter
-  await t.go('convert'); await t.page.setInputFiles('#cfile', 'tests/browser/fixtures/canary.txt'); await t.page.tap('.chip[data-f="pdf"]');
+  await t.go('convert'); await t.page.setInputFiles('#cfile', path.join(FX, 'canary.txt')); await t.page.tap('.chip[data-f="pdf"]');
   await t.page.waitForSelector('#jobs [data-dl]', { timeout: 60000 });
   check(true, `${dev}: converter turns a text file into a PDF`);
   await t.page.screenshot({ path: path.join(shots, `${dev.replace(/\W+/g, '_')}-convert.png`), fullPage: false });

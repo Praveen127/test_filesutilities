@@ -1,6 +1,7 @@
 # Writes web/seo.json — the title, description and on-page text for every page of fileutilo.com.
 # Edit the text here, then run:  python scripts/seo_content.py  &&  node scripts/build-site.mjs
-import json, pathlib
+import json, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 PRIV = "Your files are processed inside your browser and are never uploaded to a server."
 
@@ -9,9 +10,9 @@ def tool(title, desc, h1, intro, steps, faqs, free=False):
 
 T = {
 "home": {"title": "Fileutilo — Free Online PDF, Image & Document Tools (Private)",
-  "description": "31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.",
+  "description": "37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.",
   "h1": "Free, private file tools that run in your browser",
-  "intro": "Fileutilo brings 31 everyday file tools together in one place: convert documents, merge and split PDFs, compress images for form uploads, clean up spreadsheets, format JSON and more. " + PRIV + " That makes it fast, and safe for personal and work documents.",
+  "intro": "Fileutilo brings 37 everyday file tools together in one place: convert documents, merge and split PDFs, compress and merge PowerPoint decks, compress images for form uploads, clean up spreadsheets, format JSON and more. " + PRIV + " That makes it fast, and safe for personal and work documents.",
   "steps": [], "faqs": [
     ["Is Fileutilo free?", "Yes. Every tool can be used free of charge. A free account gives you 25 tasks a day; data tools like the JSON formatter and file diff have no daily limit. Pro removes Fileutilo's daily limits, file caps and ads."],
     ["Are my files uploaded?", "No. " + PRIV + " Only your account details and payment records are stored, never your files."],
@@ -253,6 +254,7 @@ PAGES = {
 "privacy": {"title": "Privacy Policy | Fileutilo", "description": "How Fileutilo handles your data: files are processed in your browser and never uploaded. What we store for accounts, payments and visit statistics."},
 "terms": {"title": "Terms of Service | Fileutilo", "description": "The terms for using Fileutilo, the private online file tools by Kalaburagi Labs."},
 "refunds": {"title": "Refund & Cancellation Policy | Fileutilo", "description": "How to cancel a Fileutilo Pro subscription and when refunds are given for plans and credit packs."},
+"for-business": {"title": "Fileutilo for Business — Private PDF & Office Tools", "description": "Work on contracts, payslips and client files without uploading them. Fileutilo runs in each browser, so no file data reaches our servers."},
 }
 
 # ---------- task-named addresses (what people type into Google) ----------
@@ -479,6 +481,9 @@ VARIANTS = {
   "formats": ("JPG, PNG, WEBP, HEIC", "JPG"), "limits_from": "exam-photo", "related": ["exam-photo", "img-resize", "pdf-sign", "img-convert"]},
 }
 
+import seo_v15 as V15   # Fileutilo 15: PowerPoint tools and new task pages
+T.update(V15.TOOLS); SLUG.update(V15.SLUG); FORMATS.update(V15.FORMATS); LIMITS.update(V15.LIMITS); RELATED.update(V15.RELATED); SHOT_ALT.update(V15.SHOT_ALT)
+VARIANTS.update(V15.VARIANTS)
 for t, m in T.items():
     if t == "home": continue
     m["slug"] = SLUG[t]; m["formats"] = FORMATS[t]; m["limits"] = LIMITS[t]; m["related"] = RELATED[t]; m["shot_alt"] = SHOT_ALT[t]
@@ -487,6 +492,7 @@ VSHOT_ALT = {"word-to-pdf": "Word to PDF: a Word document converted to PDF in th
  "powerpoint-to-pdf": "PowerPoint to PDF: a presentation converted to PDF in the document converter",
  "csv-to-json": "CSV to JSON: a CSV file on the left and the JSON output on the right",
  "webp-to-jpg": "WEBP to JPG: a WEBP image converted to JPG in the image converter"}
+VSHOT_ALT.update(V15.VSHOT_ALT)
 for k, v in VARIANTS.items():
     v["slug"] = k; v["limits"] = LIMITS[v.pop("limits_from")]; v["shot_alt"] = VSHOT_ALT.get(k, SHOT_ALT[v["shot"]])
     v.setdefault("free", T[v["tool"]].get("free", False))
@@ -497,6 +503,7 @@ VBLURB = {"word-to-pdf": "DOCX to PDF with selectable text", "pdf-to-word": "Edi
  "powerpoint-to-pdf": "Slides as 16:9 PDF pages", "excel-to-csv": "XLSX to CSV with a live preview", "csv-to-json": "Header row becomes the keys",
  "heic-to-jpg": "iPhone photos that open everywhere", "webp-to-jpg": "Web images for any app or form",
  "compress-pdf-to-200kb": "PDFs under a portal’s size limit", "fill-pdf-form": "Type into fillable PDF forms", "mask-aadhaar": "Show only the last 4 digits", "signature-resizer": "140 × 60 px, 10–20 KB and more"}
+VBLURB.update(V15.VBLURB); _NAME.update(V15.NAME); _BLURB.update(V15.BLURB)
 for t, m in T.items():
     if t != "home": m["name"] = _NAME[t]; m["blurb"] = _BLURB[t]
 for k, v in VARIANTS.items(): v["name"] = v["h1"].replace("Convert ", ""); v["blurb"] = VBLURB[k]

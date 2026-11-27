@@ -6,19 +6,19 @@
 <meta name="google-adsense-account" content="ca-pub-9678463082871615">
 <!--seo:start-->
 <title>Fileutilo — Free Online PDF, Image &amp; Document Tools (Private)</title>
-<meta name="description" content="31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.">
+<meta name="description" content="37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.">
 <link rel="canonical" href="https://www.fileutilo.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fileutilo">
 <meta property="og:url" content="https://www.fileutilo.com/">
 <meta property="og:title" content="Fileutilo — Free Online PDF, Image &amp; Document Tools (Private)">
-<meta property="og:description" content="31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.">
+<meta property="og:description" content="37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.">
 <meta property="og:image" content="https://www.fileutilo.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fileutilo — Free Online PDF, Image &amp; Document Tools (Private)">
-<meta name="twitter:description" content="31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.">
+<meta name="twitter:description" content="37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.">
 <meta name="twitter:image" content="https://www.fileutilo.com/og-image.png">
 <!--seo:end-->
 <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -30,7 +30,7 @@
 <script>window.FILEUTILO_CONFIG=window.FILEUTILO_CONFIG||{};/*config-overrides*/</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* VOICE: a confident, polished developer workbench — calm, exact, a little delightful.
    IDEA: a transit control room; each tool is a coloured "line" card you board.
@@ -611,7 +611,7 @@ kbd{font:600 12px var(--mono);padding:1px 6px;border:1px solid var(--line);borde
 .pchips a:hover{border-color:var(--green2);color:var(--green2)}
 footer .tool-links{max-width:900px;margin:14px auto 0;line-height:2}footer .tool-links a{color:var(--mute);margin:0 7px;white-space:nowrap}footer .tool-links b{margin-right:4px}
 /* tool and info pages: compact header so the tool is above the fold on phones */
-:root[data-view=tool] .hero .scene,:root[data-view=tool] .hero .heroin p,:root[data-view=tool] .hero-actions,:root[data-view=tool] .ticks,
+:root[data-view=tool] .hero .scene,:root[data-view=tool] .hero .heroin p,:root[data-view=tool] .hero-actions,:root[data-view=tool] .ticks,:root[data-view=tool] .hsearch,:root[data-view=tool] .hpop,:root[data-view=page] .hsearch,:root[data-view=page] .hpop,
 :root[data-view=page] .hero .scene,:root[data-view=page] .hero .heroin p,:root[data-view=page] .hero-actions,:root[data-view=page] .ticks{display:none}
 :root[data-view=tool] .hero h1,:root[data-view=page] .hero h1{font-size:clamp(26px,3.6vw,40px);margin-top:10px}
 :root[data-view=tool] .hero h1 em,:root[data-view=page] .hero h1 em{font-size:.62em;display:inline-block;margin-top:4px}
@@ -636,6 +636,195 @@ footer .tool-links{max-width:900px;margin:14px auto 0;line-height:2}footer .tool
 .k-install{font-size:18px!important;margin-top:16px!important}
 @media(max-width:760px){.mgrid{grid-template-columns:minmax(0,1fr)}}
 .pfoot{max-width:760px;margin:14px auto 0;text-align:center}
+
+/* ---------- Fileutilo 15 home: search, popular tasks, job groups, favourites, footer ---------- */
+.hsearch{position:relative;display:flex;align-items:center;gap:12px;max-width:640px;margin:22px 0 0;background:#fff;color:#0f1a16;border-radius:16px;padding:4px 10px 4px 18px;box-shadow:0 14px 34px -14px rgba(0,0,0,.55)}
+.hsearch>svg{flex:none;color:#4b5a55}.hsearch:focus-within{outline:3px solid var(--limeD);outline-offset:2px}
+.hsearch input{flex:1;min-width:0;border:0;outline:0;font:500 17px Inter,sans-serif;padding:13px 0;background:transparent;color:#0f1a16;min-height:48px}
+.hsearch input::placeholder{color:#5f6d67}
+.hqlist{position:absolute;left:0;right:0;top:calc(100% + 8px);margin:0;padding:6px;list-style:none;background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh2);z-index:30;max-height:min(60vh,440px);overflow:auto}
+.hqlist a{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:10px;color:inherit;text-decoration:none}
+.hqlist a b{font:600 15px Inter,sans-serif}.hqlist a small{color:var(--mute);font-size:13px}
+.hqlist [aria-selected=true] a,.hqlist a:hover{background:var(--panel)}.hqlist .none{padding:12px 14px;color:var(--mute);font-size:14px}
+.hpop{margin:18px 0 6px;max-width:860px}
+.hpop-k{display:block;font:700 11px/1.4 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--heroInk,#cde3d9);margin-bottom:10px}
+.hchips{display:flex;flex-wrap:wrap;gap:8px}
+.hchips a{display:inline-flex;align-items:center;min-height:40px;padding:0 15px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);color:#fff;font:600 14px Inter,sans-serif;text-decoration:none;transition:background .15s}
+.hchips a:hover,.hchips a:focus-visible{background:rgba(255,255,255,.22)}
+.jgroup{display:grid;grid-template-columns:minmax(170px,230px) minmax(0,1fr);gap:22px;align-items:start;border-top:1px solid var(--line);padding:22px 0 8px;scroll-margin-top:12px}
+.jgroup:first-of-type{border-top:0;padding-top:4px}
+.jhead h3{font:800 22px/1.15 'Inter Tight',Inter,sans-serif;letter-spacing:-.02em;margin:2px 0 4px}.jhead p{margin:0;font-size:14px;color:var(--mute)}
+.jnum{font:700 13px Inter,sans-serif;color:var(--green2)}
+.jgroup .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tcw{position:relative;display:flex}.tcw .tcard{flex:1;padding-right:46px}
+.tstar{display:none;position:absolute;top:6px;right:6px;width:40px;height:40px;min-height:40px;padding:0;border:0;border-radius:10px;background:transparent;color:var(--mute);cursor:pointer;place-items:center}
+.tstar svg path{fill:none}.tstar[aria-pressed=true]{color:#b7791f}.tstar[aria-pressed=true] svg path{fill:#f5b72d}
+.tstar:hover{background:var(--panel)}.tstar:focus-visible{outline:3px solid var(--coral);outline-offset:1px}
+:root.can-fav .tstar{display:grid}
+.c-ppt .tico{background:light-dark(#ffe6dc,#3b2016);color:light-dark(#b8410e,#ffab85)}
+.mgrid.mine2{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.nudge{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:34px;padding:18px 22px;border-radius:18px;background:var(--panel);border:1px solid var(--line)}
+.nudge p{margin:0;font-size:16px}.nudge .pri{min-height:44px}
+footer .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;text-align:left;max-width:1100px;margin:0 auto 22px}
+footer .fcols h2{font:700 14px Inter,sans-serif;margin:0 0 8px;color:var(--ink)}footer .fcols p{margin:0 0 6px;font-size:14px;line-height:1.55;color:var(--mute)}
+footer .fcols a{color:var(--green2)}footer .fcols .flegal{display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:14px}
+footer .fbrand{font:800 18px 'Inter Tight',Inter,sans-serif;color:var(--ink);display:block;margin-bottom:6px}
+footer .fbottom{border-top:1px solid var(--line);padding-top:16px;max-width:1100px;margin:0 auto}
+@media(max-width:720px){.jgroup{grid-template-columns:minmax(0,1fr);gap:12px}.mgrid.mine2{grid-template-columns:minmax(0,1fr)}.hsearch input{font-size:16px}}
+
+/*look-v15*/
+/* ---------- home page: the finalized design 11 look ---------- */
+:root[data-view=home]{--bg:light-dark(#f8f7f4,#131210);--sheet:light-dark(#ffffff,#1d1b18);--panel:light-dark(#f1eee7,#26231f);--line:light-dark(#e6e3dc,#36322c);
+  --ink:light-dark(#1a1a1a,#f2efe8);--mute:light-dark(#5a5850,#b6b0a4);--green2:light-dark(#a8361d,#ff9d86)}
+:root[data-view=home] body{background:var(--bg);font-family:Outfit,Inter,system-ui,sans-serif}
+:root[data-view=home] .hero{background:var(--bg);background-image:none;color:var(--ink);padding:16px max(5vw,16px) 0}
+:root[data-view=home] .hero::before{content:"";position:absolute;left:0;right:0;top:0;height:78px;background:var(--sheet);border-bottom:1px solid var(--line)}
+:root[data-view=home] .hero .scene,:root[data-view=home] #catnav,:root[data-view=home] .brand .pbadge{display:none}
+:root[data-view=home] .top,:root[data-view=home] .heroin{max-width:1200px}:root[data-view=home] .heroin{grid-template-columns:minmax(0,1fr)}
+:root[data-view=home] .brand{margin-bottom:46px;min-height:46px}
+:root[data-view=home] .logo{width:40px;height:40px;border-radius:11px;background:light-dark(#1a1a1a,#f2efe8);color:light-dark(#fff,#1a1a1a);box-shadow:none}
+:root[data-view=home] .brand .bname{color:var(--ink);font:700 22px Outfit,'Inter Tight',sans-serif}
+.hbadge{display:none}
+:root[data-view=home] .hbadge{display:inline-block;font:700 13px Outfit,Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;
+  border:1.5px solid light-dark(#1d6630,#7fd99b);background:light-dark(#e3f5e5,#16301d);color:light-dark(#1d6630,#9fe6b4);margin-bottom:16px}
+:root[data-view=home] .hero h1{font:700 clamp(40px,6vw,62px)/1.02 Outfit,'Inter Tight',sans-serif;letter-spacing:-.03em;color:var(--ink);max-width:900px;margin:0}
+:root[data-view=home] .hero h1 em{color:inherit}
+:root[data-view=home] .hero p{color:var(--mute);font-size:19px;max-width:820px;margin-top:14px}
+:root[data-view=home] .hsearch{max-width:760px;margin-top:26px;background:var(--sheet);color:var(--ink);border:2px solid var(--ink);border-radius:18px;box-shadow:0 10px 30px rgba(26,26,26,.08)}
+:root[data-view=home] .hsearch>svg,:root[data-view=home] .hsearch input{color:var(--ink)}:root[data-view=home] .hsearch input::placeholder{color:var(--mute)}
+:root[data-view=home] .hsearch:focus-within{outline:3px solid #ff6f59;outline-offset:2px}
+:root[data-view=home] .hpop{margin:22px 0 8px;max-width:1000px}:root[data-view=home] .hpop-k{color:var(--mute);font-family:Outfit,Inter,sans-serif}
+:root[data-view=home] .hchips a{min-height:44px;padding:0 18px;background:var(--sheet);border:1px solid light-dark(#dedad0,#3d3933);color:var(--ink);font:600 15px Outfit,Inter,sans-serif}
+:root[data-view=home] .hchips a:hover,:root[data-view=home] .hchips a:focus-visible{border-color:var(--ink);background:var(--panel)}
+:root[data-view=home] .acctbar{top:0}
+:root[data-view=home] .acctbar a,:root[data-view=home] .acctbar button{background:transparent;border-color:transparent;color:var(--ink);font:500 16px Outfit,Inter,sans-serif}
+:root[data-view=home] .acctbar a:hover,:root[data-view=home] .acctbar button:hover{background:var(--panel)}
+:root[data-view=home] #acctBtn{background:#ff6f59;border-color:#ff6f59;color:#2b0a04;font-weight:700}
+:root.signed-in[data-view=home] #acctBtn{background:transparent;border-color:transparent;color:var(--ink);font-weight:500}
+:root[data-view=home] .acctbar .av{width:38px;height:38px;background:#ff6f59;color:#2b0a04;font:800 15px Outfit,Inter,sans-serif;margin-left:0}
+:root[data-view=home] .acctbar .pb{display:none}
+:root[data-view=home] .wrap{padding:0 max(5vw,16px)}
+:root[data-view=home] main{max-width:1200px;background:transparent;box-shadow:none;border-radius:0;padding:6px 0 30px}
+:root[data-view=home] .home-page h2,:root[data-view=home] .home-page h3{font-family:Outfit,'Inter Tight',sans-serif}
+:root[data-view=home] .mine{padding-top:22px}:root[data-view=home] .mine .hhead{display:none}
+:root[data-view=home] .mcard{background:var(--sheet);border:1px solid var(--line);border-radius:22px;padding:22px}
+.mch{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}.mch h3{margin:0!important;font-size:21px!important}.mch span{font-size:13.5px;color:var(--mute)}
+.mtiles,.mine-recent{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.mtile{display:flex;gap:12px;align-items:center;min-height:64px;padding:10px 12px;border-radius:14px;background:var(--sheet);border:1px solid var(--line);color:var(--ink);text-decoration:none}
+.mtile:hover{border-color:var(--ink)}.mtile b{font:600 15px/1.25 Outfit,Inter,sans-serif;display:block}.mtile small{font-size:12px;color:var(--mute)}
+.mico{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:var(--jt,var(--panel));color:var(--jk,var(--ink))}
+.mine-recent .note,.mine-favs .note{grid-column:1/-1;margin:0}
+.mine-recent li{display:block;border:0;min-width:0}.mine-recent .mtile{display:flex;padding:10px 12px;min-height:64px}.mine-recent .mtile span.mtx{color:inherit;font-size:inherit;white-space:normal}
+.mine-favs{display:block}.mtiles,:root .mine-recent{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}.mtx{min-width:0}
+:root[data-view=home] .mgrid.mine2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media(max-width:720px){:root[data-view=home] .mgrid.mine2{grid-template-columns:minmax(0,1fr)}}
+:root[data-view=home] .nudge{background:#1a1a1a;color:#fff;border:0;border-radius:20px;margin-top:30px}
+:root[data-view=home] .nudge .pri{background:#ff6f59;color:#2b0a04;border-color:#ff6f59}
+:root[data-view=home] #tools .hhead h2{font:700 clamp(28px,3.6vw,36px)/1.1 Outfit,sans-serif;letter-spacing:-.02em}
+:root[data-view=home] .jgroup{grid-template-columns:minmax(200px,250px) minmax(0,1fr);gap:24px;padding:26px 0 8px}
+:root[data-view=home] .jnum{font:700 15px Outfit,Inter,sans-serif;color:var(--jk)}
+:root[data-view=home] .jhead h3{font:700 27px/1.1 Outfit,sans-serif;letter-spacing:-.01em;margin:4px 0 6px}:root[data-view=home] .jhead p{font-size:15px}
+:root[data-view=home] .jgroup .tgrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+:root[data-view=home] .jgroup .tcard{flex-direction:column;gap:10px;padding:18px 46px 20px 18px;border:0;border-radius:18px;background:var(--jt)}
+:root[data-view=home] .jgroup .tcard:hover{transform:translateY(-3px);box-shadow:none}
+:root[data-view=home] .jgroup .tico{width:auto;height:auto;background:transparent;color:var(--jk);justify-content:start}
+:root[data-view=home] .jgroup .tico svg{width:30px;height:30px;stroke-width:1.7}
+:root[data-view=home] .jgroup .ttx b{font:700 17px/1.25 Outfit,sans-serif;color:light-dark(#1a1a1a,#f2efe8)}
+:root[data-view=home] .jgroup .ttx small{font-size:14px;line-height:1.4;color:light-dark(#3d3b35,#d6d0c4);margin-top:4px}
+:root[data-view=home] .jgroup .tstar{color:light-dark(#5f5b52,#d6d0c4)}
+#do-combine,[data-g=do-combine]{--jt:light-dark(#ffe7d6,#3a2416);--jk:light-dark(#9a3a06,#ffb48a)}
+#do-smaller,[data-g=do-smaller]{--jt:light-dark(#dff1ff,#16293a);--jk:light-dark(#0b4f86,#8cc8ff)}
+#do-protect,[data-g=do-protect]{--jt:light-dark(#e3f5e5,#17301d);--jk:light-dark(#1d6630,#8fe0a4)}
+#do-convert,[data-g=do-convert]{--jt:light-dark(#efe5ff,#2a1f42);--jk:light-dark(#5626a3,#c6a8ff)}
+#do-slides,[data-g=do-slides]{--jt:light-dark(#fbe0d8,#3b1f17);--jk:light-dark(#a12d12,#ffa58c)}
+#do-edit,[data-g=do-edit]{--jt:light-dark(#fff4c7,#352c12);--jk:light-dark(#6e5100,#f2d27a)}
+#do-read,[data-g=do-read]{--jt:light-dark(#ffe1ea,#3a1823);--jk:light-dark(#97193f,#ff9fbb)}
+/* dark footer (all pages) */
+.wrap{padding-bottom:0}
+footer{background:#1a1a1a;color:#d8d5cc;margin:48px calc(-1 * max(5vw,16px)) 0;padding:48px max(5vw,16px) 26px;text-align:left}
+footer .fcols h2{color:#fff}footer .fcols p{color:#cfcac0}footer .fcols a,footer .tool-links a{color:#fff}footer .fcols a{text-decoration:underline}
+footer .fbrand{color:#fff;font-family:Outfit,'Inter Tight',sans-serif}footer .fbottom{border-top-color:#3a3833;color:#bdb8ad;text-align:center}
+footer .linkb{color:#f0ece4}footer .tool-links{color:#bdb8ad;max-width:1100px;margin:14px auto 0;text-align:center}footer .tool-links b{color:#fff}
+@media(max-width:720px){:root[data-view=home] .jgroup{grid-template-columns:minmax(0,1fr);gap:12px}:root[data-view=home] .brand{margin-bottom:30px}
+  :root[data-view=home] .hero::before{height:76px}}
+@media(max-width:600px){:root[data-view=home] .acctbar{position:absolute;top:0;right:0;margin:0}:root[data-view=home] .brand .bname{font-size:20px}}
+
+.v15all{}
+/* ---------- tool and info pages: the design 11 look ---------- */
+:root:is([data-view=tool],[data-view=page]){--bg:light-dark(#f8f7f4,#131210);--sheet:light-dark(#ffffff,#1d1b18);--panel:light-dark(#f4f2ec,#26231f);--line:light-dark(#e6e3dc,#36322c);
+  --ink:light-dark(#1a1a1a,#f2efe8);--mute:light-dark(#5a5850,#b6b0a4)}
+:root:is([data-view=tool],[data-view=page]) body{background:var(--bg);font-family:Outfit,Inter,system-ui,sans-serif}
+:root:is([data-view=tool],[data-view=page]) .hero{background:var(--bg);background-image:none;color:var(--ink);padding:16px max(5vw,16px) 0}
+:root:is([data-view=tool],[data-view=page]) .hero::before{content:"";position:absolute;left:0;right:0;top:0;height:78px;background:var(--sheet);border-bottom:1px solid var(--line)}
+:root:is([data-view=tool],[data-view=page]) .top{max-width:1240px}
+:root:is([data-view=tool],[data-view=page]) .brand .pbadge{display:none}
+:root:is([data-view=tool],[data-view=page]) #catnav a:not([data-cat=home]){display:none}   /* only the Home tab, to go back to the home page */
+:root:is([data-view=tool],[data-view=page]) #catnav{margin-top:6px}:root:is([data-view=tool],[data-view=page]) #catnav a[data-cat=home]{flex:0 0 auto;min-width:150px}
+:root:is([data-view=tool],[data-view=page]) .brand{margin-bottom:30px;min-height:46px}
+:root:is([data-view=tool],[data-view=page]) .logo{width:40px;height:40px;border-radius:11px;background:light-dark(#1a1a1a,#f2efe8);color:light-dark(#fff,#1a1a1a);box-shadow:none}
+:root:is([data-view=tool],[data-view=page]) .brand .bname{color:var(--ink);font:700 22px Outfit,'Inter Tight',sans-serif}
+:root:is([data-view=tool],[data-view=page]) .hero h1{font:700 clamp(28px,3.8vw,42px)/1.08 Outfit,'Inter Tight',sans-serif;letter-spacing:-.025em;color:var(--ink);margin:0}
+:root:is([data-view=tool],[data-view=page]) .hero h1 em{color:light-dark(#a8361d,#ff9d86)}
+:root:is([data-view=tool],[data-view=page]) .acctbar{top:0}
+:root:is([data-view=tool],[data-view=page]) .acctbar a,:root:is([data-view=tool],[data-view=page]) .acctbar button{background:transparent;border-color:transparent;color:var(--ink);font:500 16px Outfit,Inter,sans-serif}
+:root:is([data-view=tool],[data-view=page]) .acctbar a:hover,:root:is([data-view=tool],[data-view=page]) .acctbar button:hover{background:var(--panel)}
+:root:is([data-view=tool],[data-view=page]) #acctBtn{background:#ff6f59;border-color:#ff6f59;color:#2b0a04;font-weight:700}
+:root.signed-in:is([data-view=tool],[data-view=page]) #acctBtn{background:transparent;border-color:transparent;color:var(--ink);font-weight:500}
+:root:is([data-view=tool],[data-view=page]) .acctbar .av{width:38px;height:38px;background:#ff6f59;color:#2b0a04;font:800 15px Outfit,Inter,sans-serif;margin-left:0}
+:root:is([data-view=tool],[data-view=page]) .acctbar .pb{background:var(--panel);color:var(--ink)}
+:root:is([data-view=tool],[data-view=page]) nav a{background:transparent;border:1px solid transparent;border-bottom:0;color:var(--mute)}
+:root:is([data-view=tool],[data-view=page]) nav a:hover{background:light-dark(rgba(26,26,26,.05),rgba(255,255,255,.06))}
+:root:is([data-view=tool],[data-view=page]) nav a b{color:var(--ink);font-family:Outfit,'Inter Tight',sans-serif}:root:is([data-view=tool],[data-view=page]) nav a small{opacity:1;color:var(--mute)}
+:root:is([data-view=tool],[data-view=page]) nav a .ic{background:var(--sheet);border:1px solid var(--line)}:root:is([data-view=tool],[data-view=page]) nav a .ic svg{stroke:var(--ink)}
+:root:is([data-view=tool],[data-view=page]) nav a[aria-current=true]{background:var(--sheet);border-color:var(--line)}
+:root:is([data-view=tool],[data-view=page]) nav a[aria-current=true] .ic{background:light-dark(#1a1a1a,#f2efe8);border-color:light-dark(#1a1a1a,#f2efe8);box-shadow:none}:root:is([data-view=tool],[data-view=page]) nav a[aria-current=true] .ic svg{stroke:light-dark(#fff,#1a1a1a)}
+:root:is([data-view=tool],[data-view=page]) main{background:var(--sheet);border:1px solid var(--line);border-top:0;box-shadow:0 14px 36px -18px rgba(26,26,26,.18)}
+:root:is([data-view=tool],[data-view=page]) .subnav a{font-family:Outfit,Inter,sans-serif;font-size:15px;background:var(--sheet);color:var(--ink)}
+:root:is([data-view=tool],[data-view=page]) .subnav a[aria-current=true]{background:light-dark(#1a1a1a,#f2efe8);border-color:light-dark(#1a1a1a,#f2efe8);color:light-dark(#fff,#1a1a1a)}
+:root:is([data-view=tool],[data-view=page]) .lead h2,:root:is([data-view=tool],[data-view=page]) .seo-about h2,:root:is([data-view=tool],[data-view=page]) .seo-about h3{font-family:Outfit,'Inter Tight',sans-serif}
+@media(max-width:600px){:root:is([data-view=tool],[data-view=page]) .acctbar{position:absolute;top:0;right:0;margin:0}:root:is([data-view=tool],[data-view=page]) .brand .bname{font-size:20px}:root:is([data-view=tool],[data-view=page]) .hero::before{height:76px}}
+/*hero-v15*/
+:root[data-view=home] .hsearch{max-width:560px;margin-top:20px;border-width:1.5px;border-radius:14px;padding:2px 10px 2px 14px;gap:10px}
+:root[data-view=home] .hsearch>svg{width:17px;height:17px}
+:root[data-view=home] .hsearch input{font-size:15px;padding:9px 0;min-height:42px}
+/*biz-v15*/
+:root[data-view=home] .hero h1{font-size:clamp(28px,3.6vw,44px);line-height:1.08;max-width:none;letter-spacing:-.03em}
+:root[data-view=home] .hero h1 .htag{display:block;font-size:max(.58em,20px);font-weight:600;letter-spacing:-.015em;line-height:1.2;margin-top:12px}
+:root[data-view=home] .hero h1 em{color:light-dark(#c2410c,#ff9d86);font-style:normal}
+:root[data-view=home] .hero h1+p{margin-top:12px}
+.hero h1 .htag{display:block;font-size:max(.58em,18px);font-weight:600;letter-spacing:-.015em;line-height:1.2;margin-top:8px}
+:root:root .hero h1 .htag em{font-size:inherit;display:inline;margin:0;font-style:normal;color:light-dark(#c2410c,#ff9d86)}
+.biz{padding:8px 0 12px}
+.biz-kick{font:700 12px Outfit,Inter,sans-serif;letter-spacing:.14em;color:light-dark(#c2410c,#ff9d86)}
+.biz-h{font:700 clamp(28px,4vw,44px)/1.1 Outfit,'Inter Tight',sans-serif;letter-spacing:-.03em;margin:10px 0 12px;max-width:880px;color:var(--ink)}
+.biz-h em{font-style:normal;color:light-dark(#c2410c,#ff9d86)}
+.biz-lead{font-size:18px;color:var(--mute);max-width:760px;margin:0 0 22px}
+.biz-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.biz-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#ff6f59;color:#1a1a1a;font-weight:700;text-decoration:none;border:1.5px solid #ff6f59}
+.biz-btn.o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.biz-btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.biz-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:40px}
+.biz-card{background:var(--sheet);border:1px solid var(--line);border-radius:18px;padding:20px}
+.biz-card h3{font-size:17px;margin:0 0 6px}.biz-card p{margin:0;color:var(--mute);font-size:15px}
+.biz-ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.biz-ic.i1{background:light-dark(#dff3e8,#173326);color:light-dark(#0d6b3f,#8fe0b4)}
+.biz-ic.i2{background:light-dark(#e3ecff,#18233d);color:light-dark(#1d4ed8,#9db8ff)}
+.biz-ic.i3{background:light-dark(#fff4c7,#352c12);color:light-dark(#6e5100,#f2d27a)}
+.biz-ic.i4{background:light-dark(#ffe1ea,#3a1823);color:light-dark(#97193f,#ff9fbb)}
+.biz-sh{font:700 26px Outfit,'Inter Tight',sans-serif;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink)}
+.biz-tw{overflow-x:auto;margin-bottom:40px;border:1px solid var(--line);border-radius:18px}
+.biz-cmp{width:100%;border-collapse:collapse;background:var(--sheet);min-width:520px}
+.biz-cmp th,.biz-cmp td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+.biz-cmp thead th{background:light-dark(#f1ede4,#26231f);font-size:13px}.biz-cmp tbody th{font-weight:500}
+.biz-cmp tr:last-child>*{border-bottom:0}
+.biz-cmp td.y{color:light-dark(#0d6b3f,#8fe0b4);font-weight:700}.biz-cmp td.n{color:light-dark(#a8361d,#ff9d86)}
+.biz-plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:820px;margin-bottom:36px}
+.biz-plan{background:var(--sheet);border:1px solid var(--line);border-radius:18px;padding:22px}.biz-plan.hot{border:2px solid var(--ink)}
+.biz-plan h4{margin:0 0 4px;font-size:18px}.biz-plan>p{margin:0;color:var(--mute)}
+.biz-pr{font:700 26px Outfit,'Inter Tight',sans-serif;margin:10px 0}.biz-pr small{font:500 15px Inter,sans-serif;color:var(--mute)}
+.biz-plan ul{margin:0 0 18px;padding-left:18px;color:var(--mute)}
+.biz-contact{background:#1a1a1a;color:#f2efe8;border-radius:22px;padding:28px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.biz-contact h3{color:#fff;margin:0 0 6px;font:700 22px Outfit,'Inter Tight',sans-serif}.biz-contact p{margin:0;color:#cfcac0}
 </style>
 <!-- Vercel Web Analytics: counts page visits without cookies; never sees file contents.
      Loaded only on the live site (see "analytics" in the settings above). -->
@@ -678,10 +867,10 @@ window.fuTrack = function (name, params) {
 <div class="heroin">
 <div>
 <div class="brand"><div class="logo"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2.2" fill="#ff6f59" stroke="none"/></svg></div><span class="bname">Fileutilo</span><span class="pbadge">Private by design</span></div>
-<h1>Your files. Your device.<br><em>Your control.</em></h1>
-<p>One simple workspace for PDFs, documents, images and data. Get work done without sending your files to a server.</p>
-<div class="hero-actions"><a class="hero-cta" href="./#tools">Explore tools <span aria-hidden="true">→</span></a><a class="hero-secondary" href="./#how">See how it works</a></div>
-<ul class="ticks"><li>No installation</li><li>Files processed in your browser</li><li><span class="toolcount" data-suffix=" useful tools">31 useful tools</span></li><li>Free to start</li></ul>
+<h1>Free PDF, image, Word and other Office tools<span class="htag">Your files <em>never leave</em> your&nbsp;device.</span></h1>
+<p>No uploads, no installs — safe for confidential and work documents. Free to start.</p>
+<form class="hsearch" role="search" action="./" onsubmit="return false"><label for="hq" class="sr-only">Search tools</label><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="hq" type="search" autocomplete="off" spellcheck="false" enterkeyhint="go" placeholder="Search tools — try “compress”, “sign” or “excel”" role="combobox" aria-expanded="false" aria-controls="hqList" aria-autocomplete="list"><ul id="hqList" class="hqlist" role="listbox" aria-label="Matching tools" hidden></ul></form>
+<div class="hpop"><span class="hpop-k" id="hpopK">Popular tasks</span><div class="hchips" id="hchips" role="list" aria-labelledby="hpopK"><a role="listitem" href="jpg-to-pdf">JPG to PDF</a><a role="listitem" href="pdf-to-jpg">PDF to JPG</a><a role="listitem" href="word-to-pdf">Word to PDF</a><a role="listitem" href="pdf-to-word">PDF to Word</a><a role="listitem" href="powerpoint-to-pdf">PowerPoint to PDF</a><a role="listitem" href="pdf-to-powerpoint">PDF to PowerPoint</a><a role="listitem" href="excel-to-pdf">Excel to PDF</a><a role="listitem" href="merge-pdf">Merge PDF</a><a role="listitem" href="compress-pdf">Compress PDF</a><a role="listitem" href="edit-pdf">Edit PDF</a><a role="listitem" href="sign-pdf">Sign PDF</a><a role="listitem" href="heic-to-jpg">HEIC to JPG</a></div></div>
 </div>
 <div class="scene" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 420 240">
 <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e3eee8"/></linearGradient>
@@ -710,29 +899,27 @@ window.fuTrack = function (name, params) {
 
 <!-- ============ CONVERTER ============ -->
 <section id="home" class="home-page">
-  <div class="home-trust">
-    <div><b class="toolcount-n">31</b><span>tools in one workspace</span></div>
-    <div><b>0 uploads</b><span>your files stay in your browser</span></div>
-    <div><b>No install</b><span>works on phone and computer</span></div>
-    <div><b>Free to start</b><span>Pro when you need more</span></div>
-  </div>
 
   <div class="hsec mine" id="mine" hidden>
-    <div class="hhead"><div><span class="home-kicker">ON THIS DEVICE</span><h2>Pick up where you left off</h2></div>
-      <p>Favourites and recent activity are kept only in this browser — never on our servers. <button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button></p></div>
-    <div class="mgrid"><div class="mcard"><h3>Favourites</h3><div class="mine-favs"></div></div>
-      <div class="mcard"><h3>Recent activity</h3><ul class="mine-recent"></ul>
-        <div class="row mine-ctl"><button type="button" class="linkb mine-clear">Clear</button><label class="chk"><input type="checkbox" class="mine-off">Don’t keep recent activity on this device</label></div></div></div>
+    <div class="hhead"><div><span class="home-kicker">YOUR TOOLS</span><h2>Pick up where you left off</h2></div>
+      <p>Your recent tools and favourites are kept only in this browser — never on our servers. <button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button></p></div>
+    <div class="mgrid mine2"><div class="mcard"><div class="mch"><h3>Recently used</h3><span>Kept in this browser</span></div><ul class="mine-recent"></ul>
+        <div class="row mine-ctl"><button type="button" class="linkb mine-clear">Clear</button><label class="chk"><input type="checkbox" class="mine-off">Don’t keep recent activity on this device</label></div></div>
+      <div class="mcard"><div class="mch"><h3>Favourites</h3><span>Tap ☆ on any tool to pin it</span></div><div class="mine-favs"></div></div></div>
   </div>
+  <div class="nudge" id="nudge" hidden><p>Sign in to keep your recently used and favourite tools one click away.</p><button type="button" class="pri nudge-in">Sign in</button></div>
 
   <div class="hsec" id="tools">
-    <div class="hhead"><div><span class="home-kicker">THE TOOLKIT</span><h2>31 tools. One private workspace.</h2></div>
-      <p>Every tool has its own page — bookmark the ones you use. Tools marked <em class="tfree">No limit</em> are free without daily limits.</p></div>
-<div class="tgroup"><h3>PDF <span>13</span></h3><div class="tgrid"><a class="tcard c-pdf" href="merge-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="10" rx="1.5"/><path d="M7 13v2a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-2"/><path d="M12 18v3m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Merge PDF</b><small>Combine PDFs into one, in any order</small></span></a><a class="tcard c-pdf" href="split-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M3 12h3m3 0h2m3 0h2m3 0h2" /><path d="M9 6h6M9 8.5h4"/><path d="M9 16h6M9 18.5h4"/></svg></span><span class="ttx"><b>Split PDF</b><small>Extract pages or split by range</small></span></a><a class="tcard c-pdf" href="organize-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="8" rx="1.5"/><rect x="3" y="13" width="7" height="8" rx="1.5"/><path d="M17.5 14.5a3.5 3.5 0 1 1-3 1.7"/><path d="M14 13.5v3h3"/></svg></span><span class="ttx"><b>Organize pages</b><small>Reorder, rotate and delete pages</small></span></a><a class="tcard c-pdf" href="compress-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 10v4m-2-2 2 2 2-2"/><path d="M12 20v-3m-2 1.5 2-1.5 2 1.5" /><path d="M8 15.5h8"/></svg></span><span class="ttx"><b>Compress PDF</b><small>Shrink PDFs for email and uploads</small></span></a><a class="tcard c-pdf" href="sign-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 4.5 5 5L9 20H4v-5z"/><path d="m12.5 6.5 5 5"/><path d="M15 21h6"/></svg></span><span class="ttx"><b>Sign PDF</b><small>Draw, type or upload a signature</small></span></a><a class="tcard c-pdf" href="edit-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h3"/><path d="m8 9 1.5 1.5L12 8"/></svg></span><span class="ttx"><b>Edit & fill PDF</b><small>Fill forms, add text and ticks</small></span></a><a class="tcard c-pdf" href="redact-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><rect x="8" y="11" width="8" height="2.6" fill="currentColor"/><rect x="8" y="15.5" width="5" height="2.6" fill="currentColor"/></svg></span><span class="ttx"><b>Mask PDF & Aadhaar</b><small>Hide details, mask Aadhaar</small></span></a><a class="tcard c-pdf" href="protect-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6"/></svg></span><span class="ttx"><b>Protect PDF</b><small>Add an AES-256 password</small></span></a><a class="tcard c-pdf" href="unlock-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 7.6-1.7"/><path d="M12 14v3"/></svg></span><span class="ttx"><b>Unlock PDF</b><small>Remove a password you know</small></span></a><a class="tcard c-pdf" href="watermark-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 13V9.5a3 3 0 1 1 6 0V13"/><path d="M4 13h16v3H4z"/><path d="M6 20h12"/></svg></span><span class="ttx"><b>Watermark & numbers</b><small>Watermarks and page numbers</small></span></a><a class="tcard c-pdf" href="ocr"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 8h8M12 8v9"/></svg></span><span class="ttx"><b>OCR</b><small>Text from scans — Kannada, Hindi & more</small></span></a><a class="tcard c-pdf" href="pdf-to-jpg"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2H5a2 2 0 0 0-2 2v9"/><path d="M10 2l4 4h-4z"/><rect x="11" y="11" width="10" height="10" rx="2"/><path d="m11 19 3-3 2.5 2.5 1.5-1.5 3 3"/><circle cx="17.5" cy="14" r="1"/><path d="M3 17h5m-2-2 2 2-2 2"/></svg></span><span class="ttx"><b>PDF to images</b><small>Save pages as JPG or PNG</small></span></a><a class="tcard c-pdf" href="jpg-to-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="m3 11 3-3 2.5 2.5L10 9l3 3"/><path d="M18 11h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-5z"/><path d="M8 17h5m-2-2 2 2-2 2" transform="translate(-2 0)"/></svg></span><span class="ttx"><b>Images to PDF</b><small>Photos and scans into one PDF</small></span></a></div></div>
-<div class="tgroup"><h3>Convert & images <span>4</span></h3><div class="tgrid"><a class="tcard c-img" href="document-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v6"/><path d="M14 3l5 5v3"/><path d="M14 3v5h5"/><path d="M5 15h14m-3-3 3 3-3 3"/><path d="M19 21H5m3-3-3 3 3 3" transform="translate(0 -3)"/></svg></span><span class="ttx"><b>Document converter</b><small>Word, PDF, Excel, PowerPoint, ODT, RTF and more</small></span></a><a class="tcard c-img" href="image-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><circle cx="8.5" cy="8" r="1.5"/><path d="m3 15 5-5 4 4 2-2 5 5"/><path d="M8 21h8m-2-2 2 2-2 2" transform="translate(0 -1)"/></svg></span><span class="ttx"><b>Image converter</b><small>HEIC, WEBP, AVIF, PNG, JPG, ICO…</small></span></a><a class="tcard c-img" href="image-compressor"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="12" height="12" rx="2"/><path d="M14 3h7v7"/><path d="m21 3-7 7"/><path d="m3 18 4-4 4 4"/></svg></span><span class="ttx"><b>Resize & compress</b><small>Fit 20 KB / 50 KB form limits</small></span></a><a class="tcard c-img" href="passport-size-photo"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2.2"/><path d="M5.5 16.5c.6-1.8 2-2.7 3.5-2.7s2.9.9 3.5 2.7M14.5 9h4M14.5 12.5h4M14.5 16h2.5"/></svg></span><span class="ttx"><b>Passport size photo & signature</b><small>Exact px and KB for exam forms</small></span></a></div></div>
-<div class="tgroup"><h3>Documents <span>5</span></h3><div class="tgrid"><a class="tcard c-doc" href="merge-word"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h9l4 4v6"/><path d="M6.5 8 8 13l1.5-4 1.5 4L12.5 8"/><path d="M4 3v14a2 2 0 0 0 2 2h4"/><path d="M14 17h7m-3-3 3 3-3 3"/></svg></span><span class="ttx"><b>Merge Word</b><small>Join .docx files, keep formatting</small></span></a><a class="tcard c-doc" href="combine-excel"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M3 7.5h12M7.5 3v12"/><path d="M9 21h10a2 2 0 0 0 2-2V9"/><path d="M18 6h3"/></svg></span><span class="ttx"><b>Combine Excel</b><small>Merge workbooks and sheets</small></span></a><a class="tcard c-doc" href="find-and-replace"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 3 3"/><path d="M14 20h7m-2.5-2.5L21 20l-2.5 2.5"/><path d="M7 9h4"/></svg></span><span class="ttx"><b>Find & replace</b><small>Replace text across many files</small></span></a><a class="tcard c-doc" href="word-counter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="ttx"><b>Word count <em class="tfree">No limit</em></b><small>Words, characters, reading time</small></span></a><a class="tcard c-doc" href="remove-metadata"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/><path d="m14 14 4 4m0-4-4 4"/></svg></span><span class="ttx"><b>Remove metadata</b><small>Strip author, edit history and GPS</small></span></a></div></div>
-<div class="tgroup"><h3>Data & developer <span>6</span></h3><div class="tgrid"><a class="tcard c-data" href="json-formatter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/><path d="M10 9h4m-4 3h4m-4 3h2"/></svg></span><span class="ttx"><b>JSON formatter <em class="tfree">No limit</em></b><small>Format, validate and repair</small></span></a><a class="tcard c-data" href="json-compare"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3H5a2 2 0 0 0-2 2v4l-1 1 1 1v4a2 2 0 0 0 2 2h1"/><path d="M18 3h1a2 2 0 0 1 2 2v4l1 1-1 1v4a2 2 0 0 1-2 2h-1"/><path d="M12 3v18"/><path d="M7.5 9h2m5 0h2m-9.5 4h2m5 0h2"/></svg></span><span class="ttx"><b>JSON compare <em class="tfree">No limit</em></b><small>Differences by structure</small></span></a><a class="tcard c-data" href="jsonpath-tester"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/><path d="M8.5 7.5c-.8 0-1 .5-1 1v.6l-.6.4.6.4v.6c0 .5.2 1 1 1m3-4c.8 0 1 .5 1 1v.6l.6.4-.6.4v.6c0 .5-.2 1-1 1"/></svg></span><span class="ttx"><b>JSONPath & schema <em class="tfree">No limit</em></b><small>JSONPath tester, schema generator</small></span></a><a class="tcard c-data" href="data-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="11" rx="2"/><path d="M3 7.5h18M9 3v11M15 3v11"/><path d="M6 21h12m-3-3 3 3-3 3" transform="translate(0 -2)"/></svg></span><span class="ttx"><b>Data converter <em class="tfree">No limit</em></b><small>CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML</small></span></a><a class="tcard c-data" href="csv-cleaner"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/><path d="M19 13l.8 2.2L22 16l-2.2.8L19 19l-.8-2.2L16 16l2.2-.8z"/></svg></span><span class="ttx"><b>Table cleaner <em class="tfree">No limit</em></b><small>De-duplicate, trim, sort, filter</small></span></a><a class="tcard c-data" href="checksum-calculator"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 21M17 3l-2 18M4 8.5h17M3 15.5h17"/></svg></span><span class="ttx"><b>Checksums & Base64 <em class="tfree">No limit</em></b><small>MD5, SHA-256 checksums and Base64</small></span></a></div></div>
-<div class="tgroup"><h3>Compare & archive <span>3</span></h3><div class="tgrid"><a class="tcard c-arch" href="file-comparison"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="18" rx="2"/><rect x="13" y="3" width="8" height="18" rx="2"/><path d="M5.5 9h3M17 7.5v3M15.5 9h3"/><path d="M5.5 14h3m7 0h3"/></svg></span><span class="ttx"><b>Compare files <em class="tfree">No limit</em></b><small>Compare text, Word and PDF files</small></span></a><a class="tcard c-arch" href="create-zip"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></span><span class="ttx"><b>Create ZIP</b><small>Pack files and folders</small></span></a><a class="tcard c-arch" href="zip-extractor"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9"/><path d="M3 9 6 3h12l3 6z"/><path d="M12 12v5m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Open ZIP <em class="tfree">No limit</em></b><small>Look inside and extract</small></span></a></div></div>
+    <h2 class="sr-only">All tools</h2>
+<!--grid:start-->
+<section class="jgroup" id="do-combine" aria-labelledby="jg-combine"><div class="jhead"><span class="jnum">01</span><h3 id="jg-combine">Combine</h3><p>Join many files into one</p></div><div class="tgrid"><div class="tcw" data-k="pdf-merge"><a class="tcard c-doc" href="merge-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="10" rx="1.5"/><path d="M7 13v2a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-2"/><path d="M12 18v3m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Merge PDF</b><small>Combine PDFs into one, in any order</small></span></a><button type="button" class="tstar" data-k="pdf-merge" aria-pressed="false" aria-label="Add Merge PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="word-merge"><a class="tcard c-doc" href="merge-word"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h9l4 4v6"/><path d="M6.5 8 8 13l1.5-4 1.5 4L12.5 8"/><path d="M4 3v14a2 2 0 0 0 2 2h4"/><path d="M14 17h7m-3-3 3 3-3 3"/></svg></span><span class="ttx"><b>Merge Word</b><small>Join .docx files, keep formatting</small></span></a><button type="button" class="tstar" data-k="word-merge" aria-pressed="false" aria-label="Add Merge Word to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="excel-combine"><a class="tcard c-doc" href="combine-excel"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M3 7.5h12M7.5 3v12"/><path d="M9 21h10a2 2 0 0 0 2-2V9"/><path d="M18 6h3"/></svg></span><span class="ttx"><b>Combine Excel</b><small>Merge workbooks and sheets</small></span></a><button type="button" class="tstar" data-k="excel-combine" aria-pressed="false" aria-label="Add Combine Excel to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="img-to-pdf"><a class="tcard c-doc" href="jpg-to-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="m3 11 3-3 2.5 2.5L10 9l3 3"/><path d="M18 11h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-5z"/><path d="M8 17h5m-2-2 2 2-2 2" transform="translate(-2 0)"/></svg></span><span class="ttx"><b>Images to PDF</b><small>Photos and scans into one PDF</small></span></a><button type="button" class="tstar" data-k="img-to-pdf" aria-pressed="false" aria-label="Add Images to PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="zip-create"><a class="tcard c-doc" href="create-zip"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></span><span class="ttx"><b>Create ZIP</b><small>Pack files and folders</small></span></a><button type="button" class="tstar" data-k="zip-create" aria-pressed="false" aria-label="Add Create ZIP to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-smaller" aria-labelledby="jg-smaller"><div class="jhead"><span class="jnum">02</span><h3 id="jg-smaller">Make smaller</h3><p>Fit upload limits and email</p></div><div class="tgrid"><div class="tcw" data-k="pdf-compress"><a class="tcard c-img" href="compress-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 10v4m-2-2 2 2 2-2"/><path d="M12 20v-3m-2 1.5 2-1.5 2 1.5" /><path d="M8 15.5h8"/></svg></span><span class="ttx"><b>Compress PDF</b><small>Shrink PDFs for email and uploads</small></span></a><button type="button" class="tstar" data-k="pdf-compress" aria-pressed="false" aria-label="Add Compress PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="img-resize"><a class="tcard c-img" href="image-compressor"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="12" height="12" rx="2"/><path d="M14 3h7v7"/><path d="m21 3-7 7"/><path d="m3 18 4-4 4 4"/></svg></span><span class="ttx"><b>Resize &amp; compress</b><small>Fit 20 KB / 50 KB form limits</small></span></a><button type="button" class="tstar" data-k="img-resize" aria-pressed="false" aria-label="Add Resize &amp; compress to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="exam-photo"><a class="tcard c-img" href="passport-size-photo"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2.2"/><path d="M5.5 16.5c.6-1.8 2-2.7 3.5-2.7s2.9.9 3.5 2.7M14.5 9h4M14.5 12.5h4M14.5 16h2.5"/></svg></span><span class="ttx"><b>Passport size photo &amp; signature</b><small>Exact px and KB for exam forms</small></span></a><button type="button" class="tstar" data-k="exam-photo" aria-pressed="false" aria-label="Add Passport size photo &amp; signature to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-protect" aria-labelledby="jg-protect"><div class="jhead"><span class="jnum">03</span><h3 id="jg-protect">Protect &amp; keep private</h3><p>Passwords, masking and clean files</p></div><div class="tgrid"><div class="tcw" data-k="pdf-protect"><a class="tcard c-arch" href="protect-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6"/></svg></span><span class="ttx"><b>Protect PDF</b><small>Add an AES-256 password</small></span></a><button type="button" class="tstar" data-k="pdf-protect" aria-pressed="false" aria-label="Add Protect PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-unlock"><a class="tcard c-arch" href="unlock-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 7.6-1.7"/><path d="M12 14v3"/></svg></span><span class="ttx"><b>Unlock PDF</b><small>Remove a password you know</small></span></a><button type="button" class="tstar" data-k="pdf-unlock" aria-pressed="false" aria-label="Add Unlock PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-redact"><a class="tcard c-arch" href="redact-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><rect x="8" y="11" width="8" height="2.6" fill="currentColor"/><rect x="8" y="15.5" width="5" height="2.6" fill="currentColor"/></svg></span><span class="ttx"><b>Mask PDF &amp; Aadhaar</b><small>Hide details, mask Aadhaar</small></span></a><button type="button" class="tstar" data-k="pdf-redact" aria-pressed="false" aria-label="Add Mask PDF &amp; Aadhaar to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="metadata"><a class="tcard c-arch" href="remove-metadata"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/><path d="m14 14 4 4m0-4-4 4"/></svg></span><span class="ttx"><b>Remove metadata</b><small>Strip author, edit history and GPS</small></span></a><button type="button" class="tstar" data-k="metadata" aria-pressed="false" aria-label="Add Remove metadata to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-convert" aria-labelledby="jg-convert"><div class="jhead"><span class="jnum">04</span><h3 id="jg-convert">Convert</h3><p>Change one format into another</p></div><div class="tgrid"><div class="tcw" data-k="convert"><a class="tcard c-data" href="document-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v6"/><path d="M14 3l5 5v3"/><path d="M14 3v5h5"/><path d="M5 15h14m-3-3 3 3-3 3"/><path d="M19 21H5m3-3-3 3 3 3" transform="translate(0 -3)"/></svg></span><span class="ttx"><b>Word, PowerPoint &amp; Excel converter</b><small>To and from PDF — also PPT, DOC, XLS, ODT, RTF</small></span></a><button type="button" class="tstar" data-k="convert" aria-pressed="false" aria-label="Add Word, PowerPoint &amp; Excel converter to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="img-convert"><a class="tcard c-data" href="image-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><circle cx="8.5" cy="8" r="1.5"/><path d="m3 15 5-5 4 4 2-2 5 5"/><path d="M8 21h8m-2-2 2 2-2 2" transform="translate(0 -1)"/></svg></span><span class="ttx"><b>Image converter</b><small>HEIC, WEBP, AVIF, PNG, JPG, ICO…</small></span></a><button type="button" class="tstar" data-k="img-convert" aria-pressed="false" aria-label="Add Image converter to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-to-img"><a class="tcard c-data" href="pdf-to-jpg"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2H5a2 2 0 0 0-2 2v9"/><path d="M10 2l4 4h-4z"/><rect x="11" y="11" width="10" height="10" rx="2"/><path d="m11 19 3-3 2.5 2.5 1.5-1.5 3 3"/><circle cx="17.5" cy="14" r="1"/><path d="M3 17h5m-2-2 2 2-2 2"/></svg></span><span class="ttx"><b>PDF to images</b><small>Save pages as JPG or PNG</small></span></a><button type="button" class="tstar" data-k="pdf-to-img" aria-pressed="false" aria-label="Add PDF to images to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="data-convert"><a class="tcard c-data" href="data-converter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="11" rx="2"/><path d="M3 7.5h18M9 3v11M15 3v11"/><path d="M6 21h12m-3-3 3 3-3 3" transform="translate(0 -2)"/></svg></span><span class="ttx"><b>Data converter <em class="tfree">No limit</em></b><small>CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML</small></span></a><button type="button" class="tstar" data-k="data-convert" aria-pressed="false" aria-label="Add Data converter to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-slides" aria-labelledby="jg-slides"><div class="jhead"><span class="jnum">05</span><h3 id="jg-slides">PowerPoint &amp; slides</h3><p>Convert, shrink and reuse presentations</p></div><div class="tgrid"><div class="tcw" data-k="powerpoint-to-pdf"><a class="tcard c-ppt" href="powerpoint-to-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M8 10h8m-3-3 3 3-3 3"/></svg></span><span class="ttx"><b>PowerPoint to PDF</b><small>Slides as a PDF that looks the same</small></span></a></div><div class="tcw" data-k="pdf-to-ppt"><a class="tcard c-ppt" href="pdf-to-powerpoint"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M16 10H8m3-3-3 3 3 3"/></svg></span><span class="ttx"><b>PDF to PowerPoint</b><small>Turn PDF pages into slides</small></span></a><button type="button" class="tstar" data-k="pdf-to-ppt" aria-pressed="false" aria-label="Add PDF to PowerPoint to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="ppt-to-pptx"><a class="tcard c-ppt" href="ppt-to-pptx"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M12 13V7m-3 3 3-3 3 3"/></svg></span><span class="ttx"><b>PPT to PPTX</b><small>Rescue text from old .ppt files</small></span></a></div><div class="tcw" data-k="ppt-compress"><a class="tcard c-ppt" href="compress-powerpoint"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M12 6v3m-2-1.5 2 1.5 2-1.5M12 14v-3m-2 1.5 2-1.5 2 1.5"/></svg></span><span class="ttx"><b>Compress PowerPoint</b><small>Shrink big decks for email and uploads</small></span></a><button type="button" class="tstar" data-k="ppt-compress" aria-pressed="false" aria-label="Add Compress PowerPoint to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="ppt-to-img"><a class="tcard c-ppt" href="powerpoint-to-jpg"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="m6 13 3-3 2.5 2.5L13 11l5 3"/><circle cx="15.5" cy="7.5" r="1"/></svg></span><span class="ttx"><b>PowerPoint to JPG</b><small>Save every slide as an image</small></span></a><button type="button" class="tstar" data-k="ppt-to-img" aria-pressed="false" aria-label="Add PowerPoint to JPG to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="ppt-images"><a class="tcard c-ppt" href="extract-images-from-powerpoint"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><rect x="7" y="7" width="4" height="4"/><rect x="13" y="9" width="4" height="4"/></svg></span><span class="ttx"><b>Extract images from PowerPoint</b><small>Get every picture out of a deck</small></span></a><button type="button" class="tstar" data-k="ppt-images" aria-pressed="false" aria-label="Add Extract images from PowerPoint to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="ppt-merge"><a class="tcard c-ppt" href="merge-powerpoint"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="m7 7 5 3-5 3M17 7l-5 3 5 3"/></svg></span><span class="ttx"><b>Merge PowerPoint</b><small>Combine several decks into one</small></span></a><button type="button" class="tstar" data-k="ppt-merge" aria-pressed="false" aria-label="Add Merge PowerPoint to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="ppt-text"><a class="tcard c-ppt" href="powerpoint-text-and-notes"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M7 7h10M7 10h10M7 13h6"/></svg></span><span class="ttx"><b>Slide text &amp; speaker notes</b><small>Copy all text and notes from a deck</small></span></a><button type="button" class="tstar" data-k="ppt-text" aria-pressed="false" aria-label="Add Slide text &amp; speaker notes to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-edit" aria-labelledby="jg-edit"><div class="jhead"><span class="jnum">06</span><h3 id="jg-edit">Edit &amp; organize</h3><p>Change what is inside</p></div><div class="tgrid"><div class="tcw" data-k="pdf-edit"><a class="tcard c-pdf" href="edit-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h3"/><path d="m8 9 1.5 1.5L12 8"/></svg></span><span class="ttx"><b>Edit &amp; fill PDF</b><small>Fill forms, add text and ticks</small></span></a><button type="button" class="tstar" data-k="pdf-edit" aria-pressed="false" aria-label="Add Edit &amp; fill PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-sign"><a class="tcard c-pdf" href="sign-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 4.5 5 5L9 20H4v-5z"/><path d="m12.5 6.5 5 5"/><path d="M15 21h6"/></svg></span><span class="ttx"><b>Sign PDF</b><small>Draw, type or upload a signature</small></span></a><button type="button" class="tstar" data-k="pdf-sign" aria-pressed="false" aria-label="Add Sign PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-organize"><a class="tcard c-pdf" href="organize-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="8" rx="1.5"/><rect x="3" y="13" width="7" height="8" rx="1.5"/><path d="M17.5 14.5a3.5 3.5 0 1 1-3 1.7"/><path d="M14 13.5v3h3"/></svg></span><span class="ttx"><b>Organize pages</b><small>Reorder, rotate and delete pages</small></span></a><button type="button" class="tstar" data-k="pdf-organize" aria-pressed="false" aria-label="Add Organize pages to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-split"><a class="tcard c-pdf" href="split-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M3 12h3m3 0h2m3 0h2m3 0h2" /><path d="M9 6h6M9 8.5h4"/><path d="M9 16h6M9 18.5h4"/></svg></span><span class="ttx"><b>Split PDF</b><small>Extract pages or split by range</small></span></a><button type="button" class="tstar" data-k="pdf-split" aria-pressed="false" aria-label="Add Split PDF to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="pdf-stamp"><a class="tcard c-pdf" href="watermark-pdf"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 13V9.5a3 3 0 1 1 6 0V13"/><path d="M4 13h16v3H4z"/><path d="M6 20h12"/></svg></span><span class="ttx"><b>Watermark &amp; numbers</b><small>Watermarks and page numbers</small></span></a><button type="button" class="tstar" data-k="pdf-stamp" aria-pressed="false" aria-label="Add Watermark &amp; numbers to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="find-replace"><a class="tcard c-pdf" href="find-and-replace"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 3 3"/><path d="M14 20h7m-2.5-2.5L21 20l-2.5 2.5"/><path d="M7 9h4"/></svg></span><span class="ttx"><b>Find &amp; replace</b><small>Replace text across many files</small></span></a><button type="button" class="tstar" data-k="find-replace" aria-pressed="false" aria-label="Add Find &amp; replace to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<section class="jgroup" id="do-read" aria-labelledby="jg-read"><div class="jhead"><span class="jnum">07</span><h3 id="jg-read">Read, check &amp; compare</h3><p>Look inside without changing</p></div><div class="tgrid"><div class="tcw" data-k="pdf-ocr"><a class="tcard c-data" href="ocr"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 8h8M12 8v9"/></svg></span><span class="ttx"><b>OCR</b><small>Text from scans — Kannada, Hindi &amp; more</small></span></a><button type="button" class="tstar" data-k="pdf-ocr" aria-pressed="false" aria-label="Add OCR to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="doc-stats"><a class="tcard c-data" href="word-counter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="ttx"><b>Word count <em class="tfree">No limit</em></b><small>Words, characters, reading time</small></span></a><button type="button" class="tstar" data-k="doc-stats" aria-pressed="false" aria-label="Add Word count to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="diff"><a class="tcard c-data" href="file-comparison"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="18" rx="2"/><rect x="13" y="3" width="8" height="18" rx="2"/><path d="M5.5 9h3M17 7.5v3M15.5 9h3"/><path d="M5.5 14h3m7 0h3"/></svg></span><span class="ttx"><b>Compare files <em class="tfree">No limit</em></b><small>Compare text, Word and PDF files</small></span></a><button type="button" class="tstar" data-k="diff" aria-pressed="false" aria-label="Add Compare files to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="json"><a class="tcard c-data" href="json-formatter"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/><path d="M10 9h4m-4 3h4m-4 3h2"/></svg></span><span class="ttx"><b>JSON formatter <em class="tfree">No limit</em></b><small>Format, validate and repair</small></span></a><button type="button" class="tstar" data-k="json" aria-pressed="false" aria-label="Add JSON formatter to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="json-compare"><a class="tcard c-data" href="json-compare"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3H5a2 2 0 0 0-2 2v4l-1 1 1 1v4a2 2 0 0 0 2 2h1"/><path d="M18 3h1a2 2 0 0 1 2 2v4l1 1-1 1v4a2 2 0 0 1-2 2h-1"/><path d="M12 3v18"/><path d="M7.5 9h2m5 0h2m-9.5 4h2m5 0h2"/></svg></span><span class="ttx"><b>JSON compare <em class="tfree">No limit</em></b><small>Differences by structure</small></span></a><button type="button" class="tstar" data-k="json-compare" aria-pressed="false" aria-label="Add JSON compare to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="json-query"><a class="tcard c-data" href="jsonpath-tester"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/><path d="M8.5 7.5c-.8 0-1 .5-1 1v.6l-.6.4.6.4v.6c0 .5.2 1 1 1m3-4c.8 0 1 .5 1 1v.6l.6.4-.6.4v.6c0 .5-.2 1-1 1"/></svg></span><span class="ttx"><b>JSONPath &amp; schema <em class="tfree">No limit</em></b><small>JSONPath tester, schema generator</small></span></a><button type="button" class="tstar" data-k="json-query" aria-pressed="false" aria-label="Add JSONPath &amp; schema to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="table-clean"><a class="tcard c-data" href="csv-cleaner"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/><path d="M19 13l.8 2.2L22 16l-2.2.8L19 19l-.8-2.2L16 16l2.2-.8z"/></svg></span><span class="ttx"><b>Table cleaner <em class="tfree">No limit</em></b><small>De-duplicate, trim, sort, filter</small></span></a><button type="button" class="tstar" data-k="table-clean" aria-pressed="false" aria-label="Add Table cleaner to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="hash"><a class="tcard c-data" href="checksum-calculator"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 21M17 3l-2 18M4 8.5h17M3 15.5h17"/></svg></span><span class="ttx"><b>Checksums &amp; Base64 <em class="tfree">No limit</em></b><small>MD5, SHA-256 checksums and Base64</small></span></a><button type="button" class="tstar" data-k="hash" aria-pressed="false" aria-label="Add Checksums &amp; Base64 to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div><div class="tcw" data-k="zip-open"><a class="tcard c-data" href="zip-extractor"><span class="tico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9"/><path d="M3 9 6 3h12l3 6z"/><path d="M12 12v5m-2-2 2 2 2-2"/></svg></span><span class="ttx"><b>Open ZIP <em class="tfree">No limit</em></b><small>Look inside and extract</small></span></a><button type="button" class="tstar" data-k="zip-open" aria-pressed="false" aria-label="Add Open ZIP to favourites"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button></div></div></section>
+<!--grid:end-->
 <!--seo:popular-->
   </div>
 
@@ -740,18 +927,13 @@ window.fuTrack = function (name, params) {
     <div class="hhead"><div><span class="home-kicker">HOW IT WORKS</span><h2>Three steps. Your file never leaves the tab.</h2></div></div>
     <div class="how">
       <ol class="hsteps">
-        <li><b>Pick a tool</b><p>Open any of the 31 tools — no account needed to start.</p></li>
+        <li><b>Pick a tool</b><p>Open any of the <span class="toolcount-n">37</span> tools — no account needed to start.</p></li>
         <li><b>Add your files</b><p>Drop them in. Your browser reads them from your disk into memory on this page; nothing is sent to us.</p></li>
         <li><b>Download the result</b><p>The work happens on your device, so it's quick even on a slow connection — and the result is saved straight from the page.</p></li>
       </ol>
       <figure class="demo"><div class="bframe"><span></span><span></span><span></span><i>fileutilo.com/image-compressor</i></div>
         <video id="demoVideo" muted loop playsinline preload="none" poster="media/demo-poster.webp" aria-label="Demo: resizing a photo to under 50 KB in Fileutilo"><source src="media/demo.webm" type="video/webm"><source src="media/demo.mp4" type="video/mp4"></video>
         <figcaption>Real recording: a photo resized to under 50 KB for a form upload.</figcaption></figure>
-    </div>
-    <div class="shots">
-      <figure><img src="media/shot-merge.webp" width="1200" height="760" loading="lazy" alt="Merge PDF: three PDFs listed in order, ready to combine"><figcaption>Merge PDF</figcaption></figure>
-      <figure><img src="media/shot-convert.webp" width="1200" height="760" loading="lazy" alt="Document converter with Word, Excel and PDF files queued"><figcaption>Document converter</figcaption></figure>
-      <figure><img src="media/shot-json.webp" width="1200" height="760" loading="lazy" alt="JSON formatter showing formatted, validated JSON"><figcaption>JSON formatter</figcaption></figure>
     </div>
   </div>
 
@@ -765,7 +947,7 @@ window.fuTrack = function (name, params) {
         <li><b>Passwords</b> you type into Protect or Unlock PDF</li>
         <li><b>The results</b> — saved straight from the page to your downloads</li>
         <li><b>Your favourites and recent activity</b> — kept in this browser only, and you can clear them</li></ul>
-        <p>This is true for all 31 tools, on every plan, signed in or not.</p></div>
+        <p>This is true for all <span class="toolcount-n">37</span> tools, on every plan, signed in or not.</p></div>
       <div class="pnet"><h3>What does use the network</h3>
         <table><thead><tr><th>What</th><th>Why</th><th>Contains your files?</th></tr></thead><tbody>
         <tr><td>Processing code (PDF engine, Office readers, OCR language data)</td><td>Downloaded from public code libraries (jsDelivr, unpkg, esm.sh) the first time a tool needs it, then cached</td><td class="no">No</td></tr>
@@ -800,7 +982,7 @@ window.fuTrack = function (name, params) {
     <div class="ptable" role="region" aria-label="Free and Pro compared" tabindex="0"><table>
       <thead><tr><th></th><th>Without an account</th><th>Free account</th><th class="pro">Pro</th></tr></thead>
       <tbody>
-      <tr><td>All 31 tools</td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td class="pro"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td></tr>
+      <tr><td>All <span class="toolcount-n">37</span> tools</td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td><td class="pro"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></td></tr>
       <tr><td>Tasks a day</td><td>10</td><td>25</td><td class="pro">Unlimited</td></tr>
       <tr><td>Files per task</td><td>5</td><td>5</td><td class="pro">No Fileutilo cap*</td></tr>
       <tr><td>File size</td><td>Up to 20 MB</td><td>Up to 20 MB</td><td class="pro">No Fileutilo cap*</td></tr>
@@ -823,7 +1005,7 @@ window.fuTrack = function (name, params) {
   <div class="home-faq">
     <span class="home-kicker">GOOD TO KNOW</span><h3>Questions people ask</h3>
     <details><summary>Do I need to install anything?</summary><p>No. Fileutilo runs in any modern browser on Windows, Mac, Linux, Android and iPhone.</p></details>
-    <details><summary>Are my files uploaded?</summary><p>No. All 31 tools process files inside your browser. Fileutilo's servers only store account, usage-count and payment records if you sign in or buy something — never your files, their names or their contents.</p></details>
+    <details><summary>Are my files uploaded?</summary><p>No. All <span class="toolcount-n">37</span> tools process files inside your browser. Fileutilo's servers only store account, usage-count and payment records if you sign in or buy something — never your files, their names or their contents.</p></details>
     <details><summary>Why does a tool download something the first time?</summary><p>Some tools need processing code — for example the PDF engine or OCR language data. It's fetched from a public code library once and cached by your browser. Those downloads don't contain anything from your files.</p></details>
     <details><summary>Can I use Fileutilo for free?</summary><p>Yes: 10 tasks a day without an account, 25 with a free account, and the data tools have no daily limit. Pro removes all limits and ads.</p></details>
     <details><summary>Does it work offline?</summary><p>Once a tool's code has been loaded, it keeps working if your connection drops — another sign the work happens on your device.</p></details>
@@ -945,6 +1127,32 @@ window.fuTrack = function (name, params) {
 <h3>Your rights</h3><p>You can see your data in your account, ask us to correct it, and delete your account at any time from the account panel. You can also raise a grievance with us, and if it isn’t resolved, complain to the Data Protection Board of India. Fileutilo accounts are for people aged 18 or over, or younger users with a parent’s or guardian’s consent.</p>
 <h3>Contact &amp; grievances</h3><p>Email <a class="l-mail" href="mailto:support@fileutilo.com">support@fileutilo.com</a>. We aim to reply within 7 days.</p></section>
 
+<section id="for-business" hidden class="biz">
+<span class="biz-kick">FILEUTILO FOR BUSINESS</span>
+<h2 class="biz-h">Work on confidential files — <em>without uploading</em> them.</h2>
+<p class="biz-lead">Contracts, payslips, ID scans and client data are processed in each employee’s browser. Nothing reaches our servers, so there is no file data for us to store, leak or hand over.</p>
+<div class="biz-cta"><a class="biz-btn" href="mailto:support@fileutilo.com?subject=Fileutilo%20for%20business">Talk to us</a><a class="biz-btn o" href="privacy">Read our privacy policy</a></div>
+<div class="biz-cards">
+<div class="biz-card"><span class="biz-ic i1"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></svg></span><h3>No data processing risk</h3><p>Files never leave the device, so there is no file data on our side to cover in a data-processing agreement.</p></div>
+<div class="biz-card"><span class="biz-ic i2"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>Easier security review</h3><p>No uploads, no file storage and no third-party processors for documents. Our privacy policy lists everything the site sends.</p></div>
+<div class="biz-card"><span class="biz-ic i3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Fast on any connection</h3><p>Work happens on the laptop, so large PDFs and decks don’t wait on an upload — even on busy office Wi-Fi.</p></div>
+<div class="biz-card"><span class="biz-ic i4"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><h3><span class="toolcount-n">37</span> tools, one place</h3><p>PDF, Word, PowerPoint, Excel and images: merge, compress, convert, sign, redact and more.</p></div>
+</div>
+<h3 class="biz-sh">How it compares</h3>
+<div class="biz-tw"><table class="biz-cmp"><thead><tr><th scope="col"><span class="sr-only">Question</span></th><th scope="col">Fileutilo</th><th scope="col">Typical online PDF tools</th></tr></thead><tbody>
+<tr><th scope="row">Are your files uploaded?</th><td class="y">Never</td><td class="n">Yes, to their servers for processing</td></tr>
+<tr><th scope="row">Files stored after use</th><td class="y">Nothing to store</td><td class="n">Usually kept 1–2 hours, then deleted</td></tr>
+<tr><th scope="row">On a slow connection</th><td class="y">Only the tool is downloaded, never your files</td><td class="n">Every file goes up and comes back down</td></tr>
+<tr><th scope="row">Software to install</th><td class="y">None — runs in the browser</td><td>None, or a desktop app</td></tr>
+</tbody></table></div>
+<h3 class="biz-sh">Plans</h3>
+<div class="biz-plans">
+<div class="biz-plan hot"><h4>Pro</h4><p>For individuals at work</p><div class="biz-pr"><span id="bizPro">₹999</span> <small>per year</small></div><ul><li>No daily limits on any tool</li><li>All <span class="toolcount-n">37</span> tools, including PowerPoint and OCR</li><li>An invoice for every payment</li></ul><a class="biz-btn" href="pricing">Get Pro</a></div>
+<div class="biz-plan"><h4>For your team</h4><p>Several people, one bill</p><div class="biz-pr">Contact us</div><ul><li>Pro for everyone on your team</li><li>One invoice, with GST details</li><li>Answers for your security or IT review</li></ul><a class="biz-btn o" href="mailto:support@fileutilo.com?subject=Fileutilo%20for%20business">Contact us</a></div>
+</div>
+<div class="biz-contact"><div><h3>Bring Fileutilo to your team</h3><p>Tell us your team size and what you work on. We usually reply within one working day.</p></div><a class="biz-btn" href="mailto:support@fileutilo.com?subject=Fileutilo%20for%20business">Email support@fileutilo.com</a></div>
+<script>(()=>{try{const p=((window.FILEUTILO_CONFIG||{}).prices||{}).pro_yearly;if(p)document.getElementById('bizPro').textContent='₹'+Number(p).toLocaleString('en-IN')}catch(e){}})()</script>
+</section>
 <section id="terms" hidden class="legal"><h2>Terms of service</h2><p class="note">Last updated: <span class="l-date">21 November 2026</span></p>
 <p>By using Fileutilo you agree to these terms with <b class="l-brand">Kalaburagi Labs</b>.</p>
 <h3>The service</h3><p>Fileutilo provides file tools that run in your browser. Free use is subject to daily limits; paid plans and credits remove or extend them as described on the pricing page.</p>
@@ -966,7 +1174,13 @@ window.fuTrack = function (name, params) {
 <!--seo:about-->
 </main>
 <div class="msg toast" id="gmsg" role="status"></div>
-<footer>© <span id="yr">2026</span> Kalaburagi Labs. All rights reserved.<br><span class="fsub">Fileutilo — a practical, privacy-first file workspace by Kalaburagi Labs.</span><br><span class="flinks fapp"><button type="button" class="linkb installbtn" hidden>⤓ Install app</button><button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button><button type="button" class="linkb kbdhint">Keyboard shortcuts <kbd>?</kbd></button></span><br><span class="flinks"><a href="pricing">Pricing</a><a href="privacy">Privacy</a><a href="terms">Terms</a><a href="refunds">Refunds</a></span><!--seo:toollinks--></footer>
+<footer><div class="fcols">
+ <div><span class="fbrand">Fileutilo</span><p>Private file tools for PDF, Word, Excel, PowerPoint, images and data — they run in your browser.</p></div>
+ <div><h2>Your privacy</h2><p>Your files are processed in your browser and are never uploaded to our servers. If you sign in, we keep only your account, plan, credits and daily task counts — never your files or their names.</p><a href="privacy">Read the privacy policy</a></div>
+ <div><h2>Company</h2><p>Fileutilo is a product of Kalaburagi Labs.</p><p><a href="mailto:support@fileutilo.com">support@fileutilo.com</a></p></div>
+ <div class="flegal" role="navigation" aria-label="Plans and legal"><h2>Plans &amp; legal</h2><a href="pricing">Pricing</a><a href="for-business">For business</a><a href="terms">Terms of use</a><a href="refunds">Refund policy</a><a href="privacy">Privacy policy</a></div>
+</div>
+<div class="fbottom">© <span id="yr">2026</span> Kalaburagi Labs. All rights reserved.<br><span class="flinks fapp"><button type="button" class="linkb installbtn" hidden>⤓ Install app</button><button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button><button type="button" class="linkb kbdhint">Keyboard shortcuts <kbd>?</kbd></button></span></div><!--seo:toollinks--></footer>
 <dialog id="authDlg" class="dlg" aria-labelledby="authTitle"><form method="dialog" class="dlgx"><button aria-label="Close">✕</button></form>
  <h3 id="authTitle">Sign in to Fileutilo</h3><p class="note a-sub">Free account: 25 tasks a day. Your files still never leave your device.</p>
  <p class="preview-note" hidden>Preview — sign-in isn’t connected on this copy yet (see SETUP.md).</p>
@@ -1861,19 +2075,21 @@ const CATS=[
   {id:'convert',name:'Convert',sub:'Document converter',tools:['convert'],ic:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14h6m-2-2 2 2-2 2"/>'},
   {id:'pdf',name:'PDF',sub:'Merge, split, protect…',tools:['pdf-merge','pdf-split','pdf-organize','pdf-compress','pdf-sign','pdf-edit','pdf-redact','pdf-protect','pdf-unlock','pdf-stamp','pdf-ocr','pdf-to-img','img-to-pdf'],ic:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 13h2a1.5 1.5 0 0 1 0 3H8v-5m6 0v5m0-5h2m-2 2.5h1.5"/>'},
   {id:'img',name:'Images',sub:'Convert, resize, passport photos',tools:['img-convert','img-resize','exam-photo'],ic:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'},
+  {id:'slides',name:'PowerPoint',sub:'Compress, convert, merge',tools:['pdf-to-ppt','ppt-compress','ppt-to-img','ppt-images','ppt-merge','ppt-text'],ic:'<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/>'},
   {id:'data',name:'Data',sub:'JSON, CSV, hashes',tools:['json','json-compare','json-query','data-convert','table-clean','hash'],ic:'<path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/>'},
   {id:'docs',name:'Documents',sub:'Merge, stats, clean-up',tools:['word-merge','excel-combine','find-replace','doc-stats','metadata'],ic:'<path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/>'},
   {id:'compare',name:'Compare',sub:'File diff',tools:['diff'],ic:'<rect x="3" y="4" width="8" height="16" rx="2"/><rect x="13" y="4" width="8" height="16" rx="2"/><path d="M5.5 9h3M15.5 9h3m-1.5-1.5v3M5.5 14h3"/>'},
   {id:'archive',name:'Archive',sub:'Create & open ZIP',tools:['zip-create','zip-open'],ic:'<path d="M4 7h16v13H4zM3 3h18v4H3z"/><path d="M10 11h4"/>'}];
 const TOOL_NAMES={home:'Home',convert:'Converter','pdf-merge':'Merge','pdf-split':'Split','pdf-organize':'Organize pages','pdf-compress':'Compress','pdf-sign':'Sign','pdf-edit':'Edit & fill','pdf-redact':'Mask','pdf-protect':'Protect','pdf-unlock':'Unlock','pdf-stamp':'Watermark & numbers','pdf-ocr':'OCR (scan to text)','pdf-to-img':'PDF to images','img-to-pdf':'Images to PDF',
   'img-convert':'Convert format','img-resize':'Resize & compress','exam-photo':'Passport size photo & signature',json:'JSON formatter','json-compare':'JSON compare','json-query':'JSONPath & schema','data-convert':'Data converter','table-clean':'Table cleaner',hash:'Base64 & hash',
-  'word-merge':'Merge Word','excel-combine':'Combine Excel','find-replace':'Find & replace','doc-stats':'Word count & stats',metadata:'Remove metadata',diff:'File diff','zip-create':'Create ZIP','zip-open':'Open ZIP'};
+  'word-merge':'Merge Word','excel-combine':'Combine Excel','find-replace':'Find & replace','doc-stats':'Word count & stats',metadata:'Remove metadata',diff:'File diff','zip-create':'Create ZIP','zip-open':'Open ZIP',
+  'pdf-to-ppt':'PDF to PowerPoint','ppt-compress':'Compress','ppt-to-img':'Slides to images','ppt-images':'Extract images','ppt-merge':'Merge','ppt-text':'Text & notes'};
 const TOOL_CAT={};CATS.forEach(c=>c.tools.forEach(t=>TOOL_CAT[t]=c.id));
 /* Every tool has its own task-named address (fileutilo.com/merge-pdf). A few task pages open a tool with a
    preset (/word-to-pdf opens the converter with PDF chosen). Old addresses (/pdf-merge, #pdf-merge) still work. */
-const PAGE_IDS=['pricing','privacy','terms','refunds'];
-const SLUGS={"convert":"document-converter","pdf-merge":"merge-pdf","pdf-split":"split-pdf","pdf-organize":"organize-pdf","pdf-compress":"compress-pdf","pdf-protect":"protect-pdf","pdf-unlock":"unlock-pdf","pdf-stamp":"watermark-pdf","pdf-ocr":"ocr","pdf-to-img":"pdf-to-jpg","img-to-pdf":"jpg-to-pdf","img-convert":"image-converter","img-resize":"image-compressor","json":"json-formatter","json-compare":"json-compare","json-query":"jsonpath-tester","data-convert":"data-converter","table-clean":"csv-cleaner","hash":"checksum-calculator","word-merge":"merge-word","excel-combine":"combine-excel","find-replace":"find-and-replace","doc-stats":"word-counter","metadata":"remove-metadata","diff":"file-comparison","zip-create":"create-zip","zip-open":"zip-extractor","pdf-sign":"sign-pdf","pdf-edit":"edit-pdf","pdf-redact":"redact-pdf","exam-photo":"passport-size-photo"};
-const VARIANTS={"word-to-pdf":["convert","pdf"],"pdf-to-word":["convert","docx"],"excel-to-pdf":["convert","pdf"],"powerpoint-to-pdf":["convert","pdf"],"excel-to-csv":["data-convert","csv"],"csv-to-json":["data-convert","json"],"heic-to-jpg":["img-convert","jpg"],"webp-to-jpg":["img-convert","jpg"],"compress-pdf-to-200kb":["pdf-compress","200"],"fill-pdf-form":["pdf-edit","form"],"mask-aadhaar":["pdf-redact","aadhaar"],"signature-resizer":["exam-photo","bank-sign"]};
+const PAGE_IDS=['pricing','privacy','terms','refunds','for-business'];
+const SLUGS={"convert":"document-converter","pdf-merge":"merge-pdf","pdf-split":"split-pdf","pdf-organize":"organize-pdf","pdf-compress":"compress-pdf","pdf-protect":"protect-pdf","pdf-unlock":"unlock-pdf","pdf-stamp":"watermark-pdf","pdf-ocr":"ocr","pdf-to-img":"pdf-to-jpg","img-to-pdf":"jpg-to-pdf","img-convert":"image-converter","img-resize":"image-compressor","json":"json-formatter","json-compare":"json-compare","json-query":"jsonpath-tester","data-convert":"data-converter","table-clean":"csv-cleaner","hash":"checksum-calculator","word-merge":"merge-word","excel-combine":"combine-excel","find-replace":"find-and-replace","doc-stats":"word-counter","metadata":"remove-metadata","diff":"file-comparison","zip-create":"create-zip","zip-open":"zip-extractor","pdf-sign":"sign-pdf","pdf-edit":"edit-pdf","pdf-redact":"redact-pdf","exam-photo":"passport-size-photo","pdf-to-ppt":"pdf-to-powerpoint","ppt-compress":"compress-powerpoint","ppt-to-img":"powerpoint-to-jpg","ppt-images":"extract-images-from-powerpoint","ppt-merge":"merge-powerpoint","ppt-text":"powerpoint-text-and-notes"};
+const VARIANTS={"word-to-pdf":["convert","pdf"],"pdf-to-word":["convert","docx"],"excel-to-pdf":["convert","pdf"],"powerpoint-to-pdf":["ppt-to-img","pdf"],"excel-to-csv":["data-convert","csv"],"csv-to-json":["data-convert","json"],"heic-to-jpg":["img-convert","jpg"],"webp-to-jpg":["img-convert","jpg"],"compress-pdf-to-200kb":["pdf-compress","200"],"fill-pdf-form":["pdf-edit","form"],"mask-aadhaar":["pdf-redact","aadhaar"],"signature-resizer":["exam-photo","bank-sign"],"ppt-to-pptx":["convert","pptx"],"compress-image-to-50kb":["img-resize","50"],"compress-image-to-20kb":["img-resize","20"],"compress-image-to-100kb":["img-resize","100"],"compress-pdf-to-100kb":["pdf-compress","100"],"compress-pdf-to-500kb":["pdf-compress","500"],"png-to-jpg":["img-convert","jpg"],"jpg-to-png":["img-convert","png"],"image-to-pdf":["img-to-pdf",""]};
 const FROM_SLUG=Object.fromEntries(Object.entries(SLUGS).map(([t,x])=>[x,t]));
 const toolOf=k=>VARIANTS[k]?VARIANTS[k][0]:k;
 const keyOf=x=>{if(!x)return'';x=String(x).toLowerCase();if(VARIANTS[x])return x;if(FROM_SLUG[x])return FROM_SLUG[x];return(TOOL_CAT[x]||PAGE_IDS.includes(x))?x:''};
@@ -1890,7 +2106,9 @@ const PRESET={convert:v=>{const b=document.querySelector(`#tgts .chip[data-f="${
   'img-convert':v=>setSel('#img-convert .o-f',v),'data-convert':v=>setSel('#data-convert .o-to',v),
   'pdf-compress':v=>{const r=document.querySelector('#pdf-compress [name=cp-mode][value=target]');if(r&&!r.checked){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))}const k=document.querySelector('#pdf-compress .o-kb');if(k)k.value=v},
   'exam-photo':v=>{window.fuExamPreset&&window.fuExamPreset(v)},
-  'pdf-redact':()=>{const a=document.querySelector('#pdf-redact .rd-aad');if(a)a.classList.add('hl')},'pdf-edit':()=>{}};
+  'pdf-redact':()=>{const a=document.querySelector('#pdf-redact .rd-aad');if(a)a.classList.add('hl')},'pdf-edit':()=>{},
+  'img-resize':v=>{const b=document.querySelector(`#img-resize .chips2 [data-p="${v}"]`);if(b)b.click()},
+  'ppt-to-img':v=>setSel('#ppt-to-img .o-f',v)};
 function applyPreset(k){const v=VARIANTS[k];if(v&&PRESET[v[0]])try{PRESET[v[0]](v[1])}catch(e){console.error(e)}}
 let SEO_=undefined;const seoData=()=>{if(SEO_===undefined){const e=document.getElementById('seo-data');if(!e)return null;try{SEO_=JSON.parse(e.textContent)}catch(x){SEO_=null}}return SEO_};
 function syncUrl(id){if(location.protocol==='file:')return;const want=routeUrl(id),hr=hashRoute();
@@ -1903,7 +2121,7 @@ function loadAbout(id){   // in-app navigation: fetch the page's help text (step
     const ad=document.querySelector('main .adslot');ad?MAIN.insertBefore(a,ad):MAIN.appendChild(a)}).catch(()=>{}).finally(()=>aboutLoading.delete(id))}
 function seoApply(id){document.documentElement.dataset.view=viewOf(id);document.querySelectorAll('.seo-about').forEach(a=>a.hidden=a.dataset.route!==id);loadAbout(id);
   const SEO=seoData(),m=SEO&&(SEO[id]||SEO.home);if(!m)return;document.title=m.t;
-  const h1=document.querySelector('.hero h1');if(h1)h1.innerHTML=m.h?esc(m.h)+'<br><em>Free &amp; private.</em>':'Your files. Your device.<br><em>Your control.</em>';
+  const h1=document.querySelector('.hero h1');if(h1)h1.innerHTML=m.h?esc(m.h)+'<br><em>Free &amp; private.</em>':'Free PDF, image, Word and other Office tools<span class="htag">Your files <em>never leave</em> your&nbsp;device.</span>';
   const set=(q,a,v)=>{const e=document.querySelector(q);if(e)e.setAttribute(a,v)};
   set('meta[name="description"]','content',m.d);set('link[rel="canonical"]','href','https://www.fileutilo.com/'+((!id||id==='home')?'':slugOf(id)))}
 function go(id){firstRoute=false;if(location.protocol==='file:'){location.hash='#'+id;return}
@@ -3279,6 +3497,410 @@ INIT['zip-open']=()=>{let zip=null,entries=[],sel=null;
   t.q('.o-sel').onclick=async()=>{const pick=entries.filter(x=>x.chk);if(!pick.length)return toast('Tick the files you want first','err');await need('JSZip');const z=new JSZip();for(const x of pick)z.file(x.path,await x.e.async('uint8array'));
     saveFile('selected-files.zip',await z.generateAsync({type:'blob',compression:'DEFLATE'}),$('gmsg'))}};
 
+/*ppt-tools:start*/
+/* =====================================================================
+   POWERPOINT TOOLS — PDF to PowerPoint, compress, slides to images, extract pictures, merge, text & notes.
+   A .pptx is a ZIP of XML parts; everything here reads and writes those parts in the browser.
+   ===================================================================== */
+const PPT_IC='<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/>';
+const PNS={p:'http://schemas.openxmlformats.org/presentationml/2006/main',a:'http://schemas.openxmlformats.org/drawingml/2006/main',
+  r:'http://schemas.openxmlformats.org/officeDocument/2006/relationships',pr:'http://schemas.openxmlformats.org/package/2006/relationships',
+  ct:'http://schemas.openxmlformats.org/package/2006/content-types'};
+const isPptx=f=>extOf(f.name)==='pptx';
+const xmlOf=s=>new DOMParser().parseFromString(s,'application/xml');
+const xmlStr=d=>new XMLSerializer().serializeToString(d);
+const kidsOf=(el,name)=>el?[...el.children].filter(c=>c.localName===name):[];
+const kidOf=(el,name)=>el?[...el.children].find(c=>c.localName===name)||null:null;
+const pathOf=(el,...names)=>{let e=el;for(const n of names){e=kidOf(e,n);if(!e)return null}return e};
+const partJoin=(from,rel)=>{if(rel.startsWith('/'))return rel.slice(1);const p=from.split('/');p.pop();for(const s of rel.split('/')){if(s==='..')p.pop();else if(s&&s!=='.')p.push(s)}return p.join('/')};
+const partRel=(from,to)=>{const a=from.split('/');a.pop();const b=to.split('/');let i=0;while(i<a.length&&i<b.length-1&&a[i]===b[i])i++;return '../'.repeat(a.length-i)+b.slice(i).join('/')};
+const relsOf=p=>{const i=p.lastIndexOf('/');return p.slice(0,i+1)+'_rels/'+p.slice(i+1)+'.rels'};
+async function pptRels(z,part){const f=z.file(relsOf(part));const m={};if(!f)return m;
+  for(const r of xmlOf(await f.async('string')).getElementsByTagName('Relationship')){const ext=r.getAttribute('TargetMode')==='External';
+    m[r.getAttribute('Id')]={type:(r.getAttribute('Type')||'').split('/').pop(),target:ext?null:partJoin(part,r.getAttribute('Target')),ext}}return m}
+async function openPptx(f){await need('JSZip');const head=new Uint8Array(await f.slice(0,8).arrayBuffer());
+  if(head[0]===0xD0&&head[1]===0xCF)throw new Error(`${f.name} is password-protected or an old PowerPoint 97–2003 file. Remove the password, or open it in PowerPoint and save it as .pptx, then try again.`);
+  let z;try{z=await JSZip.loadAsync(await f.arrayBuffer())}catch(e){throw new Error(`${f.name} isn’t a readable PowerPoint (.pptx) file`)}
+  if(!z.file('ppt/presentation.xml'))throw new Error(`${f.name} isn’t a PowerPoint (.pptx) file`);return z}
+async function pptSlides(z){const pres=xmlOf(await z.file('ppt/presentation.xml').async('string')),rels=await pptRels(z,'ppt/presentation.xml');
+  const ids=[...pres.getElementsByTagNameNS(PNS.p,'sldId')];
+  return ids.map(e=>{const r=rels[e.getAttributeNS(PNS.r,'id')];return r&&r.target}).filter(p=>p&&z.file(p))}
+async function pptSize(z){const s=xmlOf(await z.file('ppt/presentation.xml').async('string')).getElementsByTagNameNS(PNS.p,'sldSz')[0];
+  return s?{cx:+s.getAttribute('cx'),cy:+s.getAttribute('cy')}:{cx:12192000,cy:6858000}}
+const pageList=(spec,n)=>{if(!spec||!spec.trim())return Array.from({length:n},(_,i)=>i);const out=[];
+  for(const part of spec.split(',')){const m=part.trim().match(/^(\d+)?\s*(-)?\s*(\d+)?$/);if(!m||(!m[1]&&!m[3]))throw new Error(`“${part.trim()}” isn’t a slide number or range — use e.g. 1-3, 5`);
+    const a=m[1]?+m[1]:1,b=m[2]?(m[3]?+m[3]:n):a;for(let i=Math.max(1,a);i<=Math.min(n,b);i++)out.push(i-1)}
+  if(!out.length)throw new Error(`No slides in that range — this deck has ${n} slide${n===1?'':'s'}`);return[...new Set(out)]};
+
+/* ---------- text of a shape tree, in reading order ---------- */
+function shapeText(root){const out=[];
+  const walk=el=>{for(const c of el.children){const n=c.localName;
+    if(n==='sp'){const ph=c.getElementsByTagNameNS(PNS.p,'ph')[0],typ=ph?ph.getAttribute('type')||'body':'';
+      if(['sldNum','dt','ftr','hdr','sldImg'].includes(typ))continue;
+      const tb=kidOf(c,'txBody');if(!tb)continue;const paras=kidsOf(tb,'p').map(p=>{let s='';for(const r of p.children){if(r.localName==='r'||r.localName==='fld')s+=r.textContent;else if(r.localName==='br')s+='\n'}return{t:s,lvl:+((kidOf(p,'pPr')||{getAttribute:()=>0}).getAttribute('lvl')||0)}}).filter(p=>p.t.trim());
+      if(paras.length)out.push({title:typ==='title'||typ==='ctrTitle',paras})}
+    else if(n==='graphicFrame'){for(const tbl of c.getElementsByTagNameNS(PNS.a,'tbl'))out.push({table:[...tbl.getElementsByTagNameNS(PNS.a,'tr')].map(tr=>kidsOf(tr,'tc').map(tc=>tc.textContent.trim()))})}
+    else if(n==='grpSp'||n==='AlternateContent'||n==='Choice')walk(n==='AlternateContent'?(kidOf(c,'Choice')||c):c)}};
+  walk(root);return out}
+async function deckText(z,{notes=true}={}){const slides=await pptSlides(z),res=[];
+  for(const p of slides){const d=xmlOf(await z.file(p).async('string'));const tree=d.getElementsByTagNameNS(PNS.p,'spTree')[0];const items=tree?shapeText(tree):[];
+    let title='';const ti=items.findIndex(i=>i.title);if(ti>=0){title=items[ti].paras.map(x=>x.t).join(' ');items.splice(ti,1)}
+    let note='';if(notes){const rels=await pptRels(z,p);const nr=Object.values(rels).find(r=>r.type==='notesSlide');
+      if(nr&&z.file(nr.target)){const nd=xmlOf(await z.file(nr.target).async('string'));const nt=nd.getElementsByTagNameNS(PNS.p,'spTree')[0];
+        note=nt?shapeText(nt).filter(s=>!s.title).map(s=>s.paras?s.paras.map(x=>x.t).join('\n'):'').join('\n').trim():''}}
+    res.push({title,items,note,hidden:d.documentElement.getAttribute('show')==='0'})}return res}
+
+INIT['ppt-text']=()=>makeTool('ppt-text',{title:'Slide text & speaker notes',desc:'Copy all the text and speaker notes out of a PowerPoint — slide by slide, as plain text or Markdown.',ic:PPT_IC,
+  accept:'.pptx,.ppt',multiple:true,filter:f=>['pptx','ppt'].includes(extOf(f.name)),drop:'Drop PowerPoint files here',action:'Get text',zipName:'slide-text',
+  opts:`<label class="field"><span>Format</span><select class="o-f"><option value="txt">Plain text (.txt)</option><option value="md">Markdown (.md)</option></select></label>
+   <label class="chk"><input type="checkbox" class="o-n" checked> Include speaker notes</label>
+   <label class="chk"><input type="checkbox" class="o-h"> Skip hidden slides</label>`,
+  async run(t){const md=t.q('.o-f').value==='md',withNotes=t.q('.o-n').checked,skipHidden=t.q('.o-h').checked,outs=[];let firstText='';
+    for(let i=0;i<t.files.length;i++){const f=t.files[i];t.prog(i/t.files.length,`Reading ${f.name}…`);let body='',count=0;
+      if(extOf(f.name)==='ppt'){const m=await parsePpt(await f.arrayBuffer(),stemOf(f.name));body=toTxt(m);count=m.blocks.filter(b=>b.t==='h').length}
+      else{const z=await openPptx(f);const deck=await deckText(z,{notes:withNotes});
+        const L=[];deck.forEach((s,k)=>{if(skipHidden&&s.hidden)return;count++;const head=`Slide ${k+1}${s.title?(md?' — ':': ')+s.title:''}`;
+          L.push(md?`## ${head}`:head);
+          for(const it of s.items){if(it.table){if(md){const w=Math.max(...it.table.map(r=>r.length));const row=r=>'| '+Array.from({length:w},(_,j)=>(r[j]||'').replace(/\|/g,'\\|').replace(/\n/g,' ')).join(' | ')+' |';
+                L.push(row(it.table[0]),'|'+' --- |'.repeat(w),...it.table.slice(1).map(row))}else it.table.forEach(r=>L.push(r.join('\t')))}
+            else for(const p of it.paras)L.push(md?`${'  '.repeat(p.lvl)}- ${p.t.replace(/\n/g,' ')}`:`${'  '.repeat(p.lvl)}• ${p.t}`)}
+          if(s.note)L.push(md?s.note.split('\n').map(x=>'> '+x).join('\n').replace(/^> /,'> **Notes:** '):'Notes: '+s.note);L.push('')});
+        body=(md?`# ${stemOf(f.name)}\n\n`:'')+L.join('\n')}
+      if(!body.trim())throw new Error(`No text found in ${f.name} — slides made only of pictures have no text to copy`);
+      if(!firstText)firstText=body;
+      const o={name:`${stemOf(f.name)}-text.${md?'md':'txt'}`,blob:new Blob([body],{type:md?'text/markdown':'text/plain'})};o.info=`${count} slide${count===1?'':'s'}`;outs.push(o)}
+    t._extra=`<div class="pv-text"><button class="btn o-copy" type="button">Copy text</button></div>`;setTimeout(()=>{const b=t.q('.o-copy');if(b)b.onclick=async()=>{try{await navigator.clipboard.writeText(firstText);t.msg('Copied to the clipboard','ok')}catch(e){t.msg('Your browser didn’t allow copying — download the file instead')}}},0);
+    return outs}});
+
+INIT['ppt-images']=()=>makeTool('ppt-images',{title:'Extract images from PowerPoint',desc:'Save every picture in a presentation as its original file — no screenshots, no quality loss. Works with Word and Excel files too.',ic:PPT_IC,
+  accept:'.pptx,.docx,.xlsx',multiple:true,filter:f=>['pptx','docx','xlsx'].includes(extOf(f.name)),drop:'Drop PowerPoint files here',action:'Extract images',zipName:'images',
+  opts:`<label class="chk"><input type="checkbox" class="o-s"> Skip small images (icons under 10 KB)</label>
+   <label class="chk"><input type="checkbox" class="o-v" checked> Include videos and sounds</label>`,
+  async run(t){await need('JSZip');const skip=t.q('.o-s').checked,av=t.q('.o-v').checked,outs=[];
+    const PIC=['png','jpg','jpeg','gif','bmp','tif','tiff','svg','webp','emf','wmf','wdp','jfif'],AV=['mp4','m4v','mov','wmv','avi','mp3','m4a','wav','wma'];
+    for(let i=0;i<t.files.length;i++){const f=t.files[i];t.prog(i/t.files.length,`Opening ${f.name}…`);
+      let z;try{z=await JSZip.loadAsync(await f.arrayBuffer())}catch(e){throw new Error(`${f.name} is password-protected or isn’t a valid Office file`)}
+      const media=Object.keys(z.files).filter(n=>/^(ppt|word|xl)\/media\/[^/]+$/.test(n)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));let k=0;
+      for(const n of media){const e=extOf(n);if(!PIC.includes(e)&&!(av&&AV.includes(e)))continue;const b=await z.file(n).async('blob');if(skip&&PIC.includes(e)&&b.size<10240)continue;
+        k++;outs.push({name:`${stemOf(f.name)}-${String(k).padStart(2,'0')}.${e==='jpeg'?'jpg':e}`,blob:b})}
+      await tick()}
+    if(!outs.length)throw new Error('No images found — this file has no pictures, or only very small ones (untick “Skip small images”)');
+    const odd=outs.filter(o=>['emf','wmf','wdp'].includes(extOf(o.name))).length;
+    if(odd)t._extra=`<p class="note">${odd} picture${odd>1?'s are':' is'} in a Windows drawing format (EMF/WMF/WDP), which opens in Office and Windows apps but not in most browsers.</p>`;
+    return outs}});
+
+/* ---------- compress: shrink the pictures inside, then re-pack the ZIP ---------- */
+INIT['ppt-compress']=()=>makeTool('ppt-compress',{title:'Compress PowerPoint',desc:'Shrink big presentations for email and uploads by optimising the pictures inside. Slides, text and animations stay as they are.',ic:PPT_IC,
+  accept:'.pptx',multiple:true,filter:isPptx,drop:'Drop .pptx files here',action:'Compress',zipName:'compressed',
+  opts:`<div class="field"><span>Compression</span><div class="seg o-lv" role="group" aria-label="Compression"><button data-v="light" aria-pressed="false">Light</button><button data-v="rec" aria-pressed="true">Recommended</button><button data-v="strong" aria-pressed="false">Strong</button></div></div>
+   <p class="note o-lvn">Pictures up to 1920 px wide at good quality — looks the same on a projector or screen.</p>
+   <label class="chk"><input type="checkbox" class="o-png" checked> Turn large photos saved as PNG into JPG (keeps transparent pictures as PNG)</label>`,
+  async run(t){await need('JSZip');const lv=(t.q('.o-lv [aria-pressed=true]')||{dataset:{v:'rec'}}).dataset.v,toJpg=t.q('.o-png').checked;
+    const L={light:{px:2560,q:.85},rec:{px:1920,q:.75},strong:{px:1280,q:.6}}[lv];const outs=[];
+    for(let i=0;i<t.files.length;i++){const f=t.files[i];const z=await openPptx(f);const media=Object.keys(z.files).filter(n=>/^ppt\/media\/[^/]+\.(jpe?g|png|bmp)$/i.test(n));
+      let shrunk=0;const renames=[];
+      for(let k=0;k<media.length;k++){const n=media[k];t.prog((i+k/Math.max(1,media.length)*.9)/t.files.length,`${f.name}: picture ${k+1} of ${media.length}…`);
+        const blob=await z.file(n).async('blob');if(blob.size<30*1024)continue;let bmp;try{bmp=await createImageBitmap(blob)}catch(e){continue}
+        const e=extOf(n),s=Math.min(1,L.px/Math.max(bmp.width,bmp.height));const w=Math.max(1,Math.round(bmp.width*s)),h=Math.max(1,Math.round(bmp.height*s));
+        const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');g.drawImage(bmp,0,0,w,h);bmp.close&&bmp.close();
+        let alpha=false;if(e==='png'){const d=g.getImageData(0,0,w,h).data;for(let p=3;p<d.length;p+=16)if(d[p]<250){alpha=true;break}}
+        const asJpg=e!=='png'||(toJpg&&!alpha&&blob.size>100*1024);
+        if(asJpg&&e==='png'){const j=document.createElement('canvas');j.width=w;j.height=h;const jg=j.getContext('2d');jg.fillStyle='#fff';jg.fillRect(0,0,w,h);jg.drawImage(c,0,0);
+          const nb=await canvasBlob(j,'image/jpeg',L.q);if(nb.size<blob.size*.9){let nn=n.replace(/\.png$/i,'.jpeg'),q=2;while(z.file(nn))nn=n.replace(/\.png$/i,`-${q++}.jpeg`);
+            z.remove(n);z.file(nn,nb);renames.push([n.split('/').pop(),nn.split('/').pop()]);shrunk++}continue}
+        const nb=asJpg?await canvasBlob(c,'image/jpeg',L.q):(s<1?await canvasBlob(c,'image/png'):null);
+        if(nb&&nb.size<blob.size*.95){z.file(n,nb);shrunk++}await tick()}
+      if(renames.length){for(const rn of Object.keys(z.files).filter(x=>x.endsWith('.rels'))){let x=await z.file(rn).async('string'),ch=false;
+          for(const [a,b] of renames){const re=new RegExp(`(Target="[^"]*media/)${a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}"`,'g');if(re.test(x)){x=x.replace(re,`$1${b}"`);ch=true}}if(ch)z.file(rn,x)}
+        const ct=await z.file('[Content_Types].xml').async('string');if(!/Extension="jpeg"/i.test(ct))z.file('[Content_Types].xml',ct.replace('<Default ','<Default Extension="jpeg" ContentType="image/jpeg"/><Default '))}
+      t.prog((i+.95)/t.files.length,`Packing ${f.name}…`);
+      const out=await z.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:9},mimeType:'application/vnd.openxmlformats-officedocument.presentationml.presentation'});
+      const keep=out.size>=f.size;const o={name:`${stemOf(f.name)}-compressed.pptx`,blob:keep?f:out};
+      o.info=keep?'already optimised — original kept':`${kb(f.size)} → ${kb(out.size)} (−${Math.round((1-out.size/f.size)*100)}%) · ${shrunk} picture${shrunk===1?'':'s'} optimised`;outs.push(o)}
+    return outs}});
+document.addEventListener('click',e=>{const b=e.target.closest('#ppt-compress .o-lv button');if(!b)return;b.parentElement.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const n=document.querySelector('#ppt-compress .o-lvn');if(n)n.textContent={light:'Pictures up to 2560 px wide at high quality — the smallest change, for print or very large screens.',rec:'Pictures up to 1920 px wide at good quality — looks the same on a projector or screen.',strong:'Pictures up to 1280 px wide — the smallest file, for email and uploads; photos may look a little softer.'}[b.dataset.v]});
+
+/* ---------- merge: copy every slide of the other decks, with their layouts, masters, themes and media ---------- */
+async function mergeDecks(files,{ownDesign=true,onP}={}){await need('JSZip');
+  const dst=await openPptx(files[0]);const ctDoc=xmlOf(await dst.file('[Content_Types].xml').async('string'));
+  const presP='ppt/presentation.xml',pres=xmlOf(await dst.file(presP).async('string')),presRelsDoc=xmlOf(await dst.file(relsOf(presP)).async('string'));
+  const prel=presRelsDoc.documentElement;let rid=Math.max(0,...[...prel.children].map(r=>+(r.getAttribute('Id')||'').replace(/\D/g,'')||0));
+  const ctHas=(tag,attr,v)=>[...ctDoc.documentElement.children].some(c=>c.localName===tag&&c.getAttribute(attr).toLowerCase()===v.toLowerCase());
+  const ctAdd=(tag,attrs)=>{const e=ctDoc.createElementNS(PNS.ct,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);ctDoc.documentElement.appendChild(e)};
+  const free=p=>{const m=p.match(/^(.*?)(\d*)(\.[^./]+)$/);let n=+m[2]||1,q;do{q=`${m[1]}${n++}${m[3]}`}while(dst.file(q)||used.has(q));used.add(q);return q};const used=new Set();
+  const sz0=await pptSize(dst);let warn='';
+  // ids already in use: slides (>=256) and masters/layouts (>= 2^31)
+  const sldLst=pres.getElementsByTagNameNS(PNS.p,'sldIdLst')[0]||(()=>{const e=pres.createElementNS(PNS.p,'p:sldIdLst');const ref=pres.getElementsByTagNameNS(PNS.p,'sldSz')[0];pres.documentElement.insertBefore(e,ref);return e})();
+  let sid=Math.max(255,...[...sldLst.children].map(e=>+e.getAttribute('id')));
+  const mstLst=pres.getElementsByTagNameNS(PNS.p,'sldMasterIdLst')[0];const bigIds=new Set([...mstLst.children].map(e=>+e.getAttribute('id')));
+  for(const p of Object.keys(dst.files).filter(n=>/^ppt\/slideMasters\/[^/]+\.xml$/.test(n)))for(const l of xmlOf(await dst.file(p).async('string')).getElementsByTagNameNS(PNS.p,'sldLayoutId'))bigIds.add(+l.getAttribute('id'));
+  let bid=Math.max(2147483647,...bigIds);
+  // first deck's layouts by type, for "use the first deck's design"
+  const dstLayouts={};for(const p of Object.keys(dst.files).filter(n=>/^ppt\/slideLayouts\/[^/]+\.xml$/.test(n))){const ty=xmlOf(await dst.file(p).async('string')).documentElement.getAttribute('type')||'cust';if(!dstLayouts[ty])dstLayouts[ty]=p}
+  const firstLayout=dstLayouts.obj||dstLayouts.tx||Object.values(dstLayouts)[0];
+  const secLst=pres.getElementsByTagNameNS('http://schemas.microsoft.com/office/powerpoint/2010/main','sectionLst')[0];
+  const DROP=['notesSlide','comments','commentAuthors','notesMaster','handoutMaster'];
+  for(let d=1;d<files.length;d++){const f=files[d];onP&&onP((d-1)/(files.length-1),`Adding ${f.name}…`);
+    const src=await openPptx(f);const sct=xmlOf(await src.file('[Content_Types].xml').async('string'));const sz=await pptSize(src);
+    if(Math.abs(sz.cx/sz.cy-sz0.cx/sz0.cy)>.01)warn=`${f.name} has a different slide shape (${(sz.cx/sz.cy).toFixed(2)}:1); its slides keep their positions, so some may look off-centre.`;
+    const map=new Map(),started=new Set(),mId={};const slides=await pptSlides(src);const newMasters=[];
+    for(const s of slides)map.set(s,free(s.replace(/slide\d+\.xml$/,'slide1.xml')));
+    async function copy(sp){if(started.has(sp))return map.get(sp);started.add(sp);const np=map.get(sp)||free(sp);map.set(sp,np);if(/^ppt\/slideMasters\/[^/]+\.xml$/.test(sp))mId[np]=++bid;
+      const file=src.file(sp);if(!file)return np;let data=await file.async('uint8array');
+      // relationships of this part
+      const rf=src.file(relsOf(sp));
+      if(rf){const rd=xmlOf(await rf.async('string'));for(const r of [...rd.documentElement.children]){const ty=(r.getAttribute('Type')||'').split('/').pop();
+          if(r.getAttribute('TargetMode')==='External')continue;
+          if(DROP.includes(ty)&&/^ppt\/slides\//.test(sp)){r.remove();continue}
+          const tp=partJoin(sp,r.getAttribute('Target'));
+          if(ty==='slide'&&!map.has(tp)){r.remove();continue}   // link to a slide that isn't being copied
+          let nt;if(!ownDesign&&ty==='slideLayout'&&/^ppt\/slides\//.test(sp)){const ly=src.file(tp)?xmlOf(await src.file(tp).async('string')).documentElement.getAttribute('type')||'cust':'cust';nt=dstLayouts[ly]||firstLayout}
+          else nt=await copy(tp);
+          r.setAttribute('Target',partRel(np,nt))}
+        dst.file(relsOf(np),xmlStr(rd))}
+      if(/^ppt\/slideMasters\/[^/]+\.xml$/.test(sp)){const md=xmlOf(new TextDecoder().decode(data));for(const l of md.getElementsByTagNameNS(PNS.p,'sldLayoutId'))l.setAttribute('id',String(++bid));data=xmlStr(md);newMasters.push(np)}
+      dst.file(np,data);
+      const ov=[...sct.documentElement.children].find(c=>c.localName==='Override'&&c.getAttribute('PartName').toLowerCase()==='/'+sp.toLowerCase());
+      if(ov){if(!ctHas('Override','PartName','/'+np))ctAdd('Override',{PartName:'/'+np,ContentType:ov.getAttribute('ContentType')})}
+      else{const e=extOf(np),def=[...sct.documentElement.children].find(c=>c.localName==='Default'&&c.getAttribute('Extension').toLowerCase()===e);if(def&&!ctHas('Default','Extension',e))ctAdd('Default',{Extension:e,ContentType:def.getAttribute('ContentType')})}
+      return np}
+    const ids=[];for(const s of slides){const np=await copy(s);const id=String(++rid);
+      const r=presRelsDoc.createElementNS(PNS.pr,'Relationship');r.setAttribute('Id','rId'+id);r.setAttribute('Type','http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide');r.setAttribute('Target',np.replace(/^ppt\//,''));prel.appendChild(r);
+      const e=pres.createElementNS(PNS.p,'p:sldId');e.setAttribute('id',String(++sid));e.setAttributeNS(PNS.r,'r:id','rId'+id);sldLst.appendChild(e);ids.push(sid)}
+    for(const m of newMasters){const id=String(++rid);const r=presRelsDoc.createElementNS(PNS.pr,'Relationship');r.setAttribute('Id','rId'+id);r.setAttribute('Type','http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster');r.setAttribute('Target',m.replace(/^ppt\//,''));prel.appendChild(r);
+      const e=pres.createElementNS(PNS.p,'p:sldMasterId');e.setAttribute('id',String(mId[m]));e.setAttributeNS(PNS.r,'r:id','rId'+id);mstLst.appendChild(e)}
+    if(secLst&&ids.length){const P14=secLst.namespaceURI,pf=secLst.prefix||'p14';const sec=pres.createElementNS(P14,pf+':section');sec.setAttribute('name',stemOf(f.name).slice(0,60));
+      sec.setAttribute('id','{'+crypto.randomUUID().toUpperCase()+'}');const lst=pres.createElementNS(P14,pf+':sldIdLst');for(const id of ids){const x=pres.createElementNS(P14,pf+':sldId');x.setAttribute('id',String(id));lst.appendChild(x)}sec.appendChild(lst);secLst.appendChild(sec)}}
+  dst.file(presP,xmlStr(pres));dst.file(relsOf(presP),xmlStr(presRelsDoc));dst.file('[Content_Types].xml',xmlStr(ctDoc));
+  const app=dst.file('docProps/app.xml');if(app){const total=sldLst.children.length;dst.file('docProps/app.xml',(await app.async('string')).replace(/<Slides>\d+<\/Slides>/,`<Slides>${total}</Slides>`))}
+  const blob=await dst.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6},mimeType:'application/vnd.openxmlformats-officedocument.presentationml.presentation'});
+  return{blob,slides:sldLst.children.length,warn}}
+INIT['ppt-merge']=()=>makeTool('ppt-merge',{title:'Merge PowerPoint files',desc:'Combine several presentations into one deck, in the order you choose. Slides keep their pictures, layouts and animations.',ic:PPT_IC,
+  accept:'.pptx',multiple:true,reorder:true,min:2,filter:isPptx,drop:'Drop .pptx files here',action:'Merge presentations',zipName:'merged',
+  opts:`<label class="field"><span>File name</span><input type="text" class="o-name" value="merged" spellcheck="false"></label>
+   <fieldset class="field"><legend>Design</legend><label class="chk"><input type="radio" name="pm-d" value="own" checked> Keep each presentation’s own design</label>
+   <label class="chk"><input type="radio" name="pm-d" value="first"> Use the first presentation’s design for every slide</label></fieldset>`,
+  note:'Speaker notes and comments of the second and later presentations are not carried over.',
+  async run(t){const own=t.q('[name=pm-d]:checked').value==='own';const r=await mergeDecks(t.files,{ownDesign:own,onP:(p,l)=>t.prog(p*.9,l)});
+    t.prog(.97,'Saving…');if(r.warn)t._extra=`<p class="note">${esc(r.warn)}</p>`;
+    const o={name:(t.q('.o-name').value.trim()||'merged').replace(/\.pptx$/i,'')+'.pptx',blob:r.blob};o.info=`${r.slides} slides`;return[o]}});
+
+/* ---------- slide renderer: draws a slide from its XML onto a canvas ---------- */
+const EMU_PT=12700;
+async function pptRenderer(z){const size=await pptSize(z),slides=await pptSlides(z),xml={},rels={},imgs={};
+  const getXml=async p=>{if(!(p in xml))xml[p]=z.file(p)?xmlOf(await z.file(p).async('string')):null;return xml[p]};
+  const getRels=async p=>{if(!(p in rels))rels[p]=await pptRels(z,p);return rels[p]};
+  const getImg=async p=>{if(!(p in imgs)){imgs[p]=null;const f=z.file(p);if(f){try{const b=await f.async('blob');const e=extOf(p);
+      imgs[p]=await createImageBitmap(e==='svg'?new Blob([await b.text()],{type:'image/svg+xml'}):b)}catch(e){try{imgs[p]=await loadImage(new File([await f.async('blob')],p.split('/').pop()))}catch(x){imgs[p]=null}}}}return imgs[p]};
+  async function chain(sp){const r=await getRels(sp);const lp=(Object.values(r).find(x=>x.type==='slideLayout')||{}).target;
+    const lr=lp?await getRels(lp):{};const mp=(Object.values(lr).find(x=>x.type==='slideMaster')||{}).target;const mr=mp?await getRels(mp):{};
+    const tp=(Object.values(mr).find(x=>x.type==='theme')||{}).target;return{slide:sp,layout:lp,master:mp,theme:tp}}
+  function themeOf(td){const C={},F={major:'Calibri',minor:'Calibri'};if(!td)return{C,F};
+    const cs=td.getElementsByTagNameNS(PNS.a,'clrScheme')[0];if(cs)for(const c of cs.children){const v=c.firstElementChild;if(!v)continue;C[c.localName]=v.localName==='sysClr'?(v.getAttribute('lastClr')||'000000'):(v.getAttribute('val')||'000000')}
+    const mj=td.getElementsByTagNameNS(PNS.a,'majorFont')[0],mn=td.getElementsByTagNameNS(PNS.a,'minorFont')[0];
+    if(mj&&kidOf(mj,'latin'))F.major=kidOf(mj,'latin').getAttribute('typeface')||F.major;if(mn&&kidOf(mn,'latin'))F.minor=kidOf(mn,'latin').getAttribute('typeface')||F.minor;return{C,F}}
+  const PRST={black:'000000',white:'FFFFFF',red:'FF0000',green:'008000',blue:'0000FF',yellow:'FFFF00',gray:'808080',grey:'808080',orange:'FFA500'};
+  function color(el,T,ph){if(!el)return null;let hex=null;const v=el;
+    if(v.localName==='srgbClr')hex=v.getAttribute('val');else if(v.localName==='sysClr')hex=v.getAttribute('lastClr')||'000000';else if(v.localName==='prstClr')hex=PRST[v.getAttribute('val')]||'000000';
+    else if(v.localName==='scrgbClr')hex=[v.getAttribute('r'),v.getAttribute('g'),v.getAttribute('b')].map(x=>Math.round(Math.min(1,(+x||0)/1e5)*255).toString(16).padStart(2,'0')).join('');
+    else if(v.localName==='schemeClr'){let k=v.getAttribute('val');if(k==='phClr')return ph||null;k=(T.M&&T.M[k])||{bg1:'lt1',tx1:'dk1',bg2:'lt2',tx2:'dk2'}[k]||k;hex=T.C[k]||'000000'}
+    if(!hex)return null;let r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16),a=1;
+    for(const m of v.children){const val=+m.getAttribute('val')/1e5;
+      if(m.localName==='alpha')a=val;else if(m.localName==='tint'){[r,g,b]=[r,g,b].map(c=>toS(toL(c)*val+(1-val)))}else if(m.localName==='shade'){[r,g,b]=[r,g,b].map(c=>toS(toL(c)*val))}
+      else if(m.localName==='lumMod'||m.localName==='lumOff'){let [h,s,l]=rgb2hsl(r,g,b);l=m.localName==='lumMod'?l*val:Math.min(1,l+val);[r,g,b]=hsl2rgb(h,s,l)}}
+    return`rgba(${Math.round(Math.max(0,Math.min(255,r)))},${Math.round(Math.max(0,Math.min(255,g)))},${Math.round(Math.max(0,Math.min(255,b)))},${a})`}
+  const toL=c=>{c=Math.max(0,Math.min(255,c))/255;return c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4)},toS=l=>{l=Math.max(0,Math.min(1,l));return 255*(l<=.0031308?l*12.92:1.055*Math.pow(l,1/2.4)-.055)};
+  function rgb2hsl(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h=0,s=0;const l=(mx+mn)/2;if(mx!==mn){const d=mx-mn;s=l>.5?d/(2-mx-mn):d/(mx+mn);h=mx===r?(g-b)/d+(g<b?6:0):mx===g?(b-r)/d+2:(r-g)/d+4;h/=6}return[h,s,l]}
+  function hsl2rgb(h,s,l){if(!s)return[l*255,l*255,l*255];const q=l<.5?l*(1+s):l+s-l*s,p=2*l-q;const f=t=>{if(t<0)t+=1;if(t>1)t-=1;return t<1/6?p+(q-p)*6*t:t<1/2?q:t<2/3?p+(q-p)*(2/3-t)*6:p};return[f(h+1/3)*255,f(h)*255,f(h-1/3)*255]}
+  const clrIn=(el,T,ph)=>{const c=el&&[...el.children].find(x=>/Clr$/.test(x.localName));return c?color(c,T,ph):null};
+  function fillOf(spPr,T,style,ph){// returns {color}|{grad}|{blip}|null(no fill)|undefined(not set)
+    if(spPr){for(const c of spPr.children){if(c.localName==='noFill')return null;if(c.localName==='solidFill')return{color:clrIn(c,T,ph)};
+      if(c.localName==='gradFill'){const st=[...c.getElementsByTagNameNS(PNS.a,'gs')].map(g=>({pos:+g.getAttribute('pos')/1e5,c:clrIn(g,T,ph)})).sort((a,b)=>a.pos-b.pos);const lin=kidOf(c,'lin');return{grad:st,ang:lin?+lin.getAttribute('ang')/6e4:90}}
+      if(c.localName==='blipFill')return{blip:c}}}
+    if(style){const fr=kidOf(style,'fillRef');if(fr&&+fr.getAttribute('idx')>0)return{color:clrIn(fr,T)}}return undefined}
+  async function paintFill(g,f,x,y,w,h,path,relsMap){if(!f)return;g.save();path();
+    if(f.color){g.fillStyle=f.color;g.fill()}else if(f.grad&&f.grad.length){const a=(f.ang||0)*Math.PI/180,cx=x+w/2,cy=y+h/2,dx=Math.cos(a)*w/2,dy=Math.sin(a)*h/2;const gr=g.createLinearGradient(cx-dx,cy-dy,cx+dx,cy+dy);f.grad.forEach(s=>gr.addColorStop(Math.max(0,Math.min(1,s.pos)),s.c||'#fff'));g.fillStyle=gr;g.fill()}
+    else if(f.blip){const b=kidOf(f.blip,'blip'),id=b&&b.getAttributeNS(PNS.r,'embed');const r=relsMap&&id&&relsMap[id];const im=r&&r.target?await getImg(r.target):null;if(im){g.clip();g.drawImage(im,x,y,w,h)}}
+    g.restore()}
+  function geomPath(g,prst,x,y,w,h){g.beginPath();const p=prst||'rect';
+    if(p==='ellipse'||p==='flowChartConnector')g.ellipse(x+w/2,y+h/2,Math.abs(w/2),Math.abs(h/2),0,0,Math.PI*2);
+    else if(p==='roundRect'||p==='flowChartAlternateProcess'){const r=Math.min(Math.abs(w),Math.abs(h))*.1667;g.roundRect?g.roundRect(x,y,w,h,r):g.rect(x,y,w,h)}
+    else if(p==='triangle'){g.moveTo(x+w/2,y);g.lineTo(x+w,y+h);g.lineTo(x,y+h);g.closePath()}
+    else if(p==='rtTriangle'){g.moveTo(x,y);g.lineTo(x+w,y+h);g.lineTo(x,y+h);g.closePath()}
+    else if(p==='diamond'||p==='flowChartDecision'){g.moveTo(x+w/2,y);g.lineTo(x+w,y+h/2);g.lineTo(x+w/2,y+h);g.lineTo(x,y+h/2);g.closePath()}
+    else if(p==='rightArrow'){const t=h*.25;g.moveTo(x,y+t);g.lineTo(x+w-h/2,y+t);g.lineTo(x+w-h/2,y);g.lineTo(x+w,y+h/2);g.lineTo(x+w-h/2,y+h);g.lineTo(x+w-h/2,y+h-t);g.lineTo(x,y+h-t);g.closePath()}
+    else if(p==='leftArrow'){const t=h*.25;g.moveTo(x+w,y+t);g.lineTo(x+h/2,y+t);g.lineTo(x+h/2,y);g.lineTo(x,y+h/2);g.lineTo(x+h/2,y+h);g.lineTo(x+h/2,y+h-t);g.lineTo(x+w,y+h-t);g.closePath()}
+    else if(p==='chevron'||p==='homePlate'){const t=Math.min(w,h)/2;g.moveTo(x,y);g.lineTo(x+w-t,y);g.lineTo(x+w,y+h/2);g.lineTo(x+w-t,y+h);g.lineTo(x,y+h);if(p==='chevron')g.lineTo(x+t,y+h/2);g.closePath()}
+    else if(p==='line'||p==='straightConnector1'||/Connector/.test(p)){g.moveTo(x,y);g.lineTo(x+w,y+h)}
+    else g.rect(x,y,w,h)}
+  // text style inheritance: own lstStyle → layout placeholder → master placeholder → master text styles
+  function phKey(sp){const ph=sp&&sp.getElementsByTagNameNS(PNS.p,'ph')[0];return ph?{type:ph.getAttribute('type')||'body',idx:ph.getAttribute('idx')}:null}
+  function findPh(doc,k){if(!doc||!k)return null;const all=[...doc.getElementsByTagNameNS(PNS.p,'sp')].filter(s=>s.getElementsByTagNameNS(PNS.p,'ph')[0]);
+    const norm=t=>t==='ctrTitle'?'title':t==='subTitle'?'body':t;
+    return all.find(s=>{const q=phKey(s);return k.idx!=null&&q.idx===k.idx&&k.type!=='title'})||all.find(s=>norm(phKey(s).type)===norm(k.type))||(k.type==='obj'||k.type==='body'?all.find(s=>phKey(s).type==='body'):null)}
+  const xfrmOf=sp=>{const x=sp&&(pathOf(sp,'spPr','xfrm')||pathOf(sp,'grpSpPr','xfrm')||pathOf(sp,'xfrm'));if(!x)return null;const o=kidOf(x,'off'),e=kidOf(x,'ext');if(!o||!e)return null;
+    return{x:+o.getAttribute('x'),y:+o.getAttribute('y'),w:+e.getAttribute('cx'),h:+e.getAttribute('cy'),rot:+(x.getAttribute('rot')||0)/6e4,fh:x.getAttribute('flipH')==='1',fv:x.getAttribute('flipV')==='1'}};
+  function lvlProps(lst,l){if(!lst)return null;return kidOf(lst,`lvl${l+1}pPr`)}
+  function mergeRun(base,el){if(!el)return base;const o={...base};if(el.getAttribute('sz'))o.sz=+el.getAttribute('sz')/100;if(el.getAttribute('b')!=null)o.b=el.getAttribute('b')==='1';if(el.getAttribute('i')!=null)o.i=el.getAttribute('i')==='1';
+    const sf=kidOf(el,'solidFill');if(sf)o.colEl=sf;const lt=kidOf(el,'latin');if(lt&&lt.getAttribute('typeface'))o.face=lt.getAttribute('typeface');if(el.getAttribute('cap')==='all')o.caps=true;return o}
+  function mergePara(base,el){if(!el)return base;const o={...base};if(el.getAttribute('algn'))o.algn=el.getAttribute('algn');if(el.getAttribute('marL'))o.marL=+el.getAttribute('marL');if(el.getAttribute('indent'))o.indent=+el.getAttribute('indent');
+    if(kidOf(el,'buNone'))o.bu=null;const bc=kidOf(el,'buChar');if(bc)o.bu=bc.getAttribute('char');if(kidOf(el,'buAutoNum'))o.bu='#';
+    const sb=pathOf(el,'spcBef','spcPts');if(sb){o.spcBef=+sb.getAttribute('val')/100;o.befPct=null}const sbp=pathOf(el,'spcBef','spcPct');if(sbp){o.befPct=+sbp.getAttribute('val')/1e5}
+    const sa=pathOf(el,'spcAft','spcPts');if(sa)o.spcAft=+sa.getAttribute('val')/100;
+    const ls=pathOf(el,'lnSpc','spcPct');if(ls)o.lnSpc=+ls.getAttribute('val')/1e5;o.run=mergeRun(o.run||{},kidOf(el,'defRPr'));return o}
+  async function drawText(g,sp,box,ctx,S){const tb=kidOf(sp,'txBody');if(!tb)return;const ps=kidsOf(tb,'p');if(!ps.some(p=>p.textContent.trim()))return;
+    const T=ctx.T,k=phKey(sp),kind=!k?'other':(k.type==='title'||k.type==='ctrTitle')?'title':'body';
+    const lph=k?findPh(ctx.layoutDoc,k):null,mph=k?findPh(ctx.masterDoc,k):null;
+    const tx=ctx.masterDoc&&ctx.masterDoc.getElementsByTagNameNS(PNS.p,'txStyles')[0];const mst=tx?kidOf(tx,kind==='title'?'titleStyle':kind==='body'?'bodyStyle':'otherStyle'):null;
+    const bp=kidOf(tb,'bodyPr')||{getAttribute:()=>null};const bpL=lph&&pathOf(lph,'txBody','bodyPr'),bpM=mph&&pathOf(mph,'txBody','bodyPr');
+    const battr=n=>bp.getAttribute(n)??(bpL&&bpL.getAttribute(n))??(bpM&&bpM.getAttribute(n));
+    const ins=(n,d)=>+(battr(n)??d);const L=ins('lIns',91440),R=ins('rIns',91440),Tp=ins('tIns',45720),B=ins('bIns',45720);
+    const anchor=battr('anchor')||(kind==='title'?'ctr':'t'),wrap=battr('wrap')!=='none',vert=battr('vert');if(vert&&vert!=='horz')return;
+    const na=kidOf(bp,'normAutofit')||(bpL&&kidOf(bpL,'normAutofit'));const fs=na&&na.getAttribute?+(na.getAttribute('fontScale')||1e5)/1e5:1,lsr=na&&na.getAttribute?1-(+(na.getAttribute('lnSpcReduction')||0)/1e5):1;
+    const x0=box.x+L,w=Math.max(1,box.w-L-R);const lines=[];let numAt=0;const hasRef=!!pathOf(sp,'style','fontRef');
+    for(const p of ps){const pPr=kidOf(p,'pPr');const lvl=+((pPr&&pPr.getAttribute('lvl'))||0);
+      let pp={algn:kind==='title'?'ctr':'l',bu:null,spcBef:0,spcAft:0,lnSpc:1,marL:0,indent:0,run:{sz:kind==='title'?44:kind==='body'?(lvl?20:28):18,face:'+mn-lt',b:false,i:false}};
+      pp=mergePara(pp,lvlProps(mst,lvl));if(hasRef&&kind==='other')pp.run={...pp.run,colEl:null};if(mph)pp=mergePara(pp,lvlProps(pathOf(mph,'txBody','lstStyle'),lvl));if(lph)pp=mergePara(pp,lvlProps(pathOf(lph,'txBody','lstStyle'),lvl));
+      pp=mergePara(pp,lvlProps(pathOf(sp,'txBody','lstStyle'),lvl));pp=mergePara(pp,pPr);if(kind==='title')pp.bu=null;
+      const runs=[];for(const r of p.children){if(r.localName==='r'||r.localName==='fld'){const st=mergeRun(pp.run,kidOf(r,'rPr'));const t=(kidOf(r,'t')||{textContent:''}).textContent;if(t)runs.push({t:st.caps?t.toUpperCase():t,st})}else if(r.localName==='br')runs.push({br:true,st:pp.run})}
+      const endSz=mergeRun(pp.run,kidOf(p,'endParaRPr')).sz;
+      if(!runs.length){lines.push({items:[],h:(endSz||18)*fs*1.2*EMU_PT*pp.lnSpc*lsr,algn:pp.algn,bef:pp.spcBef,aft:pp.spcAft,ind:pp.marL});continue}
+      // word wrap
+      const fontOf=st=>{let face=st.face||'+mn-lt';if(face==='+mj-lt')face=T.F.major;else if(face==='+mn-lt')face=T.F.minor;const px=(st.sz||18)*fs*EMU_PT*S;
+        return{css:`${st.i?'italic ':''}${st.b?'bold ':''}${Math.max(1,px).toFixed(2)}px "${face}", Calibri, Arial, sans-serif`,px}};
+      const ind=Math.max(0,pp.marL||0),first=pp.bu?ind:Math.max(0,ind+(pp.indent||0));numAt=pp.bu==='#'?numAt+1:0;
+      const befPts=pp.befPct!=null?pp.befPct*(runs[0].st.sz||18)*fs*1.2:pp.spcBef;
+      let cur={items:[],w:0,h:0,algn:pp.algn,ind:first,bef:befPts,aft:0,bu:pp.bu?{ch:pp.bu==='#'?numAt+'.':pp.bu,st:pp.run,x:Math.max(0,ind+(pp.indent||0))}:null,para:p};
+      const avail=()=>(w-cur.ind)*S;
+      const push=()=>{lines.push(cur);cur={items:[],w:0,h:0,algn:pp.algn,ind,bef:0,aft:0,para:p}};
+      for(const r of runs){if(r.br){if(!cur.h)cur.h=(r.st.sz||18)*fs*1.2*EMU_PT*pp.lnSpc*lsr;push();continue}
+        const f=fontOf(r.st);g.font=f.css;const lh=(r.st.sz||18)*fs*1.2*EMU_PT*pp.lnSpc*lsr;
+        for(const tok of r.t.split(/(\s+)/)){if(!tok)continue;const tw=g.measureText(tok).width;
+          if(wrap&&cur.items.length&&cur.w+tw>avail()&&tok.trim()){push()}
+          if(!cur.items.length&&!tok.trim())continue;
+          if(wrap&&tw>avail()&&tok.length>1){let s='';for(const ch of tok){const cw=g.measureText(s+ch).width;if(cur.w+cw>avail()&&s){cur.items.push({t:s,f,col:r.st.colEl,w:g.measureText(s).width});cur.h=Math.max(cur.h,lh);push();s=ch}else s+=ch}
+            if(s){const sw=g.measureText(s).width;cur.items.push({t:s,f,col:r.st.colEl,w:sw});cur.w+=sw;cur.h=Math.max(cur.h,lh)}continue}
+          cur.items.push({t:tok,f,col:r.st.colEl,w:tw});cur.w+=tw;cur.h=Math.max(cur.h,lh)}}
+      cur.aft=pp.spcAft;lines.push(cur)}
+    const total=lines.reduce((s,l)=>s+l.h+((l.bef||0)+(l.aft||0))*EMU_PT,0);
+    let y=box.y+Tp;const inner=box.h-Tp-B;if(anchor==='ctr')y+=(inner-total)/2;else if(anchor==='b')y+=inner-total;
+    const style=kidOf(sp,'style');const fontRef=style&&kidOf(style,'fontRef');const refCol=fontRef?clrIn(fontRef,T):null;
+    const tx1=color({localName:'schemeClr',getAttribute:()=>'tx1',children:[]},T)||'#000';
+    for(const l of lines){y+=(l.bef||0)*EMU_PT;const lw=l.w/S;let x=x0+l.ind;if(l.algn==='ctr')x=x0+l.ind+(w-l.ind-lw)/2;else if(l.algn==='r')x=x0+w-lw;
+      const base=y+l.h*.8;
+      if(l.bu&&l.items.length){g.font=l.items[0].f.css;g.fillStyle=(l.items[0].col&&clrIn(l.items[0].col,T))||refCol||tx1;
+        const bx=l.algn==='l'||!l.algn?x0+l.bu.x:x-g.measureText(l.bu.ch+' ').width/S;g.fillText(l.bu.ch,bx*S,base*S)}
+      for(const it of l.items){g.font=it.f.css;g.fillStyle=(it.col&&clrIn(it.col,T))||refCol||tx1;g.fillText(it.t,x*S,base*S);x+=it.w/S}
+      y+=l.h+(l.aft||0)*EMU_PT}}
+  async function drawTable(g,fr,box,ctx,S){const tbl=fr.getElementsByTagNameNS(PNS.a,'tbl')[0];if(!tbl)return false;
+    const cols=kidsOf(kidOf(tbl,'tblGrid'),'gridCol').map(c=>+c.getAttribute('w'));let y=box.y;
+    const tp=kidOf(tbl,'tblPr'),styled=!!(tp&&kidOf(tp,'tableStyleId')),hdr=tp&&tp.getAttribute('firstRow')==='1',band=tp&&tp.getAttribute('bandRow')==='1';
+    const sc=(k,t)=>color({localName:'schemeClr',getAttribute:()=>k,children:t?[{localName:'tint',getAttribute:()=>String(t*1e5)}]:[]},ctx.T);
+    kidsOf(tbl,'tr').forEach((tr,ri)=>{const h=+tr.getAttribute('h');let x=box.x;const head=styled&&hdr&&ri===0;const dr=ri-(hdr?1:0);
+      const rowFill=!styled?null:head?sc('accent1'):band&&dr%2===0?sc('accent1',.4):sc('accent1',.2);
+      kidsOf(tr,'tc').forEach((tc,i)=>{const w=cols[i]||0;const tcPr=kidOf(tc,'tcPr');const f=tcPr?fillOf(tcPr,ctx.T):undefined;const fc=f&&f.color?f.color:f===null?null:rowFill;
+        if(fc){g.fillStyle=fc;g.fillRect(x*S,y*S,w*S,h*S)}g.strokeStyle=styled?'#ffffff':'rgba(0,0,0,.25)';g.lineWidth=Math.max(1,S*12700);g.strokeRect(x*S,y*S,w*S,h*S);
+        const txt=tc.textContent.trim();if(txt){const px=Math.max(6,(+((tc.getElementsByTagNameNS(PNS.a,'rPr')[0]||{getAttribute:()=>null}).getAttribute('sz')||1800)/100)*EMU_PT*S);g.font=`${head?'bold ':''}${px}px "${ctx.T.F.minor}", Calibri, Arial, sans-serif`;g.fillStyle=head?(sc('lt1')||'#fff'):(sc('dk1')||'#000');
+          let s=txt;while(s.length>1&&g.measureText(s).width>w*S-px)s=s.slice(0,-2)+'…';g.fillText(s,x*S+px*.4,y*S+Math.min(h*S,px*1.6)-px*.35)}x+=w});y+=h});return true}
+  async function drawTree(g,tree,ctx,S,tf,skipPh,relsMap){for(const el of tree.children)await drawEl(g,el,ctx,S,tf,skipPh,relsMap)}
+  async function drawEl(g,el,ctx,S,tf,skipPh,relsMap){const n=el.localName;
+    if(n==='AlternateContent'){const pick=kidOf(el,'Fallback')||kidOf(el,'Choice');if(pick)await drawTree(g,pick,ctx,S,tf,skipPh,relsMap);return}
+    const nv=el.firstElementChild,c=nv&&kidOf(nv,'cNvPr');if(c&&c.getAttribute('hidden')==='1')return;
+    if(n==='grpSp'){const x=pathOf(el,'grpSpPr','xfrm');if(!x){await drawTree(g,el,ctx,S,tf,skipPh,relsMap);return}
+      const o=kidOf(x,'off'),e=kidOf(x,'ext'),co=kidOf(x,'chOff'),ce=kidOf(x,'chExt');const sx=+ce.getAttribute('cx')?+e.getAttribute('cx')/+ce.getAttribute('cx'):1,sy=+ce.getAttribute('cy')?+e.getAttribute('cy')/+ce.getAttribute('cy'):1;
+      const ntf=p=>tf({x:+o.getAttribute('x')+(p.x-+co.getAttribute('x'))*sx,y:+o.getAttribute('y')+(p.y-+co.getAttribute('y'))*sy,w:p.w*sx,h:p.h*sy,rot:p.rot,fh:p.fh,fv:p.fv});
+      for(const k of el.children)if(!['nvGrpSpPr','grpSpPr'].includes(k.localName))await drawEl(g,k,ctx,S,ntf,skipPh,relsMap);return}
+    if(!['sp','pic','cxnSp','graphicFrame'].includes(n))return;
+    const k=n==='sp'?phKey(el):null;if(k&&skipPh)return;
+    let xf=xfrmOf(el);if(!xf&&k){const l=findPh(ctx.layoutDoc,k),m=findPh(ctx.masterDoc,k);xf=xfrmOf(l)||xfrmOf(m)}if(!xf)return;
+    const b=tf(xf);g.save();if(b.rot||b.fh||b.fv){const cx=(b.x+b.w/2)*S,cy=(b.y+b.h/2)*S;g.translate(cx,cy);if(b.rot)g.rotate(b.rot*Math.PI/180);g.scale(b.fh?-1:1,b.fv?-1:1);g.translate(-cx,-cy)}
+    const X=b.x*S,Y=b.y*S,W=b.w*S,H=b.h*S;
+    if(n==='pic'){const blip=el.getElementsByTagNameNS(PNS.a,'blip')[0];const id=blip&&blip.getAttributeNS(PNS.r,'embed');const r=id&&relsMap[id];const im=r&&r.target?await getImg(r.target):null;
+      if(im){const sr=pathOf(el,'blipFill','srcRect');let sx=0,sy=0,sw=im.width,sh=im.height;if(sr){const f=a=>+(sr.getAttribute(a)||0)/1e5;sx=im.width*f('l');sy=im.height*f('t');sw=im.width*(1-f('l')-f('r'));sh=im.height*(1-f('t')-f('b'))}
+        try{g.drawImage(im,sx,sy,Math.max(1,sw),Math.max(1,sh),X,Y,W,H)}catch(e){}}
+      else{g.fillStyle='rgba(0,0,0,.06)';g.fillRect(X,Y,W,H)}g.restore();return}
+    if(n==='graphicFrame'){const uri=(el.getElementsByTagNameNS(PNS.a,'graphicData')[0]||{getAttribute:()=>''}).getAttribute('uri')||'';
+      if(/table/.test(uri))await drawTable(g,el,b,ctx,S);
+      else if(/diagram/.test(uri)){const dr=Object.values(relsMap).find(r=>r.type==='diagramDrawing');const dd=dr&&dr.target?await getXml(dr.target):null;const t2=dd&&dd.getElementsByTagNameNS('*','spTree')[0];
+        if(t2){const dRels=await getRels(dr.target);await drawTree(g,t2,ctx,S,p=>tf({...p,x:p.x+xf.x,y:p.y+xf.y}),false,dRels)}}
+      else{g.strokeStyle='rgba(0,0,0,.25)';g.setLineDash([6,6]);g.lineWidth=Math.max(1,W/400);g.strokeRect(X,Y,W,H);g.setLineDash([]);g.font=`${Math.max(10,Math.min(W,H)/12)}px Arial, sans-serif`;g.fillStyle='rgba(0,0,0,.45)';g.textAlign='center';g.fillText(/chart/.test(uri)?'Chart':'Object',X+W/2,Y+H/2);g.textAlign='start';ctx.skipped++}
+      g.restore();return}
+    const spPr=kidOf(el,'spPr'),style=kidOf(el,'style'),T=ctx.T;let prst=(pathOf(spPr,'prstGeom')||{getAttribute:()=>null}).getAttribute('prst');
+    let fill=fillOf(spPr,T,style);if(fill===undefined&&k){const l=findPh(ctx.layoutDoc,k);if(l)fill=fillOf(kidOf(l,'spPr'),T)}
+    if(n==='cxnSp'&&fill===undefined)fill=null;if(!prst&&!pathOf(spPr,'custGeom'))prst='rect';
+    const path=()=>geomPath(g,prst,X,Y,W,H);
+    if(fill&&prst!=='line')await paintFill(g,fill,X,Y,W,H,path,relsMap);
+    const ln=pathOf(spPr,'ln');let lc=null,lw=9525;if(ln){if(!kidOf(ln,'noFill')){lc=clrIn(kidOf(ln,'solidFill'),T);lw=+(ln.getAttribute('w')||12700)}}
+    else if(style){const lr=kidOf(style,'lnRef');if(lr&&+lr.getAttribute('idx')>0)lc=clrIn(lr,T)}
+    if(lc){path();g.strokeStyle=lc;g.lineWidth=Math.max(.5,lw*S);g.stroke()}
+    g.restore();g.save();if(b.rot){const cx=(b.x+b.w/2)*S,cy=(b.y+b.h/2)*S;g.translate(cx,cy);g.rotate(b.rot*Math.PI/180);g.translate(-cx,-cy)}
+    await drawText(g,el,b,ctx,S);g.restore()}
+  async function bgOf(doc,T,relsMap){const bg=doc&&doc.getElementsByTagNameNS(PNS.p,'bg')[0];if(!bg)return undefined;const pr=kidOf(bg,'bgPr');
+    if(pr){const f=fillOf(pr,T);return f===undefined?undefined:{f,rels:relsMap}}const ref=kidOf(bg,'bgRef');if(ref)return{f:{color:clrIn(ref,T)},rels:relsMap};return undefined}
+  async function render(i,width){const sp=slides[i];const ch=await chain(sp);const sd=await getXml(sp),ld=ch.layout?await getXml(ch.layout):null,md=ch.master?await getXml(ch.master):null,td=ch.theme?await getXml(ch.theme):null;
+    const T=themeOf(td);T.M={};const cm=md&&md.getElementsByTagNameNS(PNS.p,'clrMap')[0];if(cm)for(const a of cm.attributes)T.M[a.name]=a.value;
+    for(const d of [ld,sd]){const o=d&&d.getElementsByTagNameNS(PNS.a,'overrideClrMapping')[0];if(o)for(const a of o.attributes)T.M[a.name]=a.value}
+    const ctx={T,layoutDoc:ld,masterDoc:md,skipped:0};const S=width/size.cx;const c=document.createElement('canvas');c.width=Math.round(width);c.height=Math.round(size.cy*S);const g=c.getContext('2d');
+    g.fillStyle='#ffffff';g.fillRect(0,0,c.width,c.height);g.textBaseline='alphabetic';
+    const sR=await getRels(sp),lR=ch.layout?await getRels(ch.layout):{},mR=ch.master?await getRels(ch.master):{};
+    const bg=(await bgOf(sd,T,sR))||(await bgOf(ld,T,lR))||(await bgOf(md,T,mR));if(bg&&bg.f)await paintFill(g,bg.f,0,0,c.width,c.height,()=>{g.beginPath();g.rect(0,0,c.width,c.height)},bg.rels);
+    const id=p=>p;const showM=x=>!x||x.documentElement.getAttribute('showMasterSp')!=='0';
+    if(md&&showM(sd)&&showM(ld)){const t=md.getElementsByTagNameNS(PNS.p,'spTree')[0];if(t)await drawTree(g,t,ctx,S,id,true,mR)}
+    if(ld&&showM(sd)){const t=ld.getElementsByTagNameNS(PNS.p,'spTree')[0];if(t)await drawTree(g,t,ctx,S,id,true,lR)}
+    const t=sd&&sd.getElementsByTagNameNS(PNS.p,'spTree')[0];if(t)await drawTree(g,t,ctx,S,id,false,sR);
+    c._skipped=ctx.skipped;return c}
+  return{count:slides.length,size,render}}
+
+INIT['ppt-to-img']=()=>makeTool('ppt-to-img',{title:'PowerPoint to JPG',desc:'Save every slide as a picture — JPG, PNG, or one PDF with a page per slide.',ic:PPT_IC,
+  accept:'.pptx',multiple:true,filter:isPptx,drop:'Drop .pptx files here',action:'Convert slides',zipName:'slides',
+  opts:`<div class="row2"><label class="field"><span>Format</span><select class="o-f"><option value="jpg">JPG (smaller)</option><option value="png">PNG (sharp)</option><option value="pdf">PDF (one page per slide)</option></select></label>
+   <label class="field"><span>Width</span><select class="o-w"><option value="1280">1280 px (HD)</option><option value="1920" selected>1920 px (Full HD)</option><option value="3840">3840 px (4K)</option></select></label></div>
+   <label class="field"><span>Slides (optional)</span><input type="text" class="o-r" placeholder="all slides, or e.g. 1-3, 5" spellcheck="false"></label>`,
+  note:'Slides are drawn in your browser. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones.',
+  async run(t){const fmt=t.q('.o-f').value,W=+t.q('.o-w').value,outs=[];let skipped=0;
+    for(let i=0;i<t.files.length;i++){const f=t.files[i];const z=await openPptx(f);const R=await pptRenderer(z);if(!R.count)throw new Error(`${f.name} has no slides`);const pick=pageList(t.q('.o-r').value,R.count);
+      let pdf=null,L=null;if(fmt==='pdf'){L=await loadPdfLib();pdf=await L.PDFDocument.create()}
+      for(let k=0;k<pick.length;k++){t.prog((i+k/pick.length)/t.files.length,`${f.name}: slide ${pick[k]+1} of ${R.count}…`);const c=await R.render(pick[k],W);skipped+=c._skipped||0;
+        if(pdf){const jb=await canvasBlob(c,'image/jpeg',.92);const im=await pdf.embedJpg(new Uint8Array(await jb.arrayBuffer()));const pw=R.size.cx/EMU_PT,ph=R.size.cy/EMU_PT;const pg=pdf.addPage([pw,ph]);pg.drawImage(im,{x:0,y:0,width:pw,height:ph})}
+        else outs.push({name:`${stemOf(f.name)}-slide-${String(pick[k]+1).padStart(2,'0')}.${fmt}`,blob:await canvasBlob(c,fmt==='png'?'image/png':'image/jpeg',.92)});
+        c.width=c.height=0;await tick()}
+      if(pdf){const o=await pdfOut(pdf,`${stemOf(f.name)}.pdf`);o.info=`${pick.length} slide${pick.length===1?'':'s'}`;outs.push(o)}}
+    if(skipped)t._extra=`<p class="note">${skipped} chart${skipped>1?'s or objects were':' or object was'} shown as an outline — export those slides from PowerPoint if you need them exactly.</p>`;
+    return outs}});
+
+/* ---------- PDF to PowerPoint ---------- */
+// PptxGenJS lists slide masters it never writes in [Content_Types].xml; drop those entries so strict checkers stay happy.
+async function tidyPptx(blob){await need('JSZip');const z=await JSZip.loadAsync(blob);const ct=await z.file('[Content_Types].xml').async('string');
+  const fixed=ct.replace(/<Override [^>]*PartName="\/([^"]+)"[^>]*\/>/g,(m,p)=>z.file(p)?m:'');if(fixed===ct)return blob;z.file('[Content_Types].xml',fixed);
+  return z.generateAsync({type:'blob',compression:'DEFLATE',mimeType:'application/vnd.openxmlformats-officedocument.presentationml.presentation'})}
+INIT['pdf-to-ppt']=()=>makeTool('pdf-to-ppt',{title:'PDF to PowerPoint',desc:'Turn a PDF into a presentation: keep the exact look with one slide per page, or get the text as editable slides.',ic:PPT_IC,
+  accept:'.pdf,application/pdf',multiple:true,filter:isPdf,meta:pdfMeta,drop:'Drop PDFs here',action:'Convert to PowerPoint',zipName:'presentations',
+  opts:`<fieldset class="field"><legend>Slides</legend><label class="chk"><input type="radio" name="pp-m" value="look" checked> Same look — each page becomes a slide picture</label>
+   <label class="chk"><input type="radio" name="pp-m" value="text"> Editable text — headings, bullets and tables you can change</label></fieldset>
+   <label class="field o-qf"><span>Picture quality</span><select class="o-d"><option value="110">Standard (smaller file)</option><option value="150" selected>High</option><option value="220">Very high (for printing)</option></select></label>
+   <label class="chk o-nf"><input type="checkbox" class="o-n" checked> Put each page’s text in the speaker notes</label>`,
+  async run(t){const mode=t.q('[name=pp-m]:checked').value,dpi=+t.q('.o-d').value,notes=t.q('.o-n').checked,outs=[];
+    for(let i=0;i<t.files.length;i++){const f=t.files[i];
+      if(mode==='text'){t.prog(i/t.files.length,`Reading ${f.name}…`);const m=await parseFile(f,p=>t.prog((i+p*.8)/t.files.length,`Reading ${f.name}…`));
+        const blob=await tidyPptx(await toPptx(m));const o={name:`${stemOf(f.name)}.pptx`,blob};o.info='editable text';outs.push(o);continue}
+      let pdf;try{pdf=await pdfOpen(await bytesOf(f))}catch(e){if(e&&e.name==='PasswordException')throw new Error(`${f.name} is password-protected — unlock it first (PDF → Unlock)`);throw new Error(`${f.name} could not be opened: ${e.message||e}`)}
+      await need('PptxGenJS');const P=new PptxGenJS();const p1=await pdf.getPage(1),v1=p1.getViewport({scale:1});const Win=v1.width/72,Hin=v1.height/72;
+      P.defineLayout({name:'PDFPAGE',width:Win,height:Hin});P.layout='PDFPAGE';P.title=stemOf(f.name);
+      for(let n=1;n<=pdf.numPages;n++){t.prog((i+(n-1)/pdf.numPages)/t.files.length,`${f.name}: page ${n} of ${pdf.numPages}…`);
+        const c=await renderPage(pdf,n,dpi/72);const data=c.toDataURL('image/jpeg',.88);const pg=await pdf.getPage(n),vp=pg.getViewport({scale:1});
+        const s=P.addSlide();const ar=vp.width/vp.height;let w=Win,h=Win/ar;if(h>Hin){h=Hin;w=Hin*ar}
+        s.addImage({data,x:(Win-w)/2,y:(Hin-h)/2,w,h});
+        if(notes){const tc=await pg.getTextContent();const txt=tc.items.map(x=>x.str+(x.hasEOL?'\n':' ')).join('').replace(/[ \t]+\n/g,'\n').trim();if(txt)s.addNotes(txt.slice(0,20000))}
+        c.width=c.height=0;pg.cleanup();await tick()}
+      pdfClose(pdf);t.prog((i+.98)/t.files.length,'Saving…');const blob=await tidyPptx(await P.write({outputType:'blob'}));const o={name:`${stemOf(f.name)}.pptx`,blob};o.info=`${pdf.numPages} slide${pdf.numPages===1?'':'s'}`;outs.push(o)}
+    return outs}});
+WRITE.pptx=async m=>tidyPptx(await toPptx(m));   // the document converter's PPTX output gets the same tidy-up
+document.addEventListener('change',e=>{if(!e.target.matches('#pdf-to-ppt [name=pp-m]'))return;const look=document.querySelector('#pdf-to-ppt [name=pp-m]:checked').value==='look';
+  document.querySelector('#pdf-to-ppt .o-qf').hidden=!look;document.querySelector('#pdf-to-ppt .o-nf').hidden=!look});
+/*ppt-tools:end*/
+
+
 /* =====================================================================
    ACCOUNTS & PLANS — Supabase sign-in, plan limits, credits, Razorpay, ads
    Everything here talks to YOUR Supabase project; files are never sent anywhere.
@@ -3291,7 +3913,7 @@ INIT['zip-open']=()=>{let zip=null,entries=[],sel=null;
   const LIVE=!!(C.supabaseUrl&&C.supabaseAnonKey)&&/^https?:$/.test(location.protocol);
   const FREE_TOOLS=new Set(['json','json-compare','json-query','data-convert','table-clean','hash','diff','zip-open','doc-stats']);
   const LIM={tasks:25,anonTasks:10,files:5,mb:20,ocr:5};
-  const PAGES=['pricing','privacy','terms','refunds'];
+  const PAGES=['pricing','privacy','terms','refunds','for-business'];
   const inr=n=>'₹'+Number(n).toLocaleString('en-IN');
   const S={sb:null,session:null,profile:null,usage:{tasks:0,ocr_pages:0},pays:[]};
   const istDay=()=>new Date(Date.now()+5.5*36e5).toISOString().slice(0,10);
@@ -3323,10 +3945,10 @@ INIT['zip-open']=()=>{let zip=null,entries=[],sel=null;
 
   /* ---------- header account button ---------- */
   const bar=document.createElement('div');bar.className='acctbar';
-  bar.innerHTML=`<a href="pricing" class="plink">Pricing</a><button id="acctBtn">Sign in</button>`;
+  bar.innerHTML=`<a href="./#tools" class="plink">All tools</a><a href="pricing" class="plink">Pricing</a><a href="for-business" class="plink">For business</a><a href="privacy" class="plink">Privacy</a><button id="acctBtn">Sign in</button>`;
   document.querySelector('.hero .top').prepend(bar);
   const initial=()=>{const p=S.profile,u=S.session&&S.session.user;const n=(p&&p.full_name)||(u&&(u.email||u.phone))||'?';return esc(n.trim()[0].toUpperCase())};
-  function renderBar(){const b=$('acctBtn');
+  function renderBar(){const b=$('acctBtn');const R=document.documentElement;R.classList.toggle('signed-in',!!S.session);R.classList.toggle('can-fav',!!S.session||!LIVE);try{paintMine()}catch(e){}
     if(!S.session){b.innerHTML='Sign in';return}
     const pn=planName(S.profile);b.innerHTML=`<span class="av">${initial()}</span>Account <span class="pb ${pn==='Free'?'free':''}">${pn}</span>`}
   $('acctBtn').onclick=()=>S.session?openAccount():openAuth();
@@ -3502,7 +4124,7 @@ INIT['zip-open']=()=>{let zip=null,entries=[],sel=null;
    COMING BACK: favourites, recent activity, result previews, keyboard shortcuts, install + offline.
    Favourites and recent activity live only in this browser (localStorage) — nothing is sent anywhere.
    ===================================================================== */
-const PAL=[["convert","Document converter","Word, PDF, Excel, PowerPoint, ODT, RTF and more","document converter — word, pdf, excel, ppt online  document converter"],["pdf-merge","Merge PDF","Combine PDFs into one, in any order","merge pdf files online — free & private  merge pdf"],["pdf-split","Split PDF","Extract pages or split by range","split pdf — extract pages online free  split pdf"],["pdf-organize","Organize pages","Reorder, rotate and delete pages","rotate, delete & reorder pdf pages online  organize pdf"],["pdf-compress","Compress PDF","Shrink PDFs for email and uploads","compress pdf — reduce pdf size online free  compress pdf"],["pdf-protect","Protect PDF","Add an AES-256 password","password protect pdf — aes-256 encryption  protect pdf"],["pdf-unlock","Unlock PDF","Remove a password you know","unlock pdf — remove pdf password online  unlock pdf"],["pdf-stamp","Watermark & numbers","Watermarks and page numbers","add watermark & page numbers to pdf online  watermark pdf"],["pdf-ocr","OCR","Text from scans — Kannada, Hindi & more","ocr online — scanned pdf & image to text (kannada, hindi)  ocr"],["pdf-to-img","PDF to images","Save pages as JPG or PNG","pdf to jpg / png — convert pdf pages to images  pdf to jpg"],["img-to-pdf","Images to PDF","Photos and scans into one PDF","images to pdf — jpg, png, heic to pdf online  jpg to pdf"],["img-convert","Image converter","HEIC, WEBP, AVIF, PNG, JPG, ICO…","image converter — heic, webp, avif, png, jpg online  image converter"],["img-resize","Resize & compress","Fit 20 KB / 50 KB form limits","resize image to 20 kb, 50 kb, 100 kb — photo resizer  image compressor"],["json","JSON formatter","Format, validate and repair","json formatter & validator online — beautify, minify  json formatter"],["json-compare","JSON compare","Differences by structure","json compare — diff two json files online  json compare"],["json-query","JSONPath & schema","JSONPath tester, schema generator","jsonpath tester & json schema generator online  jsonpath tester"],["data-convert","Data converter","CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML","csv to json, excel, xml, yaml converter online  data converter"],["table-clean","Table cleaner","De-duplicate, trim, sort, filter","csv & excel cleaner — remove duplicates, sort, trim  csv cleaner"],["hash","Checksums & Base64","MD5, SHA-256 checksums and Base64","file checksum (md5, sha-256) & base64 encoder online  checksum calculator"],["word-merge","Merge Word","Join .docx files, keep formatting","merge word documents online — combine docx files  merge word"],["excel-combine","Combine Excel","Merge workbooks and sheets","combine excel files — merge sheets & workbooks online  combine excel"],["find-replace","Find & replace","Replace text across many files","find and replace in multiple word files at once  find and replace"],["doc-stats","Word count","Words, characters, reading time","word counter — count words in word, pdf & text online  word counter"],["metadata","Remove metadata","Strip author, edit history and GPS","remove metadata from pdf, word & photos (exif, gps)  remove metadata"],["diff","Compare files","Compare text, Word and PDF files","compare two files online — text, word, pdf diff  file comparison"],["zip-create","Create ZIP","Pack files and folders","create zip file online — compress files & folders  create zip"],["zip-open","Open ZIP","Look inside and extract","open zip file online — view & extract without installing  zip extractor"],["word-to-pdf","Word to PDF","DOCX to PDF with selectable text","word to pdf converter — docx to pdf online, free  word to pdf"],["pdf-to-word","PDF to Word","Editable DOCX from a PDF","pdf to word converter — editable docx online, free  pdf to word"],["excel-to-pdf","Excel to PDF","Spreadsheets as shareable PDFs","excel to pdf converter — xlsx to pdf online, free  excel to pdf"],["powerpoint-to-pdf","PowerPoint to PDF","Slides as 16:9 PDF pages","powerpoint to pdf — pptx to pdf online, free  powerpoint to pdf"],["excel-to-csv","Excel to CSV","XLSX to CSV with a live preview","excel to csv converter — xlsx to csv online, free  excel to csv"],["csv-to-json","CSV to JSON","Header row becomes the keys","csv to json converter online — free, no upload  csv to json"],["heic-to-jpg","HEIC to JPG","iPhone photos that open everywhere","heic to jpg converter — iphone photos to jpg, free  heic to jpg"],["webp-to-jpg","WEBP to JPG","Web images for any app or form","webp to jpg converter online — free & private  webp to jpg"],["pdf-sign", "Sign PDF", "Draw, type or upload your signature", "sign pdf online — add signature, initials and date  e-sign esign signature sign pdf"],["pdf-edit", "Edit & fill PDF", "Fill forms, add text, ticks and dates", "edit pdf & fill pdf forms online — add text, tick, white-out  edit pdf fill form"],["pdf-redact", "Mask PDF & Aadhaar", "Hide private details for good", "redact pdf — black out text, mask aadhaar number, hide details  redact pdf aadhaar masking"],["exam-photo", "Passport size photo & signature", "Exact pixels and KB for exam forms", "passport size photo & signature resizer — ibps, ssc, upsc, neet, jee, 20 kb 50 kb  passport size photo exam photo resizer signature"],["compress-pdf-to-200kb", "Compress PDF to 200 KB", "PDFs under a portal’s size limit", "compress pdf to 200 kb, 100 kb, 500 kb — reduce pdf size  compress pdf to 200kb"],["fill-pdf-form", "Fill PDF form", "Type into fillable PDF forms", "fill pdf form online — fillable pdf, type on pdf  fill pdf form"],["mask-aadhaar", "Mask Aadhaar", "Hide the first 8 digits", "masked aadhaar — hide aadhaar number xxxx xxxx 1234 in pdf or photo  mask aadhaar"],["signature-resizer", "Signature resizer", "140 × 60 px, 10–20 KB and more", "signature resizer — 10 kb 20 kb, 140x60 pixels for exam forms  signature resizer"]];   // [address key, name, one-liner, search words] for the quick-open search
+const PAL=[["convert","Word, PowerPoint & Excel converter","To and from PDF — also PPT, DOC, XLS, ODT, RTF","document converter — word, pdf, excel, ppt online  document converter powerpoint ppt pptx slides presentation word docx excel xlsx"],["pdf-merge","Merge PDF","Combine PDFs into one, in any order","merge pdf files online — free & private  merge pdf"],["pdf-split","Split PDF","Extract pages or split by range","split pdf — extract pages online free  split pdf"],["pdf-organize","Organize pages","Reorder, rotate and delete pages","rotate, delete & reorder pdf pages online  organize pdf"],["pdf-compress","Compress PDF","Shrink PDFs for email and uploads","compress pdf — reduce pdf size online free  compress pdf"],["pdf-protect","Protect PDF","Add an AES-256 password","password protect pdf — aes-256 encryption  protect pdf"],["pdf-unlock","Unlock PDF","Remove a password you know","unlock pdf — remove pdf password online  unlock pdf"],["pdf-stamp","Watermark & numbers","Watermarks and page numbers","add watermark & page numbers to pdf online  watermark pdf"],["pdf-ocr","OCR","Text from scans — Kannada, Hindi & more","ocr online — scanned pdf & image to text (kannada, hindi)  ocr"],["pdf-to-img","PDF to images","Save pages as JPG or PNG","pdf to jpg / png — convert pdf pages to images  pdf to jpg"],["img-to-pdf","Images to PDF","Photos and scans into one PDF","images to pdf — jpg, png, heic to pdf online  jpg to pdf"],["img-convert","Image converter","HEIC, WEBP, AVIF, PNG, JPG, ICO…","image converter — heic, webp, avif, png, jpg online  image converter"],["img-resize","Resize & compress","Fit 20 KB / 50 KB form limits","resize image to 20 kb, 50 kb, 100 kb — photo resizer  image compressor"],["json","JSON formatter","Format, validate and repair","json formatter & validator online — beautify, minify  json formatter"],["json-compare","JSON compare","Differences by structure","json compare — diff two json files online  json compare"],["json-query","JSONPath & schema","JSONPath tester, schema generator","jsonpath tester & json schema generator online  jsonpath tester"],["data-convert","Data converter","CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML","csv to json, excel, xml, yaml converter online  data converter"],["table-clean","Table cleaner","De-duplicate, trim, sort, filter","csv & excel cleaner — remove duplicates, sort, trim  csv cleaner"],["hash","Checksums & Base64","MD5, SHA-256 checksums and Base64","file checksum (md5, sha-256) & base64 encoder online  checksum calculator"],["word-merge","Merge Word","Join .docx files, keep formatting","merge word documents online — combine docx files  merge word"],["excel-combine","Combine Excel","Merge workbooks and sheets","combine excel files — merge sheets & workbooks online  combine excel"],["find-replace","Find & replace","Replace text across many files","find and replace in multiple word files at once  find and replace"],["doc-stats","Word count","Words, characters, reading time","word counter — count words in word, pdf & text online  word counter"],["metadata","Remove metadata","Strip author, edit history and GPS","remove metadata from pdf, word & photos (exif, gps)  remove metadata"],["diff","Compare files","Compare text, Word and PDF files","compare two files online — text, word, pdf diff  file comparison"],["zip-create","Create ZIP","Pack files and folders","create zip file online — compress files & folders  create zip"],["zip-open","Open ZIP","Look inside and extract","open zip file online — view & extract without installing  zip extractor"],["word-to-pdf","Word to PDF","DOCX to PDF with selectable text","word to pdf converter — docx to pdf online, free  word to pdf"],["pdf-to-word","PDF to Word","Editable DOCX from a PDF","pdf to word converter — editable docx online, free  pdf to word"],["excel-to-pdf","Excel to PDF","Spreadsheets as shareable PDFs","excel to pdf converter — xlsx to pdf online, free  excel to pdf"],["powerpoint-to-pdf","PowerPoint to PDF","Slides as a PDF that looks the same","powerpoint to pdf — pptx to pdf online, free  powerpoint to pdf"],["excel-to-csv","Excel to CSV","XLSX to CSV with a live preview","excel to csv converter — xlsx to csv online, free  excel to csv"],["csv-to-json","CSV to JSON","Header row becomes the keys","csv to json converter online — free, no upload  csv to json"],["heic-to-jpg","HEIC to JPG","iPhone photos that open everywhere","heic to jpg converter — iphone photos to jpg, free  heic to jpg"],["webp-to-jpg","WEBP to JPG","Web images for any app or form","webp to jpg converter online — free & private  webp to jpg"],["pdf-sign","Sign PDF","Draw, type or upload your signature","sign pdf online — add signature, initials and date  e-sign esign signature sign pdf"],["pdf-edit","Edit & fill PDF","Fill forms, add text, ticks and dates","edit pdf & fill pdf forms online — add text, tick, white-out  edit pdf fill form"],["pdf-redact","Mask PDF & Aadhaar","Hide private details for good","redact pdf — black out text, mask aadhaar number, hide details  redact pdf aadhaar masking aadhaar hide"],["exam-photo","Passport size photo & signature","Exact pixels and KB for exam forms","passport size photo & signature resizer — ibps, ssc, upsc, neet, jee, 20 kb 50 kb  passport size photo exam photo resizer signature passport signature exam"],["compress-pdf-to-200kb","Compress PDF to 200 KB","PDFs under a portal’s size limit","compress pdf to 200 kb, 100 kb, 500 kb — reduce pdf size  compress pdf to 200kb"],["fill-pdf-form","Fill PDF form","Type into fillable PDF forms","fill pdf form online — fillable pdf, type on pdf  fill pdf form"],["mask-aadhaar","Mask Aadhaar","Hide the first 8 digits","masked aadhaar — hide aadhaar number xxxx xxxx 1234 in pdf or photo  mask aadhaar"],["signature-resizer","Signature resizer","140 × 60 px, 10–20 KB and more","signature resizer — 10 kb 20 kb, 140x60 pixels for exam forms  signature resizer"],["pdf-to-ppt","PDF to PowerPoint","Turn PDF pages into slides","pdf to powerpoint ppt pptx slides presentation convert pdf to ppt"],["ppt-compress","Compress PowerPoint","Shrink big decks for email and uploads","compress powerpoint ppt pptx reduce size slides presentation"],["ppt-to-img","PowerPoint to JPG","Save every slide as an image","powerpoint to jpg png image ppt pptx slides export pictures pdf"],["ppt-images","Extract images from PowerPoint","Get every picture out of a deck","extract images powerpoint ppt pptx pictures photos media word excel"],["ppt-merge","Merge PowerPoint","Combine several decks into one","merge powerpoint combine ppt pptx presentations slides join"],["ppt-text","Slide text & speaker notes","Copy all text and notes from a deck","powerpoint text speaker notes ppt pptx extract copy slides transcript"],["ppt-to-pptx","PPT to PPTX","Rescue text from old .ppt files","ppt to pptx convert old powerpoint 97 2003 upgrade"],["compress-image-to-50kb","Compress image to 50 KB","Photos under 50 KB for forms","compress image to 50 kb jpg photo under 50kb resize reduce"],["compress-image-to-20kb","Compress image to 20 KB","Signatures under 20 KB","compress image to 20 kb signature photo under 20kb"],["compress-image-to-100kb","Compress image to 100 KB","Any picture under 100 KB","compress image to 100 kb jpg photo under 100kb"],["compress-pdf-to-100kb","Compress PDF to 100 KB","PDFs under a 100 KB limit","compress pdf to 100 kb reduce pdf size under 100kb"],["compress-pdf-to-500kb","Compress PDF to 500 KB","PDFs under a 500 KB limit","compress pdf to 500 kb reduce pdf size under 500kb"],["png-to-jpg","PNG to JPG","Smaller files that open everywhere","png to jpg jpeg convert image"],["jpg-to-png","JPG to PNG","PNG for editors and upload forms","jpg to png jpeg convert image"],["image-to-pdf","Image to PDF","Photos and scans into one PDF","image to pdf photo picture png jpg heic convert"]];   // [address key, name, one-liner, search words] for the quick-open search
 const LS={get:(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del:k=>{try{localStorage.removeItem(k)}catch(e){}}};
 const palOf=k=>PAL.find(p=>p[0]===k);
 const nameOf=k=>(palOf(k)||[k,TOOL_NAMES[k]||k])[1];
@@ -3513,7 +4135,7 @@ const ago=t=>{const s=(Date.now()-t)/1000;return s<60?'just now':s<3600?Math.rou
 /* ---------- favourites ---------- */
 const favs=()=>LS.get('fu_favs',[]).filter(k=>palOf(k));
 function toggleFav(k){const f=favs(),i=f.indexOf(k);if(i<0)f.unshift(k);else f.splice(i,1);LS.set('fu_favs',f.slice(0,12));paintMine();paintStars();return i<0}
-function paintStars(){const f=favs();document.querySelectorAll('.favbtn').forEach(b=>{const on=f.includes(b.dataset.k);b.setAttribute('aria-pressed',on);
+function paintStars(){const f=favs();document.querySelectorAll('.tstar').forEach(b=>{const on=f.includes(b.dataset.k);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?'Remove ':'Add ')+nameOf(b.dataset.k)+(on?' from':' to')+' favourites')});document.querySelectorAll('.favbtn').forEach(b=>{const on=f.includes(b.dataset.k);b.setAttribute('aria-pressed',on);
   b.querySelector('.ft').textContent=on?'Favourite':'Add to favourites';b.setAttribute('aria-label',(on?'Remove ':'Add ')+nameOf(b.dataset.k)+(on?' from':' to')+' favourites')})}
 function ensureStar(h,k){const sec=$(h);if(!sec||h==='home')return;let b=sec.querySelector('.favbtn');
   if(!b){const h2=sec.querySelector('h2');if(!h2)return;b=document.createElement('button');b.type='button';b.className='favbtn';b.innerHTML=STAR+'<span class="ft"></span>';
@@ -3529,10 +4151,15 @@ window.fuDone=fuDone;
 
 /* ---------- "Your tools" on the home page ---------- */
 function paintMine(){const box=$('mine');if(!box)return;const f=favs(),r=recentOn()?LS.get('fu_recent',[]).filter(x=>palOf(x.k)):[];
-  box.hidden=!f.length&&!r.length&&recentOn();
-  box.querySelector('.mine-favs').innerHTML=f.length?f.map(k=>`<a class="mchip" href="${routeUrl(k)}">${STAR}${esc(nameOf(k))}</a>`).join(''):'<p class="note">Tap the ☆ next to a tool’s name to pin it here.</p>';
+  const live=!!(window.FB&&FB.isLive()),signed=!!(window.FB&&FB.state&&FB.state.session);   // with accounts on: signed-in users only
+  box.hidden=live?!signed:(!f.length&&!r.length&&recentOn());const nd=$('nudge');if(nd)nd.hidden=!(live&&!signed);
+  document.documentElement.classList.toggle('can-fav',signed||!live);try{paintStars()}catch(e){}
+  const tileOf=(k,sub)=>{const w=document.querySelector(`#tools .tcw[data-k="${k}"]`);const ic=w?w.querySelector('.tico').innerHTML:'';const g=w?w.closest('.jgroup').id:'';
+    return `<a class="mtile" data-g="${g}" href="${routeUrl(k)}"><span class="mico">${ic}</span><span class="mtx"><b>${esc(nameOf(k))}</b>${sub?`<small>${sub}</small>`:''}</span></a>`};
+  box.querySelector('.mine-favs').innerHTML=f.length?`<div class="mtiles">${f.map(k=>tileOf(k)).join('')}</div>`:'<p class="note">Tap the ☆ on any tool to pin it here.</p>';
   const list=box.querySelector('.mine-recent');
-  list.innerHTML=!recentOn()?'<p class="note">Recent activity is turned off on this device.</p>':r.length?r.slice(0,6).map(x=>`<li><a href="${routeUrl(x.k)}"><b>${esc(nameOf(x.k))}</b><span>${x.n?`${x.n} file${x.n>1?'s':''} → `:''}${esc(x.o.join(', '))}${x.m>x.o.length?` +${x.m-x.o.length} more`:''}</span></a><time datetime="${new Date(x.at).toISOString()}">${ago(x.at)}</time></li>`).join(''):'<p class="note">Tools you use will appear here.</p>';
+  const seen=new Set(),ru=r.filter(x=>!seen.has(x.k)&&seen.add(x.k)).slice(0,6);
+  list.innerHTML=!recentOn()?'<li class="note">Recent activity is turned off on this device.</li>':ru.length?ru.map(x=>`<li>${tileOf(x.k,`<time datetime="${new Date(x.at).toISOString()}">${ago(x.at)}</time>`)}</li>`).join(''):'<li class="note">Tools you use will appear here.</li>';
   box.querySelector('.mine-off').checked=!recentOn();box.querySelector('.mine-clear').hidden=!r.length}
 
 /* ---------- preview a result before downloading ---------- */
@@ -3607,6 +4234,25 @@ document.addEventListener('click',e=>{const b=e.target.closest('.installbtn');if
   box.querySelector('.mine-off').onchange=e=>{LS.set('fu_recent_off',e.target.checked);if(e.target.checked)LS.del('fu_recent');paintMine()}})();
 window.fuAfterRoute=(h,k)=>{ensureStar(h,k||h);if(h==='home')paintMine()};
 paintMine();
+const POP_IN=[["JPG to PDF", "jpg-to-pdf"], ["PDF to JPG", "pdf-to-jpg"], ["Word to PDF", "word-to-pdf"], ["PDF to Word", "pdf-to-word"], ["PowerPoint to PDF", "powerpoint-to-pdf"], ["PDF to PowerPoint", "pdf-to-powerpoint"], ["Merge PDF", "merge-pdf"], ["Compress PDF", "compress-pdf"], ["Compress PDF to 200 KB", "compress-pdf-to-200kb"], ["Compress photo to 50 KB", "compress-image-to-50kb"], ["Passport size photo", "passport-size-photo"], ["Mask Aadhaar", "mask-aadhaar"]];
+/* ---------- home: stars on tool tiles, sign-in prompt, search box, popular tasks for India ---------- */
+document.addEventListener('click',e=>{const st=e.target.closest('.tstar');if(st){e.preventDefault();const on=toggleFav(st.dataset.k);toast(on?`${nameOf(st.dataset.k)} added to favourites`:`${nameOf(st.dataset.k)} removed from favourites`);return}
+  if(e.target.closest('.nudge-in')&&window.FB)FB.openAuth()});
+(()=>{const inp=$('hq'),list=$('hqList');if(!inp||!list)return;let hits=[],sel=-1;if(matchMedia('(max-width:600px)').matches)inp.placeholder='Search tools…';
+  const close=()=>{list.hidden=true;inp.setAttribute('aria-expanded','false');inp.removeAttribute('aria-activedescendant');sel=-1};
+  const paint=()=>{const q=inp.value.trim();if(!q){close();return}hits=cmdSearch(q);
+    list.innerHTML=hits.length?hits.map((p,i)=>`<li role="option" id="hq-${i}" aria-selected="${i===sel}"><a href="${routeUrl(p[0])}" tabindex="-1"><b>${esc(p[1])}</b><small>${esc(p[2])}</small></a></li>`).join(''):'<li class="none" role="option" aria-disabled="true">No tool matches that yet — try a file type like “pdf”, “pptx” or “png”.</li>';
+    list.hidden=false;inp.setAttribute('aria-expanded','true');if(sel>=0)inp.setAttribute('aria-activedescendant','hq-'+sel);else inp.removeAttribute('aria-activedescendant')};
+  const go=k=>{close();inp.value='';const a=document.createElement('a');a.href=routeUrl(k);document.body.appendChild(a);a.click();a.remove()};   // in-app navigation
+  inp.addEventListener('input',()=>{sel=-1;paint()});
+  inp.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!hits.length)return;e.preventDefault();sel=(sel+(e.key==='ArrowDown'?1:-1)+hits.length)%hits.length;paint()}
+    else if(e.key==='Enter'){const h=hits[sel>=0?sel:0];if(h&&inp.value.trim()){e.preventDefault();go(h[0])}}else if(e.key==='Escape'){if(!list.hidden){e.stopPropagation();close()}}});
+  list.addEventListener('mousedown',e=>{const a=e.target.closest('a');if(a){e.preventDefault();const i=+a.parentElement.id.slice(3);if(hits[i])go(hits[i][0])}});
+  inp.addEventListener('blur',()=>setTimeout(close,120))})();
+(()=>{const box=$('hchips');if(!box)return;let tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+  const india=/^Asia\/(Kolkata|Calcutta)$/.test(tz)||(navigator.languages||[navigator.language]).some(l=>/-IN$/i.test(l||''));
+  if(india)box.innerHTML=POP_IN.map(([n,u])=>`<a role="listitem" href="${u}">${esc(n)}</a>`).join('')})();
+paintStars();
 
 route();
 

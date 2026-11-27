@@ -1,5 +1,13 @@
 # Source of the landing-page tool grid and icons. Used once to write the home section into web/index.html.
 ICON = {  # 24×24 line icons, stroke = currentColor
+ 'pdf-to-ppt': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M16 10H8m3-3-3 3 3 3"/>',
+ 'powerpoint-to-pdf': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M8 10h8m-3-3 3 3-3 3"/>',
+ 'ppt-to-pptx': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M12 13V7m-3 3 3-3 3 3"/>',
+ 'ppt-compress': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M12 6v3m-2-1.5 2 1.5 2-1.5M12 14v-3m-2 1.5 2-1.5 2 1.5"/>',
+ 'ppt-to-img': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="m6 13 3-3 2.5 2.5L13 11l5 3"/><circle cx="15.5" cy="7.5" r="1"/>',
+ 'ppt-images': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><rect x="7" y="7" width="4" height="4"/><rect x="13" y="9" width="4" height="4"/>',
+ 'ppt-merge': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="m7 7 5 3-5 3M17 7l-5 3 5 3"/>',
+ 'ppt-text': '<path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M12 16v4M8 20h8"/><path d="M7 7h10M7 10h10M7 13h6"/>',
  'convert': '<path d="M14 3H7a2 2 0 0 0-2 2v6"/><path d="M14 3l5 5v3"/><path d="M14 3v5h5"/><path d="M5 15h14m-3-3 3 3-3 3"/><path d="M19 21H5m3-3-3 3 3 3" transform="translate(0 -3)"/>',
  'pdf-merge': '<rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="10" rx="1.5"/><path d="M7 13v2a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-2"/><path d="M12 18v3m-2-2 2 2 2-2"/>',
  'pdf-split': '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M3 12h3m3 0h2m3 0h2m3 0h2" /><path d="M9 6h6M9 8.5h4"/><path d="M9 16h6M9 18.5h4"/>',
@@ -33,7 +41,10 @@ ICON = {  # 24×24 line icons, stroke = currentColor
  'zip-open': '<path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9"/><path d="M3 9 6 3h12l3 6z"/><path d="M12 12v5m-2-2 2 2 2-2"/>',
 }
 BLURB = {
- 'convert': 'Word, PDF, Excel, PowerPoint, ODT, RTF and more',
+ 'pdf-to-ppt': 'Turn PDF pages into slides', 'ppt-compress': 'Shrink big decks for email and uploads', 'ppt-to-img': 'Save every slide as an image',
+ 'ppt-images': 'Get every picture out of a deck', 'ppt-merge': 'Combine several decks into one', 'ppt-text': 'Copy all text and notes from a deck',
+ 'powerpoint-to-pdf': 'Slides as a PDF that looks the same', 'ppt-to-pptx': 'Rescue text from old .ppt files',
+ 'convert': 'To and from PDF — also PPT, DOC, XLS, ODT, RTF',
  'pdf-merge': 'Combine PDFs into one, in any order',
  'pdf-split': 'Extract pages or split by range',
  'pdf-organize': 'Reorder, rotate and delete pages',
@@ -66,7 +77,9 @@ BLURB = {
  'exam-photo': 'Exact px and KB for exam forms',
 }
 NAME = {
- 'convert': 'Document converter', 'pdf-merge': 'Merge PDF', 'pdf-split': 'Split PDF', 'pdf-organize': 'Organize pages',
+ 'pdf-to-ppt': 'PDF to PowerPoint', 'ppt-compress': 'Compress PowerPoint', 'ppt-to-img': 'PowerPoint to JPG', 'ppt-images': 'Extract images from PowerPoint',
+ 'ppt-merge': 'Merge PowerPoint', 'ppt-text': 'Slide text & speaker notes', 'powerpoint-to-pdf': 'PowerPoint to PDF', 'ppt-to-pptx': 'PPT to PPTX',
+ 'convert': 'Word, PowerPoint & Excel converter', 'pdf-merge': 'Merge PDF', 'pdf-split': 'Split PDF', 'pdf-organize': 'Organize pages',
  'pdf-compress': 'Compress PDF', 'pdf-protect': 'Protect PDF', 'pdf-unlock': 'Unlock PDF', 'pdf-stamp': 'Watermark & numbers',
  'pdf-ocr': 'OCR', 'pdf-to-img': 'PDF to images', 'img-to-pdf': 'Images to PDF', 'img-convert': 'Image converter',
  'img-resize': 'Resize & compress', 'json': 'JSON formatter', 'json-compare': 'JSON compare', 'json-query': 'JSONPath & schema',
@@ -83,7 +96,9 @@ GROUPS = [
  ('arch', 'Compare & archive', 'c-arch', ['diff', 'zip-create', 'zip-open']),
 ]
 import json, pathlib
-SLUG = {t: m['slug'] for t, m in json.load(open(pathlib.Path(__file__).resolve().parent.parent / 'web' / 'seo.json'))['tools'].items() if t != 'home'}
+_SEO = json.load(open(pathlib.Path(__file__).resolve().parent.parent / 'web' / 'seo.json'))
+SLUG = {t: m['slug'] for t, m in _SEO['tools'].items() if t != 'home'}
+SLUG.update({k: k for k in _SEO['variants']})
 FREE = {'json', 'json-compare', 'json-query', 'data-convert', 'table-clean', 'hash', 'diff', 'zip-open', 'doc-stats'}
 
 def svg(t, size=22):
@@ -96,4 +111,30 @@ def grid():
             f'<a class="tcard {cls}" href="{SLUG[t]}"><span class="tico">{svg(t)}</span><span class="ttx"><b>{NAME[t]}'
             + (' <em class="tfree">No limit</em>' if t in FREE else '') + f'</b><small>{BLURB[t]}</small></span></a>' for t in tools)
         out.append(f'<div class="tgroup"><h3>{gname} <span>{len(tools)}</span></h3><div class="tgrid">{cards}</div></div>')
+    return '\n'.join(out)
+
+
+# ---------- Fileutilo 15 home page: tools grouped by the job people want to do ----------
+TASKS = [
+ ('combine', 'Combine', 'Join many files into one', 'c-doc', ['pdf-merge', 'word-merge', 'excel-combine', 'img-to-pdf', 'zip-create']),
+ ('smaller', 'Make smaller', 'Fit upload limits and email', 'c-img', ['pdf-compress', 'img-resize', 'exam-photo']),
+ ('protect', 'Protect & keep private', 'Passwords, masking and clean files', 'c-arch', ['pdf-protect', 'pdf-unlock', 'pdf-redact', 'metadata']),
+ ('convert', 'Convert', 'Change one format into another', 'c-data', ['convert', 'img-convert', 'pdf-to-img', 'data-convert']),
+ ('slides', 'PowerPoint & slides', 'Convert, shrink and reuse presentations', 'c-ppt', ['powerpoint-to-pdf', 'pdf-to-ppt', 'ppt-to-pptx', 'ppt-compress', 'ppt-to-img', 'ppt-images', 'ppt-merge', 'ppt-text']),
+ ('edit', 'Edit & organize', 'Change what is inside', 'c-pdf', ['pdf-edit', 'pdf-sign', 'pdf-organize', 'pdf-split', 'pdf-stamp', 'find-replace']),
+ ('read', 'Read, check & compare', 'Look inside without changing', 'c-data', ['pdf-ocr', 'doc-stats', 'diff', 'json', 'json-compare', 'json-query', 'table-clean', 'hash', 'zip-open']),
+]
+STAR_SVG = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
+
+def task_grid():
+    from html import escape as E
+    out = []
+    for n, (gid, name, sub, cls, keys) in enumerate(TASKS, 1):
+        cards = []
+        for k in keys:
+            is_tool = k in _SEO['tools']
+            free = ' <em class="tfree">No limit</em>' if k in FREE else ''
+            star = (f'<button type="button" class="tstar" data-k="{k}" aria-pressed="false" aria-label="Add {E(NAME[k])} to favourites">{STAR_SVG}</button>' if is_tool else '')
+            cards.append(f'<div class="tcw" data-k="{k}"><a class="tcard {cls}" href="{SLUG[k]}"><span class="tico">{svg(k)}</span><span class="ttx"><b>{E(NAME[k])}{free}</b><small>{E(BLURB[k])}</small></span></a>{star}</div>')
+        out.append(f'<section class="jgroup" id="do-{gid}" aria-labelledby="jg-{gid}"><div class="jhead"><span class="jnum">{n:02d}</span><h3 id="jg-{gid}">{E(name)}</h3><p>{E(sub)}</p></div><div class="tgrid">{"".join(cards)}</div></section>')
     return '\n'.join(out)

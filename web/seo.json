@@ -2,9 +2,9 @@
  "tools": {
   "home": {
    "title": "Fileutilo — Free Online PDF, Image & Document Tools (Private)",
-   "description": "31 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, images and data. Files stay on your device — nothing is uploaded.",
+   "description": "37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.",
    "h1": "Free, private file tools that run in your browser",
-   "intro": "Fileutilo brings 31 everyday file tools together in one place: convert documents, merge and split PDFs, compress images for form uploads, clean up spreadsheets, format JSON and more. Your files are processed inside your browser and are never uploaded to a server. That makes it fast, and safe for personal and work documents.",
+   "intro": "Fileutilo brings 37 everyday file tools together in one place: convert documents, merge and split PDFs, compress and merge PowerPoint decks, compress images for form uploads, clean up spreadsheets, format JSON and more. Your files are processed inside your browser and are never uploaded to a server. That makes it fast, and safe for personal and work documents.",
    "steps": [],
    "faqs": [
     [
@@ -59,8 +59,8 @@
     "word-merge"
    ],
    "shot_alt": "Document converter with a PowerPoint file, a text file and a web page converted to PDF, with a preview",
-   "name": "Document converter",
-   "blurb": "Word, PDF, Excel, PowerPoint, ODT, RTF and more"
+   "name": "Word, PowerPoint & Excel converter",
+   "blurb": "To and from PDF — also PPT, DOC, XLS, ODT, RTF"
   },
   "pdf-merge": {
    "title": "Merge PDF Files Online — Free & Private | Fileutilo",
@@ -1293,6 +1293,273 @@
    "shot_alt": "Passport size photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
    "name": "Passport size photo & signature",
    "blurb": "Exact px and KB for exam forms"
+  },
+  "pdf-to-ppt": {
+   "title": "PDF to PowerPoint Converter — PDF to PPTX Online, Free | Fileutilo",
+   "description": "Convert a PDF to a PowerPoint presentation: keep the exact look with one slide per page, or get editable text slides. Free, and the PDF never leaves your device.",
+   "h1": "Convert PDF to PowerPoint",
+   "intro": "Need to present a PDF, or reuse its pages in a deck? Fileutilo turns every page into a slide. Choose Same look to keep the page exactly as it is — fonts, charts and photos included — with the page’s text copied into the speaker notes, or Editable text to get headings, bullet points and tables you can change in PowerPoint. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs.",
+    "Choose Same look (each page becomes a slide picture) or Editable text.",
+    "Click Convert to PowerPoint and download the .pptx — it opens in PowerPoint, Google Slides, Keynote and LibreOffice."
+   ],
+   "faqs": [
+    [
+     "Can I edit the text after converting?",
+     "With Editable text, yes — headings, paragraphs, lists and tables become real PowerPoint text. With Same look, each page is a picture so it looks identical; its text is in the speaker notes so you can copy it."
+    ],
+    [
+     "Does it work with scanned PDFs?",
+     "Same look works with any PDF, including scans. Editable text needs a PDF with real text — run OCR first for a scan."
+    ],
+    [
+     "What slide size will I get?",
+     "The slides take the shape of the PDF’s first page, so A4 portrait documents become portrait slides and wide reports become wide slides."
+    ]
+   ],
+   "free": false,
+   "slug": "pdf-to-powerpoint",
+   "formats": [
+    "PDF",
+    "PPTX"
+   ],
+   "limits": [
+    "Same look makes each page a picture, so its text can’t be edited on the slide (it’s in the speaker notes).",
+    "Editable text keeps headings, paragraphs, lists and tables but not the page’s pictures or exact layout.",
+    "Password-protected PDFs must be unlocked first."
+   ],
+   "related": [
+    "ppt-to-img",
+    "convert",
+    "pdf-to-img",
+    "pdf-compress"
+   ],
+   "shot_alt": "PDF to PowerPoint with Same look chosen and the converted presentation ready to download",
+   "name": "PDF to PowerPoint",
+   "blurb": "Turn PDF pages into slides"
+  },
+  "ppt-compress": {
+   "title": "Compress PowerPoint — Reduce PPTX File Size Online, Free | Fileutilo",
+   "description": "Make a big PowerPoint small enough to email or upload. Optimises the pictures inside and keeps every slide, animation and note. Free and private — no upload.",
+   "h1": "Compress a PowerPoint presentation",
+   "intro": "Presentations get huge because of photos pasted at full camera resolution. Fileutilo resizes and re-saves those pictures at a sensible size for screens, turns large PNG photos into JPG, and packs the file tightly — usually making a deck many times smaller while it looks the same on a projector. Slides, text, animations, transitions and speaker notes are left exactly as they are. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files.",
+    "Choose Light, Recommended or Strong compression.",
+    "Click Compress — the before and after size is shown for each file — and download."
+   ],
+   "faqs": [
+    [
+     "Will my slides look different?",
+     "With Recommended, pictures are kept up to 1920 pixels wide, which is sharper than most projectors and screens can show. Use Light for printing or very large screens, and Strong when the file must be as small as possible."
+    ],
+    [
+     "Are animations and notes kept?",
+     "Yes. Only the pictures inside are optimised; slides, layouts, animations, transitions and speaker notes are untouched."
+    ],
+    [
+     "Why didn’t my file get smaller?",
+     "If its pictures are already small, or most of the size is video or embedded fonts, there is little to save. Fileutilo then gives you back your original file rather than a bigger one."
+    ]
+   ],
+   "free": false,
+   "slug": "compress-powerpoint",
+   "formats": [
+    "PPTX",
+    "PPTX"
+   ],
+   "limits": [
+    "Videos, sounds and embedded fonts are not compressed.",
+    "Old .ppt files and password-protected presentations aren’t supported — save them as a normal .pptx first."
+   ],
+   "related": [
+    "ppt-merge",
+    "ppt-to-img",
+    "pdf-compress",
+    "ppt-images"
+   ],
+   "shot_alt": "Compress PowerPoint showing a 9 MB presentation reduced to about 0.5 MB",
+   "name": "Compress PowerPoint",
+   "blurb": "Shrink big decks for email and uploads"
+  },
+  "ppt-to-img": {
+   "title": "PowerPoint to JPG — Convert PPTX Slides to Images Online | Fileutilo",
+   "description": "Save every PowerPoint slide as a JPG or PNG picture, or as one PDF with a page per slide. HD, Full HD or 4K. Free, and the presentation is never uploaded.",
+   "h1": "Convert PowerPoint slides to JPG",
+   "intro": "Share slides on WhatsApp, Instagram or a website, drop them into a document, or send a deck to someone without PowerPoint. Fileutilo draws each slide as a picture at the size you choose — 1280, 1920 or 3840 pixels wide — or puts them all into one PDF. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .pptx file.",
+    "Choose JPG, PNG or PDF, the width, and optionally which slides (for example 1-3, 5).",
+    "Click Convert slides and download the pictures, one by one or as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Will the pictures look exactly like PowerPoint?",
+     "Text, pictures, shapes, tables and backgrounds are drawn faithfully. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones — for pixel-perfect output of those slides, export them from PowerPoint itself."
+    ],
+    [
+     "Can I convert just a few slides?",
+     "Yes. Type the slide numbers or ranges, such as 2-4, 7. Leave the box empty for all slides."
+    ],
+    [
+     "Which format should I choose?",
+     "JPG gives smaller files for photos and sharing; PNG keeps text and lines perfectly sharp; PDF puts every slide into one document that’s easy to print or email."
+    ]
+   ],
+   "free": false,
+   "slug": "powerpoint-to-jpg",
+   "formats": [
+    "PPTX",
+    "JPG, PNG or PDF"
+   ],
+   "limits": [
+    "Charts, SmartArt effects and 3-D models may be simplified; fonts that aren’t installed are replaced by similar ones.",
+    "Animations and transitions aren’t shown — each slide is drawn as it looks when fully built.",
+    "Old .ppt files aren’t supported — save them as .pptx first."
+   ],
+   "related": [
+    "powerpoint-to-pdf",
+    "ppt-images",
+    "img-resize",
+    "pdf-to-ppt"
+   ],
+   "shot_alt": "PowerPoint to JPG with Full HD chosen and one picture per slide ready to download",
+   "name": "PowerPoint to JPG",
+   "blurb": "Save every slide as an image"
+  },
+  "ppt-images": {
+   "title": "Extract Images from PowerPoint — Get All PPTX Pictures | Fileutilo",
+   "description": "Get every picture out of a PowerPoint in its original quality — no screenshots. Also works for Word and Excel files. Free, private, nothing uploaded.",
+   "h1": "Extract images from a PowerPoint",
+   "intro": "Need the photos, logos or diagrams someone put in a presentation? Fileutilo pulls out the original picture files stored inside the .pptx — exactly as they were inserted, without the quality loss of a screenshot — and gives them to you one by one or as a ZIP. It also works with Word (.docx) and Excel (.xlsx) files, and can include videos and sounds. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files (or .docx and .xlsx).",
+    "Optionally skip small icons, or leave out videos and sounds.",
+    "Click Extract images and download them, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Are the images the original quality?",
+     "Yes. They are the exact files stored inside the presentation, byte for byte — nothing is re-saved or resized."
+    ],
+    [
+     "Why do some pictures have an .emf or .wmf ending?",
+     "Those are Windows drawing formats that PowerPoint uses for some charts and clip art. They open in Office and Windows apps, but not in most web browsers."
+    ],
+    [
+     "Can I get the pictures from just one slide?",
+     "The tool takes every picture in the file. To get one slide as a picture instead, use PowerPoint to JPG with that slide number."
+    ]
+   ],
+   "free": false,
+   "slug": "extract-images-from-powerpoint",
+   "formats": [
+    "PPTX, DOCX, XLSX",
+    "The original JPG, PNG, GIF, SVG, EMF… files (and videos)"
+   ],
+   "limits": [
+    "Pictures in EMF or WMF format open in Office and Windows apps but not in most browsers.",
+    "Pictures are saved as stored in the file, including any parts that were cropped out on the slide."
+   ],
+   "related": [
+    "ppt-to-img",
+    "zip-open",
+    "img-convert",
+    "ppt-text"
+   ],
+   "shot_alt": "Extract images from PowerPoint listing the original pictures found in a presentation",
+   "name": "Extract images from PowerPoint",
+   "blurb": "Get every picture out of a deck"
+  },
+  "ppt-merge": {
+   "title": "Merge PowerPoint Files — Combine PPTX Online, Free | Fileutilo",
+   "description": "Combine several PowerPoint presentations into one deck, in the order you choose. Slides keep their pictures, layouts and animations. Free, and nothing is uploaded.",
+   "h1": "Merge PowerPoint presentations",
+   "intro": "Bring together decks from different people or teams into one presentation. Drag the files into order and Fileutilo copies every slide — with its pictures, layouts, theme and animations — into a single .pptx. Keep each presentation’s own design, or give every slide the first deck’s design for a consistent look. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop two or more .pptx files.",
+    "Drag them, or use the arrows, into the order you want, and choose how to handle the design.",
+    "Name the file, click Merge presentations, and download it."
+   ],
+   "faqs": [
+    [
+     "Do the slides keep their design?",
+     "By default, yes — each presentation brings its own slide master and theme. Choose “Use the first presentation’s design” to put every slide on the first deck’s matching layouts instead."
+    ],
+    [
+     "Are speaker notes kept?",
+     "Notes of the first presentation are kept. Notes and comments of the second and later presentations are not carried over."
+    ],
+    [
+     "What if the presentations have different slide sizes?",
+     "The merged deck uses the first presentation’s size. Slides from a deck with a different shape keep their positions, so check those slides and adjust them if needed."
+    ]
+   ],
+   "free": false,
+   "slug": "merge-powerpoint",
+   "formats": [
+    "PPTX",
+    "PPTX"
+   ],
+   "limits": [
+    "Speaker notes and comments of the second and later presentations are not carried over.",
+    "The merged deck uses the first presentation’s slide size.",
+    "Old .ppt files and password-protected presentations aren’t supported."
+   ],
+   "related": [
+    "ppt-compress",
+    "pdf-merge",
+    "ppt-to-img",
+    "word-merge"
+   ],
+   "shot_alt": "Merge PowerPoint with three presentations listed in order, ready to combine",
+   "name": "Merge PowerPoint",
+   "blurb": "Combine several decks into one"
+  },
+  "ppt-text": {
+   "title": "PowerPoint Text & Speaker Notes — PPTX to Text, Free | Fileutilo",
+   "description": "Copy all the text and speaker notes out of a PowerPoint, slide by slide, as plain text or Markdown. Free, private — the presentation is never uploaded.",
+   "h1": "Get the text and speaker notes from a PowerPoint",
+   "intro": "Turn a presentation into a script, handout or summary. Fileutilo reads every slide in order — titles, bullet points, text boxes and tables — and, if you like, the speaker notes, and gives you a tidy .txt or Markdown file you can paste anywhere or feed into another tool. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files (old .ppt files work too, without notes).",
+    "Choose plain text or Markdown, and whether to include speaker notes or skip hidden slides.",
+    "Click Get text, then copy it or download the file."
+   ],
+   "faqs": [
+    [
+     "Does it include speaker notes?",
+     "Yes, when “Include speaker notes” is ticked — each slide’s notes follow its text."
+    ],
+    [
+     "What about text in pictures?",
+     "Text that is part of a picture can’t be read this way. Use PowerPoint to JPG and then OCR on those slides."
+    ],
+    [
+     "Why choose Markdown?",
+     "Markdown keeps the structure — slide headings, bullet levels and tables — and pastes neatly into Notion, GitHub, ChatGPT and many editors."
+    ]
+   ],
+   "free": false,
+   "slug": "powerpoint-text-and-notes",
+   "formats": [
+    "PPTX, PPT",
+    "TXT or Markdown (.md)"
+   ],
+   "limits": [
+    "Text inside pictures can’t be read — use PowerPoint to JPG and OCR for those slides.",
+    "Speaker notes are read from .pptx files only, not from old .ppt files."
+   ],
+   "related": [
+    "ppt-images",
+    "doc-stats",
+    "pdf-ocr",
+    "convert"
+   ],
+   "shot_alt": "Slide text and speaker notes in Markdown, with slide headings and notes",
+   "name": "Slide text & speaker notes",
+   "blurb": "Copy all text and notes from a deck"
   }
  },
  "variants": {
@@ -1435,50 +1702,54 @@
    "blurb": "Spreadsheets as shareable PDFs"
   },
   "powerpoint-to-pdf": {
-   "tool": "convert",
+   "tool": "ppt-to-img",
    "preset": {
     "target": "pdf"
    },
-   "title": "PowerPoint to PDF — PPTX to PDF Online, Free | Fileutilo",
-   "description": "Convert PowerPoint presentations (PPTX, PPT) to PDF, one 16:9 page per slide, ready to email or print. Free and private.",
+   "title": "PowerPoint to PDF — Convert PPTX to PDF Online, Free | Fileutilo",
+   "description": "Convert a PowerPoint presentation to a PDF that looks like your slides — one page per slide, to email, print or upload. Free, and it stays on your device.",
    "h1": "Convert PowerPoint to PDF",
-   "shot": "convert",
-   "intro": "Send slides as a PDF that opens on any phone or laptop without PowerPoint. Each slide becomes a 16:9 page. Your files are processed inside your browser and are never uploaded to a server.",
+   "shot": "ppt-to-img",
+   "intro": "Send slides as a PDF that opens on any phone or laptop without PowerPoint. Fileutilo draws every slide — text, pictures, shapes, tables and backgrounds — onto its own PDF page in the slide’s shape, so the PDF looks like your presentation. Pick just some slides if you like. Your files are processed inside your browser and are never uploaded to a server.",
    "steps": [
-    "Drop your .pptx (or .ppt) file into the converter — PDF is already selected.",
-    "Each slide is turned into a page.",
-    "Download the PDF."
+    "Drop your .pptx file — PDF is already selected.",
+    "Optionally type which slides to include (for example 1-10) and the picture width.",
+    "Click Convert slides and download the PDF."
    ],
    "faqs": [
     [
-     "Are animations kept?",
-     "No — a PDF is a static document. Slide titles, text and images are laid out on 16:9 pages; animations and transitions are dropped, and complex slide designs are simplified."
+     "Will the PDF look like my slides?",
+     "Yes for text, pictures, shapes, tables and backgrounds. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones."
+    ],
+    [
+     "Can I select the text in the PDF?",
+     "No — each slide is placed on its page as a picture so it looks right everywhere. If you need selectable text instead of the design, use the document converter with PDF chosen."
     ],
     [
      "Can I convert old .ppt files?",
-     "Yes, .ppt can be read and converted to PDF."
+     "Save them as .pptx in PowerPoint or LibreOffice first, or use the document converter, which reads the text of .ppt files."
     ]
    ],
    "formats": [
-    "PPTX, PPT",
-    "PDF"
+    "PPTX",
+    "PDF (one page per slide)"
    ],
    "related": [
-    "word-to-pdf",
+    "ppt-to-img",
+    "ppt-compress",
     "pdf-compress",
-    "pdf-merge",
-    "pdf-to-img"
+    "pdf-merge"
    ],
    "slug": "powerpoint-to-pdf",
    "limits": [
-    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
-    "PDF to Word keeps the text structure but not the images.",
-    "Scanned PDFs have no text layer — run OCR first."
+    "Charts, SmartArt effects and 3-D models may be simplified; fonts that aren’t installed are replaced by similar ones.",
+    "Animations and transitions aren’t shown — each slide is drawn as it looks when fully built.",
+    "Old .ppt files aren’t supported — save them as .pptx first."
    ],
-   "shot_alt": "PowerPoint to PDF: a presentation converted to PDF in the document converter",
+   "shot_alt": "PowerPoint to JPG with PDF chosen, making one PDF page per slide",
    "free": false,
    "name": "PowerPoint to PDF",
-   "blurb": "Slides as 16:9 PDF pages"
+   "blurb": "Slides as a PDF that looks the same"
   },
   "excel-to-csv": {
    "tool": "data-convert",
@@ -1839,6 +2110,418 @@
    "free": false,
    "name": "Resize your signature for an exam form",
    "blurb": "140 × 60 px, 10–20 KB and more"
+  },
+  "ppt-to-pptx": {
+   "tool": "convert",
+   "preset": {
+    "target": "pptx"
+   },
+   "title": "PPT to PPTX — Convert Old PowerPoint Files Online, Free | Fileutilo",
+   "description": "Rescue the slides and text of an old PowerPoint 97–2003 (.ppt) file into a new .pptx you can open and edit anywhere. Free, and nothing is uploaded.",
+   "h1": "Convert PPT to PPTX",
+   "shot": "convert",
+   "intro": "Old .ppt presentations from PowerPoint 97–2003 won’t open in some apps and phones. Fileutilo reads the slide titles, text and bullet points from the old file and builds a fresh .pptx with one slide per slide, ready to edit in PowerPoint, Google Slides or Keynote. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .ppt files into the converter — PPTX is already selected.",
+    "Each presentation is read and rebuilt in your browser.",
+    "Download the new .pptx files."
+   ],
+   "faqs": [
+    [
+     "Is the layout kept exactly?",
+     "No — the slide text and titles are carried over onto clean slides, but pictures and the original design are not. For an exact copy, open the .ppt in PowerPoint or LibreOffice Impress and use Save As → .pptx."
+    ],
+    [
+     "Can I convert a .ppt straight to PDF?",
+     "Yes — choose PDF instead of PPTX in the converter to get a document of the slide text."
+    ]
+   ],
+   "formats": [
+    "PPT (PowerPoint 97–2003)",
+    "PPTX"
+   ],
+   "related": [
+    "ppt-text",
+    "powerpoint-to-pdf",
+    "ppt-compress",
+    "convert"
+   ],
+   "slug": "ppt-to-pptx",
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "shot_alt": "Document converter with an old PowerPoint file converted to PPTX",
+   "free": false,
+   "name": "PPT to PPTX",
+   "blurb": "Rescue text from old .ppt files"
+  },
+  "compress-image-to-50kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 50
+   },
+   "title": "Compress Image to 50 KB — Photo Under 50KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 50 KB for exam, job and government forms, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 50 KB",
+   "shot": "img-resize",
+   "intro": "Exam and job portals usually ask for a photo under 50 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 50 KB, after fitting large photos to a form-friendly size (within 800 × 1000 pixels). You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 50 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 50 KB?",
+     "Yes for a passport-style photo or signature. Fileutilo searches for the highest quality that fits under 50 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-50kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 50 KB",
+   "blurb": "Photos under 50 KB for forms"
+  },
+  "compress-image-to-20kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 20
+   },
+   "title": "Compress Image to 20 KB — Photo Under 20KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 20 KB for signature and thumb-impression uploads, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 20 KB",
+   "shot": "img-resize",
+   "intro": "Signatures and thumb impressions on application forms often have to be under 20 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 20 KB, after fitting large photos to a form-friendly size (within 600 × 300 pixels). You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 20 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 20 KB?",
+     "Yes for a passport-style photo or signature. Fileutilo searches for the highest quality that fits under 20 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message. Very small limits can make large photos a little soft."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-20kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 20 KB",
+   "blurb": "Signatures under 20 KB"
+  },
+  "compress-image-to-100kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 100
+   },
+   "title": "Compress Image to 100 KB — Photo Under 100KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 100 KB for online forms, email and websites, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 100 KB",
+   "shot": "img-resize",
+   "intro": "Many forms and websites cap uploads at 100 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 100 KB, making the picture smaller only if it has to. You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 100 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 100 KB?",
+     "Yes — Fileutilo searches for the highest quality that fits under 100 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-100kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 100 KB",
+   "blurb": "Any picture under 100 KB"
+  },
+  "compress-pdf-to-100kb": {
+   "tool": "pdf-compress",
+   "preset": {
+    "target_kb": 100
+   },
+   "title": "Compress PDF to 100 KB — Reduce PDF Size Under 100KB, Free | Fileutilo",
+   "description": "Get a PDF under 100 KB for an online form, email or portal. Keeps text when it can and finds the best quality that fits. Free and private — no upload.",
+   "h1": "Compress a PDF to 100 KB",
+   "shot": "pdf-compress",
+   "intro": "Upload forms, job portals and banks often accept PDFs only up to 100 KB. Fileutilo first tries lossless clean-up that keeps the text selectable; if that isn’t enough, it turns pages into images at the highest quality that still fits under 100 KB. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF — “Under a size limit” is already chosen with 100 KB.",
+    "Change the limit if your form asks for something else.",
+    "Click Compress and download the PDF that fits."
+   ],
+   "faqs": [
+    [
+     "Will the text still be selectable?",
+     "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."
+    ],
+    [
+     "What if it can’t get under 100 KB?",
+     "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF with Split PDF and compress each part, or upload fewer pages."
+    ]
+   ],
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "related": [
+    "compress-pdf-to-200kb",
+    "pdf-split",
+    "compress-image-to-50kb",
+    "pdf-merge"
+   ],
+   "slug": "compress-pdf-to-100kb",
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "free": false,
+   "name": "Compress a PDF to 100 KB",
+   "blurb": "PDFs under a 100 KB limit"
+  },
+  "compress-pdf-to-500kb": {
+   "tool": "pdf-compress",
+   "preset": {
+    "target_kb": 500
+   },
+   "title": "Compress PDF to 500 KB — Reduce PDF Size Under 500KB, Free | Fileutilo",
+   "description": "Get a PDF under 500 KB for an online form, email or portal. Keeps text when it can and finds the best quality that fits. Free and private — no upload.",
+   "h1": "Compress a PDF to 500 KB",
+   "shot": "pdf-compress",
+   "intro": "Upload forms, job portals and banks often accept PDFs only up to 500 KB. Fileutilo first tries lossless clean-up that keeps the text selectable; if that isn’t enough, it turns pages into images at the highest quality that still fits under 500 KB. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF — “Under a size limit” is already chosen with 500 KB.",
+    "Change the limit if your form asks for something else.",
+    "Click Compress and download the PDF that fits."
+   ],
+   "faqs": [
+    [
+     "Will the text still be selectable?",
+     "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."
+    ],
+    [
+     "What if it can’t get under 500 KB?",
+     "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF with Split PDF and compress each part, or upload fewer pages."
+    ]
+   ],
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "related": [
+    "compress-pdf-to-200kb",
+    "pdf-split",
+    "compress-image-to-50kb",
+    "pdf-merge"
+   ],
+   "slug": "compress-pdf-to-500kb",
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "free": false,
+   "name": "Compress a PDF to 500 KB",
+   "blurb": "PDFs under a 500 KB limit"
+  },
+  "png-to-jpg": {
+   "tool": "img-convert",
+   "preset": {
+    "target": "jpg"
+   },
+   "title": "PNG to JPG Converter — Convert PNG to JPEG Online, Free | Fileutilo",
+   "description": "Convert PNG images and screenshots to smaller JPG files, with a background colour for transparent areas. Many at once, free, and nothing is uploaded.",
+   "h1": "Convert PNG to JPG",
+   "shot": "img-convert",
+   "intro": "PNG screenshots and graphics can be large, and some forms only accept JPG. Convert them to JPG for a much smaller file that opens everywhere; transparent areas get the background colour you pick. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PNG images — JPG is already selected.",
+    "Pick the quality and a background colour for any transparent areas.",
+    "Click Convert and download the JPGs, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Why is the JPG smaller?",
+     "JPG is designed for photos and compresses them much more than PNG. For screenshots with lots of text, keep quality high (90+) so the text stays crisp."
+    ],
+    [
+     "What happens to transparency?",
+     "JPG can’t be transparent, so those areas are filled with the background colour you choose — white by default."
+    ]
+   ],
+   "formats": [
+    "PNG (and other image formats)",
+    "JPG"
+   ],
+   "related": [
+    "jpg-to-png",
+    "img-resize",
+    "img-to-pdf",
+    "heic-to-jpg"
+   ],
+   "slug": "png-to-jpg",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "free": false,
+   "name": "PNG to JPG",
+   "blurb": "Smaller files that open everywhere"
+  },
+  "jpg-to-png": {
+   "tool": "img-convert",
+   "preset": {
+    "target": "png"
+   },
+   "title": "JPG to PNG Converter — Convert JPEG to PNG Online, Free | Fileutilo",
+   "description": "Convert JPG photos to PNG for editing, logos and sites that need PNG. No quality is lost in the conversion. Free, many at once, and nothing is uploaded.",
+   "h1": "Convert JPG to PNG",
+   "shot": "img-convert",
+   "intro": "Some apps, editors and upload forms want PNG. Convert JPG and JPEG photos to PNG without any further quality loss — handy before editing, or when a site insists on PNG. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your JPG images — PNG is already selected.",
+    "Add as many as you like.",
+    "Click Convert and download the PNGs, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Will converting make my photo better?",
+     "No — PNG keeps exactly what is in the JPG without adding more compression, but it can’t bring back detail the JPG already lost. Expect a bigger file."
+    ],
+    [
+     "Can I make the background transparent?",
+     "Converting doesn’t remove backgrounds; the PNG looks the same as the JPG."
+    ]
+   ],
+   "formats": [
+    "JPG, JPEG (and other image formats)",
+    "PNG"
+   ],
+   "related": [
+    "png-to-jpg",
+    "img-resize",
+    "img-convert",
+    "metadata"
+   ],
+   "slug": "jpg-to-png",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "free": false,
+   "name": "JPG to PNG",
+   "blurb": "PNG for editors and upload forms"
+  },
+  "image-to-pdf": {
+   "tool": "img-to-pdf",
+   "preset": {},
+   "title": "Image to PDF Converter — JPG, PNG, HEIC to PDF Online | Fileutilo",
+   "description": "Turn photos, scans and screenshots — JPG, PNG, WEBP or HEIC — into one PDF, in the order you choose, with A4 or Letter pages. Free, and nothing is uploaded.",
+   "h1": "Convert images to PDF",
+   "shot": "img-to-pdf",
+   "intro": "Combine photos of documents, receipts or notes into a single PDF that’s easy to email or upload. Put the pictures in order, choose the page size and margins, and download one PDF. Works with iPhone HEIC photos too. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your pictures — JPG, PNG, WEBP, HEIC and more.",
+    "Drag them into order and choose the page size, orientation and margins.",
+    "Click Create PDF and download it."
+   ],
+   "faqs": [
+    [
+     "Can I put several photos in one PDF?",
+     "Yes — every picture becomes a page, in the order shown. Free use allows 5 files per task."
+    ],
+    [
+     "My PDF is too big to upload — what now?",
+     "Open it in Compress PDF and choose a size limit, or shrink the photos first with Compress image to 100 KB."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC, GIF, BMP, TIFF",
+    "PDF"
+   ],
+   "related": [
+    "pdf-merge",
+    "compress-pdf-to-200kb",
+    "img-resize",
+    "pdf-compress"
+   ],
+   "slug": "image-to-pdf",
+   "limits": [
+    "HEIC needs a modern browser; if it won't open, convert it to JPG first with the image converter."
+   ],
+   "shot_alt": "Images to PDF with photos in order and page size options",
+   "free": false,
+   "name": "images to PDF",
+   "blurb": "Photos and scans into one PDF"
   }
  },
  "pages": {
@@ -1857,6 +2540,10 @@
   "refunds": {
    "title": "Refund & Cancellation Policy | Fileutilo",
    "description": "How to cancel a Fileutilo Pro subscription and when refunds are given for plans and credit packs."
+  },
+  "for-business": {
+   "title": "Fileutilo for Business — Private PDF & Office Tools",
+   "description": "Work on contracts, payslips and client files without uploading them. Fileutilo runs in each browser, so no file data reaches our servers."
   }
  }
 }

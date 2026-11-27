@@ -4,7 +4,8 @@
 //  - the Run button comes back, the files stay in the list, and running again works once the network is back
 //  - when cdn.jsdelivr.net is blocked, libraries load from unpkg.com instead
 //  - a download that never finishes gives up after the time limit
-import { open, check, skip, summary, hasLib } from './lib.mjs';
+import path from 'node:path';
+import { open, check, skip, summary, hasLib, FX } from './lib.mjs';
 import { DRIVERS } from './drivers.mjs';
 
 const FRIENDLY = /Couldn’t download the|appear to be offline/;
@@ -30,7 +31,7 @@ for (const d of withLibs) {
 }
 // converter: failed read shows "Try again", which works once the CDN is reachable
 t.state.blockCdn = true; await t.page.reload(); await t.go('convert');
-await t.page.setInputFiles('#cfile', 'tests/browser/fixtures/canary.pdf'.split(','));
+await t.page.setInputFiles('#cfile', path.join(FX, 'canary.pdf').split(','));
 await t.page.waitForSelector('#jobs [data-retry]', { timeout: 30000 });
 const st = await t.page.textContent('#jobs .stt');
 check(FRIENDLY.test(st), 'converter: clear message and a Try again button when the PDF reader can’t load', st.slice(0, 90));

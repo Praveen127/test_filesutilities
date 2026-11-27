@@ -7,7 +7,7 @@ import { open, check, summary, FX } from './lib.mjs';
 import { DRIVERS } from './drivers.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
-const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds'];
+const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business'];
 const t = await open({ config: { supabaseUrl: 'https://proj.supabase.co', supabaseAnonKey: 'anon' }, extraRoutes: [['supabase-js@2', path.join(here, 'mocks/mock-supabase.js')]] });
 const page = t.page;
 
@@ -120,8 +120,10 @@ check(!!dl, 'merge PDFs start to finish with only the keyboard (pick → run →
 const focusAfter = await page.evaluate(() => document.activeElement.closest('#pdf-merge') ? 'inside tool' : document.activeElement.tagName);
 check(focusAfter === 'inside tool', 'focus stays in the tool after running (not lost to the page top)', focusAfter);
 // category menu with keyboard
-await page.focus('#t-cat-data'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);
-check(await page.evaluate(() => /^\/(json-formatter|json-compare|jsonpath-tester|data-converter|csv-cleaner|checksum-calculator)$/.test(location.pathname)), 'category menu works with Enter');
+await page.focus('#t-cat-home'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);
+const homeOk = await page.evaluate(() => !document.getElementById('home').hidden);
+await page.focus('#tools .tcw[data-k="json"] a'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);
+check(homeOk && await page.evaluate(() => location.pathname === '/json-formatter'), 'Home tab and tool tiles work with Enter');
 // dialogs: open with keyboard, focus inside, Tab trapped, Escape closes and returns focus
 await page.focus('#acctBtn'); await page.keyboard.press('Enter'); await page.waitForSelector('#authDlg[open]');
 const inDlg = await page.evaluate(() => !!document.activeElement.closest('#authDlg'));

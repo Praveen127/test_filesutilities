@@ -4,11 +4,13 @@ Automated checks for the Fileutilo web app (`web/index.html`), run in a real Chr
 
 | Suite | File | What it proves |
 |---|---|---|
-| Privacy | `privacy.test.mjs` | Runs all 31 tools on files containing a unique marker, records every network request, and fails if any request carries file content or names, uploads anything, or goes to an unexpected host. With accounts on, Supabase only receives usage counters. |
+| Privacy | `privacy.test.mjs` | Runs all 37 tools (33 drivers; the JSON, data and text tools share drivers) on files containing a unique marker, records every network request, and fails if any request carries file content or names, uploads anything, or goes to an unexpected host. With accounts on, Supabase only receives usage counters. |
 | Library failures | `deps.test.mjs` | Blocks, slows and partly blocks the library CDNs, then checks every tool shows a clear message, recovers when you try again, falls back to unpkg.com, gives up after a time limit, and detects offline. |
 | Formats | `formats.test.mjs` + `validate_formats.py` | Converts each sample into every output format and runs the PDF, image and document tools. Each result is checked by independent software (qpdf, pdftotext, pypdf, python-docx, odfpy, python-pptx, openpyxl, Pillow, LibreOffice) for validity, text, headings, lists, tables and tool-specific promises. Results are compared with `baselines/formats.json`. |
-| Mobile | `mobile.test.mjs` | Emulates iPhone SE, iPhone 13 (portrait and landscape), Pixel 7, Galaxy S9+ and iPad Mini. Checks for sideways scrolling, tap-target size, text size and clipped labels on all 31 screens, and runs tools, the converter and sign-in by touch. Screenshots go to `out/mobile/`. |
+| Mobile | `mobile.test.mjs` | Emulates iPhone SE, iPhone 13 (portrait and landscape), Pixel 7, Galaxy S9+ and iPad Mini. Checks for sideways scrolling, tap-target size, text size and clipped labels on every tool screen, and runs tools, the converter and sign-in by touch. Screenshots go to `out/mobile/`. |
 | Accessibility | `a11y.test.mjs` | WCAG 2.2 AA rule checks on every screen (names, labels, alt text, IDs, headings, contrast in light and dark mode, live regions, progress bars). Also keyboard-only flows (skip link, focus ring, pick → run → download, dialogs, reordering, page thumbnails) and the screen-reader accessibility tree. |
+| PowerPoint | `ppt.test.mjs` + `validate_ppt.py` | Runs PDF to PowerPoint, Compress, PowerPoint to JPG, Extract images, Merge and Text & notes. Every result is opened with python-pptx, every internal reference and content type is checked, LibreOffice renders it, and the 9 new task pages open the right tool and setting. Fixtures: `python make_fixtures_ppt.py`. |
+| Home page | `home.test.mjs` | Search (typing, arrows, Enter, Escape), the global and India popular tasks, all tiles in the seven job groups, stars and favourites, signed-in vs signed-out views, footer, header, and the phone layout. |
 | Accounts | `accounts.test.mjs` | Sign-in, limits, credits, Razorpay checkout, subscriptions and the account panel, against recording mocks. |
 
 ## Running

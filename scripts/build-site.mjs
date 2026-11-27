@@ -2,7 +2,7 @@
 // Every tool gets its own task-named page (site/merge-pdf.html → https://www.fileutilo.com/merge-pdf) with its own
 // title, description, share preview, structured data, steps with a real screenshot, formats and limits, FAQs,
 // related tools and an upgrade path; plus a few preset task pages (/word-to-pdf …), sitemap.xml and robots.txt.
-// Run:  node scripts/build-site.mjs [--brand navy|green] [--out site-navy]     (no npm packages needed)
+// Run:  node scripts/build-site.mjs [--out site-navy]     (no npm packages needed; navy is the only theme now)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (k, d) => { const i = process.argv.indexOf('--' + k); return i > 0 ? process.argv[i + 1] : d; };
 const BRAND = arg('brand', 'navy');
-if (!['navy', 'green'].includes(BRAND)) throw new Error('--brand must be navy or green');
+if (BRAND !== 'navy') throw new Error('Only the navy theme is built now (the green theme was removed in Fileutilo 15).');
 const WEB = path.join(ROOT, 'web'), OUT = path.resolve(ROOT, arg('out', 'site-' + BRAND));
 const THEME_COLOR = { navy: '#101a33', green: '#064b40' }[BRAND];
 const ORIGIN = 'https://www.fileutilo.com';
@@ -63,7 +63,7 @@ const isGated = k => !meta(k).free;
 
 const toolLinks = `<div class="tool-links" role="navigation" aria-label="All tools">${TOOLS.map(t => `<a href="${href(t)}">${esc(seo.tools[t].name)}</a>`).join(' ')}</div>`
   + `<div class="tool-links" role="navigation" aria-label="Popular conversions"><b>Popular:</b> ${VARS.map(v => `<a href="${href(v)}">${esc(seo.variants[v].name)}</a>`).join(' ')}</div>`;
-const popular = `<div class="popular"><h3>Popular tasks</h3><div class="pchips">${VARS.map(v => `<a href="${href(v)}">${esc(seo.variants[v].h1)}</a>`).join('')}</div></div>`;
+const popular = `<div class="popular"><h3>More task pages</h3><div class="pchips">${VARS.map(v => `<a href="${href(v)}">${esc(seo.variants[v].h1)}</a>`).join('')}</div></div>`;
 const seoData = { home: { t: seo.tools.home.title, d: seo.tools.home.description } };
 for (const k of [...TOOLS, ...VARS]) seoData[k] = { t: meta(k).title, d: meta(k).description, h: meta(k).h1 };
 for (const p of PAGES) seoData[p] = { t: seo.pages[p].title, d: seo.pages[p].description };
@@ -139,7 +139,7 @@ ${m.faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p><
 </article>`;
 }
 
-const HERO = '<h1>Your files. Your device.<br><em>Your control.</em></h1>';
+const HERO = '<h1>Free PDF, image, Word and other Office tools<span class="htag">Your files <em>never leave</em> your&nbsp;device.</span></h1>';
 if (!src.includes(HERO)) throw new Error('hero heading not found in web/index.html');
 const HTML_TAG = '<html lang="en" data-brand="green" data-view="home">';
 if (!src.includes(HTML_TAG)) throw new Error('<html> tag not found in web/index.html');
@@ -173,7 +173,7 @@ if (fs.existsSync(media)) { fs.mkdirSync(path.join(OUT, 'media')); for (const f 
 if (fs.existsSync(path.join(WEB, 'ads.txt'))) write('ads.txt', fs.readFileSync(path.join(WEB, 'ads.txt')));
 
 const keys = ['home', ...TOOLS, ...VARS, ...PAGES];
-const prio = k => k === 'home' ? '1.0' : seo.pages[k] ? (k === 'pricing' ? '0.6' : '0.3') : seo.variants[k] ? '0.7' : '0.8';
+const prio = k => k === 'home' ? '1.0' : seo.pages[k] ? (k === 'pricing' || k === 'for-business' ? '0.6' : '0.3') : seo.variants[k] ? '0.7' : '0.8';
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${keys.map(k => `  <url><loc>${url(k)}</loc><lastmod>${TODAY}</lastmod><priority>${prio(k)}</priority></url>`).join('\n')}

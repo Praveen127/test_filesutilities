@@ -116,15 +116,16 @@ await t.ctx.close();
 
 // ---------- 3. navigation uses real, task-named addresses ----------
 t = await openSite('/merge-pdf');
-await t.page.click('#t-cat-img'); await t.page.waitForTimeout(250);
+await t.page.click('#subnav a[href$="split-pdf"]'); await t.page.waitForTimeout(250);
 let i = await info(t.page);
-check(i.path === '/image-converter' && i.vis.includes('img-convert') && i.title === seo.tools['img-convert'].title && i.h1.startsWith(seo.tools['img-convert'].h1) && !i.about.length,
-  'clicking a menu link changes the address, title and heading without reloading', JSON.stringify([i.path, i.title.slice(0, 30), i.about]));
-check(await t.page.evaluate(() => document.querySelector('#t-cat-pdf').getAttribute('href')) === '/merge-pdf', 'menu links are real addresses that crawlers can follow');
+check(i.path === '/split-pdf' && i.vis.includes('pdf-split') && i.title === seo.tools['pdf-split'].title && i.h1.startsWith(seo.tools['pdf-split'].h1) && !i.about.length,
+  'clicking a tool link changes the address, title and heading without reloading', JSON.stringify([i.path, i.title.slice(0, 30), i.about]));
+check(await t.page.evaluate(() => document.querySelector('#t-cat-home').getAttribute('href') === './' || document.querySelector('#t-cat-home').getAttribute('href') === '/') && await t.page.evaluate(() => [...document.querySelectorAll('#subnav a')].every(a => /^\/[a-z0-9-]+$/.test(a.getAttribute('href')))), 'Home and tool links are real addresses that crawlers can follow');
 await t.page.goBack(); await t.page.waitForTimeout(250); i = await info(t.page);
 check(i.path === '/merge-pdf' && i.vis.includes('pdf-merge') && i.about.includes('pdf-merge') && i.title === seo.tools['pdf-merge'].title, 'Back button returns to the previous tool', i.path);
+check(await t.page.evaluate(() => [...document.querySelectorAll('#catnav a')].filter(a => a.offsetParent).map(a => a.dataset.cat).join() === 'home'), 'tool pages show only the Home tab');
 await t.page.goForward(); await t.page.waitForTimeout(250); i = await info(t.page);
-check(i.path === '/image-converter' && i.vis.includes('img-convert'), 'Forward button works', i.path);
+check(i.path === '/split-pdf' && i.vis.includes('pdf-split'), 'Forward button works', i.path);
 await t.page.click('footer a[href="pricing"]'); await t.page.waitForTimeout(250); i = await info(t.page);
 check(i.path === '/pricing' && i.vis.includes('pricing') && i.title === seo.pages.pricing.title, 'footer link opens the pricing page', i.path);
 await t.page.click('footer .tool-links a[href="zip-extractor"]'); await t.page.waitForTimeout(250); i = await info(t.page);
@@ -133,7 +134,7 @@ await t.page.click('footer .tool-links a[href="excel-to-csv"]'); await t.page.wa
 check(i.path === '/excel-to-csv' && i.vis.includes('data-convert') && i.title === seo.variants['excel-to-csv'].title, 'footer "popular" links open task pages in place', i.path);
 await t.page.evaluate(() => document.querySelector('.hero-cta') && document.querySelector('.hero-cta').click());
 await t.page.goto('https://www.fileutilo.com/'); await t.page.waitForTimeout(300); i = await info(t.page);
-check(i.vis.includes('home') && i.h1.startsWith('Your files. Your device.'), 'home page shows the home heading', i.path + ' ' + i.h1);
+check(i.vis.includes('home') && i.h1.startsWith('Free PDF, image, Word and other Office tools'), 'home page shows the home heading', i.path + ' ' + i.h1);
 const n = await t.page.evaluate(() => [document.querySelectorAll('footer .tool-links a').length, document.querySelectorAll('.popular .pchips a').length]);
 const NT = Object.keys(seo.tools).length - 1, NV = Object.keys(seo.variants).length;
 check(n[0] === NT + NV && n[1] === NV, `footer links all ${NT} tools and ${NV} task pages; home lists the task pages`, n.join());
