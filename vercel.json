@@ -93,6 +93,36 @@
       "permanent": true
     },
     {
+      "source": "/pdf-to-ppt",
+      "destination": "/pdf-to-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-compress",
+      "destination": "/compress-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-to-img",
+      "destination": "/powerpoint-to-jpg",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-images",
+      "destination": "/extract-images-from-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-merge",
+      "destination": "/merge-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-text",
+      "destination": "/powerpoint-text-and-notes",
+      "permanent": true
+    },
+    {
       "source": "/json",
       "destination": "/json-formatter",
       "permanent": true
