@@ -1,0 +1,1 @@
+window.Razorpay=function(o){window.__rzp=o;this.on=()=>{};this.open=()=>{setTimeout(()=>o.handler(o.subscription_id?{razorpay_payment_id:'pay_1',razorpay_subscription_id:o.subscription_id,razorpay_signature:'sig'}:{razorpay_payment_id:'pay_1',razorpay_order_id:o.order_id,razorpay_signature:'sig'}),50)}};

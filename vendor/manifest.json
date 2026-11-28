@@ -1,0 +1,8 @@
+{
+ "note": "Written by scripts/vendor-libs.mjs. The page loads these from fileutilo.com before trying the CDNs.",
+ "libs": {
+  "PDFLib": "vendor/pdf-lib@1.17.1/dist/pdf-lib.min.js",
+  "pdfjsLib": "vendor/pdfjs-dist@6.2.108/legacy/build/pdf.min.mjs",
+  "JSZip": "vendor/jszip@3.10.1/dist/jszip.min.js"
+ }
+}

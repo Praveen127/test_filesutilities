@@ -1,0 +1,2549 @@
+{
+ "tools": {
+  "home": {
+   "title": "Fileutilo — Free Online PDF, Image & Document Tools (Private)",
+   "description": "37 free online tools to convert, merge, split, compress and clean PDFs, Word, Excel, PowerPoint, images and data. Files stay on your device — nothing is uploaded.",
+   "h1": "Free, private file tools that run in your browser",
+   "intro": "Fileutilo brings 37 everyday file tools together in one place: convert documents, merge and split PDFs, compress and merge PowerPoint decks, compress images for form uploads, clean up spreadsheets, format JSON and more. Your files are processed inside your browser and are never uploaded to a server. That makes it fast, and safe for personal and work documents.",
+   "steps": [],
+   "faqs": [
+    [
+     "Is Fileutilo free?",
+     "Yes. Every tool can be used free of charge. A free account gives you 25 tasks a day; data tools like the JSON formatter and file diff have no daily limit. Pro removes Fileutilo's daily limits, file caps and ads."
+    ],
+    [
+     "Are my files uploaded?",
+     "No. Your files are processed inside your browser and are never uploaded to a server. Only your account details and payment records are stored, never your files."
+    ],
+    [
+     "Does it work on a phone?",
+     "Yes. Fileutilo works in any modern browser on Android, iPhone, Windows, Mac and Linux, with nothing to install."
+    ]
+   ]
+  },
+  "convert": {
+   "title": "Document Converter — Word, PDF, Excel, PPT Online | Fileutilo",
+   "description": "Convert Word, Excel, PowerPoint, PDF, ODT, RTF, HTML and text files online for free. Real, selectable text in PDFs. Files never leave your device.",
+   "h1": "Convert documents between Word, PDF, Excel and more",
+   "intro": "Turn a Word file into a PDF, a PDF into editable Word, a spreadsheet into CSV or a presentation into PDF — the input format is detected automatically. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more files into the converter, or choose them from your device.",
+    "Pick the format you need for each file, or apply one format to all.",
+    "Click Convert, check the preview, and download the results."
+   ],
+   "faqs": [
+    [
+     "Which formats are supported?",
+     "Word, Excel, PowerPoint, PDF, OpenDocument, RTF, HTML, plain text and PostScript. Scanned PDFs need OCR first."
+    ],
+    [
+     "Will my PDF have selectable text?",
+     "Yes. Word documents converted to PDF keep real, selectable text with headings, lists, tables and images rather than flat pictures."
+    ]
+   ],
+   "free": false,
+   "slug": "document-converter",
+   "formats": [
+    "DOCX, DOC, ODT, RTF, PDF, XLSX, XLS, ODS, CSV, PPTX, PPT, HTML, TXT, PS",
+    "PDF, DOCX, DOC, ODT, RTF, XLSX, XLS, PPTX, HTML, TXT, PS"
+   ],
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "related": [
+    "pdf-compress",
+    "pdf-merge",
+    "pdf-ocr",
+    "word-merge"
+   ],
+   "shot_alt": "Document converter with a PowerPoint file, a text file and a web page converted to PDF, with a preview",
+   "name": "Word, PowerPoint & Excel converter",
+   "blurb": "To and from PDF — also PPT, DOC, XLS, ODT, RTF"
+  },
+  "pdf-merge": {
+   "title": "Merge PDF Files Online — Free & Private | Fileutilo",
+   "description": "Combine several PDFs into one file in the order you choose. Free, fast and private: your PDFs are merged in your browser, never uploaded.",
+   "h1": "Merge PDF files into one",
+   "intro": "Join two or more PDFs into a single document — handy for applications, reports and scanned pages. Drag the files into order and download one combined PDF. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDFs into the merge tool.",
+    "Drag them, or use the arrows, to set the order.",
+    "Name the file and click Merge PDFs, then download it."
+   ],
+   "faqs": [
+    [
+     "Is there a limit on how many PDFs I can merge?",
+     "Free use allows 5 files of up to 20 MB each per task. Pro removes Fileutilo's caps; because merging happens on your device, its memory sets the practical limit for very large files."
+    ],
+    [
+     "Is merging PDFs here safe for confidential files?",
+     "Yes. The merge runs entirely in your browser, so the documents never reach our servers."
+    ]
+   ],
+   "free": false,
+   "slug": "merge-pdf",
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "limits": [
+    "Password-protected PDFs must be unlocked first.",
+    "Bookmarks of the original files are not merged."
+   ],
+   "related": [
+    "pdf-split",
+    "pdf-organize",
+    "pdf-compress",
+    "img-to-pdf"
+   ],
+   "shot_alt": "Merge PDF with three PDFs listed in order, ready to combine into one file",
+   "name": "Merge PDF",
+   "blurb": "Combine PDFs into one, in any order"
+  },
+  "pdf-split": {
+   "title": "Split PDF — Extract Pages Online Free | Fileutilo",
+   "description": "Extract page ranges from a PDF or split it into several files: by range, or every N pages. Free and private — nothing is uploaded.",
+   "h1": "Split a PDF or extract pages",
+   "intro": "Pull out just the pages you need, break a long PDF into one file per range, or cut it into equal chunks. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the PDF into the split tool.",
+    "Choose: extract pages into one PDF, one PDF per range, or every N pages.",
+    "Type the page ranges (for example 1-3, 5, 8-) and click Split PDF."
+   ],
+   "faqs": [
+    [
+     "How do I write page ranges?",
+     "Use commas between ranges: 1-3, 5, 8- means pages 1 to 3, page 5, and page 8 to the end."
+    ],
+    [
+     "Does splitting reduce quality?",
+     "No. Pages are copied exactly as they are, so text and images keep their original quality."
+    ]
+   ],
+   "free": false,
+   "slug": "split-pdf",
+   "formats": [
+    "PDF",
+    "PDF, or a ZIP of PDFs"
+   ],
+   "limits": [
+    "Password-protected PDFs must be unlocked first."
+   ],
+   "related": [
+    "pdf-merge",
+    "pdf-organize",
+    "pdf-to-img",
+    "pdf-compress"
+   ],
+   "shot_alt": "Split PDF with page ranges typed in and the extracted PDF ready to download",
+   "name": "Split PDF",
+   "blurb": "Extract pages or split by range"
+  },
+  "pdf-organize": {
+   "title": "Rotate, Delete & Reorder PDF Pages Online | Fileutilo",
+   "description": "Rearrange PDF pages by dragging thumbnails, rotate sideways scans and delete pages you don't need. Free, private, no upload.",
+   "h1": "Organize PDF pages: rotate, delete and reorder",
+   "intro": "See every page as a thumbnail, drag pages into a new order, turn sideways scans upright and remove blank or unwanted pages. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop a PDF into the organizer to see its pages.",
+    "Drag thumbnails to reorder; use the buttons to rotate or delete pages.",
+    "Save and download the reorganized PDF."
+   ],
+   "faqs": [
+    [
+     "Can I fix a scanned page that is sideways?",
+     "Yes. Rotate any page left or right (or all pages at once) and the change is saved in the new PDF."
+    ],
+    [
+     "Are links and text kept?",
+     "Yes. Pages are moved, not re-drawn, so their text stays selectable."
+    ]
+   ],
+   "free": false,
+   "slug": "organize-pdf",
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "limits": [
+    "Very long PDFs (hundreds of pages) take longer to show as thumbnails, especially on phones."
+   ],
+   "related": [
+    "pdf-merge",
+    "pdf-split",
+    "pdf-stamp",
+    "pdf-compress"
+   ],
+   "shot_alt": "Organize PDF showing page thumbnails that can be dragged, rotated or deleted",
+   "name": "Organize pages",
+   "blurb": "Reorder, rotate and delete pages"
+  },
+  "pdf-compress": {
+   "title": "Compress PDF — Reduce PDF Size Online Free | Fileutilo",
+   "description": "Make PDFs smaller for email, WhatsApp and portal uploads. Light mode keeps text selectable; strong mode shrinks scans a lot. Private, no upload.",
+   "h1": "Compress a PDF to reduce its file size",
+   "intro": "Shrink PDFs that are too big to email or upload. Light compression removes unused data and keeps the text selectable; strong compression turns pages into optimized images, which works best for scans and photos. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the compressor.",
+    "Choose Light (keep text) or Strong, and a quality level for strong mode.",
+    "Click Compress and download — the new size is shown for each file."
+   ],
+   "faqs": [
+    [
+     "Which mode should I choose?",
+     "Use Light for typed documents and Strong for scanned pages or PDFs full of photos."
+    ],
+    [
+     "What if my PDF doesn't get smaller?",
+     "If a file is already optimized, Fileutilo keeps your original rather than giving you a bigger file."
+    ]
+   ],
+   "free": false,
+   "slug": "compress-pdf",
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "related": [
+    "img-resize",
+    "pdf-merge",
+    "pdf-to-img",
+    "convert"
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "name": "Compress PDF",
+   "blurb": "Shrink PDFs for email and uploads"
+  },
+  "pdf-protect": {
+   "title": "Password Protect PDF — AES-256 Encryption | Fileutilo",
+   "description": "Add a password to a PDF with strong AES-256 encryption and control printing, copying and editing. Done in your browser — the file is never uploaded.",
+   "h1": "Password-protect a PDF",
+   "intro": "Lock a PDF with a password before sharing it, using AES-256 encryption, and choose whether people may print, copy or edit it. Your files are processed inside your browser and are never uploaded to a server. Your password is never sent anywhere either.",
+   "steps": [
+    "Drop the PDF into the protect tool.",
+    "Type a password and choose the permissions.",
+    "Click Protect and download the encrypted PDF."
+   ],
+   "faqs": [
+    [
+     "How strong is the protection?",
+     "Fileutilo uses AES-256, the strongest encryption the PDF standard supports."
+    ],
+    [
+     "Can I remove the password later?",
+     "Yes, with the Unlock PDF tool, as long as you know the password."
+    ]
+   ],
+   "free": false,
+   "slug": "protect-pdf",
+   "formats": [
+    "PDF",
+    "PDF encrypted with AES-256"
+   ],
+   "limits": [
+    "If you forget the password, the file can't be recovered — not even by us."
+   ],
+   "related": [
+    "pdf-unlock",
+    "pdf-stamp",
+    "metadata",
+    "pdf-merge"
+   ],
+   "shot_alt": "Protect PDF with a password entered and the encrypted PDF ready to download",
+   "name": "Protect PDF",
+   "blurb": "Add an AES-256 password"
+  },
+  "pdf-unlock": {
+   "title": "Unlock PDF — Remove PDF Password Online | Fileutilo",
+   "description": "Remove the password and restrictions from a PDF you're allowed to open, so you can print, copy or edit it. Private: works in your browser.",
+   "h1": "Remove a password from a PDF",
+   "intro": "Save an unlocked copy of a password-protected PDF that you have the right to open, without printing, copying or editing restrictions. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the locked PDF into the unlock tool.",
+    "Enter the PDF's password if it asks for one.",
+    "Click Unlock and download the unprotected copy."
+   ],
+   "faqs": [
+    [
+     "Can it open a PDF without the password?",
+     "No. You need the password to open the file. PDFs protected with RC4, AES-128 and AES-256 are supported."
+    ],
+    [
+     "Is my password stored?",
+     "No. It's used inside your browser for that file only and never sent to a server."
+    ]
+   ],
+   "free": false,
+   "slug": "unlock-pdf",
+   "formats": [
+    "PDF protected with RC4, AES-128 or AES-256",
+    "PDF"
+   ],
+   "limits": [
+    "You need the password to open the file; this tool does not crack passwords."
+   ],
+   "related": [
+    "pdf-protect",
+    "pdf-merge",
+    "pdf-compress",
+    "convert"
+   ],
+   "shot_alt": "Unlock PDF with the password entered and the unlocked copy ready to download",
+   "name": "Unlock PDF",
+   "blurb": "Remove a password you know"
+  },
+  "pdf-stamp": {
+   "title": "Add Watermark & Page Numbers to PDF Online | Fileutilo",
+   "description": "Stamp a text watermark like CONFIDENTIAL or DRAFT across PDF pages and add page numbers in the format and position you choose. Free and private.",
+   "h1": "Add a watermark and page numbers to a PDF",
+   "intro": "Mark documents as CONFIDENTIAL, DRAFT or COPY with a diagonal, horizontal or tiled watermark, and add page numbers such as \"Page 3 of 9\". Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the tool.",
+    "Turn on the watermark, page numbers or both, and set the text, size, colour and position.",
+    "Click Apply and download the stamped PDFs."
+   ],
+   "faqs": [
+    [
+     "Can I skip numbering the cover page?",
+     "Yes. Tick \"Don't number the first page\" and choose the starting number."
+    ],
+    [
+     "Can I batch-watermark several PDFs?",
+     "Yes. Add several files and the same watermark and numbering are applied to each."
+    ]
+   ],
+   "free": false,
+   "slug": "watermark-pdf",
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "limits": [
+    "Watermarks are added on top of the page; they don't replace existing text."
+   ],
+   "related": [
+    "pdf-protect",
+    "pdf-organize",
+    "pdf-merge",
+    "metadata"
+   ],
+   "shot_alt": "Watermark PDF with watermark and page-number options and the stamped PDF ready to download",
+   "name": "Watermark & numbers",
+   "blurb": "Watermarks and page numbers"
+  },
+  "pdf-ocr": {
+   "title": "OCR Online — Scanned PDF & Image to Text (Kannada, Hindi) | Fileutilo",
+   "description": "Extract text from scanned PDFs and photos with free OCR. Supports English, Kannada, Hindi, Tamil, Telugu and more. Runs in your browser, no upload.",
+   "h1": "OCR: turn scanned PDFs and photos into text",
+   "intro": "Read the text in scanned documents, phone photos and image-only PDFs, including Kannada, Hindi and other Indian languages, and save it as a text file you can edit and search. Your files are processed inside your browser and are never uploaded to a server. The language data downloads once, the first time you use it.",
+   "steps": [
+    "Drop scanned PDFs or photos into the OCR tool.",
+    "Tick the languages used in the document.",
+    "Click Read text, then copy the text or download it as .txt."
+   ],
+   "faqs": [
+    [
+     "Which languages are supported?",
+     "English plus Indian languages such as Kannada, Hindi, Tamil, Telugu, Malayalam, Marathi and Bengali, among others."
+    ],
+    [
+     "Why is the first run slower?",
+     "Each language's data (2–15 MB) downloads the first time you use it; after that it's cached by your browser."
+    ]
+   ],
+   "free": false,
+   "slug": "ocr",
+   "formats": [
+    "PDF (scanned), JPG, PNG, WEBP, BMP, TIFF",
+    "TXT"
+   ],
+   "limits": [
+    "Accuracy depends on scan quality; clear 300 dpi scans work best.",
+    "Each language downloads 2–15 MB of data the first time.",
+    "The result is plain text, not a searchable PDF."
+   ],
+   "related": [
+    "convert",
+    "doc-stats",
+    "pdf-to-img",
+    "img-convert"
+   ],
+   "shot_alt": "OCR tool with a scanned receipt added and the language options shown",
+   "name": "OCR",
+   "blurb": "Text from scans — Kannada, Hindi & more"
+  },
+  "pdf-to-img": {
+   "title": "PDF to JPG / PNG — Convert PDF Pages to Images | Fileutilo",
+   "description": "Save every page of a PDF, or just the pages you choose, as high-quality JPG or PNG images. Free, fast and private — nothing is uploaded.",
+   "h1": "Convert PDF pages to JPG or PNG images",
+   "intro": "Turn PDF pages into images for slides, social posts or forms that only accept pictures. Pick the format and the resolution. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs into the tool.",
+    "Choose PNG or JPG and the resolution.",
+    "Click Convert to images and download them (several pages come as a ZIP)."
+   ],
+   "faqs": [
+    [
+     "Which is better, PNG or JPG?",
+     "PNG is sharper for text and diagrams; JPG makes smaller files for photos."
+    ],
+    [
+     "Are the images good enough to print?",
+     "Choose a higher resolution for printing; lower resolutions make smaller files for screens and chat."
+    ]
+   ],
+   "free": false,
+   "slug": "pdf-to-jpg",
+   "formats": [
+    "PDF",
+    "PNG or JPG (several pages as a ZIP)"
+   ],
+   "limits": [
+    "High resolutions on long PDFs use a lot of memory; phones may need a lower resolution."
+   ],
+   "related": [
+    "img-to-pdf",
+    "img-resize",
+    "pdf-split",
+    "img-convert"
+   ],
+   "shot_alt": "PDF to images with the page images ready to download as a ZIP",
+   "name": "PDF to images",
+   "blurb": "Save pages as JPG or PNG"
+  },
+  "img-to-pdf": {
+   "title": "Images to PDF — JPG, PNG, HEIC to PDF Online | Fileutilo",
+   "description": "Combine photos and scans (JPG, PNG, HEIC from iPhone and more) into one PDF for WhatsApp, email or form uploads. Free and private.",
+   "h1": "Convert images to a single PDF",
+   "intro": "Put phone photos, scans and screenshots into one tidy PDF — ideal for sending ID proofs, certificates or receipts. iPhone HEIC photos are supported. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your images into the tool.",
+    "Drag them into order and choose the page size (A4, Letter or same as the image), orientation and margins.",
+    "Click Create PDF and download it."
+   ],
+   "faqs": [
+    [
+     "Can I convert iPhone HEIC photos?",
+     "Yes. HEIC and HEIF photos open directly, alongside JPG, PNG, WEBP and other formats."
+    ],
+    [
+     "How do I make the PDF smaller?",
+     "Shrink the photos first with Resize & compress images, or run the finished PDF through Compress PDF."
+    ]
+   ],
+   "free": false,
+   "slug": "jpg-to-pdf",
+   "formats": [
+    "JPG, PNG, WEBP, HEIC, GIF, BMP, TIFF, AVIF",
+    "PDF"
+   ],
+   "limits": [
+    "HEIC needs a modern browser; if it won't open, convert it to JPG first with the image converter."
+   ],
+   "related": [
+    "img-resize",
+    "pdf-merge",
+    "pdf-compress",
+    "img-convert"
+   ],
+   "shot_alt": "Images to PDF with photos in order and page size options",
+   "name": "Images to PDF",
+   "blurb": "Photos and scans into one PDF"
+  },
+  "img-convert": {
+   "title": "Image Converter — HEIC, WEBP, AVIF, PNG, JPG Online | Fileutilo",
+   "description": "Convert images to JPG, PNG, WEBP, AVIF, GIF, BMP, TIFF, ICO or SVG. Opens iPhone HEIC photos too. Free image converter that runs in your browser.",
+   "h1": "Convert images between JPG, PNG, WEBP, AVIF and more",
+   "intro": "Change image formats in a click: iPhone HEIC to JPG, WEBP to PNG, PNG to ICO for favicons, or JPG to AVIF for smaller web images. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more images into the converter.",
+    "Choose the output format and quality.",
+    "Click Convert and download the converted images."
+   ],
+   "faqs": [
+    [
+     "How do I convert HEIC to JPG?",
+     "Drop the HEIC photo in, choose JPG and click Convert — no app or upload needed."
+    ],
+    [
+     "Which formats can it create?",
+     "JPG, PNG, WEBP, AVIF, GIF, BMP, TIFF, ICO and SVG."
+    ]
+   ],
+   "free": false,
+   "slug": "image-converter",
+   "formats": [
+    "JPG, PNG, WEBP, AVIF, HEIC/HEIF, GIF, BMP, TIFF, ICO, SVG",
+    "JPG, PNG, WEBP, AVIF, GIF, BMP, TIFF, ICO, SVG"
+   ],
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "related": [
+    "img-resize",
+    "img-to-pdf",
+    "metadata",
+    "pdf-to-img"
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "name": "Image converter",
+   "blurb": "HEIC, WEBP, AVIF, PNG, JPG, ICO…"
+  },
+  "img-resize": {
+   "title": "Resize Image to 20 KB, 50 KB, 100 KB — Photo Resizer | Fileutilo",
+   "description": "Resize and compress photos to an exact size or under a KB limit for exam, job and government form uploads (signature 20 KB, photo 50 KB). Free, private.",
+   "h1": "Resize and compress images to a size limit",
+   "intro": "Online forms often need a photo under 50 KB or a signature under 20 KB. Set the dimensions and a maximum file size, and Fileutilo finds the best quality that fits. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo or signature image into the tool.",
+    "Pick a preset (Signature ≤ 20 KB, Photo ≤ 50 KB…) or set your own width, height and KB limit.",
+    "Click Resize and download the image."
+   ],
+   "faqs": [
+    [
+     "How do I make a photo under 50 KB?",
+     "Choose the \"Photo ≤ 50 KB\" preset, or type 50 in Max file size, and click Resize."
+    ],
+    [
+     "Which format should I use for forms?",
+     "JPG is accepted almost everywhere and gives the smallest files for photos."
+    ]
+   ],
+   "free": false,
+   "slug": "image-compressor",
+   "formats": [
+    "JPG, PNG, WEBP, HEIC, GIF, BMP",
+    "JPG, PNG, WEBP"
+   ],
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "related": [
+    "img-convert",
+    "img-to-pdf",
+    "pdf-compress",
+    "metadata"
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "name": "Resize & compress",
+   "blurb": "Fit 20 KB / 50 KB form limits"
+  },
+  "json": {
+   "title": "JSON Formatter & Validator Online — Beautify, Minify | Fileutilo",
+   "description": "Format, validate, beautify and minify JSON online as you type. Tree view, sort keys and repair broken JSON. Free, no limits, and nothing is uploaded.",
+   "h1": "JSON formatter and validator",
+   "intro": "Paste or open JSON and it's validated and pretty-printed as you type, with a tree view, key sorting, minifying and a repair option for almost-valid JSON. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste JSON or open a .json file.",
+    "Choose indentation, or Minify, Sort keys or Repair.",
+    "Copy or download the formatted JSON."
+   ],
+   "faqs": [
+    [
+     "Is my JSON sent anywhere?",
+     "No. Formatting happens in your browser, so API keys and private data in your JSON stay with you."
+    ],
+    [
+     "Can it fix invalid JSON?",
+     "Click Repair to have common mistakes fixed automatically, then check the result."
+    ],
+    [
+     "Does it handle large JSON files?",
+     "Yes. Files of several megabytes format instantly; very large files (hundreds of megabytes) depend on your device's memory."
+    ]
+   ],
+   "free": true,
+   "slug": "json-formatter",
+   "formats": [
+    ".json files or pasted JSON",
+    "Formatted or minified JSON"
+   ],
+   "limits": [
+    "Repair fixes common mistakes but can't guess missing data — check the result."
+   ],
+   "related": [
+    "json-compare",
+    "json-query",
+    "data-convert",
+    "diff"
+   ],
+   "shot_alt": "JSON formatter showing formatted JSON in a tree view",
+   "name": "JSON formatter",
+   "blurb": "Format, validate and repair"
+  },
+  "json-compare": {
+   "title": "JSON Compare — Diff Two JSON Files Online | Fileutilo",
+   "description": "Compare two JSON documents by structure and see exactly which keys were added, removed or changed, regardless of formatting or key order. Free and private.",
+   "h1": "Compare two JSON documents",
+   "intro": "Find the real differences between two JSON files or API responses. Fileutilo compares the structure, so different spacing or key order doesn't show up as noise. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste or open the original JSON on the left.",
+    "Paste or open the changed JSON on the right.",
+    "Review the added, removed and changed keys."
+   ],
+   "faqs": [
+    [
+     "Does key order matter?",
+     "No. Objects are compared by key, so reordered keys aren't reported as changes."
+    ],
+    [
+     "Is there a size limit?",
+     "No fixed limit — it depends on your device's memory, and there's no daily limit on this tool."
+    ],
+    [
+     "Can I compare two API responses?",
+     "Yes. Paste both responses; differences in spacing or key order are ignored, so only real changes in values and structure are listed."
+    ]
+   ],
+   "free": true,
+   "slug": "json-compare",
+   "formats": [
+    "Two JSON documents",
+    "A list of added, removed and changed keys"
+   ],
+   "limits": [
+    "Arrays are compared item by item in order."
+   ],
+   "related": [
+    "json",
+    "diff",
+    "json-query",
+    "data-convert"
+   ],
+   "shot_alt": "JSON compare listing keys that were added, removed and changed between two documents",
+   "name": "JSON compare",
+   "blurb": "Differences by structure"
+  },
+  "json-query": {
+   "title": "JSONPath Tester & JSON Schema Generator Online | Fileutilo",
+   "description": "Query JSON with JSONPath expressions and see matches instantly, or generate a JSON Schema from an example document. Free, private, in your browser.",
+   "h1": "JSONPath query tester and JSON Schema generator",
+   "intro": "Test JSONPath expressions such as $.items[*].price against your data, or generate a JSON Schema from a sample document to validate future data. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste or open your JSON.",
+    "Type a JSONPath expression, or switch to schema generation.",
+    "Copy the matches or the generated schema."
+   ],
+   "faqs": [
+    [
+     "What is JSONPath?",
+     "A query language for JSON, like XPath for XML: $.store.book[0].title selects the first book's title."
+    ],
+    [
+     "What does the generated schema include?",
+     "Types, properties and array items inferred from your example, ready to refine and use for validation."
+    ],
+    [
+     "Can I use it to check JSONPath for my code?",
+     "Yes. Each match is listed with its full path (for example $.order.items[0].price), so you can confirm an expression before using it in a test or script."
+    ]
+   ],
+   "free": true,
+   "slug": "jsonpath-tester",
+   "formats": [
+    "JSON",
+    "Matching values, or a JSON Schema"
+   ],
+   "limits": [
+    "Uses standard JSONPath; filter expressions like ?(@.price>10) are supported for common cases."
+   ],
+   "related": [
+    "json",
+    "json-compare",
+    "data-convert",
+    "table-clean"
+   ],
+   "shot_alt": "JSONPath tester with an expression typed and the matching values listed",
+   "name": "JSONPath & schema",
+   "blurb": "JSONPath tester, schema generator"
+  },
+  "data-convert": {
+   "title": "CSV to JSON, Excel, XML, YAML Converter Online | Fileutilo",
+   "description": "Convert data between CSV, JSON, Excel, XML and YAML, plus Markdown and HTML tables. Free online data converter — your data never leaves the browser.",
+   "h1": "Convert CSV, JSON, Excel, XML and YAML",
+   "intro": "Move data between formats in seconds: CSV to JSON for an API, JSON to Excel for a report, YAML to JSON for a config, or any table to Markdown for documentation. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste data or open a CSV, JSON, Excel, XML or YAML file.",
+    "Choose the output format.",
+    "Copy or download the converted data."
+   ],
+   "faqs": [
+    [
+     "Can it convert Excel to JSON?",
+     "Yes. Open the .xlsx file, choose JSON and each row becomes an object keyed by the header row."
+    ],
+    [
+     "Does it handle large CSV files?",
+     "Yes, within your device's memory, and there's no daily limit on this tool."
+    ]
+   ],
+   "free": true,
+   "slug": "data-converter",
+   "formats": [
+    "CSV, TSV, JSON, XLSX/XLS, XML, YAML",
+    "JSON, CSV, TSV, XLSX, XML, YAML, Markdown table, HTML table"
+   ],
+   "limits": [
+    "Nested JSON objects are flattened into columns (for example order.id) when converted to CSV or Excel.",
+    "Workbooks with several sheets: open them in the CSV cleaner, pick the sheet, and export it — the data converter works best with one sheet."
+   ],
+   "related": [
+    "table-clean",
+    "json",
+    "excel-combine",
+    "convert"
+   ],
+   "shot_alt": "Data converter turning CSV into JSON, with the input on the left and the output on the right",
+   "name": "Data converter",
+   "blurb": "CSV ⇄ JSON ⇄ Excel ⇄ XML ⇄ YAML"
+  },
+  "table-clean": {
+   "title": "CSV & Excel Cleaner — Remove Duplicates, Sort, Trim | Fileutilo",
+   "description": "Open a CSV or Excel sheet to sort, filter, trim spaces, remove duplicate rows and tidy columns, then download a clean file. Free and private.",
+   "h1": "Clean up CSV and Excel tables",
+   "intro": "Tidy messy spreadsheets without formulas: remove duplicate and empty rows, trim stray spaces, fix capitalisation, find and replace, filter and sort — with undo. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Open a CSV or Excel file, or paste rows copied from a spreadsheet.",
+    "Apply the clean-ups you need: trim, remove duplicates or empty rows, sort, filter, replace.",
+    "Export the cleaned table as CSV, Excel or JSON."
+   ],
+   "faqs": [
+    [
+     "How do I remove duplicate rows?",
+     "Open the file and click Remove duplicate rows. Made a mistake? Use Undo."
+    ],
+    [
+     "Will it change my original file?",
+     "No. You download a new, cleaned copy; the original is untouched."
+    ],
+    [
+     "Can I paste rows straight from Excel or Google Sheets?",
+     "Yes. Copy the cells and paste them in; columns are split on tabs, so the table keeps its shape."
+    ]
+   ],
+   "free": true,
+   "slug": "csv-cleaner",
+   "formats": [
+    "CSV, TSV, XLSX, XLS, pasted rows",
+    "CSV, XLSX, JSON"
+   ],
+   "limits": [
+    "Formulas and formatting in Excel files are not kept; you get the values."
+   ],
+   "related": [
+    "data-convert",
+    "excel-combine",
+    "diff",
+    "json"
+   ],
+   "shot_alt": "CSV cleaner showing a table after removing duplicate rows",
+   "name": "Table cleaner",
+   "blurb": "De-duplicate, trim, sort, filter"
+  },
+  "hash": {
+   "title": "File Checksum (MD5, SHA-256) & Base64 Encoder Online | Fileutilo",
+   "description": "Calculate MD5, SHA-1, SHA-256, SHA-512 and CRC-32 checksums of files, verify downloads, and encode or decode Base64. Free, private, no upload.",
+   "h1": "File checksums and Base64 encode/decode",
+   "intro": "Check that a download isn't corrupted or tampered with by comparing its checksum, or convert text and files to and from Base64. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop a file, or paste text.",
+    "Read the MD5, SHA-1, SHA-256, SHA-512 and CRC-32 values, or paste a published hash to verify.",
+    "Switch to Base64 to encode or decode."
+   ],
+   "faqs": [
+    [
+     "How do I verify a download?",
+     "Drop the file and paste the published SHA-256 into Expected checksum; Fileutilo tells you if it matches."
+    ],
+    [
+     "Is it safe for private files?",
+     "Yes. Files are hashed in your browser and never uploaded."
+    ],
+    [
+     "Which checksum should I use?",
+     "Use SHA-256 to verify downloads and software. MD5 and SHA-1 are fine for spotting accidental changes, but are no longer considered secure."
+    ]
+   ],
+   "free": true,
+   "slug": "checksum-calculator",
+   "formats": [
+    "Any file, or text",
+    "MD5, SHA-1, SHA-256, SHA-512, CRC-32, Base64"
+   ],
+   "limits": [
+    "Hashing a multi-gigabyte file may take a while on a phone."
+   ],
+   "related": [
+    "zip-create",
+    "diff",
+    "metadata",
+    "json"
+   ],
+   "shot_alt": "Checksum calculator showing MD5, SHA-1, SHA-256 and SHA-512 of a file",
+   "name": "Checksums & Base64",
+   "blurb": "MD5, SHA-256 checksums and Base64"
+  },
+  "word-merge": {
+   "title": "Merge Word Documents Online — Combine DOCX Files | Fileutilo",
+   "description": "Join several Word .docx files into one document, keeping formatting, images, tables and lists. Free online Word merger; files stay on your device.",
+   "h1": "Merge Word documents into one",
+   "intro": "Combine chapters, reports or forms into a single .docx while keeping their formatting, images, tables and numbered lists. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .docx files into the tool.",
+    "Put them in order.",
+    "Click Merge and download the combined Word document."
+   ],
+   "faqs": [
+    [
+     "Is formatting kept?",
+     "Yes. Styles, images, tables and lists from each document are carried into the merged file."
+    ],
+    [
+     "Can I merge old .doc files?",
+     "Convert them to .docx first with the Document Converter, then merge."
+    ]
+   ],
+   "free": false,
+   "slug": "merge-word",
+   "formats": [
+    "DOCX",
+    "DOCX"
+   ],
+   "limits": [
+    "The first document's page setup, headers and footers are used for the whole file.",
+    "Footnotes and comments from the added documents aren't carried over."
+   ],
+   "related": [
+    "convert",
+    "find-replace",
+    "doc-stats",
+    "pdf-merge"
+   ],
+   "shot_alt": "Merge Word with two documents listed and the merged DOCX ready to download",
+   "name": "Merge Word",
+   "blurb": "Join .docx files, keep formatting"
+  },
+  "excel-combine": {
+   "title": "Combine Excel Files — Merge Sheets & Workbooks Online | Fileutilo",
+   "description": "Merge several Excel or CSV files into one workbook, as separate sheets or stacked into a single sheet. Free and private — nothing is uploaded.",
+   "h1": "Combine Excel files and sheets",
+   "intro": "Bring monthly reports, branch files or exports together: keep every sheet in one workbook, or stack rows from files with the same columns into a single sheet, with an optional Source file column. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .xlsx, .xls, .ods or .csv files into the tool.",
+    "Choose: keep each sheet, or stack rows into one sheet.",
+    "Click Combine and download the workbook."
+   ],
+   "faqs": [
+    [
+     "How do I know which file a row came from?",
+     "When stacking rows, tick the option to add a Source file column."
+    ],
+    [
+     "Can I combine CSV and Excel together?",
+     "Yes. CSV, XLSX, XLS, XLSM and ODS files can be mixed."
+    ]
+   ],
+   "free": false,
+   "slug": "combine-excel",
+   "formats": [
+    "XLSX, XLS, XLSM, ODS, CSV",
+    "XLSX"
+   ],
+   "limits": [
+    "Formulas are kept as values when stacking rows.",
+    "Stacking works best when files share the same column headers."
+   ],
+   "related": [
+    "table-clean",
+    "data-convert",
+    "convert",
+    "diff"
+   ],
+   "shot_alt": "Combine Excel with two workbooks added and the keep-sheets or stack-rows options",
+   "name": "Combine Excel",
+   "blurb": "Merge workbooks and sheets"
+  },
+  "find-replace": {
+   "title": "Find and Replace in Multiple Word Files at Once | Fileutilo",
+   "description": "Replace text across many Word documents and text files in one go, with match case, whole words and regex. Word formatting is kept. Free, private.",
+   "h1": "Find and replace text across many files",
+   "intro": "Update a name, date or price in dozens of Word documents at once, or run a regular-expression replace over text and code files, then download the updated copies. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .docx or text files into the tool.",
+    "Type what to find and what to replace it with; set match case, whole words or regex.",
+    "Count matches first if you like, then click Replace & download."
+   ],
+   "faqs": [
+    [
+     "Does it keep Word formatting?",
+     "Yes. Only the matching text changes; fonts, styles and layout stay the same."
+    ],
+    [
+     "Can I use regular expressions?",
+     "Yes. Tick Regular expression and use $1, $2 in the replacement for captured groups."
+    ]
+   ],
+   "free": false,
+   "slug": "find-and-replace",
+   "formats": [
+    "DOCX, TXT, CSV, JSON, HTML, Markdown, code files",
+    "The same formats, updated"
+   ],
+   "limits": [
+    "Works on Word (.docx) and text-based files; PDFs can't be edited this way — convert them to Word first."
+   ],
+   "related": [
+    "word-merge",
+    "doc-stats",
+    "diff",
+    "convert"
+   ],
+   "shot_alt": "Find and replace with search and replacement text entered and updated files ready",
+   "name": "Find & replace",
+   "blurb": "Replace text across many files"
+  },
+  "doc-stats": {
+   "title": "Word Counter — Count Words in Word, PDF & Text Online | Fileutilo",
+   "description": "Count words, characters, sentences and reading time in Word, PDF, PowerPoint and text files, or pasted text. Works with Kannada and other scripts. Free.",
+   "h1": "Word count and document statistics",
+   "intro": "Get the word count, character count, sentences, reading time and most frequent words of a document or pasted text, in English, Kannada and other scripts. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste text, or drop a .docx, .pdf, .pptx, .odt, .rtf or .txt file.",
+    "See the counts update instantly.",
+    "Copy the statistics if you need them for a submission."
+   ],
+   "faqs": [
+    [
+     "Does it count words in Kannada and Hindi?",
+     "Yes. Words are counted correctly in Indian scripts as well as Latin text."
+    ],
+    [
+     "Can it count words in a PDF?",
+     "Yes, for PDFs with real text. For scanned PDFs, run OCR first."
+    ],
+    [
+     "Is pasted text saved anywhere?",
+     "No. It stays in this browser tab and is gone when you close it; nothing is sent to a server."
+    ]
+   ],
+   "free": true,
+   "slug": "word-counter",
+   "formats": [
+    "DOCX, PDF, PPTX, ODT, RTF, TXT, pasted text",
+    "On-screen statistics"
+   ],
+   "limits": [
+    "Scanned PDFs have no text to count — run OCR first."
+   ],
+   "related": [
+    "pdf-ocr",
+    "find-replace",
+    "diff",
+    "convert"
+   ],
+   "shot_alt": "Word counter showing words, characters, sentences and reading time for a Word document",
+   "name": "Word count",
+   "blurb": "Words, characters, reading time"
+  },
+  "metadata": {
+   "title": "Remove Metadata from PDF, Word & Photos (EXIF, GPS) | Fileutilo",
+   "description": "Strip author names, company, edit history, camera details and GPS location from Word, Excel, PowerPoint, PDF and photos before sharing. Free, private.",
+   "h1": "Remove hidden metadata from files and photos",
+   "intro": "Documents and photos carry hidden details: author and company names, revision history, camera model and the exact GPS location where a photo was taken. Remove them before you share. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop documents, PDFs or photos into the tool.",
+    "Click Remove metadata.",
+    "Check the report of what was removed and download the clean files."
+   ],
+   "faqs": [
+    [
+     "Which files are supported?",
+     "Word, Excel and PowerPoint (.docx, .xlsx, .pptx), OpenDocument files, PDF, JPG, PNG and WEBP."
+    ],
+    [
+     "Does it remove GPS location from photos?",
+     "Yes. EXIF data including GPS coordinates and camera details is removed."
+    ]
+   ],
+   "free": false,
+   "slug": "remove-metadata",
+   "formats": [
+    "DOCX, XLSX, PPTX, ODT, ODS, ODP, PDF, JPG, PNG, WEBP",
+    "The same files without hidden details"
+   ],
+   "limits": [
+    "Visible content (names typed in the document itself) is not changed — only hidden details."
+   ],
+   "related": [
+    "pdf-protect",
+    "img-convert",
+    "pdf-stamp",
+    "zip-create"
+   ],
+   "shot_alt": "Remove metadata report listing the author, edit history and photo details removed",
+   "name": "Remove metadata",
+   "blurb": "Strip author, edit history and GPS"
+  },
+  "diff": {
+   "title": "Compare Two Files Online — Text, Word, PDF Diff | Fileutilo",
+   "description": "Compare two versions of text, code, CSV, JSON, Word or PDF files side by side and see every change highlighted. Free file diff, no upload.",
+   "h1": "Compare two files and see what changed",
+   "intro": "Spot the differences between two versions of a contract, report, CSV or source file, side by side or unified, with options to ignore whitespace and case. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Open, drop or paste the original version on the left.",
+    "Open, drop or paste the changed version on the right.",
+    "Click Compare and step through the changes."
+   ],
+   "faqs": [
+    [
+     "Can it compare two Word or PDF files?",
+     "Yes. The text is extracted from .docx and .pdf files and compared line by line."
+    ],
+    [
+     "Can I ignore spacing changes?",
+     "Yes. Tick Ignore whitespace (and Ignore case if you like)."
+    ],
+    [
+     "Is it safe for confidential contracts?",
+     "Yes. Both versions are compared inside your browser and neither file is uploaded."
+    ]
+   ],
+   "free": true,
+   "slug": "file-comparison",
+   "formats": [
+    "TXT, CSV, JSON, code, DOCX, PDF, pasted text",
+    "Side-by-side or unified comparison"
+   ],
+   "limits": [
+    "Word and PDF files are compared as text, so formatting-only changes don't show."
+   ],
+   "related": [
+    "json-compare",
+    "doc-stats",
+    "find-replace",
+    "table-clean"
+   ],
+   "shot_alt": "File comparison showing two versions side by side with changes highlighted",
+   "name": "Compare files",
+   "blurb": "Compare text, Word and PDF files"
+  },
+  "zip-create": {
+   "title": "Create ZIP File Online — Compress Files & Folders | Fileutilo",
+   "description": "Bundle files or a whole folder into one compressed .zip, right in your browser. Free online ZIP maker — your files are never uploaded.",
+   "h1": "Create a ZIP file",
+   "intro": "Pack many files, or an entire folder with its subfolders, into a single .zip that's easy to email or upload. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop files or a folder into the tool (or use Add a folder).",
+    "Choose the compression level.",
+    "Click Create ZIP and download it."
+   ],
+   "faqs": [
+    [
+     "Can I zip a whole folder?",
+     "Yes. Drop the folder and its subfolder structure is kept inside the ZIP."
+    ],
+    [
+     "Does zipping make files smaller?",
+     "Text and documents shrink a lot; photos and videos are already compressed, so they shrink little."
+    ]
+   ],
+   "free": false,
+   "slug": "create-zip",
+   "formats": [
+    "Any files or a folder",
+    "ZIP"
+   ],
+   "limits": [
+    "Photos, videos and other already-compressed files barely shrink inside a ZIP."
+   ],
+   "related": [
+    "zip-open",
+    "hash",
+    "metadata",
+    "pdf-merge"
+   ],
+   "shot_alt": "Create ZIP with three files added and the ZIP file ready to download",
+   "name": "Create ZIP",
+   "blurb": "Pack files and folders"
+  },
+  "zip-open": {
+   "title": "Open ZIP File Online — View & Extract Without Installing | Fileutilo",
+   "description": "Look inside .zip, .jar, .epub, .docx or .apk files, preview the contents and download just the files you need. Free and private, no upload.",
+   "h1": "Open a ZIP file online",
+   "intro": "See what's inside a ZIP without extracting everything: browse folders, preview text and images, and download only the files you need. Works with JAR, EPUB, DOCX and APK too. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the .zip (or .jar, .epub, .docx, .apk) file into the tool.",
+    "Browse the folders and preview files.",
+    "Tick the files you want and download them."
+   ],
+   "faqs": [
+    [
+     "Can it open password-protected ZIPs?",
+     "Not at the moment; it opens standard, unencrypted ZIP archives."
+    ],
+    [
+     "Do I need to install anything?",
+     "No. It runs in your browser on phones and computers alike."
+    ],
+    [
+     "Can I look inside a Word file or an e-book?",
+     "Yes. DOCX, XLSX, PPTX and EPUB files are ZIP archives inside — open one to see and extract its images and parts."
+    ]
+   ],
+   "free": true,
+   "slug": "zip-extractor",
+   "formats": [
+    "ZIP, JAR, EPUB, APK, DOCX/XLSX/PPTX",
+    "The files inside"
+   ],
+   "limits": [
+    "Password-protected and RAR/7z archives are not supported."
+   ],
+   "related": [
+    "zip-create",
+    "hash",
+    "convert",
+    "doc-stats"
+   ],
+   "shot_alt": "ZIP extractor listing the files and folders inside an archive",
+   "name": "Open ZIP",
+   "blurb": "Look inside and extract"
+  },
+  "pdf-sign": {
+   "title": "Sign PDF Online — Add Signature, Initials & Date, Free | Fileutilo",
+   "description": "Sign a PDF in your browser: draw, type or upload your signature, add initials, the date or your name, and place them on any page. The PDF is never uploaded.",
+   "h1": "Sign a PDF",
+   "intro": "Add your signature to a PDF without printing it. Draw it with a mouse or finger, type your name in a handwriting style, or upload a photo of your signature on paper — the background is removed for you. Then click where it goes, resize it, and add the date, your initials or any text. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the PDF you need to sign.",
+    "Click Add signature, then draw, type or upload it — tick Remember to keep it in this browser for next time.",
+    "Click the page where it goes, drag to adjust, add the date or initials, then Save signed PDF."
+   ],
+   "faqs": [
+    [
+     "Is this a legally valid signature?",
+     "It adds an image of your signature, like signing a printout and scanning it. That is accepted for many everyday documents. Where a law or organisation asks for a certificate-based digital signature (DSC) or Aadhaar eSign, you need that service instead."
+    ],
+    [
+     "Where is my signature saved?",
+     "Only if you tick Remember, and then only in this browser on this device. It is never sent to Fileutilo. You can forget a saved signature at any time."
+    ],
+    [
+     "Can I sign every page at once?",
+     "Yes. Place your initials or signature once, select it and click Copy to every page."
+    ]
+   ],
+   "free": false,
+   "slug": "sign-pdf",
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "limits": [
+    "This adds an image of your signature — it is not a certificate-based digital signature (DSC) or Aadhaar eSign.",
+    "Password-protected PDFs must be unlocked first."
+   ],
+   "related": [
+    "pdf-edit",
+    "pdf-protect",
+    "pdf-merge",
+    "pdf-redact"
+   ],
+   "shot_alt": "Sign PDF with a handwritten signature and the date placed on a letter",
+   "name": "Sign PDF",
+   "blurb": "Draw, type or upload a signature"
+  },
+  "pdf-edit": {
+   "title": "Edit PDF & Fill PDF Forms Online — Add Text, Ticks, Dates | Fileutilo",
+   "description": "Fill in PDF forms and type anywhere on a PDF: add text, ticks, crosses, dates and white-out. Works in your browser — the PDF is never uploaded.",
+   "h1": "Edit and fill in a PDF",
+   "intro": "Fill in a PDF form without printing it. If the PDF has fillable fields, they are listed beside the page so you can type your answers, tick boxes and choose options. For any other PDF, click on the page to add text, a tick or cross, or today’s date, and use white-out to cover a mistake. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the PDF you want to fill in.",
+    "Type into the form fields on the right, or click Add text, Tick or Date and click on the page.",
+    "Drag items into place and click Save PDF."
+   ],
+   "faqs": [
+    [
+     "Can I change the existing text in a PDF?",
+     "Not directly — PDFs don’t store text like a Word file. Cover the old words with white-out and type the new text on top. To remove private text for good, use Mask PDF instead."
+    ],
+    [
+     "Can I type in Hindi, Kannada or other Indian scripts?",
+     "Yes, with Add text on the page. Standard PDF form fields can only show Latin letters here, so for other scripts leave the field empty and type on the page instead."
+    ],
+    [
+     "What does Flatten do?",
+     "It turns your answers into part of the page, so they can’t be changed in a PDF reader. Leave it off if someone else still needs to edit the form."
+    ]
+   ],
+   "free": false,
+   "slug": "edit-pdf",
+   "formats": [
+    "PDF, including fillable forms",
+    "PDF"
+   ],
+   "limits": [
+    "Existing text can’t be edited in place; cover it with white-out and type over it.",
+    "Form fields can only show Latin letters here — type other scripts on the page with Add text.",
+    "Very complex Adobe-only (XFA) forms may not show every field."
+   ],
+   "related": [
+    "pdf-sign",
+    "pdf-redact",
+    "pdf-merge",
+    "pdf-compress"
+   ],
+   "shot_alt": "Edit and fill PDF with text, a tick and the date typed onto a form",
+   "name": "Edit & fill PDF",
+   "blurb": "Fill forms, add text and ticks"
+  },
+  "pdf-redact": {
+   "title": "Mask PDF (Redact) & Aadhaar Number Online — Free | Fileutilo",
+   "description": "Mask names, numbers and other private details in a PDF or photo for good, and hide Aadhaar numbers automatically (XXXX XXXX 1234). Nothing is uploaded.",
+   "h1": "Mask private details in a PDF",
+   "intro": "Hide private details before you share a document. Drag boxes over anything, search for a name or number to mask it everywhere, or let Fileutilo find Aadhaar numbers and mask the first 8 digits — the masked format UIDAI recommends sharing. Masked pages are rebuilt as images (this is called redaction), so the hidden text is really gone, not just covered. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop a PDF, or a photo or scan of a document.",
+    "Drag boxes over private details, search for words, or click Find Aadhaar numbers.",
+    "Check every page, then click Save masked file."
+   ],
+   "faqs": [
+    [
+     "Is the hidden text really removed?",
+     "Yes. Each page with a box is rebuilt as an image with the box burned in, so the text underneath can’t be copied, searched or uncovered. Pages without boxes are kept as they are, and document details such as author and title are removed."
+    ],
+    [
+     "How does Aadhaar masking work?",
+     "Fileutilo looks for 12-digit numbers in the Aadhaar format, checks them with the Aadhaar check digit, and covers the first 8 digits so only the last 4 show. For scans and photos it reads the page with OCR first. Always check the result — OCR can miss blurry numbers."
+    ],
+    [
+     "What about the QR code on an Aadhaar card?",
+     "The QR code can contain your details. In browsers that can read QR codes, Fileutilo covers it for you; otherwise drag a box over it."
+    ]
+   ],
+   "free": false,
+   "slug": "redact-pdf",
+   "formats": [
+    "PDF, JPG, PNG, WEBP, HEIC",
+    "PDF, or the same image format (WEBP as PNG)"
+   ],
+   "limits": [
+    "Masked pages become images, so their text is no longer selectable and the file can get bigger.",
+    "Automatic Aadhaar detection can miss blurry or handwritten numbers — always check every page.",
+    "Scanned pages and photos need OCR, which downloads about 4 MB the first time."
+   ],
+   "related": [
+    "metadata",
+    "pdf-protect",
+    "pdf-edit",
+    "pdf-compress"
+   ],
+   "shot_alt": "Mask PDF with black boxes over an Aadhaar number, leaving only the last 4 digits",
+   "name": "Mask PDF & Aadhaar",
+   "blurb": "Hide details, mask Aadhaar"
+  },
+  "exam-photo": {
+   "title": "Passport Size Photo & Signature Resizer, 20–50 KB | Fileutilo",
+   "description": "Resize your passport size photo, signature and thumb impression to the exact pixels and KB for IBPS, SBI, SSC, UPSC, NEET and JEE forms. Nothing is uploaded.",
+   "h1": "Resize your passport size photo and signature",
+   "intro": "Online application forms reject a passport size photo or signature that’s the wrong size. Choose your exam and document, crop your picture, and Fileutilo makes a JPG with the exact pixels and a file size inside the allowed KB range — for example 200 × 230 px and 20–50 KB for a bank exam passport size photo. It can also clean up the paper behind a signature and add your name and date below the photo. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Choose your exam and the document — passport size photo, signature, thumb impression or declaration.",
+    "Drop your picture and drag the frame to crop it.",
+    "Click Make my file and download — the size check shows the pixels and KB."
+   ],
+   "faqs": [
+    [
+     "Which exams are included?",
+     "Bank exams (IBPS, SBI, RBI, RRB), SSC, UPSC, NEET UG and JEE Main, plus a standard 35 × 45 mm passport size photo and a custom size. The sizes follow the 2025–26 notifications. Rules change, so always check your own notification."
+    ],
+    [
+     "My file is under the minimum KB — what happens?",
+     "Very small pictures can come out below the minimum. Fileutilo then adds empty padding to the file so it meets the minimum size; the picture itself doesn’t change."
+    ],
+    [
+     "How many can I make for free?",
+     "Each file counts as one task, like the other tools: 10 a day without an account, 25 a day with a free account, and no daily limit on Pro."
+    ]
+   ],
+   "free": false,
+   "slug": "passport-size-photo",
+   "formats": [
+    "JPG, PNG, WEBP, HEIC, BMP",
+    "JPG"
+   ],
+   "limits": [
+    "Sizes follow the 2025–26 notifications; always check your own exam notification before uploading.",
+    "Some forms (for example SSC CGL and UPSC) now take a live photo with your webcam instead of an uploaded one."
+   ],
+   "related": [
+    "img-resize",
+    "pdf-compress",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "shot_alt": "Passport size photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
+   "name": "Passport size photo & signature",
+   "blurb": "Exact px and KB for exam forms"
+  },
+  "pdf-to-ppt": {
+   "title": "PDF to PowerPoint Converter — PDF to PPTX Online, Free | Fileutilo",
+   "description": "Convert a PDF to a PowerPoint presentation: keep the exact look with one slide per page, or get editable text slides. Free, and the PDF never leaves your device.",
+   "h1": "Convert PDF to PowerPoint",
+   "intro": "Need to present a PDF, or reuse its pages in a deck? Fileutilo turns every page into a slide. Choose Same look to keep the page exactly as it is — fonts, charts and photos included — with the page’s text copied into the speaker notes, or Editable text to get headings, bullet points and tables you can change in PowerPoint. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more PDFs.",
+    "Choose Same look (each page becomes a slide picture) or Editable text.",
+    "Click Convert to PowerPoint and download the .pptx — it opens in PowerPoint, Google Slides, Keynote and LibreOffice."
+   ],
+   "faqs": [
+    [
+     "Can I edit the text after converting?",
+     "With Editable text, yes — headings, paragraphs, lists and tables become real PowerPoint text. With Same look, each page is a picture so it looks identical; its text is in the speaker notes so you can copy it."
+    ],
+    [
+     "Does it work with scanned PDFs?",
+     "Same look works with any PDF, including scans. Editable text needs a PDF with real text — run OCR first for a scan."
+    ],
+    [
+     "What slide size will I get?",
+     "The slides take the shape of the PDF’s first page, so A4 portrait documents become portrait slides and wide reports become wide slides."
+    ]
+   ],
+   "free": false,
+   "slug": "pdf-to-powerpoint",
+   "formats": [
+    "PDF",
+    "PPTX"
+   ],
+   "limits": [
+    "Same look makes each page a picture, so its text can’t be edited on the slide (it’s in the speaker notes).",
+    "Editable text keeps headings, paragraphs, lists and tables but not the page’s pictures or exact layout.",
+    "Password-protected PDFs must be unlocked first."
+   ],
+   "related": [
+    "ppt-to-img",
+    "convert",
+    "pdf-to-img",
+    "pdf-compress"
+   ],
+   "shot_alt": "PDF to PowerPoint with Same look chosen and the converted presentation ready to download",
+   "name": "PDF to PowerPoint",
+   "blurb": "Turn PDF pages into slides"
+  },
+  "ppt-compress": {
+   "title": "Compress PowerPoint — Reduce PPTX File Size Online, Free | Fileutilo",
+   "description": "Make a big PowerPoint small enough to email or upload. Optimises the pictures inside and keeps every slide, animation and note. Free and private — no upload.",
+   "h1": "Compress a PowerPoint presentation",
+   "intro": "Presentations get huge because of photos pasted at full camera resolution. Fileutilo resizes and re-saves those pictures at a sensible size for screens, turns large PNG photos into JPG, and packs the file tightly — usually making a deck many times smaller while it looks the same on a projector. Slides, text, animations, transitions and speaker notes are left exactly as they are. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files.",
+    "Choose Light, Recommended or Strong compression.",
+    "Click Compress — the before and after size is shown for each file — and download."
+   ],
+   "faqs": [
+    [
+     "Will my slides look different?",
+     "With Recommended, pictures are kept up to 1920 pixels wide, which is sharper than most projectors and screens can show. Use Light for printing or very large screens, and Strong when the file must be as small as possible."
+    ],
+    [
+     "Are animations and notes kept?",
+     "Yes. Only the pictures inside are optimised; slides, layouts, animations, transitions and speaker notes are untouched."
+    ],
+    [
+     "Why didn’t my file get smaller?",
+     "If its pictures are already small, or most of the size is video or embedded fonts, there is little to save. Fileutilo then gives you back your original file rather than a bigger one."
+    ]
+   ],
+   "free": false,
+   "slug": "compress-powerpoint",
+   "formats": [
+    "PPTX",
+    "PPTX"
+   ],
+   "limits": [
+    "Videos, sounds and embedded fonts are not compressed.",
+    "Old .ppt files and password-protected presentations aren’t supported — save them as a normal .pptx first."
+   ],
+   "related": [
+    "ppt-merge",
+    "ppt-to-img",
+    "pdf-compress",
+    "ppt-images"
+   ],
+   "shot_alt": "Compress PowerPoint showing a 9 MB presentation reduced to about 0.5 MB",
+   "name": "Compress PowerPoint",
+   "blurb": "Shrink big decks for email and uploads"
+  },
+  "ppt-to-img": {
+   "title": "PowerPoint to JPG — Convert PPTX Slides to Images Online | Fileutilo",
+   "description": "Save every PowerPoint slide as a JPG or PNG picture, or as one PDF with a page per slide. HD, Full HD or 4K. Free, and the presentation is never uploaded.",
+   "h1": "Convert PowerPoint slides to JPG",
+   "intro": "Share slides on WhatsApp, Instagram or a website, drop them into a document, or send a deck to someone without PowerPoint. Fileutilo draws each slide as a picture at the size you choose — 1280, 1920 or 3840 pixels wide — or puts them all into one PDF. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .pptx file.",
+    "Choose JPG, PNG or PDF, the width, and optionally which slides (for example 1-3, 5).",
+    "Click Convert slides and download the pictures, one by one or as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Will the pictures look exactly like PowerPoint?",
+     "Text, pictures, shapes, tables and backgrounds are drawn faithfully. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones — for pixel-perfect output of those slides, export them from PowerPoint itself."
+    ],
+    [
+     "Can I convert just a few slides?",
+     "Yes. Type the slide numbers or ranges, such as 2-4, 7. Leave the box empty for all slides."
+    ],
+    [
+     "Which format should I choose?",
+     "JPG gives smaller files for photos and sharing; PNG keeps text and lines perfectly sharp; PDF puts every slide into one document that’s easy to print or email."
+    ]
+   ],
+   "free": false,
+   "slug": "powerpoint-to-jpg",
+   "formats": [
+    "PPTX",
+    "JPG, PNG or PDF"
+   ],
+   "limits": [
+    "Charts, SmartArt effects and 3-D models may be simplified; fonts that aren’t installed are replaced by similar ones.",
+    "Animations and transitions aren’t shown — each slide is drawn as it looks when fully built.",
+    "Old .ppt files aren’t supported — save them as .pptx first."
+   ],
+   "related": [
+    "powerpoint-to-pdf",
+    "ppt-images",
+    "img-resize",
+    "pdf-to-ppt"
+   ],
+   "shot_alt": "PowerPoint to JPG with Full HD chosen and one picture per slide ready to download",
+   "name": "PowerPoint to JPG",
+   "blurb": "Save every slide as an image"
+  },
+  "ppt-images": {
+   "title": "Extract Images from PowerPoint — Get All PPTX Pictures | Fileutilo",
+   "description": "Get every picture out of a PowerPoint in its original quality — no screenshots. Also works for Word and Excel files. Free, private, nothing uploaded.",
+   "h1": "Extract images from a PowerPoint",
+   "intro": "Need the photos, logos or diagrams someone put in a presentation? Fileutilo pulls out the original picture files stored inside the .pptx — exactly as they were inserted, without the quality loss of a screenshot — and gives them to you one by one or as a ZIP. It also works with Word (.docx) and Excel (.xlsx) files, and can include videos and sounds. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files (or .docx and .xlsx).",
+    "Optionally skip small icons, or leave out videos and sounds.",
+    "Click Extract images and download them, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Are the images the original quality?",
+     "Yes. They are the exact files stored inside the presentation, byte for byte — nothing is re-saved or resized."
+    ],
+    [
+     "Why do some pictures have an .emf or .wmf ending?",
+     "Those are Windows drawing formats that PowerPoint uses for some charts and clip art. They open in Office and Windows apps, but not in most web browsers."
+    ],
+    [
+     "Can I get the pictures from just one slide?",
+     "The tool takes every picture in the file. To get one slide as a picture instead, use PowerPoint to JPG with that slide number."
+    ]
+   ],
+   "free": false,
+   "slug": "extract-images-from-powerpoint",
+   "formats": [
+    "PPTX, DOCX, XLSX",
+    "The original JPG, PNG, GIF, SVG, EMF… files (and videos)"
+   ],
+   "limits": [
+    "Pictures in EMF or WMF format open in Office and Windows apps but not in most browsers.",
+    "Pictures are saved as stored in the file, including any parts that were cropped out on the slide."
+   ],
+   "related": [
+    "ppt-to-img",
+    "zip-open",
+    "img-convert",
+    "ppt-text"
+   ],
+   "shot_alt": "Extract images from PowerPoint listing the original pictures found in a presentation",
+   "name": "Extract images from PowerPoint",
+   "blurb": "Get every picture out of a deck"
+  },
+  "ppt-merge": {
+   "title": "Merge PowerPoint Files — Combine PPTX Online, Free | Fileutilo",
+   "description": "Combine several PowerPoint presentations into one deck, in the order you choose. Slides keep their pictures, layouts and animations. Free, and nothing is uploaded.",
+   "h1": "Merge PowerPoint presentations",
+   "intro": "Bring together decks from different people or teams into one presentation. Drag the files into order and Fileutilo copies every slide — with its pictures, layouts, theme and animations — into a single .pptx. Keep each presentation’s own design, or give every slide the first deck’s design for a consistent look. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop two or more .pptx files.",
+    "Drag them, or use the arrows, into the order you want, and choose how to handle the design.",
+    "Name the file, click Merge presentations, and download it."
+   ],
+   "faqs": [
+    [
+     "Do the slides keep their design?",
+     "By default, yes — each presentation brings its own slide master and theme. Choose “Use the first presentation’s design” to put every slide on the first deck’s matching layouts instead."
+    ],
+    [
+     "Are speaker notes kept?",
+     "Notes of the first presentation are kept. Notes and comments of the second and later presentations are not carried over."
+    ],
+    [
+     "What if the presentations have different slide sizes?",
+     "The merged deck uses the first presentation’s size. Slides from a deck with a different shape keep their positions, so check those slides and adjust them if needed."
+    ]
+   ],
+   "free": false,
+   "slug": "merge-powerpoint",
+   "formats": [
+    "PPTX",
+    "PPTX"
+   ],
+   "limits": [
+    "Speaker notes and comments of the second and later presentations are not carried over.",
+    "The merged deck uses the first presentation’s slide size.",
+    "Old .ppt files and password-protected presentations aren’t supported."
+   ],
+   "related": [
+    "ppt-compress",
+    "pdf-merge",
+    "ppt-to-img",
+    "word-merge"
+   ],
+   "shot_alt": "Merge PowerPoint with three presentations listed in order, ready to combine",
+   "name": "Merge PowerPoint",
+   "blurb": "Combine several decks into one"
+  },
+  "ppt-text": {
+   "title": "PowerPoint Text & Speaker Notes — PPTX to Text, Free | Fileutilo",
+   "description": "Copy all the text and speaker notes out of a PowerPoint, slide by slide, as plain text or Markdown. Free, private — the presentation is never uploaded.",
+   "h1": "Get the text and speaker notes from a PowerPoint",
+   "intro": "Turn a presentation into a script, handout or summary. Fileutilo reads every slide in order — titles, bullet points, text boxes and tables — and, if you like, the speaker notes, and gives you a tidy .txt or Markdown file you can paste anywhere or feed into another tool. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop one or more .pptx files (old .ppt files work too, without notes).",
+    "Choose plain text or Markdown, and whether to include speaker notes or skip hidden slides.",
+    "Click Get text, then copy it or download the file."
+   ],
+   "faqs": [
+    [
+     "Does it include speaker notes?",
+     "Yes, when “Include speaker notes” is ticked — each slide’s notes follow its text."
+    ],
+    [
+     "What about text in pictures?",
+     "Text that is part of a picture can’t be read this way. Use PowerPoint to JPG and then OCR on those slides."
+    ],
+    [
+     "Why choose Markdown?",
+     "Markdown keeps the structure — slide headings, bullet levels and tables — and pastes neatly into Notion, GitHub, ChatGPT and many editors."
+    ]
+   ],
+   "free": false,
+   "slug": "powerpoint-text-and-notes",
+   "formats": [
+    "PPTX, PPT",
+    "TXT or Markdown (.md)"
+   ],
+   "limits": [
+    "Text inside pictures can’t be read — use PowerPoint to JPG and OCR for those slides.",
+    "Speaker notes are read from .pptx files only, not from old .ppt files."
+   ],
+   "related": [
+    "ppt-images",
+    "doc-stats",
+    "pdf-ocr",
+    "convert"
+   ],
+   "shot_alt": "Slide text and speaker notes in Markdown, with slide headings and notes",
+   "name": "Slide text & speaker notes",
+   "blurb": "Copy all text and notes from a deck"
+  }
+ },
+ "variants": {
+  "word-to-pdf": {
+   "tool": "convert",
+   "preset": {
+    "target": "pdf"
+   },
+   "title": "Word to PDF Converter — DOCX to PDF Online, Free | Fileutilo",
+   "description": "Convert Word documents (DOCX, DOC, ODT, RTF) to PDF with real, selectable text, headings, lists, tables and images. Free, and the file stays on your device.",
+   "h1": "Convert Word to PDF",
+   "shot": "convert",
+   "intro": "Turn a Word document into a PDF that looks the same on every device — ready to email, print or upload. The PDF keeps real, selectable text, headings, lists, tables and images. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .docx (or .doc, .odt, .rtf) files into the converter — PDF is already selected.",
+    "Wait a moment while each file is converted in your browser.",
+    "Download each PDF, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Will the PDF look exactly like Word?",
+     "Text, headings, lists, tables and images are kept. Complex layouts such as text boxes or multiple columns are simplified."
+    ],
+    [
+     "Can I convert several Word files at once?",
+     "Yes. Add several files and each becomes its own PDF; free use allows 5 files per task."
+    ]
+   ],
+   "formats": [
+    "DOCX, DOC, ODT, RTF",
+    "PDF"
+   ],
+   "related": [
+    "pdf-to-word",
+    "pdf-merge",
+    "pdf-compress",
+    "word-merge"
+   ],
+   "slug": "word-to-pdf",
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "shot_alt": "Word to PDF: a Word document converted to PDF in the document converter",
+   "free": false,
+   "name": "Word to PDF",
+   "blurb": "DOCX to PDF with selectable text"
+  },
+  "pdf-to-word": {
+   "tool": "convert",
+   "preset": {
+    "target": "docx"
+   },
+   "title": "PDF to Word Converter — Editable DOCX Online, Free | Fileutilo",
+   "description": "Turn a PDF into an editable Word document (DOCX) with headings, paragraphs, lists and tables. Free and private — the PDF is converted in your browser.",
+   "h1": "Convert PDF to Word",
+   "shot": "convert",
+   "intro": "Get the text of a PDF back into Word so you can edit it — headings, paragraphs, lists and tables become real Word structure. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF into the converter — DOCX is already selected.",
+    "The text, headings, lists and tables are rebuilt as a Word document.",
+    "Download the .docx and open it in Word, Google Docs or LibreOffice."
+   ],
+   "faqs": [
+    [
+     "Are images kept?",
+     "No — PDF to Word keeps the text structure (headings, paragraphs, lists and tables) but not the images."
+    ],
+    [
+     "Does it work with scanned PDFs?",
+     "A scanned PDF is a picture with no text. Run it through OCR first, then convert the text."
+    ]
+   ],
+   "formats": [
+    "PDF (with real text)",
+    "DOCX"
+   ],
+   "related": [
+    "word-to-pdf",
+    "pdf-ocr",
+    "find-replace",
+    "doc-stats"
+   ],
+   "slug": "pdf-to-word",
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "shot_alt": "PDF to Word: a PDF converted to an editable DOCX in the document converter",
+   "free": false,
+   "name": "PDF to Word",
+   "blurb": "Editable DOCX from a PDF"
+  },
+  "excel-to-pdf": {
+   "tool": "convert",
+   "preset": {
+    "target": "pdf"
+   },
+   "title": "Excel to PDF Converter — XLSX to PDF Online, Free | Fileutilo",
+   "description": "Convert Excel workbooks (XLSX, XLS, ODS, CSV) to PDF tables you can share or print. Every sheet is included. Free, private, no upload.",
+   "h1": "Convert Excel to PDF",
+   "shot": "convert",
+   "intro": "Share a spreadsheet as a PDF that anyone can open and nobody can accidentally edit. Each sheet becomes a table in the PDF. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .xlsx, .xls, .ods or .csv file into the converter — PDF is already selected.",
+    "Each sheet is laid out as a table.",
+    "Download the PDF."
+   ],
+   "faqs": [
+    [
+     "Are all sheets included?",
+     "Yes. Every sheet in the workbook becomes a section of the PDF."
+    ],
+    [
+     "Are formulas kept?",
+     "The PDF shows the values the formulas produced, as a printed copy would."
+    ]
+   ],
+   "formats": [
+    "XLSX, XLS, ODS, CSV",
+    "PDF"
+   ],
+   "related": [
+    "excel-to-csv",
+    "excel-combine",
+    "table-clean",
+    "pdf-merge"
+   ],
+   "slug": "excel-to-pdf",
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "shot_alt": "Document converter with a PowerPoint file, a text file and a web page converted to PDF, with a preview",
+   "free": false,
+   "name": "Excel to PDF",
+   "blurb": "Spreadsheets as shareable PDFs"
+  },
+  "powerpoint-to-pdf": {
+   "tool": "ppt-to-img",
+   "preset": {
+    "target": "pdf"
+   },
+   "title": "PowerPoint to PDF — Convert PPTX to PDF Online, Free | Fileutilo",
+   "description": "Convert a PowerPoint presentation to a PDF that looks like your slides — one page per slide, to email, print or upload. Free, and it stays on your device.",
+   "h1": "Convert PowerPoint to PDF",
+   "shot": "ppt-to-img",
+   "intro": "Send slides as a PDF that opens on any phone or laptop without PowerPoint. Fileutilo draws every slide — text, pictures, shapes, tables and backgrounds — onto its own PDF page in the slide’s shape, so the PDF looks like your presentation. Pick just some slides if you like. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .pptx file — PDF is already selected.",
+    "Optionally type which slides to include (for example 1-10) and the picture width.",
+    "Click Convert slides and download the PDF."
+   ],
+   "faqs": [
+    [
+     "Will the PDF look like my slides?",
+     "Yes for text, pictures, shapes, tables and backgrounds. Charts, SmartArt effects and 3-D models may be simplified, and fonts you don’t have installed are replaced by similar ones."
+    ],
+    [
+     "Can I select the text in the PDF?",
+     "No — each slide is placed on its page as a picture so it looks right everywhere. If you need selectable text instead of the design, use the document converter with PDF chosen."
+    ],
+    [
+     "Can I convert old .ppt files?",
+     "Save them as .pptx in PowerPoint or LibreOffice first, or use the document converter, which reads the text of .ppt files."
+    ]
+   ],
+   "formats": [
+    "PPTX",
+    "PDF (one page per slide)"
+   ],
+   "related": [
+    "ppt-to-img",
+    "ppt-compress",
+    "pdf-compress",
+    "pdf-merge"
+   ],
+   "slug": "powerpoint-to-pdf",
+   "limits": [
+    "Charts, SmartArt effects and 3-D models may be simplified; fonts that aren’t installed are replaced by similar ones.",
+    "Animations and transitions aren’t shown — each slide is drawn as it looks when fully built.",
+    "Old .ppt files aren’t supported — save them as .pptx first."
+   ],
+   "shot_alt": "PowerPoint to JPG with PDF chosen, making one PDF page per slide",
+   "free": false,
+   "name": "PowerPoint to PDF",
+   "blurb": "Slides as a PDF that looks the same"
+  },
+  "excel-to-csv": {
+   "tool": "data-convert",
+   "preset": {
+    "to": "csv"
+   },
+   "title": "Excel to CSV Converter — XLSX to CSV Online, Free | Fileutilo",
+   "description": "Convert an Excel sheet (XLSX, XLS) to CSV or TSV in seconds, with a live preview of the output. Free, no daily limit, and nothing is uploaded.",
+   "h1": "Convert Excel to CSV",
+   "shot": "data-convert",
+   "intro": "Many systems only import CSV. Open your Excel file, check the preview and download a clean CSV — or switch to TSV, JSON or another format. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Click Open file and choose your .xlsx or .xls workbook — CSV is already selected as the output.",
+    "Check the preview on the right.",
+    "Click Download to save the .csv file (or Copy to paste it elsewhere)."
+   ],
+   "faqs": [
+    [
+     "What if my workbook has several sheets?",
+     "Open it in the CSV cleaner instead: choose the sheet from the list, then export it as CSV. The data converter works best with single-sheet files."
+    ],
+    [
+     "Will it handle commas and quotes inside cells?",
+     "Yes. Values containing commas, quotes or line breaks are quoted correctly."
+    ]
+   ],
+   "formats": [
+    "XLSX, XLS (also CSV, JSON, XML, YAML)",
+    "CSV (also TSV, JSON, XLSX, XML, YAML, Markdown, HTML)"
+   ],
+   "related": [
+    "csv-to-json",
+    "table-clean",
+    "excel-combine",
+    "excel-to-pdf"
+   ],
+   "free": true,
+   "slug": "excel-to-csv",
+   "limits": [
+    "Nested JSON objects are flattened into columns (for example order.id) when converted to CSV or Excel.",
+    "Workbooks with several sheets: open them in the CSV cleaner, pick the sheet, and export it — the data converter works best with one sheet."
+   ],
+   "shot_alt": "Data converter turning CSV into JSON, with the input on the left and the output on the right",
+   "name": "Excel to CSV",
+   "blurb": "XLSX to CSV with a live preview"
+  },
+  "csv-to-json": {
+   "tool": "data-convert",
+   "preset": {
+    "to": "json"
+   },
+   "title": "CSV to JSON Converter Online — Free, No Upload | Fileutilo",
+   "description": "Convert CSV to JSON with the header row as keys and numbers and true/false detected. Live preview, copy or download. Free with no daily limit.",
+   "h1": "Convert CSV to JSON",
+   "shot": "data-convert",
+   "intro": "Turn a spreadsheet export into JSON for an API, a script or a test fixture. The first row becomes the keys, and numbers and true/false values become real types. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Paste CSV, or open a .csv file — JSON is already selected as the output.",
+    "Untick the header or type-detection options if you need to.",
+    "Copy the JSON or download it."
+   ],
+   "faqs": [
+    [
+     "What does the JSON look like?",
+     "An array of objects — one per row — keyed by the header row."
+    ],
+    [
+     "Can I go back from JSON to CSV?",
+     "Yes. Paste JSON and choose CSV as the output."
+    ]
+   ],
+   "formats": [
+    "CSV, TSV (also XLSX, JSON, XML, YAML)",
+    "JSON (also CSV, XLSX, XML, YAML, Markdown, HTML)"
+   ],
+   "related": [
+    "excel-to-csv",
+    "json",
+    "json-query",
+    "table-clean"
+   ],
+   "free": true,
+   "slug": "csv-to-json",
+   "limits": [
+    "Nested JSON objects are flattened into columns (for example order.id) when converted to CSV or Excel.",
+    "Workbooks with several sheets: open them in the CSV cleaner, pick the sheet, and export it — the data converter works best with one sheet."
+   ],
+   "shot_alt": "CSV to JSON: a CSV file on the left and the JSON output on the right",
+   "name": "CSV to JSON",
+   "blurb": "Header row becomes the keys"
+  },
+  "heic-to-jpg": {
+   "tool": "img-convert",
+   "preset": {
+    "fmt": "jpg"
+   },
+   "title": "HEIC to JPG Converter — iPhone Photos to JPG, Free | Fileutilo",
+   "description": "Convert iPhone HEIC/HEIF photos to JPG so they open everywhere — Windows, websites and forms. Batch convert, free, and photos stay on your device.",
+   "h1": "Convert HEIC to JPG",
+   "shot": "img-convert",
+   "intro": "iPhones save photos as HEIC, which many websites, forms and older computers can't open. Convert them to JPG in a click. Your photos are processed in your browser and never uploaded.",
+   "steps": [
+    "Drop your .heic or .heif photos into the converter — JPG is already selected.",
+    "Adjust the quality if you want smaller files.",
+    "Click Convert and download the JPGs (several come as a ZIP)."
+   ],
+   "faqs": [
+    [
+     "Why can't I open HEIC files on Windows?",
+     "HEIC is Apple's photo format and needs an extra codec on Windows. JPG opens everywhere."
+    ],
+    [
+     "Is the photo quality reduced?",
+     "At the default quality of 90 the difference isn't visible; lower it for smaller files."
+    ]
+   ],
+   "formats": [
+    "HEIC, HEIF (and other image formats)",
+    "JPG (also PNG, WEBP, AVIF and more)"
+   ],
+   "related": [
+    "img-resize",
+    "img-to-pdf",
+    "metadata",
+    "webp-to-jpg"
+   ],
+   "slug": "heic-to-jpg",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "free": false,
+   "name": "HEIC to JPG",
+   "blurb": "iPhone photos that open everywhere"
+  },
+  "webp-to-jpg": {
+   "tool": "img-convert",
+   "preset": {
+    "fmt": "jpg"
+   },
+   "title": "WEBP to JPG Converter Online — Free & Private | Fileutilo",
+   "description": "Convert WEBP images saved from websites to JPG (or PNG) so they open in any app or upload form. Batch convert for free; nothing is uploaded.",
+   "h1": "Convert WEBP to JPG",
+   "shot": "img-convert",
+   "intro": "Images saved from websites are often WEBP, which some apps and upload forms reject. Convert them to JPG — or PNG if you need transparency. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .webp images into the converter — JPG is already selected.",
+    "Pick a background colour for transparent areas, or choose PNG to keep transparency.",
+    "Click Convert and download the images."
+   ],
+   "faqs": [
+    [
+     "What happens to transparent areas?",
+     "JPG has no transparency, so transparent areas are filled with the background colour you choose (white by default). Choose PNG to keep them."
+    ],
+    [
+     "Can I convert many images at once?",
+     "Yes. Add several and download them together as a ZIP."
+    ]
+   ],
+   "formats": [
+    "WEBP (and other image formats)",
+    "JPG (also PNG, AVIF, GIF and more)"
+   ],
+   "related": [
+    "heic-to-jpg",
+    "img-resize",
+    "img-to-pdf",
+    "metadata"
+   ],
+   "slug": "webp-to-jpg",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "WEBP to JPG: a WEBP image converted to JPG in the image converter",
+   "free": false,
+   "name": "WEBP to JPG",
+   "blurb": "Web images for any app or form"
+  },
+  "compress-pdf-to-200kb": {
+   "tool": "pdf-compress",
+   "preset": {
+    "target_kb": 200
+   },
+   "title": "Compress PDF to 200 KB (or 100 KB, 500 KB) — Online, Free | Fileutilo",
+   "description": "Get a PDF under 200 KB, 100 KB or any size limit for an upload form. Keeps text when it can, and finds the best quality that fits. Nothing is uploaded.",
+   "h1": "Compress a PDF to 200 KB",
+   "shot": "pdf-compress",
+   "intro": "Government and exam portals often accept PDFs only up to 200 KB, 300 KB or 1 MB. Type the limit and Fileutilo first tries lossless clean-up that keeps the text; if that isn’t enough, it turns pages into images at the highest quality that still fits. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF — “Under a size limit” is already chosen with 200 KB.",
+    "Change the limit if your form asks for something else (100 KB, 500 KB, 1 MB…).",
+    "Click Compress and download the PDF that fits."
+   ],
+   "faqs": [
+    [
+     "Will the text still be selectable?",
+     "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."
+    ],
+    [
+     "What if it can’t get under the limit?",
+     "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF into parts with Split PDF and compress each part."
+    ]
+   ],
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "related": [
+    "pdf-split",
+    "img-resize",
+    "exam-photo",
+    "pdf-merge"
+   ],
+   "slug": "compress-pdf-to-200kb",
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "free": false,
+   "name": "Compress a PDF to 200 KB",
+   "blurb": "PDFs under a portal’s size limit"
+  },
+  "fill-pdf-form": {
+   "tool": "pdf-edit",
+   "preset": {},
+   "title": "Fill PDF Form Online — Type Into Fillable PDFs, Free | Fileutilo",
+   "description": "Fill in a PDF form in your browser: type into fillable fields, tick boxes, pick options, or type anywhere on a non-fillable form. The PDF is never uploaded.",
+   "h1": "Fill in a PDF form",
+   "shot": "pdf-edit",
+   "intro": "Application forms, bank forms and declarations often come as PDFs. Fileutilo lists a form’s fillable fields beside the page so you can type your answers; if the PDF isn’t fillable, click on the page to type, tick and date it instead. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop the PDF form.",
+    "Type your answers into the fields on the right — or click Add text and click on the page for forms without fields.",
+    "Optionally tick Flatten so the answers can’t be changed, then Save PDF."
+   ],
+   "faqs": [
+    [
+     "How do I know if my PDF is fillable?",
+     "When you open it, Fileutilo lists its form fields. If it says the PDF has no fillable fields, use Add text, Tick and Date on the page."
+    ],
+    [
+     "Can I sign the form too?",
+     "Yes — save it, then open it in Sign PDF to add your signature."
+    ]
+   ],
+   "formats": [
+    "PDF with or without form fields",
+    "PDF"
+   ],
+   "related": [
+    "pdf-sign",
+    "pdf-redact",
+    "pdf-merge",
+    "compress-pdf-to-200kb"
+   ],
+   "slug": "fill-pdf-form",
+   "limits": [
+    "Existing text can’t be edited in place; cover it with white-out and type over it.",
+    "Form fields can only show Latin letters here — type other scripts on the page with Add text.",
+    "Very complex Adobe-only (XFA) forms may not show every field."
+   ],
+   "shot_alt": "Edit and fill PDF with text, a tick and the date typed onto a form",
+   "free": false,
+   "name": "Fill in a PDF form",
+   "blurb": "Type into fillable PDF forms"
+  },
+  "mask-aadhaar": {
+   "tool": "pdf-redact",
+   "preset": {
+    "aadhaar": true
+   },
+   "title": "Masked Aadhaar — Hide Your Aadhaar Number Online, Free | Fileutilo",
+   "description": "Mask the first 8 digits of an Aadhaar number in a PDF or photo before you share it. Finds the number automatically and removes it for good. Nothing is uploaded.",
+   "h1": "Mask your Aadhaar number",
+   "shot": "pdf-redact",
+   "intro": "Hotels, landlords and offices often ask for a copy of your Aadhaar. A masked copy shows only the last 4 digits, which is the format UIDAI recommends sharing. Drop your Aadhaar PDF or a photo of the card, click Find Aadhaar numbers, and Fileutilo covers the first 8 digits — and the QR code where your browser can read it. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your Aadhaar PDF, or a photo or scan of the card.",
+    "Click Find Aadhaar numbers — the first 8 digits are covered on every page.",
+    "Check the result, drag a box over anything else you want hidden, and save."
+   ],
+   "faqs": [
+    [
+     "Is a masked Aadhaar valid as ID?",
+     "UIDAI lets you download and share a masked Aadhaar that shows only the last 4 digits. Whether a particular office accepts it is up to them."
+    ],
+    [
+     "Can someone undo the masking?",
+     "No. The masked page is rebuilt as an image with the digits burned out, so they can’t be uncovered or copied."
+    ]
+   ],
+   "formats": [
+    "PDF, JPG, PNG, WEBP, HEIC",
+    "PDF or image"
+   ],
+   "related": [
+    "pdf-protect",
+    "metadata",
+    "pdf-redact",
+    "pdf-compress"
+   ],
+   "slug": "mask-aadhaar",
+   "limits": [
+    "Masked pages become images, so their text is no longer selectable and the file can get bigger.",
+    "Automatic Aadhaar detection can miss blurry or handwritten numbers — always check every page.",
+    "Scanned pages and photos need OCR, which downloads about 4 MB the first time."
+   ],
+   "shot_alt": "Mask PDF with black boxes over an Aadhaar number, leaving only the last 4 digits",
+   "free": false,
+   "name": "Mask your Aadhaar number",
+   "blurb": "Show only the last 4 digits"
+  },
+  "signature-resizer": {
+   "tool": "exam-photo",
+   "preset": {
+    "preset": "bank-sign"
+   },
+   "title": "Signature Resizer — 140×60 px, 10–20 KB for Exam Forms | Fileutilo",
+   "description": "Resize a scanned signature to 140 × 60 pixels and 10–20 KB, or the size your exam form asks for, with a whiter background. Free, with nothing uploaded.",
+   "h1": "Resize your signature for an exam form",
+   "shot": "exam-photo",
+   "intro": "Exam and job forms want your signature at an exact size — often 140 × 60 pixels and 10–20 KB. Sign on white paper, take a photo, crop it, and Fileutilo makes a clean JPG that fits, with the paper turned white and the ink darker. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Sign on plain white paper with a black pen and take a clear photo.",
+    "Drop the photo — the bank-exam signature size is already chosen; pick another exam if you need to.",
+    "Crop around your signature, click Make my file and download."
+   ],
+   "faqs": [
+    [
+     "My form asks for 3.5 × 1.5 cm — which option is that?",
+     "Choose JEE Main or NEET signature; or pick Custom size and type the pixels your form lists."
+    ],
+    [
+     "Why does my signature look grey?",
+     "Keep Clean up the paper ticked — it turns the background white and the ink darker, which portals read more reliably."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC",
+    "JPG"
+   ],
+   "related": [
+    "exam-photo",
+    "img-resize",
+    "pdf-sign",
+    "img-convert"
+   ],
+   "slug": "signature-resizer",
+   "limits": [
+    "Sizes follow the 2025–26 notifications; always check your own exam notification before uploading.",
+    "Some forms (for example SSC CGL and UPSC) now take a live photo with your webcam instead of an uploaded one."
+   ],
+   "shot_alt": "Passport size photo resizer with a photo cropped to 200 by 230 pixels and a size check showing it is between 20 and 50 KB",
+   "free": false,
+   "name": "Resize your signature for an exam form",
+   "blurb": "140 × 60 px, 10–20 KB and more"
+  },
+  "ppt-to-pptx": {
+   "tool": "convert",
+   "preset": {
+    "target": "pptx"
+   },
+   "title": "PPT to PPTX — Convert Old PowerPoint Files Online, Free | Fileutilo",
+   "description": "Rescue the slides and text of an old PowerPoint 97–2003 (.ppt) file into a new .pptx you can open and edit anywhere. Free, and nothing is uploaded.",
+   "h1": "Convert PPT to PPTX",
+   "shot": "convert",
+   "intro": "Old .ppt presentations from PowerPoint 97–2003 won’t open in some apps and phones. Fileutilo reads the slide titles, text and bullet points from the old file and builds a fresh .pptx with one slide per slide, ready to edit in PowerPoint, Google Slides or Keynote. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your .ppt files into the converter — PPTX is already selected.",
+    "Each presentation is read and rebuilt in your browser.",
+    "Download the new .pptx files."
+   ],
+   "faqs": [
+    [
+     "Is the layout kept exactly?",
+     "No — the slide text and titles are carried over onto clean slides, but pictures and the original design are not. For an exact copy, open the .ppt in PowerPoint or LibreOffice Impress and use Save As → .pptx."
+    ],
+    [
+     "Can I convert a .ppt straight to PDF?",
+     "Yes — choose PDF instead of PPTX in the converter to get a document of the slide text."
+    ]
+   ],
+   "formats": [
+    "PPT (PowerPoint 97–2003)",
+    "PPTX"
+   ],
+   "related": [
+    "ppt-text",
+    "powerpoint-to-pdf",
+    "ppt-compress",
+    "convert"
+   ],
+   "slug": "ppt-to-pptx",
+   "limits": [
+    "Complex layouts (text boxes, columns, embedded charts) are simplified; text, headings, lists and tables are kept.",
+    "PDF to Word keeps the text structure but not the images.",
+    "Scanned PDFs have no text layer — run OCR first."
+   ],
+   "shot_alt": "Document converter with an old PowerPoint file converted to PPTX",
+   "free": false,
+   "name": "PPT to PPTX",
+   "blurb": "Rescue text from old .ppt files"
+  },
+  "compress-image-to-50kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 50
+   },
+   "title": "Compress Image to 50 KB — Photo Under 50KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 50 KB for exam, job and government forms, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 50 KB",
+   "shot": "img-resize",
+   "intro": "Exam and job portals usually ask for a photo under 50 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 50 KB, after fitting large photos to a form-friendly size (within 800 × 1000 pixels). You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 50 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 50 KB?",
+     "Yes for a passport-style photo or signature. Fileutilo searches for the highest quality that fits under 50 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-50kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 50 KB",
+   "blurb": "Photos under 50 KB for forms"
+  },
+  "compress-image-to-20kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 20
+   },
+   "title": "Compress Image to 20 KB — Photo Under 20KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 20 KB for signature and thumb-impression uploads, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 20 KB",
+   "shot": "img-resize",
+   "intro": "Signatures and thumb impressions on application forms often have to be under 20 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 20 KB, after fitting large photos to a form-friendly size (within 600 × 300 pixels). You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 20 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 20 KB?",
+     "Yes for a passport-style photo or signature. Fileutilo searches for the highest quality that fits under 20 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message. Very small limits can make large photos a little soft."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-20kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 20 KB",
+   "blurb": "Signatures under 20 KB"
+  },
+  "compress-image-to-100kb": {
+   "tool": "img-resize",
+   "preset": {
+    "target_kb": 100
+   },
+   "title": "Compress Image to 100 KB — Photo Under 100KB Online, Free | Fileutilo",
+   "description": "Reduce a photo or scan to under 100 KB for online forms, email and websites, at the best quality that fits. Free, and the image never leaves your device.",
+   "h1": "Compress an image to 100 KB",
+   "shot": "img-resize",
+   "intro": "Many forms and websites cap uploads at 100 KB. Drop your picture and Fileutilo finds the highest quality that still fits under 100 KB, making the picture smaller only if it has to. You can also type exact pixels if the form asks for them. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your photo, signature or scan — the 100 KB limit is already set.",
+    "If the form gives exact pixels, choose Width, Height or Fit and type them.",
+    "Click Resize and download the image — the new size in pixels and KB is shown."
+   ],
+   "faqs": [
+    [
+     "Will the photo still look good at 100 KB?",
+     "Yes — Fileutilo searches for the highest quality that fits under 100 KB and makes the picture smaller only when quality alone isn’t enough. In the rare case it can’t fit, you get the smallest version and a message."
+    ],
+    [
+     "Can I do several photos at once?",
+     "Yes. Add several and each is compressed under the limit; download them together as a ZIP."
+    ],
+    [
+     "The form needs the photo between two sizes, like 20–50 KB — what should I use?",
+     "Use Passport size photo & signature: it makes the exact pixels and a size inside the allowed range for exam and job forms."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC and more",
+    "JPG (or WEBP, PNG)"
+   ],
+   "related": [
+    "exam-photo",
+    "compress-pdf-to-200kb",
+    "img-to-pdf",
+    "img-convert"
+   ],
+   "slug": "compress-image-to-100kb",
+   "limits": [
+    "Very small size limits (under ~10 KB) can make photos visibly blurry."
+   ],
+   "shot_alt": "Image compressor with the Photo 50 KB preset chosen and the resized photo under 50 KB",
+   "free": false,
+   "name": "Compress an image to 100 KB",
+   "blurb": "Any picture under 100 KB"
+  },
+  "compress-pdf-to-100kb": {
+   "tool": "pdf-compress",
+   "preset": {
+    "target_kb": 100
+   },
+   "title": "Compress PDF to 100 KB — Reduce PDF Size Under 100KB, Free | Fileutilo",
+   "description": "Get a PDF under 100 KB for an online form, email or portal. Keeps text when it can and finds the best quality that fits. Free and private — no upload.",
+   "h1": "Compress a PDF to 100 KB",
+   "shot": "pdf-compress",
+   "intro": "Upload forms, job portals and banks often accept PDFs only up to 100 KB. Fileutilo first tries lossless clean-up that keeps the text selectable; if that isn’t enough, it turns pages into images at the highest quality that still fits under 100 KB. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF — “Under a size limit” is already chosen with 100 KB.",
+    "Change the limit if your form asks for something else.",
+    "Click Compress and download the PDF that fits."
+   ],
+   "faqs": [
+    [
+     "Will the text still be selectable?",
+     "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."
+    ],
+    [
+     "What if it can’t get under 100 KB?",
+     "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF with Split PDF and compress each part, or upload fewer pages."
+    ]
+   ],
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "related": [
+    "compress-pdf-to-200kb",
+    "pdf-split",
+    "compress-image-to-50kb",
+    "pdf-merge"
+   ],
+   "slug": "compress-pdf-to-100kb",
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "free": false,
+   "name": "Compress a PDF to 100 KB",
+   "blurb": "PDFs under a 100 KB limit"
+  },
+  "compress-pdf-to-500kb": {
+   "tool": "pdf-compress",
+   "preset": {
+    "target_kb": 500
+   },
+   "title": "Compress PDF to 500 KB — Reduce PDF Size Under 500KB, Free | Fileutilo",
+   "description": "Get a PDF under 500 KB for an online form, email or portal. Keeps text when it can and finds the best quality that fits. Free and private — no upload.",
+   "h1": "Compress a PDF to 500 KB",
+   "shot": "pdf-compress",
+   "intro": "Upload forms, job portals and banks often accept PDFs only up to 500 KB. Fileutilo first tries lossless clean-up that keeps the text selectable; if that isn’t enough, it turns pages into images at the highest quality that still fits under 500 KB. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PDF — “Under a size limit” is already chosen with 500 KB.",
+    "Change the limit if your form asks for something else.",
+    "Click Compress and download the PDF that fits."
+   ],
+   "faqs": [
+    [
+     "Will the text still be selectable?",
+     "If clean-up alone gets the file under the limit, yes. Otherwise pages become images, which is what makes big scans small enough — the text then can’t be selected."
+    ],
+    [
+     "What if it can’t get under 500 KB?",
+     "You get the smallest version Fileutilo could make and a message. For long scans, split the PDF with Split PDF and compress each part, or upload fewer pages."
+    ]
+   ],
+   "formats": [
+    "PDF",
+    "PDF"
+   ],
+   "related": [
+    "compress-pdf-to-200kb",
+    "pdf-split",
+    "compress-image-to-50kb",
+    "pdf-merge"
+   ],
+   "slug": "compress-pdf-to-500kb",
+   "limits": [
+    "Strong mode turns pages into images, so text is no longer selectable — use Light for typed documents.",
+    "PDFs that are already optimized may not get smaller; your original is kept in that case."
+   ],
+   "shot_alt": "Compress PDF showing the original size and the smaller compressed size",
+   "free": false,
+   "name": "Compress a PDF to 500 KB",
+   "blurb": "PDFs under a 500 KB limit"
+  },
+  "png-to-jpg": {
+   "tool": "img-convert",
+   "preset": {
+    "target": "jpg"
+   },
+   "title": "PNG to JPG Converter — Convert PNG to JPEG Online, Free | Fileutilo",
+   "description": "Convert PNG images and screenshots to smaller JPG files, with a background colour for transparent areas. Many at once, free, and nothing is uploaded.",
+   "h1": "Convert PNG to JPG",
+   "shot": "img-convert",
+   "intro": "PNG screenshots and graphics can be large, and some forms only accept JPG. Convert them to JPG for a much smaller file that opens everywhere; transparent areas get the background colour you pick. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your PNG images — JPG is already selected.",
+    "Pick the quality and a background colour for any transparent areas.",
+    "Click Convert and download the JPGs, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Why is the JPG smaller?",
+     "JPG is designed for photos and compresses them much more than PNG. For screenshots with lots of text, keep quality high (90+) so the text stays crisp."
+    ],
+    [
+     "What happens to transparency?",
+     "JPG can’t be transparent, so those areas are filled with the background colour you choose — white by default."
+    ]
+   ],
+   "formats": [
+    "PNG (and other image formats)",
+    "JPG"
+   ],
+   "related": [
+    "jpg-to-png",
+    "img-resize",
+    "img-to-pdf",
+    "heic-to-jpg"
+   ],
+   "slug": "png-to-jpg",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "free": false,
+   "name": "PNG to JPG",
+   "blurb": "Smaller files that open everywhere"
+  },
+  "jpg-to-png": {
+   "tool": "img-convert",
+   "preset": {
+    "target": "png"
+   },
+   "title": "JPG to PNG Converter — Convert JPEG to PNG Online, Free | Fileutilo",
+   "description": "Convert JPG photos to PNG for editing, logos and sites that need PNG. No quality is lost in the conversion. Free, many at once, and nothing is uploaded.",
+   "h1": "Convert JPG to PNG",
+   "shot": "img-convert",
+   "intro": "Some apps, editors and upload forms want PNG. Convert JPG and JPEG photos to PNG without any further quality loss — handy before editing, or when a site insists on PNG. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your JPG images — PNG is already selected.",
+    "Add as many as you like.",
+    "Click Convert and download the PNGs, or all of them as a ZIP."
+   ],
+   "faqs": [
+    [
+     "Will converting make my photo better?",
+     "No — PNG keeps exactly what is in the JPG without adding more compression, but it can’t bring back detail the JPG already lost. Expect a bigger file."
+    ],
+    [
+     "Can I make the background transparent?",
+     "Converting doesn’t remove backgrounds; the PNG looks the same as the JPG."
+    ]
+   ],
+   "formats": [
+    "JPG, JPEG (and other image formats)",
+    "PNG"
+   ],
+   "related": [
+    "png-to-jpg",
+    "img-resize",
+    "img-convert",
+    "metadata"
+   ],
+   "slug": "jpg-to-png",
+   "limits": [
+    "WEBP and AVIF saving depend on your browser (Chrome and Edge support both).",
+    "SVG output wraps the picture in an SVG file; it doesn't trace it into vector shapes."
+   ],
+   "shot_alt": "Image converter with JPG chosen as the output format and converted images listed",
+   "free": false,
+   "name": "JPG to PNG",
+   "blurb": "PNG for editors and upload forms"
+  },
+  "image-to-pdf": {
+   "tool": "img-to-pdf",
+   "preset": {},
+   "title": "Image to PDF Converter — JPG, PNG, HEIC to PDF Online | Fileutilo",
+   "description": "Turn photos, scans and screenshots — JPG, PNG, WEBP or HEIC — into one PDF, in the order you choose, with A4 or Letter pages. Free, and nothing is uploaded.",
+   "h1": "Convert images to PDF",
+   "shot": "img-to-pdf",
+   "intro": "Combine photos of documents, receipts or notes into a single PDF that’s easy to email or upload. Put the pictures in order, choose the page size and margins, and download one PDF. Works with iPhone HEIC photos too. Your files are processed inside your browser and are never uploaded to a server.",
+   "steps": [
+    "Drop your pictures — JPG, PNG, WEBP, HEIC and more.",
+    "Drag them into order and choose the page size, orientation and margins.",
+    "Click Create PDF and download it."
+   ],
+   "faqs": [
+    [
+     "Can I put several photos in one PDF?",
+     "Yes — every picture becomes a page, in the order shown. Free use allows 5 files per task."
+    ],
+    [
+     "My PDF is too big to upload — what now?",
+     "Open it in Compress PDF and choose a size limit, or shrink the photos first with Compress image to 100 KB."
+    ]
+   ],
+   "formats": [
+    "JPG, PNG, WEBP, HEIC, GIF, BMP, TIFF",
+    "PDF"
+   ],
+   "related": [
+    "pdf-merge",
+    "compress-pdf-to-200kb",
+    "img-resize",
+    "pdf-compress"
+   ],
+   "slug": "image-to-pdf",
+   "limits": [
+    "HEIC needs a modern browser; if it won't open, convert it to JPG first with the image converter."
+   ],
+   "shot_alt": "Images to PDF with photos in order and page size options",
+   "free": false,
+   "name": "images to PDF",
+   "blurb": "Photos and scans into one PDF"
+  }
+ },
+ "pages": {
+  "pricing": {
+   "title": "Pricing — Free, Pro & Lifetime Plans | Fileutilo",
+   "description": "Use Fileutilo free with 25 tasks a day, or go Pro for no daily limits, no file caps and no ads: ₹149 a month, ₹999 a year, or ₹2,999 once for lifetime access."
+  },
+  "privacy": {
+   "title": "Privacy Policy | Fileutilo",
+   "description": "How Fileutilo handles your data: files are processed in your browser and never uploaded. What we store for accounts, payments and visit statistics."
+  },
+  "terms": {
+   "title": "Terms of Service | Fileutilo",
+   "description": "The terms for using Fileutilo, the private online file tools by Kalaburagi Labs."
+  },
+  "refunds": {
+   "title": "Refund & Cancellation Policy | Fileutilo",
+   "description": "How to cancel a Fileutilo Pro subscription and when refunds are given for plans and credit packs."
+  },
+  "for-business": {
+   "title": "Fileutilo for Business — Private PDF & Office Tools",
+   "description": "Work on contracts, payslips and client files without uploading them. Fileutilo runs in each browser, so no file data reaches our servers."
+  }
+ }
+}

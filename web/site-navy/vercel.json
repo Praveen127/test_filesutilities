@@ -1,0 +1,273 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/convert",
+      "destination": "/document-converter",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-merge",
+      "destination": "/merge-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-split",
+      "destination": "/split-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-organize",
+      "destination": "/organize-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-compress",
+      "destination": "/compress-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-sign",
+      "destination": "/sign-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-edit",
+      "destination": "/edit-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-redact",
+      "destination": "/redact-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-protect",
+      "destination": "/protect-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-unlock",
+      "destination": "/unlock-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-stamp",
+      "destination": "/watermark-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-ocr",
+      "destination": "/ocr",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-to-img",
+      "destination": "/pdf-to-jpg",
+      "permanent": true
+    },
+    {
+      "source": "/img-to-pdf",
+      "destination": "/jpg-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/img-convert",
+      "destination": "/image-converter",
+      "permanent": true
+    },
+    {
+      "source": "/img-resize",
+      "destination": "/image-compressor",
+      "permanent": true
+    },
+    {
+      "source": "/exam-photo",
+      "destination": "/passport-size-photo",
+      "permanent": true
+    },
+    {
+      "source": "/pdf-to-ppt",
+      "destination": "/pdf-to-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-compress",
+      "destination": "/compress-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-to-img",
+      "destination": "/powerpoint-to-jpg",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-images",
+      "destination": "/extract-images-from-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-merge",
+      "destination": "/merge-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/ppt-text",
+      "destination": "/powerpoint-text-and-notes",
+      "permanent": true
+    },
+    {
+      "source": "/json",
+      "destination": "/json-formatter",
+      "permanent": true
+    },
+    {
+      "source": "/json-query",
+      "destination": "/jsonpath-tester",
+      "permanent": true
+    },
+    {
+      "source": "/data-convert",
+      "destination": "/data-converter",
+      "permanent": true
+    },
+    {
+      "source": "/table-clean",
+      "destination": "/csv-cleaner",
+      "permanent": true
+    },
+    {
+      "source": "/hash",
+      "destination": "/checksum-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/word-merge",
+      "destination": "/merge-word",
+      "permanent": true
+    },
+    {
+      "source": "/excel-combine",
+      "destination": "/combine-excel",
+      "permanent": true
+    },
+    {
+      "source": "/find-replace",
+      "destination": "/find-and-replace",
+      "permanent": true
+    },
+    {
+      "source": "/doc-stats",
+      "destination": "/word-counter",
+      "permanent": true
+    },
+    {
+      "source": "/metadata",
+      "destination": "/remove-metadata",
+      "permanent": true
+    },
+    {
+      "source": "/diff",
+      "destination": "/file-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/zip-create",
+      "destination": "/create-zip",
+      "permanent": true
+    },
+    {
+      "source": "/zip-open",
+      "destination": "/zip-extractor",
+      "permanent": true
+    },
+    {
+      "source": "/exam-photo-resizer",
+      "destination": "/passport-size-photo",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/config.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/vendor/(.*)@(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/vendor/(.*).mjs",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/version.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/vendor/manifest.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+{
+ "convert canary.txt → docx": {
+  "headings": 0,
+  "lists": 0,
+  "tables": 0,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → doc": {
+  "tables": 0,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → odt": {
+  "headings": 0,
+  "tables": 0,
+  "lists": 0,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → rtf": {
+  "tables": 0,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → pdf": {
+  "encrypted": false,
+  "pages": 1,
+  "first_page_text": "Title line Kalaburagi is a city in Karnataka. Marker FUCANARY7f3a9q. Second paragraph line.",
+  "images": 0,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → pptx": {
+  "slides": 2,
+  "words": 18,
+  "chars": 130,
+  "coverage": 1
+ },
+ "convert canary.txt → html": {
+  "headings": 0,
+  "tables": 0,
+  "lists": 0,
+  "words": 12,
+  "chars": 96,
+  "coverage": 1
+ },
+ "convert canary.txt → txt": {
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.txt → ps": {
+  "pages": 1,
+  "words": 13,
+  "chars": 91,
+  "coverage": 1
+ },
+ "convert canary.html → docx": {
+  "headings": 1,
+  "lists": 2,
+  "tables": 1,
+  "words": 11,
+  "chars": 64,
+  "coverage": 1
+ },
+ "convert canary.html → doc": {
+  "tables": 1,
+  "words": 13,
+  "chars": 68,
+  "coverage": 1
+ },
+ "convert canary.html → odt": {
+  "headings": 1,
+  "tables": 1,
+  "lists": 2,
+  "words": 11,
+  "chars": 64,
+  "coverage": 1
+ },
+ "convert canary.html → rtf": {
+  "tables": 1,
+  "words": 13,
+  "chars": 68,
+  "coverage": 1
+ },
+ "convert canary.html → pdf": {
+  "encrypted": false,
+  "pages": 1,
+  "first_page_text": "Heading Para with bold FUCANARY7f3a9q • One • Two Alpha Beta 101 202",
+  "images": 0,
+  "words": 13,
+  "chars": 68,
+  "coverage": 1
+ },
+ "convert canary.html → pptx": {
+  "slides": 2,
+  "words": 16,
+  "chars": 108,
+  "coverage": 1
+ },
+ "convert canary.html → html": {
+  "headings": 1,
+  "tables": 1,
+  "lists": 2,
+  "words": 6,
+  "chars": 76,
+  "coverage": 1
+ },
+ "convert canary.html → txt": {
+  "words": 14,
+  "chars": 76,
+  "coverage": 1
+ },
+ "convert canary.html → ps": {
+  "pages": 1,
+  "words": 13,
+  "chars": 72,
+  "coverage": 1
+ },
+ "convert canary.pdf → docx": {
+  "headings": 0,
+  "lists": 0,
+  "tables": 0,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → doc": {
+  "tables": 0,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → odt": {
+  "headings": 0,
+  "tables": 0,
+  "lists": 0,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → rtf": {
+  "tables": 0,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → pdf": {
+  "encrypted": false,
+  "pages": 3,
+  "first_page_text": "Page 1 Body text on page 1. FUCANARY7f3a9q",
+  "images": 0,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → pptx": {
+  "slides": 4,
+  "words": 31,
+  "chars": 181,
+  "coverage": 1
+ },
+ "convert canary.pdf → html": {
+  "headings": 0,
+  "tables": 0,
+  "lists": 0,
+  "words": 20,
+  "chars": 130,
+  "coverage": 1
+ },
+ "convert canary.pdf → txt": {
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.pdf → ps": {
+  "pages": 3,
+  "words": 24,
+  "chars": 128,
+  "coverage": 1
+ },
+ "convert canary.odt → docx": {
+  "headings": 2,
+  "lists": 3,
+  "tables": 1,
+  "words": 35,
+  "chars": 232,
+  "coverage": 1
+ },
+ "convert canary.odt → doc": {
+  "tables": 1,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.odt → odt": {
+  "headings": 2,
+  "tables": 1,
+  "lists": 3,
+  "words": 35,
+  "chars": 232,
+  "coverage": 1
+ },
+ "convert canary.odt → rtf": {
+  "tables": 1,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.odt → pdf": {
+  "encrypted": false,
+  "pages": 1,
+  "first_page_text": "Quarterly report Kalaburagi Labs grew in every region. Marker FUCANARY7f3a9q. Highlights • Revenue up 12% • Two new tools • Faster PDF engine City Users Growth Kalaburagi 1200 8% Bengaluru 5400 15% Se",
+  "images": 0,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.odt → pptx": {
+  "slides": 4,
+  "words": 41,
+  "chars": 283,
+  "coverage": 1
+ },
+ "convert canary.odt → html": {
+  "headings": 2,
+  "tables": 1,
+  "lists": 3,
+  "words": 21,
+  "chars": 224,
+  "coverage": 1
+ },
+ "convert canary.odt → txt": {
+  "words": 40,
+  "chars": 266,
+  "coverage": 1
+ },
+ "convert canary.odt → ps": {
+  "pages": 1,
+  "words": 38,
+  "chars": 244,
+  "coverage": 1
+ },
+ "convert canary.rtf → docx": {
+  "headings": 0,
+  "lists": 3,
+  "tables": 1,
+  "words": 35,
+  "chars": 232,
+  "coverage": 1
+ },
+ "convert canary.rtf → doc": {
+  "tables": 1,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.rtf → odt": {
+  "headings": 0,
+  "tables": 1,
+  "lists": 3,
+  "words": 35,
+  "chars": 232,
+  "coverage": 1
+ },
+ "convert canary.rtf → rtf": {
+  "tables": 1,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.rtf → pdf": {
+  "encrypted": false,
+  "pages": 1,
+  "first_page_text": "Quarterly report Kalaburagi Labs grew in every region. Marker FUCANARY7f3a9q. Highlights • Revenue up 12% • Two new tools • Faster PDF engine City Users Growth Kalaburagi 1200 8% Bengaluru 5400 15% Se",
+  "images": 0,
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.rtf → pptx": {
+  "slides": 4,
+  "words": 44,
+  "chars": 301,
+  "coverage": 1
+ },
+ "convert canary.rtf → html": {
+  "headings": 0,
+  "tables": 1,
+  "lists": 3,
+  "words": 21,
+  "chars": 224,
+  "coverage": 1
+ },
+ "convert canary.rtf → txt": {
+  "words": 38,
+  "chars": 238,
+  "coverage": 1
+ },
+ "convert canary.rtf → ps": {
+  "pages": 1,
+  "words": 38,
+  "chars": 244,
+  "coverage": 1
+ },
+ "convert canary.pptx → docx": {
+  "headings": 3,
+  "lists": 6,
+  "tables": 0,
+  "words": 22,
+  "chars": 104,
+  "coverage": 1
+ },
+ "convert canary.pptx → doc": {
+  "tables": 0,
+  "words": 28,
+  "chars": 116,
+  "coverage": 1
+ },
+ "convert canary.pptx → odt": {
+  "headings": 3,
+  "tables": 0,
+  "lists": 6,
+  "words": 22,
+  "chars": 104,
+  "coverage": 1
+ },
+ "convert canary.pptx → rtf": {
+  "tables": 0,
+  "words": 28,
+  "chars": 116,
+  "coverage": 1
+ },
+ "convert canary.pptx → pdf": {
+  "encrypted": false,
+  "pages": 3,
+  "first_page_text": "Slide 1 title • Point A FUCANARY7f3a9q • Point B 1",
+  "images": 0,
+  "words": 31,
+  "chars": 122,
+  "coverage": 1
+ },
+ "convert canary.pptx → pptx": {
+  "slides": 4,
+  "words": 26,
+  "chars": 136,
+  "coverage": 1
+ },
+ "convert canary.pptx → html": {
+  "headings": 3,
+  "tables": 0,
+  "lists": 6,
+  "words": 15,
+  "chars": 103,
+  "coverage": 1
+ },
+ "convert canary.pptx → txt": {
+  "words": 31,
+  "chars": 158,
+  "coverage": 1
+ },
+ "convert canary.pptx → ps": {
+  "pages": 3,
+  "words": 28,
+  "chars": 128,
+  "coverage": 1
+ },
+ "pdf-merge: merged.pdf": {
+  "pages": 6,
+  "images": 0,
+  "words": 48
+ },
+ "pdf-split: canary_p1_3.pdf": {
+  "pages": 2,
+  "images": 0,
+  "words": 16
+ },
+ "pdf-compress: canary-compressed.pdf": {
+  "pages": 3,
+  "images": 0,
+  "words": 24
+ },
+ "pdf-protect: canary-protected.pdf": {
+  "pages": 3,
+  "images": 0,
+  "words": 24
+ },
+ "pdf-unlock: canary-locked-unlocked.pdf": {
+  "pages": 3,
+  "images": 0,
+  "words": 24
+ },
+ "pdf-stamp: canary-stamped.pdf": {
+  "pages": 3,
+  "images": 0,
+  "words": 54
+ },
+ "img-to-pdf: images.pdf": {
+  "pages": 2,
+  "images": 2,
+  "words": 0
+ },
+ "pdf-organize: canary-organized.pdf": {
+  "pages": 2,
+  "images": 0,
+  "words": 16
+ },
+ "pdf-to-img: canary-p1.png": {
+  "width": 1275,
+  "height": 1650
+ },
+ "pdf-to-img: canary-p2.png": {
+  "width": 1275,
+  "height": 1650
+ },
+ "pdf-to-img: canary-p3.png": {
+  "width": 1275,
+  "height": 1650
+ },
+ "img-convert: canary.jpg": {
+  "width": 640,
+  "height": 360
+ },
+ "img-convert: canary.webp": {
+  "width": 640,
+  "height": 360
+ },
+ "img-resize (under 50 KB): canary-resized.jpg": {
+  "width": 640,
+  "height": 360
+ },
+ "img-resize (1080 px wide): canary-resized.jpg": {
+  "width": 1080,
+  "height": 608
+ },
+ "img-convert (open img.gif): img.png": {},
+ "img-convert (open img.webp): img.png": {},
+ "img-convert (open img.avif): img.png": {},
+ "img-convert (open img.bmp): img.png": {},
+ "img-convert (open img.ico): img.png": {},
+ "img-convert (open img-none.tif): img-none.png": {},
+ "img-convert (open img-lzw.tif): img-lzw.png": {},
+ "img-convert (open img-deflate.tif): img-deflate.png": {},
+ "img-convert (open img-packbits.tif): img-packbits.png": {},
+ "img-convert (open img-gray.tif): img-gray.png": {},
+ "img-convert (open img-palette.tif): img-palette.png": {},
+ "img-convert (open img.svg): img.png": {
+  "width": 320
+ },
+ "img-convert (save as jpg): img-alpha.jpg": {},
+ "img-convert (save as png): img-alpha.png": {},
+ "img-convert (save as webp): img-alpha.webp": {},
+ "img-convert (save as gif): img-alpha.gif": {},
+ "img-convert (save as bmp): img-alpha.bmp": {},
+ "img-convert (save as tiff): img-alpha.tiff": {},
+ "img-convert (save as ico): img-alpha.ico": {
+  "icon_sizes": 7
+ },
+ "img-convert (save as svg): img-alpha.svg": {},
+ "word-merge: merged.docx": {
+  "headings": 3,
+  "lists": 3,
+  "tables": 1,
+  "words": 43
+ },
+ "find-replace: canary.docx": {
+  "headings": 2,
+  "lists": 3,
+  "tables": 1,
+  "words": 35
+ },
+ "zip-create: archive.zip": {
+  "files": 3
+ },
+ "metadata: canary-clean.docx": {},
+ "metadata: canary-clean.pdf": {},
+ "metadata: canary-clean.jpg": {}
+}

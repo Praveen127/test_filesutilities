@@ -1,0 +1,22 @@
+# Supabase CLI settings for Fileutilo. Only the function settings matter here.
+# project_id is just a local label (the CLI requires one); `supabase link` connects the real project.
+project_id = "fileutilo"
+#
+# The platform's built-in JWT check (verify_jwt) only understands Supabase's legacy keys. Projects using the new
+# publishable/secret keys need it off; every function except the webhook checks the signed-in user itself
+# (auth.getUser on the request's token) and rejects the call without one.
+[functions.create-order]
+verify_jwt = false
+
+[functions.verify-payment]
+verify_jwt = false
+
+[functions.cancel-subscription]
+verify_jwt = false
+
+[functions.delete-account]
+verify_jwt = false
+
+[functions.razorpay-webhook]
+# Razorpay calls this URL directly (no user sign-in); requests are authenticated by their HMAC signature instead.
+verify_jwt = false
