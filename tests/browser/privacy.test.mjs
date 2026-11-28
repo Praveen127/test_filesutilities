@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // PRIVACY: proves that file contents never leave the browser.
 // Runs every tool on files that contain a unique marker (CANARY) and inspects every network request the page makes:
 //  - no request may carry the marker (as text, base64, URL-encoded or UTF-16) or a file name, in its URL or body
@@ -55,7 +56,7 @@ await sweep('preview mode', { config: { analytics: true } });   // analytics for
 
 // Accounts switched on (Supabase + Razorpay configured, signed in). supabase-js is replaced by a recording mock
 // unless LIB_MODE=online, so we check the exact arguments the app hands to Supabase for every task.
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const mockRoutes = LIB_MODE === 'online' ? [] : [['supabase-js@2', path.join(here, 'mocks/mock-supabase.js')]];
 const t = await open({ config: { supabaseUrl: 'https://proj.supabase.co', supabaseAnonKey: 'anon', analytics: true }, extraRoutes: mockRoutes });
 if (LIB_MODE !== 'online') {

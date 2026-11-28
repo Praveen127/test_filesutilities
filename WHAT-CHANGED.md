@@ -1,3 +1,158 @@
+# Fileutilo 16.1.4 — open-source licences page (28 November 2026)
+
+**Upload:** `site-navy` as before (SETUP.md, Part F), staging first, then live, with the commit message
+`Fileutilo 16.1.4`. **Round 2 now has a third folder, `legal`** (5 licence texts): drag `about`, `media` and `legal`
+in together. No Supabase or Razorpay changes.
+
+- **New page: `/licenses`, "Open-source licences".** It meets the licence obligations of the libraries the tools use:
+  - a table of every library: name, version, licence (linked to its full text) and a link to its source code, plus
+    what each one includes (for example jsPDF inside html2pdf.js, libheif inside heic2any);
+  - the **GNU LGPL notice** for the HEIC converter (libheif and libde265), with the LGPL and GPL texts;
+  - the **SheetJS attribution** notice its licence asks for;
+  - the full licence texts in `/legal/` (Apache-2.0, MIT, BSD-2-Clause, LGPL-3.0, GPL-3.0) and a note on the fonts.
+- **Kept low-key:** a small "Open-source licences" link at the very bottom of every page's footer, next to the
+  version, and one line in the Terms of Service (SheetJS recommends linking the list from the terms). The page is
+  **noindex** and **not in the sitemap**, so it doesn't appear in Google results. It doesn't say which tool uses
+  which library.
+- **Upgrading a library later:** update its row on this page too (the `licenses` section in `web/index.html`). A new
+  test fails if any library version the app loads isn't listed, so it can't be forgotten.
+- **Tests:** 6 new checks in "seo & site" (noindex, sitemap, footer link on every page, licence texts present, every
+  library version listed, LGPL and SheetJS notices, terms link); the page is also in the accessibility and phone
+  checks. Those caught table links that were too small to tap on phones; they're now at least 24 px tall.
+
+# Fileutilo 16.1.3 — navy name beside the blue logo (28 November 2026)
+
+**Upload:** `site-navy` as before (SETUP.md, Part F), staging first, then live, with the commit message
+`Fileutilo 16.1.3`. Only Rounds 1 and 2 have changes; `vendor` only if you haven't uploaded it yet. No Supabase or
+Razorpay changes.
+
+- **The "Fileutilo" name in the header** is deep navy (#1e3a8a) on light pages and soft blue (#c7d8ff) in dark mode,
+  on the home page, every tool page and the info pages. It was black (white in dark mode). With the blue logo from
+  16.1.2, the icon and name now read as one mark. (`scripts/apply_v1613_wordmark.py`)
+- **Link preview (`og-image.png`):** the name there is the same soft blue. Redrawn with `node scripts\make-icons.mjs`.
+- **Tests:** 1 new check in "seo & site" for the name colour in light and dark mode.
+
+# Fileutilo 16.1.2 — blue logo everywhere (28 November 2026)
+
+**Upload:** `site-navy` as before (SETUP.md, Part F), staging first, then live, with the commit message
+`Fileutilo 16.1.2`. Round 1 now includes two new files, `icon-maskable-192.png` and `icon-maskable-512.png`.
+No Supabase or Razorpay changes; `vendor` only if you haven't uploaded it yet.
+
+- **Header logo = the app icon** on every page: blue gradient (#5b97ff → #2f6fed), white lines, coral dot. It was
+  black on light pages and cream in dark mode; now it stays blue in both. The "Fileutilo" name stays black on light
+  pages and white in dark mode. (`scripts/apply_v1612_logo.py`)
+- **Phone home-screen icons:** the iPhone icon (`apple-touch-icon.png`) and the Android icons are now full-bleed blue,
+  so the home screen shows a clean blue tile instead of a blue square inside a navy one. Desktop install icons are
+  the rounded blue tile on a transparent background, like the browser-tab icon.
+  - `site.webmanifest` lists them separately: `icon-192/512.png` ("any") and `icon-maskable-192/512.png` ("maskable").
+- **Link preview (`og-image.png`)**, shown when someone shares a fileutilo.com link on WhatsApp, LinkedIn and so on:
+  now has the current headline, "Free PDF, image, Word and other Office tools — Your files never leave your device."
+  It still had the old "Your files. Your device. Your control." Sites cache previews, so an already-shared link may
+  show the old image for a few days. LinkedIn's Post Inspector and Facebook's Sharing Debugger can refresh it.
+- **One source for all icons:** `node scripts\make-icons.mjs` draws every icon, `favicon.svg` and the preview image
+  from one logo definition. The PNGs are in the zip; run it only if the logo or headline changes.
+- **Tests:** 2 new checks in "seo & site": the logo is blue on the home page, a tool page and in dark mode, and the
+  manifest has both icon kinds.
+- People who already installed the app keep the old icon until their phone or browser refreshes it, usually within
+  a few days. Removing and re-adding the app updates it at once.
+
+# Fileutilo 16.1.1 — version numbers (28 November 2026)
+
+**Upload:** `site-navy` as before (SETUP.md, Part F), to staging first, then live. No Supabase or Razorpay changes.
+Write `Fileutilo 16.1.1` as the commit message. The `vendor` folder only needs uploading if you haven't yet.
+
+- **One version number, in the `VERSION` file.** The build stamps it everywhere else, so it's never typed twice
+  (SETUP.md, **Part M**).
+  - `/version.json` on the site: version, build time, a fingerprint of the files (same on staging and live for the
+    same build; it leaves out `config.js`), the newest database script and the number of library files.
+  - `<meta name="fileutilo-version">` in every page's head, and "v16.1.1" in small type in the footer, so a
+    customer's screenshot shows which build they had.
+  - The offline cache in `sw.js` is named after the version (`fileutilo-16.1.1-…`).
+  - The zip is named `fileutilo_16.1.1.zip`. The build's last line starts "Fileutilo 16.1.1: built …".
+  - `vercel.json`: `/version.json` is never cached, so it always shows what's live.
+- **AutoQA** prints the tested version at the top of every report (its README, "app version in reports").
+- **SETUP.md corrected:** the second database script (`20261124000000_pro_after_charge.sql`) is now in Part B; paths
+  are `D:\fileutilo_automation\fileutilo_16` and `site-navy`; Part F covers the staging and live repositories, the
+  `config.js` comparison and version commit messages; Part H says `config.js`, not `index.html`.
+- **Tests:** 5 new checks in the "seo & site" suite (version.json, every page stamped, cache name, no-cache header,
+  footer and `/version.json` in the browser). The page change is `scripts/apply_v1611_version.py`.
+
+# Fileutilo 16.1 — libraries on fileutilo.com (27 November 2026)
+
+- **Tests now run on Windows as written.** `npm run test:browser:online` used a Mac/Linux-only way of setting
+  `LIB_MODE`; it now passes `--online` instead. The test scripts also found their own folder in a way that broke on
+  Windows drive letters (`D:\…`); they now use Node's `fileURLToPath`. To run only the Excel checks:
+  `node tests\browser\run-all.mjs --online formats deps`.
+
+**Upload:** first run `node scripts\vendor-libs.mjs` once on a computer with internet (SETUP.md, **Part L**), then
+rebuild and upload `site-navy` as before, plus the new `vendor` folder (Part F, Round 3). No Supabase or Razorpay
+changes. If you skip the script, everything works as in 16.0, except that three libraries (PDF reader, PDF editor,
+ZIP engine) already come from fileutilo.com.
+
+- **Libraries from fileutilo.com first.** The page reads `vendor/manifest.json` and loads each library listed there
+  from fileutilo.com, falling back to cdn.jsdelivr.net and unpkg.com. Files not listed go straight to the CDNs, so
+  there are no failed requests. If the manifest doesn't answer within 5 seconds, the CDNs are used.
+  - Why: tools now work on company networks that block public CDNs, the files can't change underneath you, and the
+    site needs only fileutilo.com for its tools.
+  - `scripts/vendor-libs.mjs` downloads the exact versions, records each file's SHA-256 in `vendor-lock.json`, and
+    refuses any later download that differs. The PDF reader, PDF editor and ZIP engine are already included.
+  - OCR: the engine and English language data come from fileutilo.com too, once downloaded. Other OCR languages and
+    the AVIF encoder still come from the CDN.
+  - The service worker keeps vendored files after the first use, and Vercel caches them for a year (their addresses
+    include the version).
+  - When even the backups fail, the message says "Couldn’t download the PDF editor from fileutilo.com or its backup
+    servers…".
+- **Supabase pinned to 2.104.1** (it loaded "the newest 2.x" before), from fileutilo.com first. To move to a newer
+  version, change `SUPABASE_VER` in `scripts/apply_v161_vendor.py` and the version in `scripts/vendor-libs.mjs`.
+- **SheetJS upgraded from 0.18.5 to 0.20.3**, from SheetJS’s own CDN (cdn.sheetjs.com) — the public npm registry
+  stops at 0.18.5, which has known problems with specially crafted spreadsheet files. **Run the format tests online
+  once after the vendor script** (`npm run test:browser:online`): my sandbox has no copy of SheetJS, so the Excel and
+  CSV checks were skipped here.
+- **Rebuild:** `… && python scripts/apply_v16_fixes.py && python scripts/apply_v161_vendor.py` (already applied).
+- **Tests:** new `tests/browser/vendor.test.mjs` (12 checks): libraries load from fileutilo.com, a blocked CDN doesn't
+  matter, missing files and a silent manifest fall back to the CDNs, and the message when everything fails.
+
+# Fileutilo 16 — Google Drive (27 November 2026)
+
+**Upload:** `site-navy` as before (SETUP.md, Part F). The Google Drive buttons stay hidden until you do the
+20-minute Google setup in SETUP.md, **Part K**, and fill in three new settings in `config.js`: `googleClientId`,
+`googleApiKey`, `googleAppId`. No Supabase or Razorpay changes.
+
+## Google Drive
+- **Choose from Google Drive** appears under every drop area (all PDF, image, Office, data and PowerPoint tools, and
+  the Document converter). It opens Google's own file picker; the chosen files download straight from Google into
+  the browser and land in the tool as if they had been dropped there. One-file tools pick one file; multi-file tools
+  pick several.
+- **Google Docs, Sheets, Slides and Drawings** open as Word, Excel, PowerPoint and PNG files.
+- **Save a copy to Google Drive** is offered for 12 seconds after each download, with an **Open** link once saved.
+- **Privacy:** Fileutilo asks Google only for `drive.file`, which covers just the files a person picks or saves.
+  Files travel between Google and the browser and never pass through Fileutilo's servers, so "your files never leave
+  your device" still holds for everything Fileutilo does. Nothing from Google loads until someone points at, focuses
+  or taps a Google Drive button. The privacy policy has a new *Google Drive* paragraph.
+
+## Fixed after the AutoQA run (27 November)
+The AutoQA run found five places where bad input was handled poorly. Each now has a check in `tests/browser/qa16.test.mjs`.
+- **Unlock PDF:** a damaged file was reported as "This PDF isn’t password-protected". It now says the file is damaged
+  or isn’t a PDF.
+- **Word count, Find & replace and other tools that read text from PDFs:** a damaged or locked PDF showed raw library
+  messages ("Invalid PDF structure.", "No password given"). They now say "This file can’t be opened — it’s damaged or
+  isn’t a PDF" or "This PDF is password-protected — unlock it first", and screen readers announce them.
+- **File comparison:** when a file couldn’t be read, the old text stayed on that side and was compared anyway, which
+  gave a misleading result. Now that side is emptied, a message says which file couldn’t be read, and nothing is
+  compared until it’s replaced — even if the other file loads fine.
+- **Table cleaner:** any file, such as `.xyz`, was opened as if it were CSV. It now refuses anything that isn’t CSV,
+  TSV, text or a spreadsheet, with a message.
+- **Data converter:** the status line said "Read as JSON" even when the JSON was invalid. It now says
+  "Couldn’t convert — …".
+
+## Also fixed
+- **Results on phones:** a result's name was squeezed into a narrow column ("merg / ed.pd / f"). The name and size now
+  sit beside the file icon, with full-width **Download** and **Preview** buttons under them.
+
+- **Rebuild:** `… && python scripts/apply_v15_business.py && python scripts/apply_v16_drive.py &&
+  python scripts/apply_v16_fixes.py` (already applied).
+- **Tests:** new `tests/browser/drive.test.mjs` (20 checks) with a stand-in for Google, so no Google account is needed.
+
 # Fileutilo 15 — new home page and PowerPoint tools (27 November 2026)
 
 Upload the same way (SETUP.md, Part F): `site-navy` in two rounds — 79 top-level files, then the

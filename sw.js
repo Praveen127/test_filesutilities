@@ -1,4 +1,4 @@
-const V='fileutilo-16.1.3-mx0dt5ha';
+const V='fileutilo-16.1.4-mx0gv2z3';
 const SHELL=['./','config.js','site.webmanifest','favicon.svg','favicon.ico','icon-192.png','icon-512.png'];
 const CDN=/^https:\/\/(cdn\.jsdelivr\.net|unpkg\.com|esm\.sh|cdn\.sheetjs\.com|fonts\.googleapis\.com|fonts\.gstatic\.com|tessdata\.projectnaptha\.com)\//;
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});

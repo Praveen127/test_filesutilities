@@ -11,6 +11,10 @@ window.FILEUTILO_CONFIG = {
   contactEmail:    "support@fileutilo.com",
   brandName:       "Kalaburagi Labs",
   analytics:       "auto",        // Vercel Web Analytics: "auto" = on at fileutilo.com and *.vercel.app only, false = off
+  // Google Drive buttons (SETUP.md, Part K). Leave all three empty to hide them.
+  googleClientId:  "",            // OAuth client ID, ends in .apps.googleusercontent.com
+  googleApiKey:    "",            // API key restricted to fileutilo.com and the Google Picker API
+  googleAppId:     "",            // the Google Cloud project NUMBER (digits only)
   ga4Id:           "",            // Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ9" (empty = no Google Analytics)
   // Display prices in rupees. The amounts actually charged live in supabase/functions/_shared/products.ts
   prices: { pro_monthly: 149, pro_yearly: 999, lifetime: 2999, credits_50: 49, credits_250: 199 }

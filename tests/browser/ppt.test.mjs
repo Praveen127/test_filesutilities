@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // POWERPOINT TOOLS: PDF to PowerPoint, Compress, Slides to images, Extract images, Merge, Text & notes — plus the new task pages.
 // Every result is checked outside the browser: python-pptx, the package's own references and content types, LibreOffice, pdf.js.
 import fs from 'node:fs';
@@ -5,7 +6,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { open, FX, OUT, check, summary, waitDone, download } from './lib.mjs';
 let pdfjs; try { pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs'); } catch { pdfjs = await import('/opt/npm-tools/node_modules/pdfjs-dist/legacy/build/pdf.mjs'); }
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const py = (...a) => JSON.parse(execFileSync('python3', [path.join(here, 'validate_ppt.py'), ...a], { encoding: 'utf8', timeout: 300000 }));
 const clean = i => !i.broken_rels.length && !i.missing_ct.length && !i.dup_ids.length;
 const pdfPages = async f => (await pdfjs.getDocument({ data: new Uint8Array(fs.readFileSync(f)), isEvalSupported: false }).promise).numPages;

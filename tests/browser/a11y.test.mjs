@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // ACCESSIBILITY: automated WCAG 2.2 AA checks on every screen, keyboard-only use of the main flows, and the
 // accessibility tree that screen readers read (Chromium's, via the DevTools protocol).
 // What this can't replace: listening with a real screen reader (NVDA, VoiceOver, TalkBack) — see the manual
@@ -6,8 +7,8 @@ import path from 'node:path';
 import { open, check, summary, FX } from './lib.mjs';
 import { DRIVERS } from './drivers.mjs';
 
-const here = path.dirname(new URL(import.meta.url).pathname);
-const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business'];
+const here = path.dirname(fileURLToPath(import.meta.url));
+const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business', 'licenses'];
 const t = await open({ config: { supabaseUrl: 'https://proj.supabase.co', supabaseAnonKey: 'anon' }, extraRoutes: [['supabase-js@2', path.join(here, 'mocks/mock-supabase.js')]] });
 const page = t.page;
 

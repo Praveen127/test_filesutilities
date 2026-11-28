@@ -1,20 +1,23 @@
 # Fileutilo — setup guide (accounts, payments, analytics)
 
-Checked against the Supabase, Google, Razorpay and Vercel dashboards as of 23 November 2026.
+Checked against the Supabase, Google, Razorpay and Vercel dashboards as of 23 November 2026; paths and file names
+updated for Fileutilo 16.1.1 on 28 November 2026. This guide is for setting everything up the first time. **To update
+the live site to a new version, follow the update runbook** ("Fileutilo — Updating fileutilo.com") and Part M below.
 Do the parts in order. Parts A–F take about 1½ hours, plus waiting for Razorpay KYC and your email domain check.
 
 | What | Where it goes |
 |---|---|
-| Everything inside the `site/` folder | Your GitHub repo, at the top level (no `site` folder in GitHub). Vercel publishes it. |
-| `site/config.js` | The website settings (Supabase, live Razorpay key, AdSense, Google Analytics). Edit this one file — every page reads it. |
-| `supabase/migrations/20261121000000_fileutilo.sql` | Supabase → SQL Editor (copy and paste) |
+| Everything inside the `site-navy` folder | Your GitHub repo, at the top level (no `site-navy` folder in GitHub). Vercel publishes it. Staging: `Praveen127/test_filesutilities`; live: `Praveen127/filebench`. |
+| `site-navy/config.js` (from `web/config.js`) | The website settings (Supabase, live Razorpay key, AdSense, Google Analytics). Edit this one file — every page reads it. |
+| `supabase/migrations/*.sql` (two files, oldest first) | Supabase → SQL Editor (copy and paste) |
 | `supabase/functions/` | Supabase Edge Functions, deployed by `deploy-supabase.bat` (Windows) or `deploy-supabase.sh` (Mac) |
 | Razorpay secret keys | Supabase secrets only, set by the same script. **Never** in `index.html` or GitHub. |
 
-Only two keys may appear in `index.html`: the Supabase **publishable** key (`sb_publishable_…`) and the Razorpay
-**Key ID** (`rzp_test_…` / `rzp_live_…`). Both are meant to be public.
+Only public keys may appear in `config.js`: the Supabase **publishable** key (`sb_publishable_…`), the Razorpay
+**Key ID** (`rzp_test_…` / `rzp_live_…`) and, for Google Drive, a browser API key restricted to fileutilo.com.
 
-First, unzip `fileutilo.zip`, for example to `C:\fileutilo`, and install **Node.js LTS** from nodejs.org.
+First, unzip the latest `fileutilo_<version>.zip` to `D:\fileutilo_automation\fileutilo_16` (any folder works; this guide
+uses that one) and install **Node.js LTS** from nodejs.org.
 
 ---
 
@@ -35,12 +38,16 @@ First, unzip `fileutilo.zip`, for example to `C:\fileutilo`, and install **Node.
 
 ## Part B — Database
 
-1. Open `C:\fileutilo\supabase\migrations\20261121000000_fileutilo.sql` in Notepad. Press **Ctrl+A**, then **Ctrl+C**.
+1. Open `D:\fileutilo_automation\fileutilo_16\supabase\migrations\20261121000000_fileutilo.sql` in Notepad. Press **Ctrl+A**, then **Ctrl+C**.
 2. In Supabase: **SQL Editor → New query**. Paste, then click **Run**. If it warns about destructive operations,
    confirm: the script only drops and re-creates its own policies and triggers.
 3. You should see **"Success. No rows returned"**. In **Table Editor** you should see `profiles`, `usage_daily` and `payments`.
+4. Do the same with the second file, `supabase\migrations\20261124000000_pro_after_charge.sql`. It makes Pro start
+   only after the first subscription payment goes through, not when a customer only authorises the mandate.
+   Again you should see **"Success. No rows returned"**.
 
-You can run the script again safely at any time.
+You can run both scripts again safely at any time. `version.json` on the site names the newest script the build
+expects (`database`), so you can tell if Supabase is behind.
 
 ## Part C — Sign-in
 
@@ -120,7 +127,7 @@ Skip for now. It needs an SMS provider plus DLT registration in India (about a w
 
 ## Part E — Payment functions (one script)
 
-1. **Windows:** double-click `C:\fileutilo\deploy-supabase.bat`.
+1. **Windows:** double-click `D:\fileutilo_automation\fileutilo_16\deploy-supabase.bat`.
    **Mac:** open Terminal and run `bash ~/Documents/fileutilo/deploy-supabase.sh` (or wherever you unzipped it).
 2. It asks for: your project ref, the Razorpay Key ID, Key Secret, webhook secret and the two plan IDs.
 3. It then does four steps by itself:
@@ -156,7 +163,7 @@ automatically. The company name on Razorpay's checkout defaults to "Kalaburagi L
 
 The website is the **`site-navy`** folder. It has one page per tool at a
 task-named address (`merge-pdf.html` becomes `www.fileutilo.com/merge-pdf`), eight task pages such as `/word-to-pdf`,
-plus `config.js`, `sw.js` (offline copy), icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
+plus `config.js`, `sw.js` (offline copy), `version.json` (which build this is), icons, `sitemap.xml`, `robots.txt`, `ads.txt`, `vercel.json` and two folders: `about` (help text the
 app loads when you move between tools) and `media` (screenshots and the demo video). All pages share one settings file.
 
 1. Open `site-navy\config.js` in **Notepad** and check the settings:
@@ -168,18 +175,28 @@ app loads when you move between tools) and `media` (screenshots and the demo vid
    ga4Id:           "G-…",            // Google Analytics measurement ID (Part I); "" = off
    ```
    Save.
-2. **GitHub** — GitHub's web upload takes at most 100 files at a time, so upload in two rounds:
+2. **GitHub** — there are two repositories, each connected to its own Vercel project. Upload every new build to
+   **staging** (`Praveen127/test_filesutilities`) first and check it there; upload the same folder to **live**
+   (`Praveen127/filebench`, www.fileutilo.com) only after that. Uploading replaces the live `config.js`, so compare it with
+   the one in `filebench` first and carry over any live setting the new one lacks (for example `ga4Id`).
+   In the **Commit changes** box, write the version as the message, for example `Fileutilo 16.1.1`. Vercel's
+   **Deployments** list shows that message, so you can see which version is live and pick the right one to roll back to.
+   GitHub's web upload takes at most 100 files at a time, so upload in three rounds:
    - **Round 1:** repo → **Add file → Upload files** → open your site folder, select **all the files** at its top level
      (not the two folders) → drag them in → **Commit changes**. About 63 files.
-   - **Round 2:** **Add file → Upload files** again → drag the **`about`** and **`media`** folders in together →
+   - **Round 2:** **Add file → Upload files** again → drag the **`about`**, **`media`** and **`legal`** folders in together →
      **Commit changes**. About 84 files; GitHub keeps the folder names.
    - The hidden `.nojekyll` file is part of round 1. If Windows hides it, turn on **View → Show → Hidden items**.
+   - **Round 3 (Fileutilo 16.1 and later):** drag the **`vendor`** folder in → **Commit changes**. It holds the tool
+     libraries (Part L). Upload it again only when `scripts\vendor-libs.mjs` downloads something new.
 3. **Remove the earlier tool pages** (they used the old addresses). In GitHub, open each and delete it
    (… menu → **Delete file**), or delete them all at once with GitHub Desktop:
    `convert.html`, `pdf-merge.html`, `pdf-split.html`, `pdf-organize.html`, `pdf-compress.html`, `pdf-protect.html`, `pdf-unlock.html`, `pdf-stamp.html`, `pdf-ocr.html`, `pdf-to-img.html`, `img-to-pdf.html`, `img-convert.html`, `img-resize.html`, `json.html`, `json-query.html`, `data-convert.html`, `table-clean.html`, `hash.html`, `word-merge.html`, `excel-combine.html`, `find-replace.html`, `doc-stats.html`, `metadata.html`, `diff.html`, `zip-create.html`, `zip-open.html`.
    On Vercel these addresses also redirect permanently to the new ones (`vercel.json`), so old links keep working.
 4. **Vercel:** nothing to upload. It redeploys within about a minute.
    - Under **Deployments**, the newest entry should say *Ready*.
+   - Open https://www.fileutilo.com/version.json. `version` should be the one you uploaded; the page footer shows it too
+     (small, after "All rights reserved").
    - Open https://www.fileutilo.com/merge-pdf — the tool opens directly, with its own title in the browser tab,
      and the help text, screenshot, formats, FAQs and related tools below it.
    - Open https://www.fileutilo.com/pdf-merge — it should jump to `/merge-pdf`.
@@ -219,7 +236,7 @@ If something fails:
 1. Razorpay: finish KYC, then switch to **Live mode**.
 2. Repeat Part D in live mode: new live keys, the two plans again (live plan IDs differ), and the webhook again.
 3. Run the deploy script again with the live values. It replaces the test secrets.
-4. In `index.html`, set `razorpayKeyId` to `rzp_live_…` and upload it to GitHub again.
+4. In `config.js`, set `razorpayKeyId` to `rzp_live_…` and upload that file to GitHub again.
 
 ---
 
@@ -264,6 +281,111 @@ If something fails:
 5. After 2–4 weeks, check **Performance → Search results** to see which searches show your pages, and
    **Pages** for any that weren't indexed and why. **Experience → Core Web Vitals** shows real-phone loading speed
    once there is enough traffic.
+
+## Part K — Google Drive buttons (optional, about 20 minutes)
+
+This turns on **Choose from Google Drive** under every drop area and **Save a copy to Google Drive** after each
+download. Files go straight between Google and the visitor's browser; they never touch Supabase or Vercel. Fileutilo
+can see only the files a person picks or saves (Google's `drive.file` permission), so Google's long security review
+isn't needed. Until the three settings below are filled in, the buttons stay hidden.
+
+Use the **same Google Cloud project** as Google sign-in (Part C3).
+
+1. **Turn on two APIs.** Google Cloud Console → **APIs & Services → Library**. Search for and **Enable**:
+   - **Google Drive API**
+   - **Google Picker API**
+2. **Add the Drive permission.** **Google Auth Platform → Data Access → Add or remove scopes**. Tick
+   `.../auth/drive.file` ("See, edit, create and delete only the specific Google Drive files you use with this app"),
+   click **Update**, then **Save**.
+3. **Check the client.** **Google Auth Platform → Clients** → open the Web client from Part C3. Under
+   **Authorised JavaScript origins**, make sure both are listed, then **Save**:
+   - `https://www.fileutilo.com`
+   - `https://fileutilo.com`
+
+   Copy its **Client ID** (it ends in `.apps.googleusercontent.com`). The client secret is not needed here and must
+   never go in `config.js`.
+4. **Make an API key.** **APIs & Services → Credentials → Create credentials → API key**. Then click it and set:
+   - **Application restrictions → Websites:** `https://www.fileutilo.com/*` and `https://fileutilo.com/*`
+   - **API restrictions → Restrict key:** tick **Google Picker API** and **Google Drive API**
+   - Click **Save** and copy the key.
+5. **Find the project number.** Click the project name at the top → the **Project number** column (digits only, not
+   the project ID).
+6. **Fill in `config.js`** (in `site-navy`, and in `web` so later builds keep it):
+   ```js
+   googleClientId:  "1234567890-abc123.apps.googleusercontent.com",
+   googleApiKey:    "AIza…",
+   googleAppId:     "1234567890",
+   ```
+   Upload `config.js` to GitHub as in Part F. The client ID, API key and project number are meant to be public in
+   a web page; the website restriction in step 4 stops other sites using the key.
+7. **Test.** Open `https://www.fileutilo.com/merge-pdf` → **Choose from Google Drive** → sign in → pick two PDFs. They
+   appear in the list. Merge them, download, then click **Save a copy to Google Drive** and open the link.
+
+**If something goes wrong**
+- *"Access blocked: this app's request is invalid"* — the site's address is missing from step 3's origins.
+- *"This app is blocked"* or only some people can sign in — **Google Auth Platform → Audience**: the app must be
+  **In production**, not *Testing*.
+- *The picker opens but says "The API developer key is invalid"* — check step 4's restrictions, and wait 5 minutes
+  after saving them.
+- *Nothing happens on click* — the browser blocked the pop-up; allow pop-ups for fileutilo.com and click again.
+- Google may ask to verify your branding (name, logo, domain) because of the new permission. Follow its steps; the
+  buttons keep working for visitors meanwhile, with Google's "unverified app" notice if it applies.
+
+## Part L — Put the tool libraries on fileutilo.com (once, about 5 minutes)
+
+The tools use open-source libraries (PDF reader, Word reader, Excel engine, OCR and so on). Until you do this, they
+download from public CDNs (cdn.jsdelivr.net, unpkg.com, cdn.sheetjs.com) the first time someone uses a tool. With
+them on fileutilo.com:
+- tools work on company networks that block those CDNs;
+- the exact files can never change underneath you (each one's fingerprint is checked);
+- the site talks to fileutilo.com only, which is what the For business page promises.
+
+The CDNs stay as a backup, so nothing breaks if a file is missing.
+
+1. Open a terminal in the project folder (`D:\fileutilo_automation\fileutilo_16`) on a computer with internet.
+2. Run:
+   ```
+   node scripts\vendor-libs.mjs
+   ```
+   It downloads about 30 MB into `web\vendor\`. Each line starts with ✓ (already there), ↓ (downloaded) or ✗ (failed).
+   It ends with "11 of 11 libraries on fileutilo.com, plus OCR engine and English data".
+   - A ✗ line means that file couldn't be downloaded. Run the command again later; that tool keeps working from the
+     CDN meanwhile.
+   - The first run records every file's SHA-256 fingerprint in `web\vendor\vendor-lock.json`. Keep that file. Later
+     runs refuse any file whose content differs, so a changed or tampered copy is never used.
+3. Rebuild the site:
+   ```
+   node scripts\build-site.mjs --brand navy
+   ```
+   It reports "… library files on fileutilo.com" (about 25).
+4. Upload `site-navy` as in Part F, including **Round 3** (the `vendor` folder).
+5. Check: open https://www.fileutilo.com/merge-pdf, press F12 → **Network**, and merge two PDFs. The library line reads
+   `pdf-lib.min.js` from `www.fileutilo.com/vendor/…`, not from cdn.jsdelivr.net.
+
+**To check the files later** without downloading: `node scripts\vendor-libs.mjs --verify` lists any file that is
+missing or changed. **To update a library**, change its version in `scripts\vendor-libs.mjs` (and the matching address in
+`web\index.html`), update its row on the Open-source licences page (the `licenses` section of `web\index.html`),
+run the script, rebuild and upload; the old version's folder can then be deleted.
+
+The AVIF image encoder (Image compressor → AVIF) stays on the CDN: its code loads other packages by CDN address.
+Languages other than English for OCR also still come from the CDN.
+
+## Part M — Version numbers
+
+Each build has one version number, kept in the `VERSION` file at the top of the project (for example `16.1.1`).
+Change it only there; the build stamps it everywhere else.
+
+- **Numbering** (major.minor.patch): **major** for a big release (17 for e-sign), **minor** for new features (16.2),
+  **patch** for fixes only (16.1.2).
+- **Where it shows:** `/version.json` on the site (version, build time, fingerprint, newest database script), the
+  page head (`<meta name="fileutilo-version">`), the footer, the offline cache name in `sw.js`, the zip name and
+  WHAT-CHANGED.md. AutoQA prints it at the top of every report.
+- **Fingerprint:** a short code for the exact files in the build, leaving out `config.js`. The same build shows the
+  same fingerprint on staging and live, so if both say `625ece4b…`, live has exactly what you tested.
+- **Releases (optional):** after a live upload, in `filebench` click **Releases → Draft a new release**, tag it
+  `v16.1.1`, and paste that version's WHAT-CHANGED section. It's a permanent record of every live version.
+- **Is Supabase up to date?** `version.json` → `database` names the newest SQL file in `supabase\migrations`. If you
+  haven't run that file in Supabase yet, run it (Part B).
 
 ## Good to know
 - **On-device extras:** favourites and recent activity live in the visitor's browser (`localStorage`); clearing

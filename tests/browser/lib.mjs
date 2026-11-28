@@ -51,7 +51,8 @@ const CDN = /^https:\/\/(cdn\.jsdelivr\.net|unpkg\.com)\//;
 /**
  * Opens the app in a fresh browser context.
  * opts: viewport, device (Playwright device name), config (object merged into FILEUTILO_CONFIG),
- *       blockCdn (fail every CDN request), extraRoutes [[urlSubstring, filePath]], hasTouch
+ *       blockCdn (fail every CDN request), extraRoutes [[urlSubstring, filePath]], hasTouch,
+ *       noVendor (as if web/vendor/ were empty), vendorMissing [path parts that 404], vendorHang (manifest never answers)
  */
 export async function open(opts = {}) {
   const browser = await pw.chromium.launch();
@@ -70,6 +71,13 @@ export async function open(opts = {}) {
       if (p === '/config.js') return route.fulfill({ body: 'window.FILEUTILO_CONFIG = {};', contentType: 'text/javascript' });
       if (p === '/_vercel/insights/script.js') return route.fulfill({ path: path.join(here, 'mocks/mock-vercel-insights.js'), contentType: 'text/javascript' });
       if (p === '/_vercel/insights/view') return route.fulfill({ status: 200, body: 'OK' });
+      // libraries on fileutilo.com itself (web/vendor/, filled by scripts/vendor-libs.mjs); opts.noVendor hides them
+      if (p.startsWith('/vendor/')) {
+        const f = path.join(ROOT, 'web', decodeURIComponent(p));
+        if (opts.noVendor || (opts.vendorMissing || []).some(x => p.includes(x)) || !f.startsWith(path.join(ROOT, 'web', 'vendor')) || !fs.existsSync(f)) return route.fulfill({ status: 404, body: 'not found' });
+        if (opts.vendorHang && p === '/vendor/manifest.json') { await new Promise(r => setTimeout(r, 60000)); return route.abort('timedout').catch(() => {}); }
+        return route.fulfill({ path: f, contentType: /\.m?js$/.test(f) ? 'text/javascript' : /\.json$/.test(f) ? 'application/json' : 'application/octet-stream' });
+      }
       return route.fulfill({ status: 404, body: 'not found' });
     }
     for (const [k, f] of opts.extraRoutes || []) if (u.includes(k)) return route.fulfill({ path: f, contentType: 'text/javascript', headers: { 'Access-Control-Allow-Origin': '*' } });

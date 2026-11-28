@@ -11,6 +11,9 @@ Automated checks for the Fileutilo web app (`web/index.html`), run in a real Chr
 | Accessibility | `a11y.test.mjs` | WCAG 2.2 AA rule checks on every screen (names, labels, alt text, IDs, headings, contrast in light and dark mode, live regions, progress bars). Also keyboard-only flows (skip link, focus ring, pick → run → download, dialogs, reordering, page thumbnails) and the screen-reader accessibility tree. |
 | PowerPoint | `ppt.test.mjs` + `validate_ppt.py` | Runs PDF to PowerPoint, Compress, PowerPoint to JPG, Extract images, Merge and Text & notes. Every result is opened with python-pptx, every internal reference and content type is checked, LibreOffice renders it, and the 9 new task pages open the right tool and setting. Fixtures: `python make_fixtures_ppt.py`. |
 | Home page | `home.test.mjs` | Search (typing, arrows, Enter, Escape), the global and India popular tasks, all tiles in the seven job groups, stars and favourites, signed-in vs signed-out views, footer, header, and the phone layout. |
+| Google Drive | `drive.test.mjs` | With a stand-in for Google: buttons hidden until set up, nothing loads from Google before a click, picking files into Merge and the Document converter, Google Docs opened as Word, cancel and refused sign-in, saving a result to Drive, and the phone layout. |
+| AutoQA fixes | `qa16.test.mjs` | Bad input is refused clearly: Unlock PDF on a damaged file, Word count on damaged and locked PDFs, File comparison with an unreadable file, Table cleaner with a non-spreadsheet file, Data converter with invalid JSON. |
+| Libraries from fileutilo.com | `vendor.test.mjs` | Libraries load from `web/vendor/` first; tools still work when the CDNs are blocked; no vendored files, a missing file or a silent manifest fall back to the CDNs; the message when everything fails; Supabase pinned; SheetJS 0.20.3. |
 | Accounts | `accounts.test.mjs` | Sign-in, limits, credits, Razorpay checkout, subscriptions and the account panel, against recording mocks. |
 
 ## Running
@@ -23,6 +26,7 @@ pip install pypdf python-docx odfpy python-pptx openpyxl pillow lxml   # for the
 
 npm run test:fixtures           # creates the sample files (once)
 npm run test:browser:online     # everything, with the real CDNs (recommended)
+node tests\browser\run-all.mjs --online formats deps   # only some suites, with the real CDNs
 npm run test:browser            # offline: libraries come from node_modules; tools needing missing ones are skipped
 node tests/browser/run-all.mjs privacy a11y    # just some suites
 ```

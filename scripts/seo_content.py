@@ -254,6 +254,7 @@ PAGES = {
 "privacy": {"title": "Privacy Policy | Fileutilo", "description": "How Fileutilo handles your data: files are processed in your browser and never uploaded. What we store for accounts, payments and visit statistics."},
 "terms": {"title": "Terms of Service | Fileutilo", "description": "The terms for using Fileutilo, the private online file tools by Kalaburagi Labs."},
 "refunds": {"title": "Refund & Cancellation Policy | Fileutilo", "description": "How to cancel a Fileutilo Pro subscription and when refunds are given for plans and credit packs."},
+"licenses": {"title": "Open-source licences | Fileutilo", "description": "The open-source software Fileutilo uses, with versions, licences and where to get the source code."},
 "for-business": {"title": "Fileutilo for Business — Private PDF & Office Tools", "description": "Work on contracts, payslips and client files without uploading them. Fileutilo runs in each browser, so no file data reaches our servers."},
 }
 

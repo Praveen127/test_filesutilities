@@ -1,9 +1,12 @@
+import { fileURLToPath } from 'node:url';
 // Runs every browser test suite and prints one summary.   npm run test:browser
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
-const here = path.dirname(new URL(import.meta.url).pathname);
-const SUITES = ['privacy', 'deps', 'formats', 'mobile', 'a11y', 'accounts', 'seo', 'return', 'pe', 'ppt', 'home'];
-const only = process.argv.slice(2);
+const here = path.dirname(fileURLToPath(import.meta.url));
+const SUITES = ['privacy', 'deps', 'formats', 'mobile', 'a11y', 'accounts', 'seo', 'return', 'pe', 'ppt', 'home', 'drive', 'qa16', 'vendor'];
+// --online: let the tests use the real CDNs (same as LIB_MODE=online, but works in the Windows Command Prompt too)
+if (process.argv.includes('--online')) process.env.LIB_MODE = 'online';
+const only = process.argv.slice(2).filter(a => !a.startsWith('--'));
 const rows = []; let failed = false;
 for (const s of SUITES.filter(s => !only.length || only.includes(s))) {
   console.log(`\n=== ${s} ===`);

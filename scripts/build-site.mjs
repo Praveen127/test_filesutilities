@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (k, d) => { const i = process.argv.indexOf('--' + k); return i > 0 ? process.argv[i + 1] : d; };
@@ -15,10 +16,15 @@ const WEB = path.join(ROOT, 'web'), OUT = path.resolve(ROOT, arg('out', 'site-' 
 const THEME_COLOR = { navy: '#101a33', green: '#064b40' }[BRAND];
 const ORIGIN = 'https://www.fileutilo.com';
 const TODAY = new Date().toISOString().slice(0, 10);
-const BUILD = Date.now().toString(36);
+// The release number lives in the VERSION file only (major.minor.patch); everything below is stamped from it.
+const VERSION = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim();
+if (!/^\d+\.\d+\.\d+$/.test(VERSION)) throw new Error(`VERSION must look like 16.1.1, not "${VERSION}"`);
+const BUILD = VERSION + '-' + Date.now().toString(36);
 
 const source = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
 let src = source;
+src = src.replace('<meta name="fileutilo-version" content="dev">', `<meta name="fileutilo-version" content="${VERSION}">`)
+  .replace('<span data-fu-ver>dev</span>', `<span data-fu-ver>${VERSION}</span>`);
 const seo = JSON.parse(fs.readFileSync(path.join(WEB, 'seo.json'), 'utf8'));
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonLd = o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
@@ -164,15 +170,29 @@ for (const k of [...TOOLS, ...VARS]) write(slug(k) + '.html', page(k));
 // help text on its own, for in-app navigation between tools (the app fetches it, a few KB each)
 fs.mkdirSync(path.join(OUT, 'about'));
 for (const k of [...TOOLS, ...VARS]) write('about/' + slug(k) + '.html', about(k, meta(k)));
-for (const p of PAGES) write(p + '.html', page(p));
+// pages only for people, never for search results: noindex and left out of the sitemap
+const HIDDEN = new Set(['licenses']);
+for (const p of PAGES) write(p + '.html', page(p, { noindex: HIDDEN.has(p) }));
+// full licence texts the licences page links to (web/legal/*.txt)
+if (fs.existsSync(path.join(WEB, 'legal'))) { fs.mkdirSync(path.join(OUT, 'legal')); for (const f of fs.readdirSync(path.join(WEB, 'legal'))) write('legal/' + f, fs.readFileSync(path.join(WEB, 'legal', f))); }
 write('404.html', page('home', { noindex: true }));
 write('config.js', fs.readFileSync(path.join(WEB, 'config.js')));
 for (const d of [path.join(WEB, 'static-' + BRAND)]) if (fs.existsSync(d)) for (const f of fs.readdirSync(d)) write(f, fs.readFileSync(path.join(d, f)));
 const media = path.join(WEB, 'media-' + BRAND);
 if (fs.existsSync(media)) { fs.mkdirSync(path.join(OUT, 'media')); for (const f of fs.readdirSync(media)) if (f !== 'shots.json') write('media/' + f, fs.readFileSync(path.join(media, f))); }
 if (fs.existsSync(path.join(WEB, 'ads.txt'))) write('ads.txt', fs.readFileSync(path.join(WEB, 'ads.txt')));
+// Libraries served from fileutilo.com itself (scripts/vendor-libs.mjs fills web/vendor/). The lock file stays behind.
+const VENDOR = path.join(WEB, 'vendor');
+let vendored = 0;
+if (fs.existsSync(VENDOR)) (function copy(rel) {
+  for (const e of fs.readdirSync(path.join(VENDOR, rel), { withFileTypes: true })) {
+    const r = rel ? rel + '/' + e.name : e.name;
+    if (e.isDirectory()) { fs.mkdirSync(path.join(OUT, 'vendor', r), { recursive: true }); copy(r); }
+    else if (e.name !== 'vendor-lock.json') { fs.mkdirSync(path.join(OUT, 'vendor'), { recursive: true }); write('vendor/' + r, fs.readFileSync(path.join(VENDOR, r))); vendored++; }
+  }
+})('');
 
-const keys = ['home', ...TOOLS, ...VARS, ...PAGES];
+const keys = ['home', ...TOOLS, ...VARS, ...PAGES.filter(p => !HIDDEN.has(p))];
 const prio = k => k === 'home' ? '1.0' : seo.pages[k] ? (k === 'pricing' || k === 'for-business' ? '0.6' : '0.3') : seo.variants[k] ? '0.7' : '0.8';
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -185,7 +205,7 @@ ${keys.map(k => `  <url><loc>${url(k)}</loc><lastmod>${TODAY}</lastmod><priority
 // Never touched: sign-in, payments, analytics and ads (they always go to the network).
 write('sw.js', `const V='fileutilo-${BUILD}';
 const SHELL=['./','config.js','site.webmanifest','favicon.svg','favicon.ico','icon-192.png','icon-512.png'];
-const CDN=/^https:\\/\\/(cdn\\.jsdelivr\\.net|unpkg\\.com|esm\\.sh|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|tessdata\\.projectnaptha\\.com)\\//;
+const CDN=/^https:\\/\\/(cdn\\.jsdelivr\\.net|unpkg\\.com|esm\\.sh|cdn\\.sheetjs\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|tessdata\\.projectnaptha\\.com)\\//;
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('fileutilo-')&&k!==V&&k!=='fileutilo-libs').map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function fresh(req){const c=await caches.open(V);try{const r=await fetch(req);if(r.ok)c.put(req,r.clone());return r}
@@ -196,9 +216,10 @@ self.addEventListener('fetch',e=>{const req=e.request;if(req.method!=='GET')retu
   if(u.origin===location.origin){
     if(req.mode==='navigate'||/\\/config\\.js$/.test(u.pathname))return e.respondWith(fresh(req));
     if(/\\.(webm|mp4)$/.test(u.pathname))return;
+    if(/^\\/vendor\\/.+@/.test(u.pathname))return e.respondWith(lib(req));   // versioned library files: keep once fetched
     if(/\\/(about|media)\\/|\\.(png|ico|svg|webp|webmanifest)$/.test(u.pathname))return e.respondWith(swr(req));
     return}
-  if(CDN.test(req.url)&&!u.pathname.includes('@supabase'))e.respondWith(lib(req))});
+  if(CDN.test(req.url))e.respondWith(lib(req))});   // every library address carries an exact version
 `);
 write('.nojekyll', '');   // GitHub Pages: serve files as they are
 // Addresses that were live and then renamed: Vercel redirects them (vercel.json below); for hosts without
@@ -215,7 +236,25 @@ write('vercel.json', JSON.stringify({
     ...Object.entries(RENAMED).map(([f, t]) => ({ source: '/' + f, destination: '/' + t, permanent: true }))],
   headers: [{ source: '/config.js', headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }] },
     { source: '/sw.js', headers: [{ key: 'Cache-Control', value: 'no-cache' }, { key: 'Service-Worker-Allowed', value: '/' }] },
-    { source: '/media/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=604800' }] }],
+    { source: '/media/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=604800' }] },
+    // library files carry their version in the address, so they never change
+    { source: '/vendor/(.*)@(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }, { key: 'Access-Control-Allow-Origin', value: '*' }] },
+    { source: '/vendor/(.*).mjs', headers: [{ key: 'Content-Type', value: 'text/javascript; charset=utf-8' }] },
+    { source: '/version.json', headers: [{ key: 'Cache-Control', value: 'no-cache' }, { key: 'Access-Control-Allow-Origin', value: '*' }] },
+    { source: '/vendor/manifest.json', headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }] }],
 }, null, 2) + '\n');
 
-console.log(`Built ${files.length} files into ${path.relative(process.cwd(), OUT) || OUT} (${keys.length} pages in the sitemap)`);
+// version.json: what this upload is. Open https://www.fileutilo.com/version.json to see what's live.
+// The fingerprint leaves out config.js and sw.js, so staging and live show the same fingerprint for the same build.
+{
+  const h = crypto.createHash('sha256');
+  for (const f of [...files].sort()) if (f !== 'sw.js' && f !== 'config.js') { h.update(f + '\0'); h.update(fs.readFileSync(path.join(OUT, f))); h.update('\0'); }
+  const mig = fs.existsSync(path.join(ROOT, 'supabase', 'migrations')) ? fs.readdirSync(path.join(ROOT, 'supabase', 'migrations')).filter(f => f.endsWith('.sql')).sort() : [];
+  write('version.json', JSON.stringify({
+    version: VERSION, built: new Date().toISOString(), fingerprint: h.digest('hex').slice(0, 16),
+    database: mig.length ? mig[mig.length - 1].replace(/\.sql$/, '') : null,
+    libraries: vendored,
+  }, null, 2) + '\n');
+}
+
+console.log(`Fileutilo ${VERSION}: built ${files.length} files into ${path.relative(process.cwd(), OUT) || OUT} (${keys.length} pages in the sitemap, ${vendored} library files on fileutilo.com)`);

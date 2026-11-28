@@ -56,7 +56,9 @@ const info = page => page.evaluate(() => {
 const meta = k => seo.tools[k] || seo.variants[k] || seo.pages[k];
 const slug = k => k === 'home' ? '' : seo.variants[k] ? k : (seo.tools[k] && seo.tools[k].slug) || k;
 const toolOf = k => seo.variants[k] ? seo.variants[k].tool : k;
-const ids = ['home', ...Object.keys(seo.tools).filter(t => t !== 'home'), ...Object.keys(seo.variants), ...Object.keys(seo.pages)];
+// pages meant for search; the licences page is for people only (noindex, not in the sitemap) and is checked further down
+const NOT_FOR_SEARCH = new Set(['licenses']);
+const ids = ['home', ...Object.keys(seo.tools).filter(t => t !== 'home'), ...Object.keys(seo.variants), ...Object.keys(seo.pages).filter(p => !NOT_FOR_SEARCH.has(p))];
 const bad = [], thin = [];
 let t = await openSite('/');
 for (const id of ids) {
@@ -187,6 +189,70 @@ check(events.some(([n, p]) => n === 'tool_use' && p.tool_id === 'pdf-merge'), 'r
 check(!/canary|\.pdf/i.test(dl), 'analytics data never contains file names', dl.length + ' bytes checked');
 check(!t.errors.length, 'no script errors with analytics on', t.errors.join(' | '));
 await t.ctx.close();
+
+// Version stamps (16.1.1): one number from the VERSION file, on every page, in version.json and the offline cache name
+{
+  const VER = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim();
+  const vj = JSON.parse(fs.readFileSync(path.join(SITE, 'version.json'), 'utf8'));
+  check(vj.version === VER && /^[0-9a-f]{16}$/.test(vj.fingerprint) && !isNaN(Date.parse(vj.built)) && /^\d{14}_/.test(vj.database || ''),
+    'version.json gives the version, build time, fingerprint and latest database script', JSON.stringify(vj));
+  const pages = fs.readdirSync(SITE).filter(f => f.endsWith('.html'));
+  const unstamped = pages.filter(f => { const h = fs.readFileSync(path.join(SITE, f), 'utf8'); return h.includes('<footer') && !(h.includes(`content="${VER}"`) && h.includes(`data-fu-ver>${VER}<`)); });
+  check(!unstamped.length, `every page carries v${VER} in its head and footer`, unstamped.slice(0, 5).join(', '));
+  check(fs.readFileSync(path.join(SITE, 'sw.js'), 'utf8').startsWith(`const V='fileutilo-${VER}-`), 'the offline cache is named after the version');
+  const vc = JSON.parse(fs.readFileSync(path.join(SITE, 'vercel.json'), 'utf8'));
+  check(vc.headers.some(h => h.source === '/version.json' && h.headers.some(x => x.value === 'no-cache')), 'version.json is never cached, so it always shows what is live');
+  const vt = await openSite('/merge-pdf'); const vp = vt.page;
+  const foot = await vp.locator('footer .fver').innerText();
+  const live = await vp.evaluate(() => fetch('/version.json').then(r => r.json()));
+  check(foot === 'v' + VER && live.version === VER, 'the footer shows the version and /version.json answers', foot + ' · ' + live.version);
+  await vt.ctx.close();
+}
+
+// Logo (16.1.2): the header logo is the app icon — blue gradient, white lines — on every view and in dark mode
+{
+  const lt = await openSite('/');
+  const logo = () => lt.page.evaluate(() => { const c = getComputedStyle(document.querySelector('.brand .logo')); return c.backgroundImage + ' | ' + c.color; });
+  const seen = [await logo()];
+  await lt.page.goto('https://www.fileutilo.com/merge-pdf'); await lt.page.waitForTimeout(300); seen.push(await logo());
+  await lt.page.emulateMedia({ colorScheme: 'dark' }); await lt.page.waitForTimeout(200); seen.push(await logo());
+  check(seen.every(v => v.includes('rgb(91, 151, 255)') && v.includes('rgb(47, 111, 237)') && v.endsWith('rgb(255, 255, 255)')),
+    'header logo is the blue app icon on the home page, a tool page and in dark mode', seen.join(' ; '));
+  // 16.1.3: the name beside it is deep navy on light pages and soft blue in dark mode
+  const nameCol = () => lt.page.evaluate(() => getComputedStyle(document.querySelector('.brand .bname')).color);
+  const darkName = await nameCol(); await lt.page.emulateMedia({ colorScheme: 'light' }); await lt.page.waitForTimeout(200);
+  const lightTool = await nameCol(); await lt.page.goto('https://www.fileutilo.com/'); await lt.page.waitForTimeout(300);
+  const lightHome = await nameCol();
+  check(lightHome === 'rgb(30, 58, 138)' && lightTool === 'rgb(30, 58, 138)' && darkName === 'rgb(199, 216, 255)',
+    'the Fileutilo name is deep navy on light pages and soft blue in dark mode', [lightHome, lightTool, darkName].join(' ; '));
+  await lt.ctx.close();
+  const mf = JSON.parse(fs.readFileSync(path.join(SITE, 'site.webmanifest'), 'utf8'));
+  check(mf.icons.some(i => i.purpose === 'any') && mf.icons.filter(i => i.purpose === 'maskable').length === 2 && mf.icons.every(i => fs.existsSync(path.join(SITE, i.src))),
+    'install icons: a rounded one for desktops and full-bleed ones for Android home screens', mf.icons.map(i => i.src + ' ' + i.purpose).join(', '));
+}
+
+// Open-source licences page (16.1.4): for people, not search; linked from every footer; lists every library version
+{
+  const lic = fs.readFileSync(path.join(SITE, 'licenses.html'), 'utf8');
+  const sm = fs.readFileSync(path.join(SITE, 'sitemap.xml'), 'utf8');
+  check(lic.includes('<meta name="robots" content="noindex">') && !/rel="canonical"/.test(lic.split('</head>')[0]) && !sm.includes('/licenses<'),
+    'licences page is noindex and left out of the sitemap');
+  const pages = fs.readdirSync(SITE).filter(f => f.endsWith('.html'));
+  const nolink = pages.filter(f => { const h = fs.readFileSync(path.join(SITE, f), 'utf8'); return h.includes('<footer') && !h.includes('class="flic" href="licenses"'); });
+  check(!nolink.length, 'every page links "Open-source licences" from its footer', nolink.slice(0, 5).join(', '));
+  const sec = lic.slice(lic.indexOf('<section id="licenses"'), lic.indexOf('</section>', lic.indexOf('<section id="licenses"')));
+  const texts = [...sec.matchAll(/href="legal\/([^"]+)"/g)].map(m => m[1]);
+  const missing = [...new Set(texts)].filter(f => !fs.existsSync(path.join(SITE, 'legal', f)));
+  check(texts.length >= 5 && !missing.length, 'every licence text the page links is on the site', missing.join(', ') || [...new Set(texts)].join(', '));
+  // every library version the app loads must be on the page, so an upgrade can't leave it out of date
+  const app = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  const vers = new Set([...app.matchAll(/(?:npm\/(?:@[\w.-]+\/)?[\w.-]+@|xlsx-)(\d+\.\d+\.\d+)/g)].map(m => m[1]));
+  const absent = [...vers].filter(v => !sec.includes('<td>' + v + '</td>'));
+  check(vers.size >= 10 && !absent.length, `all ${vers.size} library versions the app loads are listed`, absent.join(', ') || [...vers].join(' '));
+  check(sec.includes('GNU Lesser General Public License') && sec.includes('Copyright (C) 2012-present SheetJS LLC'), 'the LGPL notice and the SheetJS attribution are on the page');
+  const terms = fs.readFileSync(path.join(SITE, 'terms.html'), 'utf8');
+  check(terms.includes('<a href="licenses">Open-source licences</a>'), 'the terms link to the licences page');
+}
 
 await browser.close();
 summary('seo & site');

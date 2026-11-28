@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // MOBILE: emulates phones and a tablet (screen size, pixel density, touch, mobile browser) and checks every screen:
 //  - nothing is wider than the screen (no sideways scrolling) on any tool or page
 //  - buttons and links are big enough to tap (at least 24×24 px, WCAG 2.2; most should be 44×44)
@@ -10,11 +11,11 @@ import { DRIVERS } from './drivers.mjs';
 
 const DEVICES = ['iPhone SE', 'iPhone 13', 'Pixel 7', 'Galaxy S9+', 'iPad Mini', 'iPhone 13 landscape'];
 const shots = path.join(OUT, 'mobile'); fs.mkdirSync(shots, { recursive: true });
-const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business'];
+const ROUTES = ['home', ...DRIVERS.map(d => d.id), 'pricing', 'privacy', 'terms', 'refunds', 'for-business', 'licenses'];
 
 for (const dev of DEVICES) {
   const t = await open({ device: dev, config: { supabaseUrl: 'https://proj.supabase.co', supabaseAnonKey: 'anon' },
-    extraRoutes: [['supabase-js@2', path.join(path.dirname(new URL(import.meta.url).pathname), 'mocks/mock-supabase.js')]] });
+    extraRoutes: [['supabase-js@2', path.join(path.dirname(fileURLToPath(import.meta.url)), 'mocks/mock-supabase.js')]] });
   const vw = t.page.viewportSize().width;
   const overflow = [], tiny = [], small = [], smallText = [], clipped = [];
   for (const r of ROUTES) {

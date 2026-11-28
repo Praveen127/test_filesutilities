@@ -13,7 +13,7 @@ const msgOf = (t, id) => t.page.$eval('#' + id, s => ((s.querySelector('.side .m
 const withLibs = DRIVERS.filter(d => d.libs.length && !d.libs.includes('Tesseract') && d.libs.every(hasLib));
 
 // 1) CDN blocked → friendly error, then retry succeeds
-let t = await open({ init: 'window.FU_LIB_TIMEOUT=8000' });
+let t = await open({ init: 'window.FU_LIB_TIMEOUT=8000', noVendor: true });
 for (const d of withLibs) {
   if (d.id === 'convert') continue;
   t.state.blockCdn = true;
@@ -42,7 +42,7 @@ check(!t.errors.length, 'no script errors during failures', t.errors.join(' / ')
 await t.close();
 
 // 2) jsDelivr blocked → backup CDN (unpkg.com) is used
-t = await open();
+t = await open({ noVendor: true });
 t.state.blockHost = /cdn\.jsdelivr\.net/;
 const merge = DRIVERS.find(d => d.id === 'pdf-merge');
 const out = await merge.run(t);
@@ -55,7 +55,7 @@ check(/Download/.test(out2) && worker, 'pdf.js worker also comes from the backup
 await t.close();
 
 // 3) hanging download → gives up after the time limit with a message
-t = await open({ init: 'window.FU_LIB_TIMEOUT=2500' });
+t = await open({ init: 'window.FU_LIB_TIMEOUT=2500', noVendor: true });
 t.state.hang = true;
 const t0 = Date.now();
 await t.go('pdf-merge'); await t.add('pdf-merge', ['canary.pdf', 'canary.pdf']); await t.page.click('#pdf-merge .run');
@@ -64,7 +64,7 @@ check(Date.now() - t0 < 15000, 'a download that never finishes stops after the t
 await t.close();
 
 // 4) device offline → says so
-t = await open();
+t = await open({ noVendor: true });
 t.state.blockCdn = true; await t.ctx.setOffline(true);
 await t.go('pdf-merge'); await t.add('pdf-merge', ['canary.pdf', 'canary.pdf']); await t.page.click('#pdf-merge .run');
 await t.page.waitForFunction(() => /offline/.test(document.querySelector('#pdf-merge .side .msg').textContent), null, { timeout: 30000 });

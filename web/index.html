@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="fileutilo-version" content="dev">
 <meta name="google-adsense-account" content="ca-pub-9678463082871615">
 <!--seo:start-->
 <title>Fileutilo — Free Online PDF, Image &amp; Document Tools (Private)</title>
@@ -669,7 +670,7 @@ footer .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1f
 footer .fcols h2{font:700 14px Inter,sans-serif;margin:0 0 8px;color:var(--ink)}footer .fcols p{margin:0 0 6px;font-size:14px;line-height:1.55;color:var(--mute)}
 footer .fcols a{color:var(--green2)}footer .fcols .flegal{display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:14px}
 footer .fbrand{font:800 18px 'Inter Tight',Inter,sans-serif;color:var(--ink);display:block;margin-bottom:6px}
-footer .fbottom{border-top:1px solid var(--line);padding-top:16px;max-width:1100px;margin:0 auto}
+footer .fbottom{border-top:1px solid var(--line);padding-top:16px;max-width:1100px;margin:0 auto}footer .fver{opacity:.75;font-size:12px;white-space:nowrap}
 @media(max-width:720px){.jgroup{grid-template-columns:minmax(0,1fr);gap:12px}.mgrid.mine2{grid-template-columns:minmax(0,1fr)}.hsearch input{font-size:16px}}
 
 /*look-v15*/
@@ -682,7 +683,7 @@ footer .fbottom{border-top:1px solid var(--line);padding-top:16px;max-width:1100
 :root[data-view=home] .hero .scene,:root[data-view=home] #catnav,:root[data-view=home] .brand .pbadge{display:none}
 :root[data-view=home] .top,:root[data-view=home] .heroin{max-width:1200px}:root[data-view=home] .heroin{grid-template-columns:minmax(0,1fr)}
 :root[data-view=home] .brand{margin-bottom:46px;min-height:46px}
-:root[data-view=home] .logo{width:40px;height:40px;border-radius:11px;background:light-dark(#1a1a1a,#f2efe8);color:light-dark(#fff,#1a1a1a);box-shadow:none}
+:root[data-view=home] .logo{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,#5b97ff,#2f6fed);color:#fff;box-shadow:0 4px 12px -4px rgba(47,111,237,.55)}
 :root[data-view=home] .brand .bname{color:var(--ink);font:700 22px Outfit,'Inter Tight',sans-serif}
 .hbadge{display:none}
 :root[data-view=home] .hbadge{display:inline-block;font:700 13px Outfit,Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;
@@ -761,7 +762,7 @@ footer .linkb{color:#f0ece4}footer .tool-links{color:#bdb8ad;max-width:1100px;ma
 :root:is([data-view=tool],[data-view=page]) #catnav a:not([data-cat=home]){display:none}   /* only the Home tab, to go back to the home page */
 :root:is([data-view=tool],[data-view=page]) #catnav{margin-top:6px}:root:is([data-view=tool],[data-view=page]) #catnav a[data-cat=home]{flex:0 0 auto;min-width:150px}
 :root:is([data-view=tool],[data-view=page]) .brand{margin-bottom:30px;min-height:46px}
-:root:is([data-view=tool],[data-view=page]) .logo{width:40px;height:40px;border-radius:11px;background:light-dark(#1a1a1a,#f2efe8);color:light-dark(#fff,#1a1a1a);box-shadow:none}
+:root:is([data-view=tool],[data-view=page]) .logo{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,#5b97ff,#2f6fed);color:#fff;box-shadow:0 4px 12px -4px rgba(47,111,237,.55)}
 :root:is([data-view=tool],[data-view=page]) .brand .bname{color:var(--ink);font:700 22px Outfit,'Inter Tight',sans-serif}
 :root:is([data-view=tool],[data-view=page]) .hero h1{font:700 clamp(28px,3.8vw,42px)/1.08 Outfit,'Inter Tight',sans-serif;letter-spacing:-.025em;color:var(--ink);margin:0}
 :root:is([data-view=tool],[data-view=page]) .hero h1 em{color:light-dark(#a8361d,#ff9d86)}
@@ -825,6 +826,23 @@ footer .linkb{color:#f0ece4}footer .tool-links{color:#bdb8ad;max-width:1100px;ma
 .biz-plan ul{margin:0 0 18px;padding-left:18px;color:var(--mute)}
 .biz-contact{background:#1a1a1a;color:#f2efe8;border-radius:22px;padding:28px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .biz-contact h3{color:#fff;margin:0 0 6px;font:700 22px Outfit,'Inter Tight',sans-serif}.biz-contact p{margin:0;color:#cfcac0}
+/*gdrive-v16*/
+.gd-row{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:10px 0 2px}
+.gd-btn,.gd-save{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line,#d8d2c4);background:var(--sheet,#fff);color:var(--ink,#1a1a1a);font:600 14px Inter,sans-serif;cursor:pointer}
+.gd-btn:hover,.gd-save:hover{border-color:var(--ink,#1a1a1a)}.gd-btn:focus-visible,.gd-save:focus-visible,.gd-x:focus-visible{outline:3px solid var(--ink,#1a1a1a);outline-offset:2px}
+.gd-btn[disabled],.gd-save[disabled]{opacity:.6;cursor:progress}
+.gd-msg{font-size:13px;color:var(--mute,#5a5850)}.gd-msg.ok{color:light-dark(#0d6b3f,#8fe0b4)}.gd-msg.err{color:light-dark(#a8361d,#ff9d86)}
+.gd-toast{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;max-width:min(520px,calc(100vw - 32px));padding:12px 12px 12px 18px;border-radius:16px;background:#1a1a1a;color:#f2efe8;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:14px}
+.gd-toast[hidden]{display:none}.gd-toast b{color:#fff;word-break:break-all}.gd-toast a{color:#ff9d86;font-weight:600}
+.gd-toast .gd-save{background:#fff;color:#1a1a1a;border-color:#fff}
+.gd-x{width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:#f2efe8;font-size:22px;line-height:1;cursor:pointer}
+@media(max-width:600px){.gd-toast{left:12px;right:12px;bottom:12px;max-width:none}}
+/* result rows: name and size beside the icon, Preview and Download on their own line on phones (was squeezing the name) */
+.rlist li{grid-template-columns:auto minmax(0,1fr) auto auto}
+.rlist li .fi{grid-row:1/3;grid-column:1}.rlist li .nm{grid-row:1;grid-column:2;overflow-wrap:anywhere}.rlist li .fm{grid-row:2;grid-column:2}
+.rlist li .pvbtn{grid-row:1/3;grid-column:3}.rlist li .pri{grid-row:1/3;grid-column:4}
+@media(max-width:700px){.rlist li{grid-template-columns:auto minmax(0,1fr) auto;row-gap:4px}.rlist li .nm,.rlist li .fm{grid-column:2/4}
+ .rlist li .pri{grid-row:3;grid-column:1/-1;justify-content:center;margin-top:8px}.rlist li .pvbtn{grid-row:4;grid-column:1/-1;min-height:40px}}
 </style>
 <!-- Vercel Web Analytics: counts page visits without cookies; never sees file contents.
      Loaded only on the live site (see "analytics" in the settings above). -->
@@ -860,6 +878,8 @@ window.fuTrack = function (name, params) {
 };
 </script>
 <!--seo:data-->
+<style>/*wordmark-v1613*/:root .brand .bname,:root[data-view=home] .brand .bname,:root:is([data-view=tool],[data-view=page]) .brand .bname{color:light-dark(#1e3a8a,#c7d8ff)}</style>
+<style>/*licenses-v1614*/footer .flic{color:inherit;opacity:.75;font-size:12px}footer .flic:hover{opacity:1}.lic-wrap{overflow-x:auto}.lic{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0 4px}.lic th,.lic td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.lic th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.75}.lic small{opacity:.8}.lic a{display:inline-block;min-height:24px;line-height:24px;min-width:24px}.lic-pre{white-space:pre-wrap;font:12px/1.5 "JetBrains Mono",monospace;background:light-dark(#f4f2ee,#22211e);padding:12px 14px;border-radius:8px;overflow-x:auto}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -1062,7 +1082,7 @@ window.fuTrack = function (name, params) {
 </div>
 <div class="row"><button id="prevC" title="Previous change">↑ Prev</button><button id="nextC" title="Next change">↓ Next</button><button class="pri" id="cmp"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>Compare</button></div>
 </div>
-<div class="stats" id="dstats"></div>
+<div class="msg err" id="dmsg" role="alert" hidden></div><div class="stats" id="dstats"></div>
 <div id="dout" style="margin-top:12px"></div>
 </section>
 
@@ -1117,11 +1137,11 @@ window.fuTrack = function (name, params) {
 
 <section id="privacy" hidden class="legal"><h2>Privacy policy</h2><p class="note">Last updated: <span class="l-date">25 November 2026</span></p>
 <p><b class="l-brand">Kalaburagi Labs</b> (“we”) runs Fileutilo. This policy explains what personal data we handle, why, and your rights under India’s Digital Personal Data Protection Act, 2023.</p>
-<h3>Your files</h3><p>Files you open in Fileutilo are processed inside your web browser, on your own device. They are not uploaded to our servers and we cannot see them.</p>
+<h3>Your files</h3><p>Files you open in Fileutilo are processed inside your web browser, on your own device. They are not uploaded to our servers and we cannot see them.</p><h3>Google Drive (only if you use it)</h3><p>If you choose “Choose from Google Drive” or “Save a copy to Google Drive”, you sign in to Google in a Google window and allow Fileutilo to see only the files you pick or save. The file goes straight between Google and your browser; it never passes through our servers. The Google permission lasts for that browser session, and you can remove it at any time in your Google Account under “Third-party apps &amp; services”.</p>
 <h3>What we collect when you create an account</h3><ul><li>Your email address, or phone number if you sign in with a one-time code, and your name if you give it or sign in with Google.</li><li>Your plan, credit balance, and a daily count of tasks per tool (not the files or their contents).</li><li>Payment records: product, amount, status, date and Razorpay reference numbers. Card, UPI and bank details are handled by Razorpay; we never see or store them.</li></ul>
 <h3>Visit statistics (everyone)</h3><p>To understand how Fileutilo is used, we count page visits with Vercel Web Analytics: which page was viewed, the site you came from, and your country, browser and device type. It uses no cookies. Visits are told apart only by a code that changes every 24 hours, so you can’t be followed across days or other websites. It never receives your files or anything in them.</p><p class="ga-note" hidden>We also use Google Analytics (Google LLC) to see which pages and tools are used and how many visits lead to sign-ups and purchases. It sets cookies and receives the page address, the tool name and plan or purchase amounts — never file names or file contents. Visitors in the EEA, the UK and Switzerland are measured only after agreeing in the consent message.</p>
 <h3>Why we use it</h3><p>To provide your account, apply plan limits, process payments and refunds, prevent abuse, and meet legal and tax obligations.</p>
-<h3>Who processes it for us</h3><ul><li>Vercel — hosting the website, and anonymous visit statistics (Vercel Web Analytics).</li><li>Supabase — sign-in and database hosting.</li><li>Razorpay — payments.</li><li>Google — “Sign in with Google”, Google AdSense ads shown on the free plan, and Google Analytics visit statistics where used.</li><li>Our SMS provider — sending one-time sign-in codes.</li><li>jsDelivr, unpkg and esm.sh — delivering the open-source code libraries the app uses.</li></ul>
+<h3>Who processes it for us</h3><ul><li>Vercel — hosting the website, and anonymous visit statistics (Vercel Web Analytics).</li><li>Supabase — sign-in and database hosting.</li><li>Razorpay — payments.</li><li>Google — “Sign in with Google”, Google Drive when you choose to open or save files there, Google AdSense ads shown on the free plan, and Google Analytics visit statistics where used.</li><li>Our SMS provider — sending one-time sign-in codes.</li><li>jsDelivr, unpkg and esm.sh — delivering the open-source code libraries the app uses.</li></ul>
 <h3>Cookies and storage</h3><p>Your sign-in session and tool settings are stored in your browser’s local storage. So are your favourite tools and your recent activity (the tool used, when, how many files, and the names of up to two result files) — they stay in that browser, are never sent to us, and can be cleared or turned off from the home page. If you install Fileutilo as an app, your browser also keeps a copy of the site and the tools’ code so they work offline. Vercel visit statistics don’t use cookies; Google Analytics, when used, does (see above). On the free plan, Google may use cookies to show and measure ads; see Google’s advertising policy for details. Pro and Lifetime users don’t see ads.</p>
 <h3>How long we keep it</h3><p>Account data is kept until you delete your account. Payment records are kept for as long as tax laws require, without being linked to a deleted account.</p>
 <h3>Your rights</h3><p>You can see your data in your account, ask us to correct it, and delete your account at any time from the account panel. You can also raise a grievance with us, and if it isn’t resolved, complain to the Data Protection Board of India. Fileutilo accounts are for people aged 18 or over, or younger users with a parent’s or guardian’s consent.</p>
@@ -1162,6 +1182,7 @@ window.fuTrack = function (name, params) {
 <h3>Your content</h3><p>Your files stay yours. Because processing happens on your device, keep your own backups.</p>
 <h3>No warranty, limited liability</h3><p>Fileutilo is provided “as is”. We work to keep it accurate and available but can’t guarantee every conversion is perfect. To the extent the law allows, our total liability is limited to the amount you paid us in the 12 months before the claim.</p>
 <h3>Ending your use</h3><p>You can stop using Fileutilo and delete your account anytime. We may suspend accounts that break these terms.</p>
+<h3>Open-source software</h3><p>Fileutilo uses open-source software under its own licences. See <a href="licenses">Open-source licences</a>.</p>
 <h3>Law and disputes</h3><p>These terms are governed by the laws of India. Courts at Kalaburagi, Karnataka have jurisdiction.</p>
 <h3>Contact</h3><p><a class="l-mail" href="mailto:support@fileutilo.com">support@fileutilo.com</a></p></section>
 
@@ -1170,6 +1191,28 @@ window.fuTrack = function (name, params) {
 <h3>Refunds</h3><ul><li><b>First subscription payment or Lifetime:</b> full refund if you ask within 7 days of paying.</li><li><b>Renewals:</b> not refunded, except for billing mistakes.</li><li><b>Credit packs:</b> refundable within 7 days if none of the credits have been used.</li></ul>
 <p>Refunds go back to your original payment method through Razorpay, usually within 5–7 working days after we approve them.</p>
 <h3>How to ask</h3><p>Email <a class="l-mail" href="mailto:support@fileutilo.com">support@fileutilo.com</a> from your account email with the payment date and amount.</p></section>
+<section id="licenses" hidden class="legal"><h2>Open-source licences</h2><p class="note">Last updated: <span class="l-date">28 November 2026</span></p>
+<p>Fileutilo’s tools run in your browser using the open-source software below. We use each one unchanged, and each file keeps its own copyright notice. Our thanks to their authors.</p>
+<div class="lic-wrap"><table class="lic"><thead><tr><th>Software</th><th>Version</th><th>Licence</th><th>Source code</th></tr></thead><tbody><tr><td><b>pdf-lib</b></td><td>1.17.1</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/Hopding/pdf-lib" rel="noopener">Source</a></td></tr><tr><td><b>PDF.js (pdfjs-dist)</b></td><td>6.2.108</td><td><a href="legal/Apache-2.0.txt">Apache-2.0</a></td><td><a href="https://github.com/mozilla/pdf.js" rel="noopener">Source</a></td></tr><tr><td><b>JSZip</b></td><td>3.10.1</td><td><a href="legal/MIT.txt">MIT (dual-licensed MIT or GPL-3.0; used under MIT)</a></td><td><a href="https://github.com/Stuk/jszip" rel="noopener">Source</a></td></tr><tr><td><b>SheetJS Community Edition</b></td><td>0.20.3</td><td><a href="legal/Apache-2.0.txt">Apache-2.0</a></td><td><a href="https://git.sheetjs.com/sheetjs/sheetjs" rel="noopener">Source</a></td></tr><tr><td><b>mammoth</b></td><td>1.8.0</td><td><a href="legal/BSD-2-Clause.txt">BSD-2-Clause</a></td><td><a href="https://github.com/mwilliamson/mammoth.js" rel="noopener">Source</a></td></tr><tr><td><b>html2pdf.js</b><br><small>Includes jsPDF and html2canvas (MIT).</small></td><td>0.10.1</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/eKoopmans/html2pdf.js" rel="noopener">Source</a></td></tr><tr><td><b>PptxGenJS</b></td><td>3.12.0</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/gitbrent/PptxGenJS" rel="noopener">Source</a></td></tr><tr><td><b>Tesseract.js</b><br><small>Includes the Tesseract OCR engine (Apache-2.0) and Leptonica (BSD-2-Clause style). English language data from <a href="https://github.com/tesseract-ocr/tessdata" rel="noopener">tessdata</a> (Apache-2.0).</small></td><td>5.1.1</td><td><a href="legal/Apache-2.0.txt">Apache-2.0</a></td><td><a href="https://github.com/naptha/tesseract.js" rel="noopener">Source</a></td></tr><tr><td><b>heic2any</b><br><small>Includes libheif and libde265 (LGPL-3.0); see the notice below.</small></td><td>0.0.4</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/alexcorvi/heic2any" rel="noopener">Source</a></td></tr><tr><td><b>jSquash AVIF</b><br><small>Includes libavif and libaom (BSD-2-Clause; libaom also under the AOMedia Patent License 1.0).</small></td><td>2.1.1</td><td><a href="legal/Apache-2.0.txt">Apache-2.0</a></td><td><a href="https://github.com/jamsinclair/jSquash" rel="noopener">Source</a></td></tr><tr><td><b>js-yaml</b></td><td>4.1.0</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/nodeca/js-yaml" rel="noopener">Source</a></td></tr><tr><td><b>supabase-js</b></td><td>2.104.1</td><td><a href="legal/MIT.txt">MIT</a></td><td><a href="https://github.com/supabase/supabase-js" rel="noopener">Source</a></td></tr></tbody></table></div>
+<h3>GNU LGPL notice (HEIC photo converter)</h3><p>The HEIC converter includes <a href="https://github.com/strukturag/libheif" rel="noopener">libheif</a> and <a href="https://github.com/strukturag/libde265" rel="noopener">libde265</a>, which are covered by the <a href="legal/LGPL-3.0.txt">GNU Lesser General Public License, version 3</a>, which builds on the <a href="legal/GPL-3.0.txt">GNU General Public License, version 3</a>. You can get their source code from the links above. Fileutilo loads them as a separate, unmodified file (heic2any 0.0.4), so you can replace it with your own build of the same libraries.</p>
+<h3>SheetJS notice</h3><pre class="lic-pre">SheetJS Community Edition -- https://sheetjs.com/
+
+Copyright (C) 2012-present SheetJS LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+<h3>Licence texts</h3><ul><li><a href="legal/Apache-2.0.txt">Apache License 2.0</a></li><li><a href="legal/MIT.txt">MIT License</a></li><li><a href="legal/BSD-2-Clause.txt">BSD 2-Clause License</a></li><li><a href="legal/LGPL-3.0.txt">GNU LGPL 3.0</a> and <a href="legal/GPL-3.0.txt">GNU GPL 3.0</a></li></ul>
+<h3>Fonts</h3><p>Inter, Inter Tight, Outfit and JetBrains Mono, served by Google Fonts under the <a href="https://openfontlicense.org/" rel="noopener">SIL Open Font License 1.1</a>.</p>
+<h3>Questions</h3><p><a class="l-mail" href="mailto:support@fileutilo.com">support@fileutilo.com</a></p></section>
 
 <!--seo:about-->
 </main>
@@ -1180,7 +1223,7 @@ window.fuTrack = function (name, params) {
  <div><h2>Company</h2><p>Fileutilo is a product of Kalaburagi Labs.</p><p><a href="mailto:support@fileutilo.com">support@fileutilo.com</a></p></div>
  <div class="flegal" role="navigation" aria-label="Plans and legal"><h2>Plans &amp; legal</h2><a href="pricing">Pricing</a><a href="for-business">For business</a><a href="terms">Terms of use</a><a href="refunds">Refund policy</a><a href="privacy">Privacy policy</a></div>
 </div>
-<div class="fbottom">© <span id="yr">2026</span> Kalaburagi Labs. All rights reserved.<br><span class="flinks fapp"><button type="button" class="linkb installbtn" hidden>⤓ Install app</button><button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button><button type="button" class="linkb kbdhint">Keyboard shortcuts <kbd>?</kbd></button></span></div><!--seo:toollinks--></footer>
+<div class="fbottom">© <span id="yr">2026</span> Kalaburagi Labs. All rights reserved. <span class="fver" title="Fileutilo version">v<span data-fu-ver>dev</span></span> · <a class="flic" href="licenses">Open-source licences</a><br><span class="flinks fapp"><button type="button" class="linkb installbtn" hidden>⤓ Install app</button><button type="button" class="linkb findtool">Find a tool <kbd>/</kbd></button><button type="button" class="linkb kbdhint">Keyboard shortcuts <kbd>?</kbd></button></span></div><!--seo:toollinks--></footer>
 <dialog id="authDlg" class="dlg" aria-labelledby="authTitle"><form method="dialog" class="dlgx"><button aria-label="Close">✕</button></form>
  <h3 id="authTitle">Sign in to Fileutilo</h3><p class="note a-sub">Free account: 25 tasks a day. Your files still never leave your device.</p>
  <p class="preview-note" hidden>Preview — sign-in isn’t connected on this copy yet (see SETUP.md).</p>
@@ -1227,7 +1270,7 @@ async function saveFile(name,data,msgEl){
       if(!['docx','pptx','pdf','xlsx','html','txt','csv','json','md','zip','svg','epub'].includes(ext)){await need('JSZip');const z=new JSZip();z.file(name,data);data=await z.generateAsync({type:'blob',compression:'DEFLATE'});name+='.zip'}
       await dl.save({filename:name,data});flash(msgEl,'Saved '+name+(name.endsWith('.zip')&&ext!=='zip'?' — this viewer only allows some file types, so it is packed in a .zip':''),'ok');return}
     const blob=data instanceof Blob?data:new Blob([data]);const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();
+    a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();try{window.fuSaved&&window.fuSaved(name,blob)}catch(e){}
     setTimeout(()=>URL.revokeObjectURL(a.href),4000);
   }catch(e){flash(msgEl,e&&e.code==='declined'?'Download cancelled.':'Download not available here'+(e&&e.message?': '+e.message:''),'err')}
 }
@@ -1240,7 +1283,7 @@ async function copyText(t,msgEl){try{await navigator.clipboard.writeText(t);flas
 const LIBS={
   // jSquash's encode.js imports 'wasm-feature-detect' by bare name, which browsers can't resolve; these CDN forms rewrite it
   jsquashAvif:['https://cdn.jsdelivr.net/npm/@jsquash/avif@2.1.1/encode.js/+esm','https://unpkg.com/@jsquash/avif@2.1.1/encode.js?module','https://esm.sh/@jsquash/avif@2.1.1/encode'],
-  mammoth:'https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js',html2pdf:'https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js',pdfjsLib:'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/legacy/build/pdf.min.mjs',JSZip:'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js',XLSX:'https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js',PptxGenJS:'https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js',PDFLib:'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js',Tesseract:'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js',heic2any:'https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js',jsyaml:'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js'};
+  mammoth:'https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js',html2pdf:'https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js',pdfjsLib:'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.2.108/legacy/build/pdf.min.mjs',JSZip:'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js',XLSX:['https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js'],PptxGenJS:'https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js',PDFLib:'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js',Tesseract:'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js',heic2any:'https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js',jsyaml:'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js'};
 const loading={};
 const MODULE_LIBS={pdfjsLib:true,jsquashAvif:true};
 /* Every library is tried from two independent CDNs, each with a time limit.
@@ -1249,9 +1292,14 @@ const LIB_MIRRORS=[u=>u,u=>u.replace('https://cdn.jsdelivr.net/npm/','https://un
 const LIB_LABEL={mammoth:'Word (DOCX) reader',html2pdf:'HTML-to-PDF engine',pdfjsLib:'PDF reader',JSZip:'ZIP engine',XLSX:'Excel engine',PptxGenJS:'PowerPoint writer',
   PDFLib:'PDF editor',Tesseract:'OCR engine',heic2any:'HEIC photo decoder',jsquashAvif:'AVIF encoder',jsyaml:'YAML reader'};
 const LIB_TIMEOUT=window.FU_LIB_TIMEOUT||30000,libSrc={};
-class LibError extends Error{constructor(n){const label=LIB_LABEL[n]||n;
+/*vendor-v161*/let VENDOR=null,VENDOR_P=null;const SITE_ROOT=location.origin+'/';
+function vendorReady(){return VENDOR_P||(VENDOR_P=Promise.race([fetch(SITE_ROOT+'vendor/manifest.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}),new Promise(r=>setTimeout(()=>r({}),5000))]).catch(()=>({})).then(v=>VENDOR=v&&typeof v==='object'?v:{}))}
+async function vendorUrl(n){const v=await vendorReady();return v.libs&&typeof v.libs[n]==='string'?new URL(v.libs[n],SITE_ROOT).href:null}
+window.fuVendorUrl=vendorUrl;
+function tessPaths(langs){const t=VENDOR&&VENDOR.tesseract;if(!t)return{};const o={workerPath:new URL(t.workerPath,SITE_ROOT).href,corePath:new URL(t.corePath,SITE_ROOT).href};if((langs||['eng']).every(l=>l==='eng'))o.langPath=new URL(t.langPath,SITE_ROOT).href;return o}
+class LibError extends Error{constructor(n){const label=LIB_LABEL[n]||n;const own=!!(VENDOR&&VENDOR.libs&&VENDOR.libs[n]);
   super(navigator.onLine===false?`You appear to be offline, so the ${label} couldn’t be downloaded. Reconnect and try again — your files are still here.`
-    :`Couldn’t download the ${label} (it loads from cdn.jsdelivr.net${n==='jsquashAvif'?', unpkg.com or esm.sh':' or unpkg.com'} the first time you use this tool). A slow connection, firewall or content blocker may be stopping it. Please try again.`);
+    :own?`Couldn’t download the ${label} from fileutilo.com or its backup servers. A slow connection, firewall or content blocker may be stopping it. Please try again.`:`Couldn’t download the ${label} (it loads from ${n==='XLSX'?'cdn.sheetjs.com':'cdn.jsdelivr.net'}${n==='jsquashAvif'?', unpkg.com or esm.sh':n==='XLSX'?'':' or unpkg.com'} the first time you use this tool). A slow connection, firewall or content blocker may be stopping it. Please try again.`);
   this.name='LibError';this.lib=n}}
 function loadFrom(n,url){
   const limit=new Promise((_,rej)=>setTimeout(()=>rej(new Error('timeout')),LIB_TIMEOUT));
@@ -1261,7 +1309,7 @@ function loadFrom(n,url){
 }
 function need(...names){return Promise.all(names.map(n=>{if(window[n])return;
   return loading[n]||(loading[n]=(async()=>{let last;
-    const urls=Array.isArray(LIBS[n])?LIBS[n]:LIB_MIRRORS.map(m=>m(LIBS[n]));
+    const own=await vendorUrl(n);const urls=[...new Set([...(own?[own]:[]),...(Array.isArray(LIBS[n])?LIBS[n]:LIB_MIRRORS.map(m=>m(LIBS[n])))])];
     for(const url of urls){try{await loadFrom(n,url);libSrc[n]=url;return}catch(e){last=e;if(window[n]){libSrc[n]=url;return}}}
     console.warn('library load failed',n,last);throw new LibError(n)})().catch(e=>{delete loading[n];throw e}))}))}
 let pdfReady=false;
@@ -1779,10 +1827,13 @@ let view=store.get('dview','side');
 const ta=$('ta'),tb=$('tb');ta.value=store.get('dA','');tb.value=store.get('dB','');
 $('fnA').textContent=store.get('fnA','Pasted text');$('fnB').textContent=store.get('fnB','Pasted text');
 async function readAny(f){const e=inExt(f.name);if(['docx','doc','odt','rtf','pdf','xlsx','xls','ods','pptx','ppt','ps'].includes(e))return toTxt(await parseFile(f));return f.text()}
-function hookFile(inp,area,fn,key){inp.onchange=async e=>{const f=e.target.files[0];if(!f)return;try{area.value=await readAny(f);$(fn).textContent=f.name;store.set(fn,f.name);store.set(key,area.value.slice(0,500000));runDiff()}catch(err){$(fn).textContent='Could not read '+f.name}e.target.value=''}}
+const dBad={};function diffMsg(){const m=$('dmsg'),v=Object.values(dBad);m.textContent=v.join(' ');m.hidden=!v.length}
+function diffBad(side,f,err){dBad[side]=`${f.name} couldn’t be read — ${err&&/password/i.test(err.message)?'it’s password-protected':'it’s damaged or not a supported file'}. Nothing was compared.`;diffMsg();$('dout').innerHTML='';$('dstats').innerHTML='';lastOps=null}
+function diffOk(side){if(dBad[side]){delete dBad[side];diffMsg()}}
+function hookFile(inp,area,fn,key){const side=fn==='fnA'?'A':'B';inp.onchange=async e=>{const f=e.target.files[0];if(!f)return;try{area.value=await readAny(f);$(fn).textContent=f.name;store.set(fn,f.name);store.set(key,area.value.slice(0,500000));diffOk(side);runDiff()}catch(err){area.value='';store.set(key,'');$(fn).textContent='Could not read '+f.name;store.set(fn,'Pasted text');diffBad(side,f,err)}e.target.value=''}}
 hookFile($('fA'),ta,'fnA','dA');hookFile($('fB'),tb,'fnB','dB');
-[ta,tb].forEach((el,i)=>{el.addEventListener('input',()=>{store.set(i?'dB':'dA',el.value.slice(0,500000));$(i?'fnB':'fnA').textContent='Pasted text';store.set(i?'fnB':'fnA','Pasted text')});
-  el.addEventListener('dragover',e=>e.preventDefault());el.addEventListener('drop',async e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f){el.value=await readAny(f);$(i?'fnB':'fnA').textContent=f.name;runDiff()}})});
+[ta,tb].forEach((el,i)=>{el.addEventListener('input',()=>{diffOk(i?'B':'A');store.set(i?'dB':'dA',el.value.slice(0,500000));$(i?'fnB':'fnA').textContent='Pasted text';store.set(i?'fnB':'fnA','Pasted text')});
+  el.addEventListener('dragover',e=>e.preventDefault());el.addEventListener('drop',async e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f){try{el.value=await readAny(f);$(i?'fnB':'fnA').textContent=f.name;diffOk(i?'B':'A');runDiff()}catch(err){el.value='';$(i?'fnB':'fnA').textContent='Could not read '+f.name;diffBad(i?'B':'A',f,err)}}})});
 $('swap').onclick=()=>{[ta.value,tb.value]=[tb.value,ta.value];const a=$('fnA').textContent;$('fnA').textContent=$('fnB').textContent;$('fnB').textContent=a;runDiff()};
 $('dclear').onclick=()=>{ta.value=tb.value='';store.set('dA','');store.set('dB','');$('dout').innerHTML='';$('dstats').innerHTML=''};
 function setView(v){view=v;store.set('dview',v);$('vSide').setAttribute('aria-pressed',v==='side');$('vUni').setAttribute('aria-pressed',v==='uni');if(lastOps)render()}
@@ -1790,7 +1841,7 @@ $('vSide').onclick=()=>setView('side');$('vUni').onclick=()=>setView('uni');
 ['oWs','oCase'].forEach(id=>$(id).onchange=runDiff);$('oFold').onchange=()=>lastOps&&render();
 $('cmp').onclick=runDiff;
 let lastOps=null,A=[],B=[],hunks=[],curH=-1;
-function runDiff(){
+function runDiff(){if(Object.keys(dBad).length){diffMsg();$('dout').innerHTML='';$('dstats').innerHTML='';lastOps=null;return}
   A=ta.value.replace(/\r\n?/g,'\n').split('\n');B=tb.value.replace(/\r\n?/g,'\n').split('\n');
   if(!ta.value&&!tb.value){$('dout').innerHTML='<div class="same" style="color:var(--mute)">Add two files or paste text to compare.</div>';$('dstats').innerHTML='';lastOps=null;return}
   const ws=$('oWs').checked,cs=$('oCase').checked;
@@ -2020,7 +2071,7 @@ function walkStrings(L,obj,fn){const {PDFDict,PDFArray,PDFString,PDFHexString,PD
 async function unlock(bytes,password){
   const L=getPDFLib();const {PDFDocument,PDFName,PDFRawStream,PDFNumber,PDFHexString,PDFParser,PDFObjectStreamParser}=L;
   const first=await PDFDocument.load(bytes.slice(),{ignoreEncryption:true,throwOnInvalidObject:false,updateMetadata:false});
-  const E=readEncrypt(L,first.context);if(!E)throw new Error('This PDF isn’t password-protected');
+  /*fixes-v16*/if(!/%PDF-/.test(new TextDecoder('latin1').decode(bytes.subarray?bytes.subarray(0,1024):new Uint8Array(bytes).subarray(0,1024))))throw new Error('This file can’t be opened — it’s damaged or isn’t a PDF');let pc=0;try{pc=first.getPageCount()}catch(_){}const E=readEncrypt(L,first.context);if(!E){if(!pc)throw new Error('This file can’t be opened — it’s damaged or isn’t a PDF');throw new Error('This PDF isn’t password-protected')}
   const key=await fileKey(E,E.id0,password||'');if(!key)throw new Error(password?'Wrong password':'This PDF needs a password to open — enter it above');
   // second pass: decrypt object streams while pdf-lib parses them
   const P=PDFParser.prototype,hdr=P.parseIndirectObjectHeader,fs=PDFObjectStreamParser.forStream;let cur=null;const inner=new Set();
@@ -2087,7 +2138,7 @@ const TOOL_NAMES={home:'Home',convert:'Converter','pdf-merge':'Merge','pdf-split
 const TOOL_CAT={};CATS.forEach(c=>c.tools.forEach(t=>TOOL_CAT[t]=c.id));
 /* Every tool has its own task-named address (fileutilo.com/merge-pdf). A few task pages open a tool with a
    preset (/word-to-pdf opens the converter with PDF chosen). Old addresses (/pdf-merge, #pdf-merge) still work. */
-const PAGE_IDS=['pricing','privacy','terms','refunds','for-business'];
+const PAGE_IDS=['pricing','privacy','terms','refunds','for-business','licenses'];
 const SLUGS={"convert":"document-converter","pdf-merge":"merge-pdf","pdf-split":"split-pdf","pdf-organize":"organize-pdf","pdf-compress":"compress-pdf","pdf-protect":"protect-pdf","pdf-unlock":"unlock-pdf","pdf-stamp":"watermark-pdf","pdf-ocr":"ocr","pdf-to-img":"pdf-to-jpg","img-to-pdf":"jpg-to-pdf","img-convert":"image-converter","img-resize":"image-compressor","json":"json-formatter","json-compare":"json-compare","json-query":"jsonpath-tester","data-convert":"data-converter","table-clean":"csv-cleaner","hash":"checksum-calculator","word-merge":"merge-word","excel-combine":"combine-excel","find-replace":"find-and-replace","doc-stats":"word-counter","metadata":"remove-metadata","diff":"file-comparison","zip-create":"create-zip","zip-open":"zip-extractor","pdf-sign":"sign-pdf","pdf-edit":"edit-pdf","pdf-redact":"redact-pdf","exam-photo":"passport-size-photo","pdf-to-ppt":"pdf-to-powerpoint","ppt-compress":"compress-powerpoint","ppt-to-img":"powerpoint-to-jpg","ppt-images":"extract-images-from-powerpoint","ppt-merge":"merge-powerpoint","ppt-text":"powerpoint-text-and-notes"};
 const VARIANTS={"word-to-pdf":["convert","pdf"],"pdf-to-word":["convert","docx"],"excel-to-pdf":["convert","pdf"],"powerpoint-to-pdf":["ppt-to-img","pdf"],"excel-to-csv":["data-convert","csv"],"csv-to-json":["data-convert","json"],"heic-to-jpg":["img-convert","jpg"],"webp-to-jpg":["img-convert","jpg"],"compress-pdf-to-200kb":["pdf-compress","200"],"fill-pdf-form":["pdf-edit","form"],"mask-aadhaar":["pdf-redact","aadhaar"],"signature-resizer":["exam-photo","bank-sign"],"ppt-to-pptx":["convert","pptx"],"compress-image-to-50kb":["img-resize","50"],"compress-image-to-20kb":["img-resize","20"],"compress-image-to-100kb":["img-resize","100"],"compress-pdf-to-100kb":["pdf-compress","100"],"compress-pdf-to-500kb":["pdf-compress","500"],"png-to-jpg":["img-convert","jpg"],"jpg-to-png":["img-convert","png"],"image-to-pdf":["img-to-pdf",""]};
 const FROM_SLUG=Object.fromEntries(Object.entries(SLUGS).map(([t,x])=>[x,t]));
@@ -2419,7 +2470,7 @@ INIT['pdf-ocr']=()=>{const t=makeTool('pdf-ocr',{title:'OCR — scan to text',de
   note:'Language data (2–15 MB each) downloads on first use. This needs the desktop or website version — the Claude preview blocks those downloads.',
   async run(t){const langs=t.qa('.langs input:checked').map(i=>i.value);if(!langs.length)throw new Error('Choose at least one language');
     t.prog(.02,'Loading the OCR engine…');await need('Tesseract');
-    let worker;try{worker=await Tesseract.createWorker(langs,1,{logger:m=>{if(m.status&&/load|initial/i.test(m.status))t.prog(.05,`${m.status} ${m.progress?Math.round(m.progress*100)+'%':''}`)}})}
+    let worker;try{worker=await Tesseract.createWorker(langs,1,{...tessPaths(langs),logger:m=>{if(m.status&&/load|initial/i.test(m.status))t.prog(.05,`${m.status} ${m.progress?Math.round(m.progress*100)+'%':''}`)}})}
     catch(e){throw new Error('OCR couldn’t download its language data. In the Claude preview this is blocked; use the desktop or website version of Fileutilo.')}
     const outs=[],texts=[];try{
       for(let i=0;i<t.files.length;i++){const f=t.files[i];let parts=[];
@@ -2927,7 +2978,7 @@ INIT['pdf-redact']=()=>{let pe,ocrWorker=null;
   t.q('.o-find').onclick=async()=>{const q=t.q('.o-q').value.trim();const n=t.q('.o-findn');if(!q){n.textContent='Type the words to find.';return}let hits=0;const ql=q.toLowerCase();
     for(let i=0;i<pe.pages.length;i++){const {s}=await pageText(pe,i),low=s.toLowerCase();let k=0;const bs=[];while((k=low.indexOf(ql,k))>=0){bs.push(...charBoxes(pe,i,k,k+q.length));k+=q.length;hits++}if(bs.length)addBoxes(i,bs,'find')}
     n.textContent=hits?`Marked ${hits} match${hits>1?'es':''}. Check each page before saving.`:pe.pages.every(p=>!p.runs.s.trim())?'This PDF has no text layer (it’s a scan) — drag boxes by hand instead.':`“${q}” wasn’t found.`};
-  async function ocrPage(c){await need('Tesseract');if(!ocrWorker)try{ocrWorker=await Tesseract.createWorker(['eng'],1)}catch(e){ocrWorker=null;throw new Error('OCR couldn’t download its language data — check your connection, or drag boxes by hand.')}
+  async function ocrPage(c){await need('Tesseract');if(!ocrWorker)try{ocrWorker=await Tesseract.createWorker(['eng'],1,tessPaths(['eng']))}catch(e){ocrWorker=null;throw new Error('OCR couldn’t download its language data — check your connection, or drag boxes by hand.')}
     const r=await ocrWorker.recognize(c,{},{blocks:true});const lines=r.data.lines&&r.data.lines.length?r.data.lines:(r.data.blocks||[]).flatMap(b=>(b.paragraphs||[]).flatMap(p=>p.lines||[]));return lines}
   function aadhaarFromLines(lines,W,H,all){const out=[];for(const ln of lines){const ws=(ln.words||[]).map(w=>({d:w.text.replace(/[^\d]/g,''),b:w.bbox}));
       for(let k=0;k<ws.length;k++){if(ws[k].d.length===12&&/^[2-9]/.test(ws[k].d)){const b=ws[k].b,cut=all?1:8/12;out.push({x:b.x0/W,y:b.y0/H,w:(b.x1-b.x0)*cut/W,h:(b.y1-b.y0)/H});continue}
@@ -3181,7 +3232,7 @@ INIT['data-convert']=()=>{const r=shell('data-convert',{title:'Data converter',d
         else if(to==='md'){const [h,...b]=hdr?rows:[rows[0].map((_,i)=>`Column ${i+1}`),...rows];s=`| ${h.map(mdCell).join(' | ')} |\n| ${h.map(()=>'---').join(' | ')} |\n`+b.map(x=>`| ${h.map((_,i)=>mdCell(x[i])).join(' | ')} |`).join('\n')+'\n'}
         else if(to==='html'){const [h,...b]=rows;s=`<table>\n  <thead><tr>${h.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead>\n  <tbody>\n${b.map(x=>`    <tr>${h.map((_,i)=>`<td>${esc(x[i]??'')}</td>`).join('')}</tr>`).join('\n')}\n  </tbody>\n</table>\n`}
         else if(to==='xlsx'){s=`Excel output: ${rows.length-(hdr?1:0)} rows × ${rows[0].length} columns.\nPress Download to save the .xlsx file.\n\nPreview (CSV):\n`+toCSV(rows.slice(0,20))}}
-      o.value=s;o.classList.remove('err')}catch(e){o.value=e.message;o.classList.add('err');value=null}}
+      o.value=s;o.classList.remove('err')}catch(e){o.value=e.message;o.classList.add('err');value=null;const inf=r.q('.o-info');if(inf)inf.textContent='Couldn’t convert — '+e.message.split('\n')[0]}}
   let tm;r.q('.dc').addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(convert,350)});['.o-from','.o-to','.o-hdr','.o-typ'].forEach(s=>r.q(s).onchange=convert);
   r.q('.o-cp').onclick=()=>value!=null&&r.q('.o-to').value!=='xlsx'?copyText(r.q('.dco').value,$('gmsg')):toast('Nothing to copy','err');
   r.q('.o-dl').onclick=async()=>{if(value==null)return toast('Fix the input first','err');const to=r.q('.o-to').value;
@@ -3213,7 +3264,7 @@ INIT['table-clean']=()=>{const r=shell('table-clean',{title:'Table cleaner',desc
     if(!H.length){r.q('.tcwrap').innerHTML='<div class="empty">Open a CSV or Excel file, or paste data, to start.</div>';return}
     r.q('.tcwrap').innerHTML=`<table class="tct"><thead><tr><th class="rn">#</th>${H.map((h,i)=>`<th><button class="sortb" data-s="${i}">${esc(h)} ${sort&&sort.c===i?(sort.d>0?'▲':'▼'):''}</button><button class="delc" data-dc="${i}" aria-label="Delete column ${esc(h)}">✕</button></th>`).join('')}</tr></thead>
       <tbody>${rows.slice(0,500).map(([x,i])=>`<tr><td class="rn">${i+1}</td>${x.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>${rows.length>500?`<p class="note">Showing the first 500 of ${rows.length} rows — every row is included in exports.</p>`:''}`}
-  r.q('.o-f').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;const ex=extOf(f.name);
+  r.q('.o-f').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;const ex=extOf(f.name);if(!['csv','tsv','txt','xlsx','xls','ods'].includes(ex))return toast(`${f.name} isn’t a CSV or Excel file — open a .csv, .tsv, .txt, .xlsx, .xls or .ods file`,'err');
     if(['xlsx','xls','ods'].includes(ex)){try{await need('XLSX')}catch(er){return toast(er.message,'err')}wb=XLSX.read(await f.arrayBuffer(),{type:'array'});const sel=r.q('.o-sheet');sel.hidden=wb.SheetNames.length<2;sel.innerHTML=wb.SheetNames.map(n=>`<option>${esc(n)}</option>`).join('');
       load(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:false,defval:''}),stemOf(f.name))}
     else{wb=null;r.q('.o-sheet').hidden=true;load(parseCSV(await f.text()),stemOf(f.name))}};
@@ -3412,14 +3463,14 @@ const mins=m=>m<1?`${Math.max(1,Math.round(m*60))} sec`:`${Math.floor(m)} min${m
 async function docxText(f){await need('JSZip');const z=await JSZip.loadAsync(await f.arrayBuffer());const d=xparse(await z.file('word/document.xml').async('string'));
   return[...d.getElementsByTagNameNS(W_NS,'p')].map(p=>[...p.getElementsByTagNameNS(W_NS,'t')].map(t=>t.textContent).join('')).join('\n\n')}
 async function anyText(f){const e=extOf(f.name);if(e==='docx')return{text:await docxText(f)};
-  if(e==='pdf'){const pdf=await pdfOpen(await bytesOf(f));let s='';for(let p=1;p<=pdf.numPages;p++){const tc=await (await pdf.getPage(p)).getTextContent();s+=tc.items.map(i=>i.str+(i.hasEOL?'\n':'')).join('')+'\n\n'}const n=pdf.numPages;pdfClose(pdf);return{text:s,pages:n}}
+  if(e==='pdf'){const pdf=await pdfOpen(await bytesOf(f)).catch(er=>{throw new Error(er&&er.name==='PasswordException'?'This PDF is password-protected — unlock it first (PDF → Unlock)':er&&er.name==='LibError'?er.message:'This file can’t be opened — it’s damaged or isn’t a PDF')});let s='';for(let p=1;p<=pdf.numPages;p++){const tc=await (await pdf.getPage(p)).getTextContent();s+=tc.items.map(i=>i.str+(i.hasEOL?'\n':'')).join('')+'\n\n'}const n=pdf.numPages;pdfClose(pdf);return{text:s,pages:n}}
   if(['doc','odt','rtf','pptx','ppt','html','htm','xlsx','xls','ps'].includes(e))return{text:toTxt(await parseFile(f))};return{text:await f.text()}}
 function statsHtml(name,s,pages){const card=(v,l)=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`;
   return`<div class="statbox"><h3 class="sub">${esc(name)}</h3><div class="statgrid">${card(s.words.toLocaleString(),'words')}${card(s.chars.toLocaleString(),'characters')}${card(s.charsNoSpace.toLocaleString(),'without spaces')}${card(s.sentences.toLocaleString(),'sentences')}${card(s.paragraphs.toLocaleString(),'paragraphs')}${pages?card(pages,'pages'):''}${card(mins(s.read),'reading time')}${card(mins(s.speak),'speaking time')}${card(s.avg.toFixed(1),'words per sentence')}${s.flesch!=null?card(s.flesch,'Flesch reading ease'):''}</div>
    ${s.top.length?`<div class="topw"><span class="note">Most used words</span>${s.top.map(([w,c])=>`<span class="pill s">${esc(w)} <b>${c}</b></span>`).join('')}</div>`:''}</div>`}
 INIT['doc-stats']=()=>{const t=makeTool('doc-stats',{title:'Word count & statistics',desc:'Count words, characters and sentences, and estimate reading time — for documents or pasted text. Works with Kannada and other scripts.',ic:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',accept:'.docx,.pdf,.txt,.md,.odt,.rtf,.html,.pptx,.doc',multiple:true,drop:'Drop documents here',action:'Count',wide:false,
   body:`<label class="field" style="margin-top:14px"><span>…or paste text (counted as you type)</span><textarea class="plain o-pt" rows="8" placeholder="Paste or type text here"></textarea></label>`,
-  async run(t){let h='';for(let i=0;i<t.files.length;i++){const f=t.files[i];t.prog(i/t.files.length,`Reading ${f.name}…`);try{const {text,pages}=await anyText(f);h+=statsHtml(f.name,textStats(text),pages)}catch(e){h+=`<p class="errc">${esc(f.name)}: ${esc(e.message)}</p>`}}
+  async run(t){let h='';for(let i=0;i<t.files.length;i++){const f=t.files[i];t.prog(i/t.files.length,`Reading ${f.name}…`);try{const {text,pages}=await anyText(f);h+=statsHtml(f.name,textStats(text),pages)}catch(e){h+=`<p class="errc" role="alert">${esc(f.name)}: ${esc(e.message)}</p>`}}
     t._extra=h;return[]}});
   const run2=()=>{const v=t.q('.o-pt').value;if(v.trim())t.out(statsHtml('Pasted text',textStats(v)))};t.q('.o-pt').addEventListener('input',()=>{clearTimeout(t._tm);t._tm=setTimeout(run2,250)});
   const r0=t.results;t.results=(o,x)=>{t.out(x)}};
@@ -3913,7 +3964,7 @@ document.addEventListener('change',e=>{if(!e.target.matches('#pdf-to-ppt [name=p
   const LIVE=!!(C.supabaseUrl&&C.supabaseAnonKey)&&/^https?:$/.test(location.protocol);
   const FREE_TOOLS=new Set(['json','json-compare','json-query','data-convert','table-clean','hash','diff','zip-open','doc-stats']);
   const LIM={tasks:25,anonTasks:10,files:5,mb:20,ocr:5};
-  const PAGES=['pricing','privacy','terms','refunds','for-business'];
+  const PAGES=['pricing','privacy','terms','refunds','for-business','licenses'];
   const inr=n=>'₹'+Number(n).toLocaleString('en-IN');
   const S={sb:null,session:null,profile:null,usage:{tasks:0,ocr_pages:0},pays:[]};
   const istDay=()=>new Date(Date.now()+5.5*36e5).toISOString().slice(0,10);
@@ -3957,7 +4008,7 @@ document.addEventListener('change',e=>{if(!e.target.matches('#pdf-to-ppt [name=p
   async function init(){
     renderBar();renderAds();
     if(!LIVE)return;
-    try{await loadScript('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js')}catch(e){toast(e.message,'err');return}
+    {const own=window.fuVendorUrl?await window.fuVendorUrl('supabase'):null;let err=null;for(const u of [own,'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.104.1/dist/umd/supabase.js','https://unpkg.com/@supabase/supabase-js@2.104.1/dist/umd/supabase.js'].filter(Boolean)){try{await loadScript(u);if(window.supabase){err=null;break}}catch(e){err=e}}if(!window.supabase){toast((err&&err.message)||'Couldn’t load sign-in. Check your connection or ad blocker.','err');return}}
     S.sb=window.supabase.createClient(C.supabaseUrl,C.supabaseAnonKey,{auth:{persistSession:true,detectSessionInUrl:true,flowType:'pkce'}});
     S.sb.auth.onAuthStateChange((ev,session)=>{S.session=session;
       if(ev==='SIGNED_IN'&&session&&session.user){const u=session.user,k='fu_tr_'+u.id;try{if(!sessionStorage.getItem(k)){sessionStorage.setItem(k,'1');
@@ -4258,5 +4309,103 @@ route();
 
 }
 </script>
+<script>/*gdrive:start*/
+/* Google Drive: open files from Drive into any tool, and save a result back to Drive.
+   Off unless googleClientId, googleApiKey and googleAppId are set in config.js (see SETUP.md, Part K).
+   Nothing from Google loads until someone points at, focuses or taps a Google Drive button.
+   Files travel Google → this browser and this browser → Google. They never pass through Fileutilo's servers.
+   Access is limited to the files the person picks or saves (the drive.file permission). */
+(()=>{
+const cfg=()=>window.FILEUTILO_CONFIG||{};
+const on=()=>{const c=cfg();return !!(c.googleClientId&&c.googleApiKey&&c.googleAppId)};
+const SCOPE='https://www.googleapis.com/auth/drive.file';
+const API='https://www.googleapis.com';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICON='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 4h7l5.5 9.5-3.5 6h-11L3 13.5z"/><path d="M8.5 4 12 10.5M15.5 4 9.5 14M3 13.5h12"/></svg>';
+// Google's own formats are exported to the matching Office or image file.
+const EXPORT={'application/vnd.google-apps.document':['application/vnd.openxmlformats-officedocument.wordprocessingml.document','.docx'],
+  'application/vnd.google-apps.spreadsheet':['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','.xlsx'],
+  'application/vnd.google-apps.presentation':['application/vnd.openxmlformats-officedocument.presentationml.presentation','.pptx'],
+  'application/vnd.google-apps.drawing':['image/png','.png']};
+
+let token=null,tokenExp=0,client=null,ready=null;
+const load=src=>new Promise((res,rej)=>{const s=document.createElement('script');s.src=src;s.async=true;s.onload=res;
+  s.onerror=()=>{s.remove();rej(new Error('Couldn’t reach Google Drive. Check your connection and try again.'))};document.head.appendChild(s)});
+function loadGoogle(){return ready||(ready=(async()=>{
+  await Promise.all([window.gapi?.load?0:load('https://apis.google.com/js/api.js'),window.google?.accounts?.oauth2?0:load('https://accounts.google.com/gsi/client')]);
+  await new Promise((res,rej)=>gapi.load('picker',{callback:res,onerror:()=>rej(new Error('Google Drive picker didn’t load. Try again.'))}));
+})().catch(e=>{ready=null;throw e}))}
+function getToken(){return new Promise((res,rej)=>{
+  if(token&&Date.now()<tokenExp-60000)return res(token);
+  client=client||google.accounts.oauth2.initTokenClient({client_id:cfg().googleClientId,scope:SCOPE,callback:()=>{}});
+  client.callback=r=>{if(r.error)return rej(new Error(r.error==='access_denied'?'Google Drive access wasn’t allowed.':'Google sign-in didn’t work ('+r.error+'). Try again.'));
+    token=r.access_token;tokenExp=Date.now()+(+r.expires_in||3600)*1000;res(token)};
+  client.error_callback=e=>rej(new Error(e&&e.type==='popup_closed'?'The Google window was closed.':
+    'Your browser blocked the Google window. Allow pop-ups for this site, or tap Google Drive again.'));
+  client.requestAccessToken({prompt:''})})}
+async function auth(r){if(r&&r.status===401){token=null;tokenExp=0}return r}
+
+function pick(multiple){return new Promise(res=>{
+  const P=google.picker,view=new P.DocsView(P.ViewId.DOCS).setIncludeFolders(true).setSelectFolderEnabled(false).setMode(P.DocsViewMode.LIST);
+  const b=new P.PickerBuilder().setOAuthToken(token).setDeveloperKey(cfg().googleApiKey).setAppId(String(cfg().googleAppId))
+    .addView(view).setOrigin(location.protocol+'//'+location.host).setTitle('Choose from Google Drive')
+    .setCallback(d=>{if(d[P.Response.ACTION]===P.Action.PICKED)res(d[P.Response.DOCUMENTS]||[]);else if(d[P.Response.ACTION]===P.Action.CANCEL)res([])});
+  if(multiple)b.enableFeature(P.Feature.MULTISELECT_ENABLED);
+  b.build().setVisible(true)})}
+
+async function fetchFile(doc){
+  const id=encodeURIComponent(doc.id),mime=doc.mimeType||'',ex=EXPORT[mime];let name=doc.name||'file';
+  if(/^application\/vnd\.google-apps\./.test(mime)&&!ex)throw new Error(`“${name}” is a Google ${mime.split('.').pop()} and can’t be opened as a file.`);
+  const url=ex?`${API}/drive/v3/files/${id}/export?mimeType=${encodeURIComponent(ex[0])}`:`${API}/drive/v3/files/${id}?alt=media&supportsAllDrives=true`;
+  const r=await auth(await fetch(url,{headers:{Authorization:'Bearer '+token}}));
+  if(!r.ok)throw new Error(r.status===401?'Your Google sign-in expired. Tap Google Drive again.':r.status===403||r.status===404?`Fileutilo wasn’t given access to “${name}”.`:`Couldn’t download “${name}” from Google Drive (error ${r.status}).`);
+  const blob=await r.blob();if(ex&&!name.toLowerCase().endsWith(ex[1]))name+=ex[1];
+  return new File([blob],name,{type:ex?ex[0]:(mime||blob.type),lastModified:Date.now()})}
+
+// ---------- open from Drive ----------
+function addButtons(root){if(!on())return;
+  for(const lab of root.querySelectorAll('label.drop:not(.o-bfz)')){if(lab.dataset.gd)continue;lab.dataset.gd='1';
+    const inp=lab.querySelector('input[type=file]');if(!inp)continue;
+    const row=document.createElement('div');row.className='gd-row';
+    row.innerHTML=`<button type="button" class="gd-btn">${ICON}<span>Choose from Google Drive</span></button><span class="gd-msg" role="status"></span>`;
+    lab.after(row);const btn=row.firstChild,msg=row.lastChild;
+    const warm=()=>{loadGoogle().catch(()=>{})};
+    btn.addEventListener('pointerenter',warm);btn.addEventListener('focus',warm);btn.addEventListener('touchstart',warm,{passive:true});
+    btn.addEventListener('click',async()=>{if(btn.disabled)return;msg.textContent='';msg.className='gd-msg';btn.disabled=true;
+      try{await loadGoogle();await getToken();const docs=await pick(inp.multiple);if(!docs.length)return;
+        const files=[];for(let i=0;i<docs.length;i++){msg.textContent=docs.length>1?`Getting ${i+1} of ${docs.length} from Google Drive…`:'Getting your file from Google Drive…';files.push(await fetchFile(docs[i]))}
+        const dt=new DataTransfer();files.forEach(f=>dt.items.add(f));inp.files=dt.files;inp.dispatchEvent(new Event('change',{bubbles:true}));
+        msg.textContent=files.length>1?`Added ${files.length} files from Google Drive`:`Added ${files[0].name} from Google Drive`;msg.className='gd-msg ok'}
+      catch(e){msg.textContent=e.message||String(e);msg.className='gd-msg err'}
+      finally{btn.disabled=false}})}}
+
+// ---------- save to Drive ----------
+let toast=null;
+async function upload(name,blob,set){
+  await loadGoogle();await getToken();set('Saving to Google Drive…');
+  const start=await auth(await fetch(`${API}/upload/drive/v3/files?uploadType=resumable&fields=id,name,webViewLink`,{method:'POST',
+    headers:{Authorization:'Bearer '+token,'Content-Type':'application/json; charset=UTF-8','X-Upload-Content-Type':blob.type||'application/octet-stream'},body:JSON.stringify({name})}));
+  if(!start.ok)throw new Error(start.status===401?'Your Google sign-in expired. Try again.':`Google Drive refused the file (error ${start.status}).`);
+  const loc=start.headers.get('Location');if(!loc)throw new Error('Google Drive didn’t accept the upload. Try again.');
+  const r=await fetch(loc,{method:'PUT',headers:{'Content-Type':blob.type||'application/octet-stream'},body:blob});
+  if(!r.ok)throw new Error(`Saving to Google Drive failed (error ${r.status}).`);return r.json()}
+window.fuSaved=(name,data)=>{if(!on())return;const blob=data instanceof Blob?data:new Blob([data]);
+  if(!toast){toast=document.createElement('div');toast.className='gd-toast';toast.setAttribute('role','status');document.body.appendChild(toast)}
+  clearTimeout(toast._t);toast.hidden=false;
+  toast.innerHTML=`<span class="gd-t">Downloaded <b>${esc(name)}</b></span><button type="button" class="gd-save">${ICON}<span>Save a copy to Google Drive</span></button><button type="button" class="gd-x" aria-label="Close">×</button>`;
+  const t=toast.querySelector('.gd-t'),save=toast.querySelector('.gd-save'),set=s=>{t.textContent=s};
+  const later=ms=>{clearTimeout(toast._t);toast._t=setTimeout(()=>{toast.hidden=true},ms)};later(12000);
+  toast.querySelector('.gd-x').onclick=()=>{toast.hidden=true};
+  const warm=()=>{loadGoogle().catch(()=>{})};save.addEventListener('pointerenter',warm);save.addEventListener('focus',warm);
+  save.onclick=async()=>{clearTimeout(toast._t);save.disabled=true;
+    try{const f=await upload(name,blob,set);t.innerHTML=`Saved <b>${esc(f.name||name)}</b> to Google Drive${f.webViewLink?` · <a href="${esc(f.webViewLink)}" target="_blank" rel="noopener">Open</a>`:''}`;save.remove();later(10000)}
+    catch(e){set(e.message||String(e));save.disabled=false;later(15000)}}};
+
+// Buttons appear on every drop area, including tools that are built when they are first opened.
+const scan=()=>{if(on())addButtons(document)};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',scan);else scan();
+let q=0;new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;scan()})}).observe(document.documentElement,{childList:true,subtree:true});
+})();
+/*gdrive:end*/</script>
 </body>
 </html>

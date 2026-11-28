@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // FORMAT REGRESSION: converts every sample document into every output format, and runs the PDF, image and
 // document tools, then has independent software check each result (validate_formats.py: pypdf/qpdf/pdftotext,
 // python-docx, odfpy, python-pptx, openpyxl, Pillow, LibreOffice):
@@ -11,7 +12,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { open, check, skip, summary, hasLib, download, OUT, FX } from './lib.mjs';
 
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const dir = path.join(OUT, 'formats'); fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
 const manifest = [];
 const t = await open();

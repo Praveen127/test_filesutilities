@@ -1,6 +1,6 @@
-const V='fileutilo-mwyo8d2w';
+const V='fileutilo-16.1.4-mx0gv2z3';
 const SHELL=['./','config.js','site.webmanifest','favicon.svg','favicon.ico','icon-192.png','icon-512.png'];
-const CDN=/^https:\/\/(cdn\.jsdelivr\.net|unpkg\.com|esm\.sh|fonts\.googleapis\.com|fonts\.gstatic\.com|tessdata\.projectnaptha\.com)\//;
+const CDN=/^https:\/\/(cdn\.jsdelivr\.net|unpkg\.com|esm\.sh|cdn\.sheetjs\.com|fonts\.googleapis\.com|fonts\.gstatic\.com|tessdata\.projectnaptha\.com)\//;
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('fileutilo-')&&k!==V&&k!=='fileutilo-libs').map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function fresh(req){const c=await caches.open(V);try{const r=await fetch(req);if(r.ok)c.put(req,r.clone());return r}
@@ -11,6 +11,7 @@ self.addEventListener('fetch',e=>{const req=e.request;if(req.method!=='GET')retu
   if(u.origin===location.origin){
     if(req.mode==='navigate'||/\/config\.js$/.test(u.pathname))return e.respondWith(fresh(req));
     if(/\.(webm|mp4)$/.test(u.pathname))return;
+    if(/^\/vendor\/.+@/.test(u.pathname))return e.respondWith(lib(req));   // versioned library files: keep once fetched
     if(/\/(about|media)\/|\.(png|ico|svg|webp|webmanifest)$/.test(u.pathname))return e.respondWith(swr(req));
     return}
-  if(CDN.test(req.url)&&!u.pathname.includes('@supabase'))e.respondWith(lib(req))});
+  if(CDN.test(req.url))e.respondWith(lib(req))});   // every library address carries an exact version

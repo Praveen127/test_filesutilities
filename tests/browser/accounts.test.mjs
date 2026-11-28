@@ -1,10 +1,11 @@
+import { fileURLToPath } from 'node:url';
 // ACCOUNTS & PAYMENTS: sign-in (email, phone), free limits, credits, Razorpay checkout, subscriptions, account panel.
 // Supabase and Razorpay are replaced by recording mocks (tests/browser/mocks), so no real accounts are needed.
 import fs from 'fs';
 import path from 'node:path';
 import { pw, LOCAL, ROOT, FX } from './lib.mjs';
 const { chromium } = pw;
-const T=path.join(path.dirname(new URL(import.meta.url).pathname),'mocks')+'/';
+const T=path.join(path.dirname(fileURLToPath(import.meta.url)),'mocks')+'/';
 const ROUTES=[['supabase-js@2',T+'mock-supabase.js'],['checkout.razorpay.com',T+'mock-razorpay.js'],...LOCAL.filter(l=>l.file).map(l=>[l.key,l.file])];
 let html=fs.readFileSync(path.join(ROOT,'web/index.html'),'utf8');
 const CONFIG_JS='window.FILEUTILO_CONFIG={supabaseUrl:"https://proj.supabase.co",supabaseAnonKey:"anon123"};';
